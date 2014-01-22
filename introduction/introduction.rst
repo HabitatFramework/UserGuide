@@ -19,7 +19,7 @@ For example, :ref:`Table1` indicates the effect on a 500 polygon dataset if the 
 	| Polygons        ||        500 | 16,750             |
 	+-----------------+-------------+--------------------+
 	| Attributes      ||     40,000 | 1,340,000          |
-	+=================+=============+====================+
+	+-----------------+-------------+--------------------+
 	| Total           ||     40,500 | 1,356,750          |
 	+-----------------+-------------+--------------------+
 
@@ -46,5 +46,21 @@ This offers a significant reduction in total attributes as shown in :ref:`Table2
 	| Total              |     40,500 |                                     157,750 |
 	+--------------------+------------+---------------------------------------------+
 
+The HLU GIS Tool provides a user interface for maintaining the habitat and spatial data, including changes to attributes and changes to the spatial data. It also provides an audit trail to indicate when it was last edited, why and by whom.
 
+The toolkit provides an interface that links the spatial and attribute data in multiple software environments. It can link ArcGIS and MapInfo with databases held in Access or SQL Server In principle, the toolkit could link to other database systems such as PostgreSQL and Oracle but these have not been tested and are not supported.
+
+The performance of the tool is limited by the capabilities of third party software, particularly GIS software, which were not designed to handle large datasets split across multiple platforms.
+
+In addition, one of the key requirements for this tool was the ability to use multiple GIS and database environments. Significant improvements in performance could have been achieved if the tool had been designed to work with a single environment e.g. ArcGIS and SQL Server but multiple environment functionality was a key requirement.
+
+The HLU GIS Tool has been optimised as far as possible and there are no further technological enhancements that can be made to significantly improve performance. It is important therefore to ensure performance is optimised wherever possible through user operation. The following section suggests some simple approaches to improving performance.
+
+The code for the HLU GIS Tool is ‘open source’.
+
+Optimising Performance
+----------------------
+Creation of ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+An ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor) must be created for use with the HLU GIS Tool. This should be optimised to ensure maximum performance, which should include the following:
 
