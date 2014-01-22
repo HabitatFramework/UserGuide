@@ -15,12 +15,13 @@ For example, :ref:`Table1` indicates the effect on a 500 polygon dataset if the 
 
 	+-----------------+-------------+--------------------+
 	|                 | Original    | Split by Mastermap |
+	| <<<<<<<<<<<<<<< | >>>>>>>>>>> | >>>>>>>>>>>>>>>>>> |
 	+=================+=============+====================+
-	| Polygons        ||        500 | 16,750             |
+	| Polygons        |         500 | 16,750             |
 	+-----------------+-------------+--------------------+
-	| Attributes      ||     40,000 | 1,340,000          |
+	| Attributes      |      40,000 | 1,340,000          |
 	+-----------------+-------------+--------------------+
-	| Total           ||     40,500 | 1,356,750          |
+	| Total           |      40,500 | 1,356,750          |
 	+-----------------+-------------+--------------------+
 
 Due to the complexity of the attribute data required by the Local Records Centres and to minimise data duplication, the habitat attribute and spatial data were split into a relational database with an associated GIS layer. Splitting the attribute and spatial data, reduces the number of attributes required for the spatial layer to 6.
