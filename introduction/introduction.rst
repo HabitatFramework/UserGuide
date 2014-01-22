@@ -11,7 +11,6 @@ Whilst there are benefits to splitting the habitat polygons by OS Mastermap, suc
 For example, :ref:`Table1` indicates the effect on a 500 polygon dataset if the data was held in a single GIS layer.
 
 .. table:: Table1
-
 	Effect of OS Mastermap Split (Single Dataset)
 
 	+------------+----------+--------------------+
@@ -31,7 +30,6 @@ This offers a significant reduction in total attributes as shown in :ref:`Table2
 
 
 .. table:: Table2
-	
 	Effect of OS Mastermap Split (Attribute and Spatial Datasets)
 
 	+--------------------+------------+---------------------------------------------+
@@ -51,7 +49,6 @@ This offers a significant reduction in total attributes as shown in :ref:`Table2
 Test text :ref:`Test` reference
 
 .. table:: Test
-	
 	Test table
 
 	|   | Original | Final |
