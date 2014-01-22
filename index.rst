@@ -12,6 +12,7 @@ HLU GIS Tool User Manual
    :numbered:
 
    introduction/introduction
+   background/background
 
 
 Indices and tables
