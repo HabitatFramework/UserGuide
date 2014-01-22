@@ -11,8 +11,7 @@ HLU GIS Tool User Manual
    :maxdepth: 2
    :numbered:
 
-   introduction
-   background/background
+   introduction/introduction
 
 
 Indices and tables
