@@ -148,7 +148,7 @@ Maximises the ArcGIS or MapInfo window and sets it as the active window.
 |winsidebyside| Windows side by side
 ------------------------------------
 
-Aligns the HLU window to the top left of the screen and expands the GIS window to fill the remaining area as shown in the figure :ref:`figWSBS.
+Aligns the HLU window to the top left of the screen and expands the GIS window to fill the remaining area as shown in the figure :ref:`figWSBS`.
 
 .. _figWSBS:
 
@@ -202,7 +202,7 @@ Allows you to filter the database records using the query builder shown in the f
 	HLU Query Builder
 
 * Boolean Operator allows you to perform logical selections using:
-	* AND; AND NOT; OR; OR NOT.
+	* 'AND', 'AND NOT', 'OR', 'OR NOT'.
 * ‘(‘ and ‘)’ fields allow you to add additional brackets as shown in the example in Figure 6 to define how the query is executed.
 * ‘Table’ and ‘Column’ define the table and field to be searched.
 * ‘Operator’ provides a drop-down list of the available operators as shown in the figure :ref:`figSOL`.
@@ -327,7 +327,8 @@ ArcGIS
 MapInfo
 """""""
 
-.. Sidebar:: Note
+.. sidebar:: Note
+
 	The Cosmetic layer should be used due to the time required for MapInfo to add a new polygon to the full HLU layer.
 
 * Set the Cosmetic layer as ‘Editable’ and draw the polygon to split by
@@ -343,7 +344,7 @@ MapInfo
 
 	Data Disaggregation Dialog (MapInfo)
 
-* The polygon will be split but still selected as shown in Figure 11. Return to the HLU GIS Tool and click ‘Get Map Selection’.
+* The polygon will be split but still selected as shown in :ref:`figMISF`. Return to the HLU GIS Tool and click ‘Get Map Selection’.
 
 .. _figMISF:
 
