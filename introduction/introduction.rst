@@ -37,7 +37,7 @@ This offers a significant reduction in total attributes as shown in the table be
 
 	+--------------------+----------+------------------------+
 	|                    | Original | Attribute database and |
-	|                    |          || associated GIS Layer  |
+	|                    |          | |associated GIS Layer  |
 	+====================+==========+========================+
 	| HLU Records        | 500      | 500                    |
 	+--------------------+----------+------------------------+
