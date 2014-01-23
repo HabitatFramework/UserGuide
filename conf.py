@@ -30,8 +30,7 @@ import os
 # ones.
 extensions = [
     'sphinx.ext.todo',
-    'sphinx.ext.ifconfig',
-    'numfig'
+    'sphinx.ext.ifconfig'
 ]
 
 todo_include_todos=True

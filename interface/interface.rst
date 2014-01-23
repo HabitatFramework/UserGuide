@@ -17,7 +17,7 @@ It is essential that the following guidelines are followed to ensure that the to
 HLU GIS Tool Window
 ===================
 
-Once the HLU GIS Tool has been configured, the tool will start the associated GIS, then the main window will appear as shown in :num:`figure #figure1`.
+Once the HLU GIS Tool has been configured, the tool will start the associated GIS, then the main window will appear as shown in :ref:`figure1`.
 
 .. _figure1:
 
