@@ -13,7 +13,7 @@ Whilst there are benefits to splitting the habitat polygons by OS Mastermap, suc
 
 For example, :ref:`table1` indicates the effect on a 500 polygon dataset if the data was held in a single GIS layer.
 
-.. tabularcolumns:: |L|R|R|
+.. tabularcolumns:: |L|L|R|
 
 .. _table1:
 
@@ -33,25 +33,26 @@ Due to the complexity of the attribute data required by the Local Records Centre
 
 This offers a significant reduction in total attributes as shown in :ref:`table2`. Nevertheless, there is still a significant increase in data volume versus the original HLU dataset.
 
-.. tabularcolumns:: |L|R|r|
+.. tabularcolumns:: |L|R|L|
 
-.. _table2:
+.. _table2: Table 1.2
 
 .. table:: Effect of OS Mastermap Split (Attribute and Spatial Datasets)
 
-	+--------------------+------------+---------------------------------------------+
-	|                    | Original   | Attribute database and associated GIS Layer |
-	+====================+============+=============================================+
-	| HLU Records        |        500 |                                         500 |
-	+--------------------+------------+---------------------------------------------+
-	| HLU Attributes     |     40,000 |                                      40,000 |
-	+--------------------+------------+---------------------------------------------+
-	| Spatial Polygons   |            |                                      16,750 |
-	+--------------------+------------+---------------------------------------------+
-	| Spatial Attributes |	          |                                     100,500 |
-	+--------------------+------------+---------------------------------------------+
-	| Total              |     40,500 |                                     157,750 |
-	+--------------------+------------+---------------------------------------------+
+	+--------------------+----------+------------------------+
+	|                    | Original | Attribute database and |
+	|                    |          | associated GIS Layer   |
+	+====================+==========+========================+
+	| HLU Records        | 500      | 500                    |
+	+--------------------+----------+------------------------+
+	| HLU Attributes     | 40,000   | 40,000                 |
+	+--------------------+----------+------------------------+
+	| Spatial Polygons   |          | 16,750                 |
+	+--------------------+----------+------------------------+
+	| Spatial Attributes |          | 100,500                |
+	+--------------------+----------+------------------------+
+	| Total              | 40,500   | 157,750                |
+	+--------------------+----------+------------------------+
 
 The HLU GIS Tool provides a user interface for maintaining the habitat and spatial data, including changes to attributes and changes to the spatial data. It also provides an audit trail to indicate when it was last edited, why and by whom.
 
@@ -101,7 +102,7 @@ It takes a significant length of time for ArcGIS or MapInfo to draw an entire HL
 	* MapInfo – Press the Esc key on your keyboard
 
 * For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in Tools > Extensions – see section ref:`?`.
-* For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase. :emphasis:`The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.`
+* For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase. *The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.* 
 	**e.g. exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.**
 * For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
 
