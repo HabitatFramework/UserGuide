@@ -93,11 +93,11 @@ It takes a significant length of time for ArcGIS or MapInfo to draw an entire HL
 * ‘Select by Attributes’ performs complex queries and selects the results in the GIS window. If a large number of results are returned, it could take a long time to select the spatial polygons in the GIS.
 * If the layer is taking a long time to draw, pause or cancel the drawing using:
 
-	* ArcGIS - Click the Pause () button in the bottom left corner of the map window
+	* ArcGIS - Click the Pause button in the bottom left corner of the map window
 	* MapInfo – Press the Esc key on your keyboard
 
-* For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in Tools > Extensions – see section :ref:`?`.
-* For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase. **The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.**
+* For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in Tools > Extensions – see section ref:`?`.
+* For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase. :emphasis:`The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.`
 	**e.g. exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.**
 * For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
 
@@ -131,6 +131,7 @@ Administrator
 -------------
 
 We recommend that a person with the organisation should be designated as the database administrator. This person should:
+
 * Have several years experience of IT systems management.
 * Be an expert user of the database system.
 * Understand relational database structures.
@@ -140,6 +141,7 @@ Users
 -----
 
 This user guide assumes that users of the HLU GIS Tool have:
-* General IT experience including use of Microsoft Windows
+
+* General IT experience including use of Microsoft Windows.
 * Certified training or equivalent experience in the use of the relevant GIS software.
 
