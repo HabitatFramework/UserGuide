@@ -110,13 +110,15 @@ Allows you to update the attributes for all selected database records.
 
 .. Note:: This feature is only available to configured users who have been given bulk update permissions. For details on configuring users, see section 3.2.
 
-To perform a bulk update, filter the database records using ‘Select by attributes’ or select polygons in the GIS layer and click ‘Get Map Selection’. For details on filtering records, see section 2.6.
+To perform a bulk update:
 
-Click ‘Bulk Update’ on the Edit menu or toolbar. The HLU GIS Tool enters bulk update mode and an empty form is displayed as shown in the figure :ref:`figUIBU`.
+* Filter the database records using ‘Select by attributes’ or select polygons in the GIS layer and click ‘Get Map Selection’. For details on filtering records, see section 2.6.
 
-The ‘Bulk Update’ box displays the number of INCIDs, TOIDs and fragments affected by the update and allows you to select whether to create a History record for this process.
+* Click ‘Bulk Update’ on the Edit menu or toolbar. The HLU GIS Tool enters bulk update mode and an empty form is displayed as shown in the figure :ref:`figUIBU`.
 
-Enter the updated details in the IHS, Details, and Sources tabs, then click Apply. These fields will be updated for all the selected INCIDs.
+* The ‘Bulk Update’ box displays the number of INCIDs, TOIDs and fragments affected by the update and allows you to select whether to create a History record for this process.
+
+* Enter the updated details in the IHS, Details, and Sources tabs, then click Apply. These fields will be updated for all the selected INCIDs.
 
 .. Note:: If ‘Delete Empty Bulk Update Rows’ is checked, child records will be deleted if these fields are not completed in the bulk update form. For details, see section 2.8.1.1.
 
@@ -134,7 +136,7 @@ View Menu
 	:height: 16px
 	:width: 16px
 
-|maximise| Maximise GIS window
+|winmaximise| Maximise GIS window
 ------------------------------
 
 Maximises the ArcGIS or MapInfo window and sets it as the active window.
@@ -148,7 +150,7 @@ Maximises the ArcGIS or MapInfo window and sets it as the active window.
 
 Aligns the HLU window to the top left of the screen and expands the GIS window to fill the remaining area as shown in the figure :ref:`figWSBS.
 
-.. _figUWSBS:
+.. _figWSBS:
 
 .. figure:: ../images/figures/WindowsSideBySide.png
 	:align: center
@@ -178,7 +180,7 @@ Sets ArcGIS or MapInfo as the active window but does not alter its size.
 
 Zooms to the current database selection in the GIS window.
 
-.. Note:: This process may take a long time depending upon the layer size, the number of selected records and their geographical distribution.
+.. Warning:: This process may take a long time depending upon the layer size, the number of selected records and their geographical distribution.
 
 Select Menu
 ===========
@@ -199,14 +201,12 @@ Allows you to filter the database records using the query builder shown in the f
 
 	HLU Query Builder
 
-* Boolean Operator’ allows you to perform logical selections using
+* Boolean Operator allows you to perform logical selections using:
 	* AND; AND NOT; OR; OR NOT.
 * ‘(‘ and ‘)’ fields allow you to add additional brackets as shown in the example in Figure 6 to define how the query is executed.
 * ‘Table’ and ‘Column’ define the table and field to be searched.
 * ‘Operator’ provides a drop-down list of the available operators as shown in the figure :ref:`figSOL`.
 * Value’ is the value to search for. Values can either be entered as text or selected from the drop-down list (where available).
-
-.. Note:: The value of the ‘Boolean Operator’ field on the first row is not used.
 
 .. _figSOL:
 
@@ -214,6 +214,8 @@ Allows you to filter the database records using the query builder shown in the f
 	:align: center
 
 	List of Operators
+
+.. Note:: The value of the ‘Boolean Operator’ field on the first row is not used.
 
 Once you have entered the values for the current row, click on another row in the query builder to confirm the entry and enable the ‘OK’ button.
 
@@ -239,21 +241,21 @@ Removes the current filter so that all database records are visible.
 
 Selects all MasterMap polygons associated with the INCID on the current database record in the GIS layer.
 
-.. |selectbyattr| image:: ../images/icons/SelectByAttributes.png
-	:height: 16px
-	:width: 16px
-
-Get Map Selection
------------------
-
-Filters the database records to retrieve the attributes associated with the selected polygons in the GIS layer.
-
 .. |getmapsel| image:: ../images/icons/ReadMapSelection.png
 	:height: 16px
 	:width: 16px
 
-|getmapsel| Select by INCID
----------------------------
+|getmapsel| Get Map Selection
+-----------------------------
+
+Filters the database records to retrieve the attributes associated with the selected polygons in the GIS layer.
+
+.. |selectbyincid| image:: ../images/icons/SelectByIncid.png
+	:height: 16px
+	:width: 16px
+
+|selectbyincid| Select by INCID
+-------------------------------
 
 Select a polygon on the map and go to ‘Get Map Selection’ to select the database records.
 
@@ -294,10 +296,12 @@ Physical split creates a new TOID fragment in the database based upon a single T
 
 To perform a physical split:
 
-* ArcGIS
-	* On the ‘Editor’ toolbar, click on ‘Editor’ and select ‘Start Editing’.
-	* Select the polygon you wish to split.
-	* In the ‘Task’ drop-down list on the ‘Editor’ toolbar, select ‘Cut Polygon Features’ as shown in the figure :ref:`figArcEMB`.
+ArcGIS
+""""""
+
+* On the ‘Editor’ toolbar, click on ‘Editor’ and select ‘Start Editing’.
+* Select the polygon you wish to split.
+* In the ‘Task’ drop-down list on the ‘Editor’ toolbar, select ‘Cut Polygon Features’ as shown in the figure :ref:`figArcEMB`.
 
 .. _figArcEMB:
 
@@ -306,9 +310,9 @@ To perform a physical split:
 
 	Edit Settings for Physical Split (ArcGIS)
 
-	* Using the Sketch tool on ‘Editor’ toolbar, draw a polyline.
-	* On the ‘Editor’ toolbar, click on ‘Editor’ and select ‘Save Edits’.
-	* The polygon will be split but still selected as shown in the figure :ref:`figArcSFD`. Return to the HLU GIS Tool and click ‘Get Map Selection’.
+* Using the Sketch tool on ‘Editor’ toolbar, draw a polyline.
+* On the ‘Editor’ toolbar, click on ‘Editor’ and select ‘Save Edits’.
+* The polygon will be split but still selected as shown in the figure :ref:`figArcSFD`. Return to the HLU GIS Tool and click ‘Get Map Selection’.
 
 .. _figArcSFD:
 
@@ -317,17 +321,20 @@ To perform a physical split:
 
 	Split Features (ArcGIS)
 
-	* Select one of the options in the ‘Process’ list.
-	* Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID.
+* Select one of the options in the ‘Process’ list.
+* Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID.
 
-* MapInfo
-	* Set the Cosmetic layer as ‘Editable’ and draw the polygon to split by
-	* Set the HLU layer as ‘Editable’
-	* Select the polygon you wish to split and go to Objects > Set Target
-	* Select the polygon in the Cosmetic layer and go to Objects > Split
-	* In the Data Disaggregation box, ensure that ‘Method’ for all fields is set to ‘Value’ as shown in the figure :ref:`figMIDD`, then click OK.
+MapInfo
+"""""""
 
-.. Note:: The Cosmetic layer should be used due to the time required for MapInfo to add a new polygon to the full HLU layer.
+.. Sidebar:: Note
+	The Cosmetic layer should be used due to the time required for MapInfo to add a new polygon to the full HLU layer.
+
+* Set the Cosmetic layer as ‘Editable’ and draw the polygon to split by
+* Set the HLU layer as ‘Editable’
+* Select the polygon you wish to split and go to Objects > Set Target
+* Select the polygon in the Cosmetic layer and go to Objects > Split
+* In the Data Disaggregation box, ensure that ‘Method’ for all fields is set to ‘Value’ as shown in the figure :ref:`figMIDD`, then click OK.
 
 .. _figMIDD:
 
@@ -336,6 +343,8 @@ To perform a physical split:
 
 	Data Disaggregation Dialog (MapInfo)
 
+* The polygon will be split but still selected as shown in Figure 11. Return to the HLU GIS Tool and click ‘Get Map Selection’.
+
 .. _figMISF:
 
 .. figure:: ../images/figures/MapInfoSplitFeaturesDiagram.png
@@ -343,9 +352,8 @@ To perform a physical split:
 
 	Split Features (MapInfo)
 
-	* The polygon will be split but still selected as shown in Figure 11. Return to the HLU GIS Tool and click ‘Get Map Selection’.
-	* Select one of the options in the ‘Process’ list.
-	* Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
+* Select one of the options in the ‘Process’ list.
+* Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
 
 .. note::
 	* Only one polygon should be split in a single operation. Splitting multiple polygons will cause database synchronisation issues. 
