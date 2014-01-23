@@ -11,11 +11,9 @@ The Habitat and Land Use (HLU) data consisted of a set of habitat polygons. Each
 
 Whilst there are benefits to splitting the habitat polygons by OS Mastermap, such as ensuring polygon boundaries are accurate, the splitting process significantly increases the volume of data. On average, there are 33.5 Mastermap-derived polygons for each habitat polygon in the HLU data.
 
-For example, :ref:`table1` indicates the effect on a 500 polygon dataset if the data was held in a single GIS layer.
+For example, the table below indicates the effect on a 500 polygon dataset if the data was held in a single GIS layer.
 
-.. tabularcolumns:: |L|L|R|
-
-.. _table1:
+.. tabularcolumns:: |L|R|R|
 
 .. table:: Effect of OS Mastermap Split (Single Dataset)
 
@@ -31,17 +29,15 @@ For example, :ref:`table1` indicates the effect on a 500 polygon dataset if the 
 
 Due to the complexity of the attribute data required by the Local Records Centres and to minimise data duplication, the habitat attribute and spatial data were split into a relational database with an associated GIS layer. Splitting the attribute and spatial data, reduces the number of attributes required for the spatial layer to 6.
 
-This offers a significant reduction in total attributes as shown in :ref:`table2`. Nevertheless, there is still a significant increase in data volume versus the original HLU dataset.
+This offers a significant reduction in total attributes as shown in the table below. Nevertheless, there is still a significant increase in data volume versus the original HLU dataset.
 
-.. tabularcolumns:: |L|R|L|
-
-.. _table2: Table 1.2
+.. tabularcolumns:: |L|R|R|
 
 .. table:: Effect of OS Mastermap Split (Attribute and Spatial Datasets)
 
 	+--------------------+----------+------------------------+
 	|                    | Original | Attribute database and |
-	|                    |          | associated GIS Layer   |
+	|                    |          | |associated GIS Layer  |
 	+====================+==========+========================+
 	| HLU Records        | 500      | 500                    |
 	+--------------------+----------+------------------------+
@@ -102,8 +98,10 @@ It takes a significant length of time for ArcGIS or MapInfo to draw an entire HL
 	* MapInfo – Press the Esc key on your keyboard
 
 * For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in Tools > Extensions – see section ref:`?`.
-* For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase. *The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.* 
-	**e.g. exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.**
+* For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase. **The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.**
+
+**e.g. exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.**
+
 * For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
 
 Selection of Database Type
