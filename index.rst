@@ -12,6 +12,7 @@ HLU GIS Tool User Manual
    :numbered:
 
    introduction/introduction
+   interface/interface
 
 
 Indices and tables
