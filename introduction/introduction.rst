@@ -11,7 +11,11 @@ The Habitat and Land Use (HLU) data consisted of a set of habitat polygons. Each
 
 Whilst there are benefits to splitting the habitat polygons by OS Mastermap, such as ensuring polygon boundaries are accurate, the splitting process significantly increases the volume of data. On average, there are 33.5 Mastermap-derived polygons for each habitat polygon in the HLU data.
 
-For example, :ref:`Effect of OS Mastermap Split (Single Dataset)` indicates the effect on a 500 polygon dataset if the data was held in a single GIS layer.
+For example, :ref:`table1` indicates the effect on a 500 polygon dataset if the data was held in a single GIS layer.
+
+.. tabularcolumns:: |L|R|R|
+
+.. _table1:
 
 .. table:: Effect of OS Mastermap Split (Single Dataset)
 
@@ -27,10 +31,13 @@ For example, :ref:`Effect of OS Mastermap Split (Single Dataset)` indicates the 
 
 Due to the complexity of the attribute data required by the Local Records Centres and to minimise data duplication, the habitat attribute and spatial data were split into a relational database with an associated GIS layer. Splitting the attribute and spatial data, reduces the number of attributes required for the spatial layer to 6.
 
-This offers a significant reduction in total attributes as shown in :ref:`Table2`. Nevertheless, there is still a significant increase in data volume versus the original HLU dataset.
+This offers a significant reduction in total attributes as shown in :ref:`table2`. Nevertheless, there is still a significant increase in data volume versus the original HLU dataset.
 
-.. table:: Table2
-	Effect of OS Mastermap Split (Attribute and Spatial Datasets)
+.. tabularcolumns:: |L|R|r|
+
+.. _table2:
+
+.. table:: Effect of OS Mastermap Split (Attribute and Spatial Datasets)
 
 	+--------------------+------------+---------------------------------------------+
 	|                    | Original   | Attribute database and associated GIS Layer |

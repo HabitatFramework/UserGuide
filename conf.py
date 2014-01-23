@@ -31,6 +31,7 @@ import os
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.ifconfig',
+    'numfig'
 ]
 
 todo_include_todos=True
