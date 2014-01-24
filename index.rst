@@ -3,18 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-************************
-HLU GIS Tool User Manual
-************************
-
-.. toctree:: `Table of Contents`
-   :maxdepth: 2
-   :numbered:
-
-   introduction/introduction
-   interface/interface
-   database/database
-   appendix/appendix
+Contents
+========
 
 .. raw:: latex
 
@@ -23,10 +13,20 @@ HLU GIS Tool User Manual
 	\addcontentsline{toc}{chapter}{\listfigurename}
 	\listoffigures
 
-Indices and tables
-==================
+.. toctree::
+   :maxdepth: 2
+   :numbered:
 
-* :ref:`genindex`
-* :ref:`search`
+   introduction/introduction
+   interface/interface
+   database/database
+   appendix/appendix
 
-.. * :ref:`modindex`
+.. raw:: Not latex
+
+	Indices and tables
+	==================
+
+	* :ref:`genindex`
+	* :ref:`search`
+	.. * :ref:`modindex`
