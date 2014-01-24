@@ -331,10 +331,10 @@ MapInfo
 
 	The Cosmetic layer should be used due to the time required for MapInfo to add a new polygon to the full HLU layer.
 
-* Set the Cosmetic layer as ‘Editable’ and draw the polygon to split by
-* Set the HLU layer as ‘Editable’
-* Select the polygon you wish to split and go to Objects > Set Target
-* Select the polygon in the Cosmetic layer and go to Objects > Split
+* Set the Cosmetic layer as ‘Editable’ and draw the polygon to split by.
+* Set the HLU layer as ‘Editable’.
+* Select the polygon you wish to split and go to Objects > Set Target.
+* Select the polygon in the Cosmetic layer and go to Objects > Split.
 * In the Data Disaggregation box, ensure that ‘Method’ for all fields is set to ‘Value’ as shown in the figure :ref:`figMIDD`, then click OK.
 
 .. _figMIDD:
@@ -361,4 +361,213 @@ MapInfo
 	* If several polygons have been split, select the fragments for one original polygon and split using the tool. Repeat this operation for the remaining polygons.
 	* Ensure that the physical split is completed in the database prior to commencing any other operations such as ‘Select by attributes…’ to avoid database synchronisation issues.
 
+.. |merge| image:: ../images/icons/MergeFeatures.png
+	:height: 16px
+	:width: 16px
 
+|merge| Merge Features
+----------------------
+
+Merge features performs two types of merge: Logical Merge and Physical Merge
+
+Logical Merge
+^^^^^^^^^^^^^
+
+Logical merge combines the selected TOIDs on the map with the INCID selected from the list.
+
+To perform a logical merge:
+* Click ‘Switch to GIS Window’ and select the polygons you wish to merge and a polygon from the INCID you wish to merge them with in the GIS layer.
+* Return to the HLU main window and click ‘Get Map Selection’.
+* Select one of the options in the ‘Process’ list.
+* Click on ‘Merge Features’. A list of INCIDs will be displayed as shown in the figure :ref:`figLMD`.
+
+.. _figLMD:
+
+.. figure:: ../images/figures/LogicalMergeDialog.png
+	:align: center
+
+	Select INCID to Keep Dialog
+
+* Click on the grey box to the left of the row to select an INCID. The associated polygon will blink in the GIS window. Click ‘OK’.
+* The selected Mastermap polygons will be merged with the selected INCID and details added to the History tab.
+* If the merge polygons are fragments of a single TOID, you will be given the option to perform a physical merge.
+
+Physical Merge
+^^^^^^^^^^^^^^
+
+Physical merge combines fragments of a single TOID into a single polygon in the GIS layer.
+
+To perform a physical merge:
+* Select two or more fragments from one TOID in the GIS layer as shown in the figure :Ref:`PMD` (left).
+* Return to the HLU main window and click ‘Get Map Selection’.
+* Select one of the options in the ‘Process’ list.
+* Click on ‘Merge Features’. The polygons will be combined in the GIS layer as shown in figure :Ref:`PMD` (right).
+
+.. _figPMD:
+
+.. figure:: ../images/figures/PhysicalMergeDiagram.png
+	:align: center
+
+	Physical Merge – Before (left) and After (right)
+
+.. Note:: Only fragments belonging to the same TOID can be merged in a single operation. If fragments for several TOIDs need to be merged, the operation must be repeated for each TOID.
+
+Tools Menu
+==========
+
+.. |options| image:: ../images/icons/Options.png
+	:height: 16px
+	:width: 16px
+
+|options| Options
+-----------------
+
+Allows you to alter your HLU configuration. There are three categories of options as shown in the figure :ref:`figOD`.
+
+.. _figOD:
+
+.. figure:: ../images/figures/OptionsDialog.png
+	:align: center
+
+	HLU Options Dialog
+
+Database Options
+^^^^^^^^^^^^^^^^
+
+* ‘Timeout’ sets the amount of time the tool will wait for the database to respond. The default value is 15. This value should be increased if an error occurs such as ‘The connection to the database timed out’.
+* ‘Page Size’ sets how many records are retrieved from the database and stored in memory. The default value is 100. Increasing this value can improve performance when browsing records, however this will increase the amount of RAM required by the application and significant increases in the page size value could cause the tool to stop responding.
+* ‘Display History Rows’ sets the number of entries displayed in the ‘History’ tab of the main window. For detail on the ‘History’ tab - see section 2.9.5.
+* ‘Delete Empty Bulk Update Rows’ removes the details of child records if they are these fields are not completed in the bulk update form if this box is checked. By default this box is unchecked. 
+
+	This affects the following sections of the main window:
+
+	* IHS Matrix, IHS Formation, IHS Management, IHS Complex, BAP Habitat, Potential BAP Habitats, Sources.
+
+::
+
+	Example If the bulk update record has only 1 source record completed. For each of the selected records, source 1 will be updated and if the selected record has data entered in sources 2 and 3, it will be deleted.
+
+GIS Options
+^^^^^^^^^^^
+
+* ‘History Columns’ allows you to select which additional columns from the GIS layer are displayed in the History tab for each update. If the box is unchecked, the field will not be displayed.
+* ‘Preferred GIS’ allows you to select whether the tool should use ArcGIS or MapInfo if both applications are installed on your computer. 
+
+.. Note:: The tool must be closed and restarted for this change to take effect.
+
+* ‘Map Document/Workspace’ sets the default map document or workspace opened by the HLU GIS Tool. As this field cannot be edited directly, you must click on the “…” button and browse to the new map document or workspace. 
+
+.. Note:: If the preferred GIS is altered, this field must also be updated.
+
+* ‘Warn before GIS selection’ allows you to enable or disable the warning message indicating the number of polygons which will be selected by the current query as shown in the figure :ref:`figGSWD`.
+
+.. _figGSWD:
+
+.. figure:: ../images/figures/GISSelectionWarningDialog.png
+	:align: center
+
+	GIS Selection Warning Box
+
+Vague Date Season Names
+^^^^^^^^^^^^^^^^^^^^^^^
+
+These fields allow you to define how vague dates, such as 'Spring 2010-Autumn 2010' or '1989-2010', are entered so that they can be converted to dates in the HLU database.
+
+ 
+The default value for the ‘Vague Date Delimiter’ is a hyphen ( - ). This can be altered to any character, however it must not be the same delimiter used by your computer to enter precise dates, such as 01/04/2010. The default delimiter used by Windows for English-format dates is a forward slash ( / ).
+
+Data
+====
+
+Records can be viewed or updated through the main window of the HLU GIS Tool. The following sections summarise the details available for each record. 
+
+Required fields are highlighted in red on each tab. The ‘Apply’ button will be active when the required fields have been completed on all tabs.
+
+INCID Box
+---------
+
+The ‘INCID’ box displays summary information for each INCID in the database, including area, perimeter, date created and date last modified as shown in the figure :ref:`fidUIIS`.
+
+.. Note:: If the user is not configured, the ‘By’ fields will display their Windows login. For details on configuring users, see section 3.1.
+
+.. _figUIIS:
+
+.. figure:: ../images/figures/UserInterfaceIncidSection.png
+	:align: center
+
+	INCID Section
+
+* ‘Reason’ and ‘Process’ are required fields for all updates and are used on the History tab to indicate why the record was last updated. These fields are sticky i.e. the selected reason and process will be used for all updates in the current session unless they are altered manually.
+
+IHS Tab
+-------
+
+The IHS tab displays the IHS details for the current database record as shown in the figure :Ref:`figUIIT`.
+
+.. _figUIIT:
+
+.. figure:: ../images/figures/UserInterfaceIHSTab.png
+	:align: center
+
+	IHS Tab
+
+* ‘Category’ and ‘NVC’ drop-down lists are used to filter the ‘Habitat’ drop-down list to relevant IHS codes. The entries in these fields are not saved to the database.
+* The drop-down lists in the IHS Matrix, IHS Formation, IHS Management and IHS Complex boxes allow you to define the habitat according to the SERC IHS guidelines.
+* ‘IHS Summary’ is automatically generated based upon the options selected from the preceding drop-down lists.
+* ‘Legacy Habitat’ is the pre-IHS habitat code.
+
+Details Tab
+-----------
+
+Click on ‘Details’ to display the Details tab as shown in the figure :ref:`figUIDT`.
+
+.. _figUIDT:
+
+.. figure:: ../images/figures/UserInterfaceDetailsTab.png
+	:align: center
+
+	Details Tab
+
+* ‘BAP Habitats’ is automatically updated based upon the habitat code selected on the ‘IHS’ tab. For new BAPhabitats, ‘Determination Quality’ and ‘Interpretation Quality’ must be entered.
+* ‘Potential BAP Habitats’ allows you to define other BAP habitats which may also be present within the BAP habitat. An INCID may have a potential BAP habitat even if no BAP habitats are present.
+* ‘General Comments’ is a text field which allows you to enter any additional comments up to 254 characters.
+* ‘Maps’ contains two drop-down lists:
+* ‘Boundary Map’ defines the source data used to identify the boundary.
+* ‘Digitisation Map’ defines the map data used to digitise the boundary.
+* ‘BiositeName’ is a text field which allows you to enter the name of the biosite.
+
+Sources Tab
+-----------
+
+Click on ‘Sources’ to display the Sources tab as shown in the figure :ref:`figUIST`. Up to three sources can be defined for each INCID.
+
+.. _figUIST:
+
+.. figure:: ../images/figures/UserInterfaceSourcesTab.png
+	:align: center
+
+	Sources Tab
+
+* ‘Name’ contains a list of data sources. For details on adding new sources, see section 3.1.
+* ‘Vague Date’ allows you to enter the date of the dataset. This can be either a precise date e.g. 01/04/2010 or a vague date e.g. Spring 2010-Summer 2010, 1980-2010 or ‘Unknown’. For details on defining vague dates, see section 2.8.1.3.
+* ‘Habitat Class’ defines the habitat classification used for this data source. If no habitat classification is used, select ‘Not Applicable’.
+* ‘Habitat Type’ defines the type of habitat. This list is filtered based upon the habitat class.
+* ‘Boundary Imp.’ sets the importance of the source data in determining the habitat boundary.
+* ‘Habitat Imp.’ sets the importance of the source data in determining the habitat type.
+
+.. Note::
+
+	* If the default date for the selected data source has been configured, the ‘Vague Date’ field will be updated to the default date. If the default date has not been defined, then the ‘Vague Date’ field must be updated manually.
+	* For boundary importance and habitat importance, there must only be one source set as ‘Primary’ or ‘Secondary’ for each field.
+
+History Tab
+-----------
+
+The History tab displays a list of modifications made to the current INCID and the associated TOIDs. Each entry details what modification was made, when and by whom as shown in Figure 20. Entries are shown in descending date order. The number of entries can be configured in the Options, see section 2.8.1.
+
+.. _figUIHT:
+
+.. figure:: ../images/figures/UserInterfaceHistoryTab.png
+	:align: center
+
+	History Tab
