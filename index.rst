@@ -7,23 +7,19 @@
 HLU GIS Tool User Manual
 ************************
 
-Contents
-========
-
 .. toctree:: `Table of Contents`
    :maxdepth: 2
    :numbered:
-
-.. raw:: latex
-
-	\listoffigures
-	\listoftables
 
    introduction/introduction
    interface/interface
    database/database
    appendix/appendix
 
+.. raw:: latex
+
+	\listoffigures
+	\listoftables
 
 Indices and tables
 ==================
