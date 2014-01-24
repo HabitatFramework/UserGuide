@@ -8,14 +8,9 @@ Contents
 
 .. raw:: latex
 
-	\pagenumbering{roman}
-	\cleardoublepage
-	% \phantomsection
 	\addcontentsline{toc}{chapter}{\listfigurename}
 	\listoffigures
 	\renewcommand\contentsname{Table of Contents}
-	\newpage
-	\pagenumbering{arabic}
 
 .. toctree::
    :maxdepth: 2
@@ -25,6 +20,14 @@ Contents
    interface/interface
    database/database
    appendix/appendix
+
+
+.. only:: html
+
+	Todo List
+	=========
+
+	.. todolist::
 
 .. only:: html
 
