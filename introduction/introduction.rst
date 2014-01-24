@@ -62,6 +62,10 @@ The HLU GIS Tool has been optimised as far as possible and there are no further 
 
 The code for the HLU GIS Tool is ‘open source’.
 
+.. raw:: latex
+
+	\newpage
+
 Optimising Performance
 ======================
 
@@ -126,6 +130,10 @@ Only one copy of the database and the GIS layer should be used to avoid data bec
 Habitat data must not be edited directly in either the database or the GIS layer. Any modifications made outside the HLU GIS Tool could cause data corruption particularly if unique identifiers are altered.
 
 However, if additional entries are required in the lookup tables, these may be added to the database directly. It is essential that the structure of these tables is not altered and we recommend that any updates to the data in these tables are carried out solely by the database administrator.
+
+.. raw:: latex
+
+	\newpage
 
 Recommended User Knowledge
 ==========================

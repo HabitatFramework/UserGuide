@@ -14,6 +14,10 @@ It is essential that the following guidelines are followed to ensure that the to
 * :strong:`DO` ensure that the HLU GIS layer contains polygons for all INCIDs in the HLU database.
 * For ArcGIS users, :strong:`DO` use a file geodatabase or personal geodatabase to store spatial information. :strong:`DO NOT` use a shapefile as this affects performance.
 
+.. raw:: latex
+
+	\newpage
+
 HLU GIS Tool Window
 ===================
 
@@ -28,6 +32,10 @@ Once the HLU GIS Tool has been configured, the tool will start the associated GI
 	HLU GIS Tool window
 
 The following sections provide some guidelines for use and summarise the menu functionality. All menu functions are also available on the toolbar and the relevant icon is shown next to each heading.
+
+.. raw:: latex
+
+	\newpage
 
 File Menu
 =========
@@ -58,18 +66,14 @@ The 'Export Descriptions' checkbox replaces habitat codes with textual descripti
 	:height: 16px
 	:width: 16px
 
-.. raw:: latex
-
-	\newpage
-
 |exit| Exit
 -----------
 
+Exits the HLU GIS tool and allows you to decide whether or not to close the GIS window.
+
 .. raw:: latex
 
-	\pagebreak
-
-Exits the HLU GIS tool and allows you to decide whether or not to close the GIS window.
+	\newpage
 
 Edit Menu
 =========
@@ -137,6 +141,10 @@ To perform a bulk update:
 
 	HLU Main Window in Bulk Update Mode
 
+.. raw:: latex
+
+	\newpage
+
 View Menu
 =========
 
@@ -189,6 +197,10 @@ Sets ArcGIS or MapInfo as the active window but does not alter its size.
 Zooms to the current database selection in the GIS window.
 
 .. Warning:: This process may take a long time depending upon the layer size, the number of selected records and their geographical distribution.
+
+.. raw:: latex
+
+	\newpage
 
 Select Menu
 ===========
@@ -270,6 +282,10 @@ Filters the database records to retrieve the attributes associated with the sele
 Select a polygon on the map and go to ‘Get Map Selection’ to select the database records.
 
 Once the records are filtered in the database, if all the polygons are part of the same INCID, ‘Select by INCID’ allows you to expand the map selection to include all polygons belonging to that INCID.
+
+.. raw:: latex
+
+	\newpage
 
 Split/Merge Menu
 ================
@@ -426,6 +442,10 @@ To perform a physical merge:
 
 .. Note:: Only fragments belonging to the same TOID can be merged in a single operation. If fragments for several TOIDs need to be merged, the operation must be repeated for each TOID.
 
+.. raw:: latex
+
+	\newpage
+
 Tools Menu
 ==========
 
@@ -497,6 +517,10 @@ These fields allow you to define how vague dates, such as 'Spring 2010-Autumn 20
 
  
 The default value for the ‘Vague Date Delimiter’ is a hyphen ( - ). This can be altered to any character, however it must not be the same delimiter used by your computer to enter precise dates, such as 01/04/2010. The default delimiter used by Windows for English-format dates is a forward slash ( / ).
+
+.. raw:: latex
+
+	\newpage
 
 Data
 ====
