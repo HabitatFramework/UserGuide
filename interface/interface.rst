@@ -137,7 +137,7 @@ View Menu
 	:width: 16px
 
 |winmaximise| Maximise GIS window
-------------------------------
+---------------------------------
 
 Maximises the ArcGIS or MapInfo window and sets it as the active window.
 
