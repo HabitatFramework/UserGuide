@@ -483,11 +483,9 @@ Database Options
 	* Potential BAP Habitats
 	* Sources
 
-	For example::
+.. Warning::
 
-		If the bulk update record has only 1 source record completed then, for
-		each of the selected records, source 1 will be updated and if the
-		selected record has data entered in sources 2 and 3, it will be deleted.
+	If the 'Delete Empty Bulk Update Rows' option is checked and a bulk update record has only 1 source record completed then, for each of the selected records, source 1 will be updated and if the selected record has data entered in sources 2 and 3, it will be deleted.
 
 GIS Options
 ^^^^^^^^^^^
