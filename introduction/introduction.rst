@@ -33,17 +33,39 @@ Requirement for Tool
 
 	Tip
 
-.. note::
-
-	Note
-
 .. hint::
 
 	Hint
 
+.. note::
+
+	Note
+
 ____
 
 
+.. topic:: Test topic
+
+	Topic text
+
+----
+
+
+.. hlist::
+   :columns: 3
+
+	* A list of
+	* short items
+	* that should be
+	* displayed
+	* horizontally
+     
+----
+
+.. versionadded:: 1.0.5
+	The *Switch GIS layer* function.
+
+----
 
 -a	option a
 -b	option b
