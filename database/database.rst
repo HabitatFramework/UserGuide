@@ -19,6 +19,10 @@ Additional sources should be added to the ‘lut_sources’ table by the databas
 * ‘source_date_default’ is an optional field. If a date is entered, the ‘Vague Date’ field will be overwritten with this value when this data source is selected. If this field is blank, the existing entry in the ‘Vague Date’ field will not be altered.
 * ‘sort_order’ determines the order names are displayed in the ‘Name’ drop-down list.
 
+.. raw:: latex
+
+	\newpage
+
 Adding Users
 ============
 
@@ -37,6 +41,10 @@ Each user of the HLU GIS Tool should be added to the ‘lut_user’ table by the
 * ‘sort_order’ determines the order names would be displayed in drop-down lists. This field is not currently used.
 
 Users will be able to use the tool even if their user details have not been entered into the lut_user table, however the ‘By’ fields in the INCID box and History tab will display the login ID and bulk updates will be disabled.
+
+.. raw:: latex
+
+	\newpage
 
 Configuring Exports
 ===================
@@ -79,5 +87,6 @@ The ‘exports_fields’ table shown in the figure :ref:`figDTEF` defines which 
 
 * ‘field ordinal’ sets the order of the fields in the exported GIS layer.
 * ‘fields_count’ allows you to determine the number of child records to be exported.
+
 
 .. Note:: As shown in the example in the figure :ref:`figDTEF`, geometry fields should not be included. This includes: obj, shape, perimeter, area, x, y etc. These fields will be added automatically to the exported layer.

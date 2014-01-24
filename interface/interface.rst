@@ -132,6 +132,8 @@ To perform a bulk update:
 
 * Enter the updated details in the IHS, Details, and Sources tabs, then click Apply. These fields will be updated for all the selected INCIDs.
 
+
+
 .. Warning:: If ‘Delete Empty Bulk Update Rows’ is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. For details, see section 2.8.1.1.
 
 .. _figUIBU:
@@ -196,6 +198,8 @@ Sets ArcGIS or MapInfo as the active window but does not alter its size.
 
 Zooms to the current database selection in the GIS window.
 
+
+
 .. Warning:: This process may take a long time depending upon the layer size, the number of selected records and their geographical distribution.
 
 .. raw:: latex
@@ -242,6 +246,7 @@ Allows you to filter the database records using the query builder shown in the f
 Once you have entered the values for the current row, click on another row in the query builder to confirm the entry and enable the ‘OK’ button.
 
 If you have made a mistake when entering the selection criteria, click on the grey box to the left of ‘Boolean Operator’ to select the row, then press the ‘Delete’ key on your keyboard to remove it.
+
 
 .. Tip:: It will typically be quicker to select data from these fields in the GIS, then use ‘Get Map Selection’.
 
@@ -383,6 +388,7 @@ To perform a physical split:
 * Select one of the options in the ‘Process’ list.
 * Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
 
+
 .. note::
 
 	* Only one polygon should be split in a single operation. Splitting multiple polygons will cause database synchronisation issues. 
@@ -439,6 +445,7 @@ To perform a physical merge:
 	:align: center
 
 	Physical Merge – Before (left) and After (right)
+
 
 .. Note:: Only fragments belonging to the same TOID can be merged in a single operation. If fragments for several TOIDs need to be merged, the operation must be repeated for each TOID.
 
@@ -598,6 +605,7 @@ Click on ‘Sources’ to display the Sources tab as shown in the figure :ref:`f
 * ‘Habitat Type’ defines the type of habitat. This list is filtered based upon the habitat class.
 * ‘Boundary Imp.’ sets the importance of the source data in determining the habitat boundary.
 * ‘Habitat Imp.’ sets the importance of the source data in determining the habitat type.
+
 
 .. Note::
 
