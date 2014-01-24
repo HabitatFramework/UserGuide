@@ -8,10 +8,14 @@ Contents
 
 .. raw:: latex
 
-	\cleardoublepage
-	% \phantomsection
+	\pagenumbering{roman}
+..	\cleardoublepage
+..	% \phantomsection
 	\addcontentsline{toc}{chapter}{\listfigurename}
 	\listoffigures
+	\renewcommand\contentsname{Table of Contents}
+	\newpage
+	\pagenumbering{arabic}
 
 .. toctree::
    :maxdepth: 2
