@@ -5,7 +5,7 @@ User Interface
 DOs and DON’Ts
 ================
 
-It is essential that the following guidelines are followed to ensure that the tool runs smoothly.
+It is essential that the following guidelines are followed to ensure that the tool runs smoothly:
 
 * :strong:`DO` close all instances of ArcGIS or MapInfo before the tool launching the tool. The tool will automatically communicate with the correct instance; however multiple instances will require more memory and will therefore affect tool performance.
 * :strong:`DO NOT` remove the HLU layer from the map while the tool is running.
@@ -120,7 +120,7 @@ To perform a bulk update:
 
 * Enter the updated details in the IHS, Details, and Sources tabs, then click Apply. These fields will be updated for all the selected INCIDs.
 
-.. Note:: If ‘Delete Empty Bulk Update Rows’ is checked, child records will be deleted if these fields are not completed in the bulk update form. For details, see section 2.8.1.1.
+.. Warning:: If ‘Delete Empty Bulk Update Rows’ is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. For details, see section 2.8.1.1.
 
 .. _figUIBU:
 
@@ -329,13 +329,12 @@ To perform a physical split:
 MapInfo
 """""""
 
-.. sidebar:: Note
-
-	The Cosmetic layer should be used due to the time required for MapInfo to add a new polygon to the full HLU layer.
-
 To perform a physical split:
 
 * Set the Cosmetic layer as ‘Editable’ and draw the polygon to split by.
+
+.. Tip:: The Cosmetic layer should be used due to the time required for MapInfo to add a new polygon to the full HLU layer.
+
 * Set the HLU layer as ‘Editable’.
 * Select the polygon you wish to split and go to Objects > Set Target.
 * Select the polygon in the Cosmetic layer and go to Objects > Split.
@@ -457,6 +456,7 @@ Database Options
 	* Sources
 
 	For example::
+
 		If the bulk update record has only 1 source record completed then, for
 		each of the selected records, source 1 will be updated and if the
 		selected record has data entered in sources 2 and 3, it will be deleted.
