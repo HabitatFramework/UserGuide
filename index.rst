@@ -9,8 +9,8 @@ Contents
 .. raw:: latex
 
 	\pagenumbering{roman}
-..	\cleardoublepage
-..	% \phantomsection
+	\cleardoublepage
+	% \phantomsection
 	\addcontentsline{toc}{chapter}{\listfigurename}
 	\listoffigures
 	\renewcommand\contentsname{Table of Contents}
