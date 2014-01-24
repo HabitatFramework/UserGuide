@@ -202,7 +202,11 @@ Allows you to filter the database records using the query builder shown in the f
 	HLU Query Builder
 
 * Boolean Operator allows you to perform logical selections using:
+
 	* 'AND', 'AND NOT', 'OR', 'OR NOT'.
+
+.. Note:: The value of the ‘Boolean Operator’ field on the first row is not used.
+
 * ‘(‘ and ‘)’ fields allow you to add additional brackets as shown in the example in Figure 6 to define how the query is executed.
 * ‘Table’ and ‘Column’ define the table and field to be searched.
 * ‘Operator’ provides a drop-down list of the available operators as shown in the figure :ref:`figSOL`.
@@ -215,13 +219,11 @@ Allows you to filter the database records using the query builder shown in the f
 
 	List of Operators
 
-.. Note:: The value of the ‘Boolean Operator’ field on the first row is not used.
-
 Once you have entered the values for the current row, click on another row in the query builder to confirm the entry and enable the ‘OK’ button.
 
 If you have made a mistake when entering the selection criteria, click on the grey box to the left of ‘Boolean Operator’ to select the row, then press the ‘Delete’ key on your keyboard to remove it.
 
-.. Note:: If IHS category and/or IHS summary are enabled in the Options menu, it will be quicker to select data from these fields in the GIS, then use ‘Get Map Selection’.
+.. Tip:: It will typically be quicker to select data from these fields in the GIS, then use ‘Get Map Selection’.
 
 .. |clearfilter| image:: ../images/icons/ClearFilter.png
 	:height: 16px
@@ -294,10 +296,10 @@ Physical Split
 
 Physical split creates a new TOID fragment in the database based upon a single TOID which has been split in the GIS layer.
 
-To perform a physical split:
-
 ArcGIS
 """"""
+
+To perform a physical split:
 
 * On the ‘Editor’ toolbar, click on ‘Editor’ and select ‘Start Editing’.
 * Select the polygon you wish to split.
@@ -331,6 +333,8 @@ MapInfo
 
 	The Cosmetic layer should be used due to the time required for MapInfo to add a new polygon to the full HLU layer.
 
+To perform a physical split:
+
 * Set the Cosmetic layer as ‘Editable’ and draw the polygon to split by.
 * Set the HLU layer as ‘Editable’.
 * Select the polygon you wish to split and go to Objects > Set Target.
@@ -357,6 +361,7 @@ MapInfo
 * Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
 
 .. note::
+
 	* Only one polygon should be split in a single operation. Splitting multiple polygons will cause database synchronisation issues. 
 	* If several polygons have been split, select the fragments for one original polygon and split using the tool. Repeat this operation for the remaining polygons.
 	* Ensure that the physical split is completed in the database prior to commencing any other operations such as ‘Select by attributes…’ to avoid database synchronisation issues.
@@ -376,6 +381,7 @@ Logical Merge
 Logical merge combines the selected TOIDs on the map with the INCID selected from the list.
 
 To perform a logical merge:
+
 * Click ‘Switch to GIS Window’ and select the polygons you wish to merge and a polygon from the INCID you wish to merge them with in the GIS layer.
 * Return to the HLU main window and click ‘Get Map Selection’.
 * Select one of the options in the ‘Process’ list.
@@ -398,10 +404,11 @@ Physical Merge
 Physical merge combines fragments of a single TOID into a single polygon in the GIS layer.
 
 To perform a physical merge:
-* Select two or more fragments from one TOID in the GIS layer as shown in the figure :Ref:`PMD` (left).
+
+* Select two or more fragments from one TOID in the GIS layer as shown in the figure :Ref:`figPMD` (left).
 * Return to the HLU main window and click ‘Get Map Selection’.
 * Select one of the options in the ‘Process’ list.
-* Click on ‘Merge Features’. The polygons will be combined in the GIS layer as shown in figure :Ref:`PMD` (right).
+* Click on ‘Merge Features’. The polygons will be combined in the GIS layer as shown in figure :Ref:`figPMD` (right).
 
 .. _figPMD:
 
@@ -441,11 +448,18 @@ Database Options
 
 	This affects the following sections of the main window:
 
-	* IHS Matrix, IHS Formation, IHS Management, IHS Complex, BAP Habitat, Potential BAP Habitats, Sources.
+	* IHS Matrix
+	* IHS Formation
+	* IHS Management
+	* IHS Complex
+	* BAP Habitat
+	* Potential BAP Habitats
+	* Sources
 
-::
-
-	Example If the bulk update record has only 1 source record completed. For each of the selected records, source 1 will be updated and if the selected record has data entered in sources 2 and 3, it will be deleted.
+	For example::
+		If the bulk update record has only 1 source record completed then, for
+		each of the selected records, source 1 will be updated and if the
+		selected record has data entered in sources 2 and 3, it will be deleted.
 
 GIS Options
 ^^^^^^^^^^^
@@ -486,7 +500,7 @@ Required fields are highlighted in red on each tab. The ‘Apply’ button will 
 INCID Box
 ---------
 
-The ‘INCID’ box displays summary information for each INCID in the database, including area, perimeter, date created and date last modified as shown in the figure :ref:`fidUIIS`.
+The ‘INCID’ box displays summary information for each INCID in the database, including area, perimeter, date created and date last modified as shown in the figure :ref:`figUIIS`.
 
 .. Note:: If the user is not configured, the ‘By’ fields will display their Windows login. For details on configuring users, see section 3.1.
 
