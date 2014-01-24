@@ -58,12 +58,16 @@ The 'Export Descriptions' checkbox replaces habitat codes with textual descripti
 	:height: 16px
 	:width: 16px
 
-.. raw:: pdf
+.. raw:: latex
 
-	PageBreak
+	\newpage
 
 |exit| Exit
 -----------
+
+.. raw:: latex
+
+	\pagebreak
 
 Exits the HLU GIS tool and allows you to decide whether or not to close the GIS window.
 
