@@ -8,11 +8,13 @@ HLU GIS Tool User Manual
 ************************
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :numbered:
 
    introduction/introduction
    interface/interface
+   database/database
+   appendix/appendix
 
 
 Indices and tables
