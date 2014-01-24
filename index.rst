@@ -22,9 +22,9 @@ Contents
    database/database
    appendix/appendix
 
-.. raw:: Not latex
+.. only:: html
 
-	Indices and tables
+	Indices and Search
 	==================
 
 	* :ref:`genindex`
