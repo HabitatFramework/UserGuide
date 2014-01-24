@@ -11,10 +11,10 @@ HLU GIS Tool User Manual
    :maxdepth: 2
    :numbered:
 
-introduction/introduction
-interface/interface
-database/database
-appendix/appendix
+	introduction/introduction
+	interface/interface
+	database/database
+	appendix/appendix
 
 .. raw:: latex
 
