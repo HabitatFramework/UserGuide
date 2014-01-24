@@ -27,7 +27,8 @@ Once the HLU GIS Tool has been configured, the tool will start the associated GI
 
 .. figure:: ../images/figures/UserInterfaceMainWindow.png
 	:align: center
-	:height: 250px
+	:height: 350px
+	:width: 567px
 
 	HLU GIS Tool window
 
@@ -140,6 +141,7 @@ To perform a bulk update:
 
 .. figure:: ../images/figures/UserInterfaceBulkUpdate.png
 	:align: center
+	:scale: 60
 
 	HLU Main Window in Bulk Update Mode
 
@@ -231,7 +233,7 @@ Allows you to filter the database records using the query builder shown in the f
 
 .. Note:: The value of the ‘Boolean Operator’ field on the first row is not used.
 
-* ‘(‘ and ‘)’ fields allow you to add additional brackets as shown in the example in Figure 6 to define how the query is executed.
+* ‘(‘ and ‘)’ fields allow you to add additional brackets as shown in the example in the figure :ref:`figQB` to define how the query is executed.
 * ‘Table’ and ‘Column’ define the table and field to be searched.
 * ‘Operator’ provides a drop-down list of the available operators as shown in the figure :ref:`figSOL`.
 * Value’ is the value to search for. Values can either be entered as text or selected from the drop-down list (where available).
@@ -559,6 +561,7 @@ The IHS tab displays the IHS details for the current database record as shown in
 
 .. figure:: ../images/figures/UserInterfaceIHSTab.png
 	:align: center
+	:scale: 25
 
 	IHS Tab
 
@@ -576,6 +579,7 @@ Click on ‘Details’ to display the Details tab as shown in the figure :ref:`f
 
 .. figure:: ../images/figures/UserInterfaceDetailsTab.png
 	:align: center
+	:scale: 50
 
 	Details Tab
 

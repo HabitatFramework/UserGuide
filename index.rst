@@ -7,7 +7,7 @@
 HLU GIS Tool User Manual
 ************************
 
-.. toctree::
+.. toctree:: `Table of Contents`
    :maxdepth: 3
    :numbered:
 
