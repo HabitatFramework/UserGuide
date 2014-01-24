@@ -63,6 +63,10 @@ The 'Export Descriptions' checkbox replaces habitat codes with textual descripti
 
 Exits the HLU GIS tool and allows you to decide whether or not to close the GIS window.
 
+.. raw:: pdf
+
+        PageBreak
+
 Edit Menu
 =========
 

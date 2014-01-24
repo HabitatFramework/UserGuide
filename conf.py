@@ -198,6 +198,8 @@ latex_elements = {
 #'preamble': '',
 }
 
+pdf_break_level = 1
+
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto/manual]).
