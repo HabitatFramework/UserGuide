@@ -5,6 +5,8 @@ User Menus
 
 The following sections summarise the menu functionality and provide some guidelines for their use. Where menu functions are also available on one of the toolbars the relevant icon is shown next to each heading.
 
+.. _file_menu:
+
 File Menu
 =========
 
@@ -18,7 +20,7 @@ File Menu
 Allows you to export data from the HLU database to a GIS layer using a pre-defined export format.
 
 .. seealso::
-	See :ref:`Export Window` for more information.
+	See :ref:`export_window` for more information.
 
 .. |exit| image:: ../images/icons/FileExit.png
 	:height: 16px
@@ -32,6 +34,8 @@ Exits the HLU GIS tool and allows you to decide whether or not to close the GIS 
 .. raw:: latex
 
 	\newpage
+
+.. _edit_menu:
 
 Edit Menu
 =========
@@ -165,6 +169,8 @@ Zooms to the current database selection in the GIS window.
 
 	\newpage
 
+.. _select_menu:
+
 Select Menu
 ===========
 
@@ -250,6 +256,8 @@ Once the records are filtered in the database, if all the polygons are part of t
 .. raw:: latex
 
 	\newpage
+
+.. _split_merge_menu:
 
 Split/Merge Menu
 ================
@@ -412,6 +420,8 @@ To perform a physical merge:
 
 	\newpage
 
+.. _tools_menu:
+
 Tools Menu
 ==========
 
@@ -425,7 +435,5 @@ Tools Menu
 Allows users to alter some aspects of the HLU Tool configuration.
 
 .. seealso::
-	See :ref:`Options Menu` for more information.
+	See :ref:`options_window` for more information.
 
-
-----

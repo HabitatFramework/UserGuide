@@ -2,6 +2,8 @@
 Appendix
 ********
 
+.. _optimising_performance:
+
 Optimising Performance
 ======================
 
@@ -68,6 +70,8 @@ Habitat data must not be edited directly in either the database or the GIS layer
 However, if additional entries are required in the lookup tables, these may be added to the database directly. It is essential that the structure of these tables is not altered and we recommend that any updates to the data in these tables are carried out solely by the database administrator.
 
 
+.. _known_issues:
+
 Known Issues and Bugs
 =====================
 
@@ -88,5 +92,3 @@ Known Issues and Bugs
 
 	* Ensure that the database and map layer are kept in sync so this situation does not occur.
 
-
-----

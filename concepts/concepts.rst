@@ -36,5 +36,3 @@ GIS layer and Database Separation
 Splits and Merges
 =================
 
-
-----

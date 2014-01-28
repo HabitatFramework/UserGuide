@@ -2,6 +2,8 @@
 User Interface
 **************
 
+.. _dos_and_donts:
+
 DOs and DON’Ts
 ================
 
@@ -31,6 +33,8 @@ DO NOTs
 .. raw:: latex
 
 	\newpage
+
+.. _main_window:
 
 HLU Tool Window
 ===============
@@ -146,6 +150,8 @@ The History tab displays a list of modifications made to the current INCID and t
 
 	\newpage
 
+.. _options_window:
+
 Options Window
 ==============
 
@@ -159,7 +165,7 @@ Allows users to alter the HLU configuration. There are three categories of optio
 	HLU Options Dialog
 
 Database Options
-^^^^^^^^^^^^^^^^
+----------------
 
 * ‘Timeout’ sets the amount of time the tool will wait for the database to respond. The default value is 15. This value should be increased if an error occurs such as ‘The connection to the database timed out’.
 * ‘Page Size’ sets how many records are retrieved from the database and stored in memory. The default value is 100. Increasing this value can improve performance when browsing records, however this will increase the amount of RAM required by the application and significant increases in the page size value could cause the tool to stop responding.
@@ -181,7 +187,7 @@ Database Options
 	If the 'Delete Empty Bulk Update Rows' option is checked and a bulk update record has only 1 source record completed then, for each of the selected records, source 1 will be updated and if the selected record has data entered in sources 2 and 3, it will be deleted.
 
 GIS Options
-^^^^^^^^^^^
+-----------
 
 * ‘History Columns’ allows you to select which additional columns from the GIS layer are displayed in the History tab for each update. If the box is unchecked, the field will not be displayed.
 * ‘Preferred GIS’ allows you to select whether the tool should use ArcGIS or MapInfo if both applications are installed on your computer. 
@@ -202,13 +208,14 @@ GIS Options
 	GIS Selection Warning Box
 
 Vague Date Season Names
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 These fields allow you to define how vague dates, such as 'Spring 2010-Autumn 2010' or '1989-2010', are entered so that they can be converted to dates in the HLU database.
 
  
 The default value for the ‘Vague Date Delimiter’ is a hyphen ( - ). This can be altered to any character, however it must not be the same delimiter used by your computer to enter precise dates, such as 01/04/2010. The default delimiter used by Windows for English-format dates is a forward slash ( / ).
 
+.. _export_window:
 
 Export Window
 =============
@@ -230,5 +237,3 @@ If the database records have been filtered, the 'Selected only' checkbox is auto
 
 The 'Export Descriptions' checkbox replaces habitat codes with textual descriptions. This feature is only available for ArcGIS users due to record length restrictions in MapInfo.
 
-
-----

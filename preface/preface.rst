@@ -63,9 +63,9 @@ Useful links
 
 Related community links:
 
-* `Users <http://forum.lrcs.org.uk/viewforum.php?id=24>`_ - Announcements, bug reports, user Q&A, and feature discussions.
-* `Administrators <>`_ - Release notes and installers for ArcGIS and MapInfo systems.
-* `Developers <https://github.com/HabitatFramework/HLUTool>`_ - Source code.
+* `Users <http://forum.lrcs.org.uk/viewforum.php?id=24>`_ - Announcements, bug reports, user Q&A and feature discussions.
+* `Administrators <https://github.com/HabitatFramework/HLUTool/releases>`_ - Release notes and installers for ArcGIS and MapInfo systems.
+* `Developers <https://github.com/HabitatFramework/HLUTool>`_ - Tool source code.
 * `Issues <https://github.com/HabitatFramework/HLUTool/issues>`_ - Known issues and existing change requests.
 
 
@@ -101,5 +101,3 @@ The following typographical conventions are used in this manual:
 .. caution::
 	Warnings where users should pay attention.
 
-
-----

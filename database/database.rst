@@ -2,6 +2,8 @@
 Database Configuration
 **********************
 
+.. _lookup_tables:
+
 Lookup Tables
 =============
 
@@ -144,6 +146,8 @@ IHS Habitats can be flagged as **local** in the ‘lut_ihs_habitat` table. The f
 
 	\newpage
 
+.. _configuring_exports:
+
 Configuring Exports
 ===================
 
@@ -208,3 +212,4 @@ The ‘exports_fields’ table shown in the figure :ref:`figDTEF` defines which 
 	Allows users to determine the number of child records to be exported.
 
 .. Note:: As shown in the example in the figure :ref:`figDTEF`, geometry fields should not be included. This includes: obj, shape, perimeter, area, x, y etc. These fields will be added automatically to the exported layer.
+
