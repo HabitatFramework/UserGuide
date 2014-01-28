@@ -16,9 +16,13 @@ Contents
    :maxdepth: 2
    :numbered:
 
+   preface/preface
    introduction/introduction
+   concepts/concepts
+   menus/menus
    interface/interface
    database/database
+   faq/faq
    appendix/appendix
 
 
@@ -26,7 +30,6 @@ Contents
 
 	Todo List
 	=========
-
 	.. todolist::
 
 .. only:: html
