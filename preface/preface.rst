@@ -50,6 +50,9 @@ The :doc:`../introduction/introduction` explains why the HLU Tool is needed, wha
 :doc:`../appendix/appendix` introduces tips for optimising performance and known issues with the tool.
 
 
+.. index::
+	single: Licensing
+
 Licensing
 =========
 
@@ -57,6 +60,9 @@ The code for the HLU GIS Tool is ‘open source’ and is released under `GPLv3 
 
 Please remember, however, that the tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefuly received. Enquiries can be made via the `ALERC forum <http://forum.lrcs.org.uk/viewforum.php?id=24>`_.
 
+
+.. index::
+	single: Useful links
 
 Useful links
 ============
@@ -68,6 +74,9 @@ Related community links:
 * `Developers <https://github.com/HabitatFramework/HLUTool>`_ - Tool source code.
 * `Issues <https://github.com/HabitatFramework/HLUTool/issues>`_ - Known issues and existing change requests.
 
+
+.. index::
+	single: Acknowledgements
 
 Acknowledgements
 ================
@@ -89,7 +98,7 @@ The following typographical conventions are used in this manual:
 :menuselection:`Tools... --> About`
 	Indicates a menu choice, or a combination of menu choices, tab selections or GUI buttons.
 
-:file:`C:\Program Files\HLU Tool`
+:file:`C:\\Program Files\\HLU Tool`
 	Indicates a filename or directory name.
 
 .. tip::

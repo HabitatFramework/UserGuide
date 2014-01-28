@@ -1,3 +1,6 @@
+.. index::
+	single: Windows
+
 **************
 User Interface
 **************
@@ -9,22 +12,22 @@ DOs and DON’Ts
 
 It is essential that the following guidelines are followed to ensure that the tool runs smoothly:
 
-DOs
---
+DOs --
 
 * :strong:`DO` close all instances of MapInfo before launching the tool as the tool may try and communicate with the wrong instance of MapInfo.
 * :strong:`DO` close all instances of ArcGIS before launching the tool. Unlike with MapInfo, the tool will automatically communicate with the correct instance of ArcGIS, however multiple instances will require more memory and may therefore affect tool performance.
 * For ArcGIS users, :strong:`DO` use a file geodatabase or personal geodatabase to store spatial information. :strong:`DO NOT` use a shapefile as this affects performance.
 
-DO NOTs
--------
+DO NOTs --
 
 * :strong:`DO NOT` remove the HLU layer from the map while the tool is running.
 * :strong:`DO NOT` close the associated GIS while the tool is running, otherwise the tool will display an error message.
 * :strong:`DO NOT` create or open another map document or workspace in the associated GIS window while the tool is running.
 
 
-.. versionadded:: 1.0.5
+.. note::
+
+	New in version 1.0.5:
 	
 	* It is now possible to use a HLU GIS layer containing only a subset of all the incids in the HLU database.
 	* It is also possible to switch between different HLU GIS layers present in the open document or workspace using the *Switch GIS layer* function.
@@ -33,6 +36,9 @@ DO NOTs
 .. raw:: latex
 
 	\newpage
+
+.. index::
+	single: Windows; Main window
 
 .. _main_window:
 
@@ -152,6 +158,9 @@ The History tab displays a list of modifications made to the current INCID and t
 
 	\newpage
 
+.. index::
+	single: Windows; Options window
+
 .. _options_window:
 
 Options Window
@@ -216,6 +225,14 @@ These fields allow you to define how vague dates, such as 'Spring 2010-Autumn 20
 
  
 The default value for the ‘Vague Date Delimiter’ is a hyphen ( - ). This can be altered to any character, however it must not be the same delimiter used by your computer to enter precise dates, such as 01/04/2010. The default delimiter used by Windows for English-format dates is a forward slash ( / ).
+
+
+.. raw:: latex
+
+	\newpage
+
+.. index::
+	single: Windows; Export window
 
 .. _export_window:
 

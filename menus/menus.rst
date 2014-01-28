@@ -1,9 +1,14 @@
+.. index::
+	single: Menus
 
-**********
-User Menus
-**********
+*****
+Menus
+*****
 
 The following sections summarise the menu functionality and provide some guidelines for their use. Where menu functions are also available on one of the toolbars the relevant icon is shown next to each heading.
+
+.. index::
+	single: Menus; File menu
 
 .. _file_menu:
 
@@ -34,6 +39,9 @@ Exits the HLU GIS tool and allows you to decide whether or not to close the GIS 
 .. raw:: latex
 
 	\newpage
+
+.. index::
+	single: Menus; Edit menu
 
 .. _edit_menu:
 
@@ -110,6 +118,9 @@ To perform a bulk update:
 
 	\newpage
 
+.. index::
+	single: Menus; View menu
+
 View Menu
 =========
 
@@ -168,6 +179,9 @@ Zooms to the current database selection in the GIS window.
 .. raw:: latex
 
 	\newpage
+
+.. index::
+	single: Menus; Select menu
 
 .. _select_menu:
 
@@ -256,6 +270,9 @@ Once the records are filtered in the database, if all the polygons are part of t
 .. raw:: latex
 
 	\newpage
+
+.. index::
+	single: Menus; Split/Merge menu
 
 .. _split_merge_menu:
 
@@ -419,6 +436,9 @@ To perform a physical merge:
 .. raw:: latex
 
 	\newpage
+
+.. index::
+	single: Menus; Tools menu
 
 .. _tools_menu:
 

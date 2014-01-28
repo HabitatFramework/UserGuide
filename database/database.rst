@@ -1,8 +1,21 @@
-**********************
-Database Configuration
-**********************
+******************
+Database Structure
+******************
+
+.. index::
+	single: Data tables
+
+.. _data_tables:
+
+Data Tables
+===========
+
 
 .. _lookup_tables:
+
+.. index::
+	single: Lookup tables
+	see: lut; Lookup tables
 
 Lookup Tables
 =============
@@ -15,6 +28,9 @@ Tables in the database prefixed by `lut_` are *lookup tables* and are used in ma
 .. caution::
 	Lookup table values are relevant to the **whole** database system and hence will affect **all** users of that database.
 
+
+.. index::
+	single: Adding; Users
 
 Users
 -----
@@ -52,6 +68,9 @@ New users of the HLU GIS Tool can be added to the ‘lut_user’ table. The form
 	Bulk update permission should only be assigned to **expert** users and should only be used with caution as mistakes can have major affects on the data.
 
 
+.. index::
+	single: Adding; Sources
+
 Sources
 -------
 
@@ -82,6 +101,9 @@ Additional sources can be added to the ‘lut_sources’ table . The format of t
 	Existing source records cannot be removed from the 'lut_sources' table if they are referenced by any of the data records (i.e. if they have been used in any incid data records). This is because data integrity must be retained.
 
 
+.. index::
+	single: Adding; Processes
+
 Processes
 ---------
 
@@ -105,6 +127,9 @@ New processes can be added to the ‘lut_process’ table. The format of the tab
 :sort_order:
 	Determines the order processes are displayed in the 'Process' drop-down list in the main window.
 
+
+.. index::
+	single: Adding; IHS Habitats
 
 IHS Habitats
 ------------
@@ -147,6 +172,9 @@ IHS Habitats can be flagged as **local** in the ‘lut_ihs_habitat` table. The f
 	\newpage
 
 .. _configuring_exports:
+
+.. index::
+	single: Exports; Configuring
 
 Configuring Exports
 ===================

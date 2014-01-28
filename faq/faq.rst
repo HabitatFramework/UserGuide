@@ -1,3 +1,7 @@
+.. index::
+	single: faq
+	see: Frequently asked questions; faq
+
 **************************
 Frequently Asked Questions
 **************************
