@@ -35,19 +35,19 @@ Reading Guide
 
 This Preface explains a little about the HLU Tool, the community of people who develop and use it, and the licensing conditions for using and distributing it.
 
-The :doc:`introduction` explains why the HLU Tool is needed, what it does and where it comes from.
+The :doc:`..\introduction\introduction` explains why the HLU Tool is needed, what it does and where it comes from.
 
-:doc:`concepts` is a quick tutorial on the key concepts of the HLU Tool.
+:doc:`..\concepts\concepts` is a quick tutorial on the key concepts of the HLU Tool.
 
-:doc:`menus` describes all the user interface menu items and buttons on the HLU Tool.
+:doc:`..\menus\menus` describes all the user interface menu items and buttons on the HLU Tool.
 
-:doc:`interface` describes all the user interface windows and components of the HLU Tool.
+:doc:`..\interface\interface` describes all the user interface windows and components of the HLU Tool.
 
-:doc:`database` outlines the database structure and how to adapt the data for local requirements.
+:doc:`..\database\database` outlines the database structure and how to adapt the data for local requirements.
 
-:doc:`faq` has a list of commonly asked questions and their answers.
+:doc:`..\faq\faq` has a list of commonly asked questions and their answers.
 
-:doc:`appendix` introduces tips for optimising performance and known issues with the tool.
+:doc:`..\appendix\appendix` introduces tips for optimising performance and known issues with the tool.
 
 
 Licensing
