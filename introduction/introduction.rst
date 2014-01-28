@@ -2,6 +2,9 @@
 Introduction
 ************
 
+.. module:: introduction
+	:synopsis: Introduce the HLU Tool, why it is needed and it's history.
+
 What is the HLU Tool?
 =====================
 

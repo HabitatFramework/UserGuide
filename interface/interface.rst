@@ -48,6 +48,8 @@ Once the HLU GIS Tool has been configured, the tool will start the associated GI
 	:height: 350px
 	:width: 567px
 
+	HLU GIS Tool window
+
 
 Records can be viewed or updated through the main window of the HLU GIS Tool. The following sections summarise the details available for each record. 
 
