@@ -23,6 +23,7 @@ Contents
    interface/interface
    database/database
    faq/faq
+   glossary/glossary
    appendix/appendix
 
 
