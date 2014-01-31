@@ -15,7 +15,7 @@ The following sections summarise the menu functionality and provide some guideli
 File Menu
 =========
 
-.. image:: ../images/icons/UserInterfaceFileToolbar.png
+.. image:: ../images/figures/UserInterfaceFileToolbar.png
 
 .. |export| image:: ../images/icons/FileExport.png
 	:height: 16px
@@ -50,7 +50,7 @@ Exits the HLU GIS tool and allows users to decide whether or not to close the GI
 Edit Menu
 =========
 
-.. image:: ../images/icons/UserInterfaceMenuToolbar.png
+.. image:: ../images/figures/UserInterfaceMenuToolbar.png
 
 When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see section 3.2) and the spatial data must be editable in the GIS software.
 
@@ -105,7 +105,7 @@ Allows users to update the attributes for multiple selected database records sim
 View Menu
 =========
 
-.. image:: ../images/icons/UserInterfaceViewToolbar.png
+.. image:: ../images/figures/UserInterfaceViewToolbar.png
 
 .. |winmaximise| image:: ../images/icons/GisWinMaximise.png
 	:height: 16px
@@ -129,6 +129,7 @@ Aligns the HLU window to the top left of the screen and expands the GIS window t
 
 .. figure:: ../images/figures/WindowsSideBySide.png
 	:align: center
+	:scale: 50
 
 	Windows arranged side by side
 
@@ -171,7 +172,7 @@ Zooms to the current database selection in the GIS window.
 Select Menu
 ===========
 
-.. image:: ../images/icons/UserInterfaceSelectToolbar.png
+.. image:: ../images/figures/UserInterfaceSelectToolbar.png
 
 .. |selectbyattr| image:: ../images/icons/SelectByAttributes.png
 	:height: 16px
@@ -232,7 +233,7 @@ Once the records are filtered in the database, if all the polygons are part of t
 Split/Merge Menu
 ================
 
-.. image:: ../images/icons/UserInterfaceSplitMergeToolbar.png
+.. image:: ../images/figures/UserInterfaceSplitMergeToolbar.png
 
 .. Note:: Both options in this menu are disabled until the database records have been filtered and a process has been selected from the ‘Process’ drop-down list in the INCID box on the main window. For details on the INCID box, see section 2.9.1.
 
@@ -243,7 +244,10 @@ Split/Merge Menu
 |split| Split Features
 ----------------------
 
-Split features performs two types of split: Logical Split and Physical Split. Logical splits are used to isolate one or more features from one INCID into a new INCID so that they can be updated independently. Physical splits can be used to sub-divide a single feature, that has been split in the GIS layer, into one or more new TOID fragments in the database so that they can then be assigned different attributes.
+Split features performs two types of split:
+
+* Logical splits are used to isolate one or more features from one INCID into a new INCID so that they can be updated independently.
+* Physical splits can be used to sub-divide a single feature, that has been split in the GIS layer, into one or more new TOID fragments in the database so that they can then be assigned different attributes.
 
 .. |merge| image:: ../images/icons/MergeFeatures.png
 	:height: 16px
@@ -252,7 +256,10 @@ Split features performs two types of split: Logical Split and Physical Split. Lo
 |merge| Merge Features
 ----------------------
 
-Merge features performs two types of merge: Logical Merge and Physical Merge. Logical merges are used to combine two or more fragments selected in GIS into the INCID of one of the selected fragments by selecting it from a list. Physical merges will combine fragments of a single TOID into a single feature in the GIS layer.
+Merge features performs two types of merge:
+
+* Logical merges are used to combine two or more fragments selected in GIS into the INCID of one of the selected fragments by selecting it from a list.
+* Physical merges will combine fragments of a single TOID into a single feature in the GIS layer.
 
 
 .. raw:: latex
@@ -267,7 +274,7 @@ Merge features performs two types of merge: Logical Merge and Physical Merge. Lo
 Tools Menu
 ==========
 
-.. image:: ../images/icons/UserInterfaceToolsToolbar.png
+.. image:: ../images/figures/UserInterfaceToolsToolbar.png
 
 .. |options| image:: ../images/icons/Options.png
 	:height: 16px
@@ -279,5 +286,5 @@ Tools Menu
 Allows users to alter some aspects of the HLU Tool configuration.
 
 .. seealso::
-	:ref:`options_window` for more information.
+	See :ref:`options_window`  for more information.
 

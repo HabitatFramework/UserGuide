@@ -12,6 +12,8 @@ Concepts
 	single: toid_fragment_id
 	see: fragment; toid_fragment_id
 
+.. _mastermap:
+
 OS MasterMap Framework
 ======================
 
@@ -26,6 +28,8 @@ TOID_Fragment_Id
 .. index::
 	single: incid
 	see: Incremental Identifier; incid
+
+.. _incid:
 
 Incremental Identifier
 ======================
@@ -53,15 +57,19 @@ Splits and Merges
 .. index::
 	single: split
 
+.. _split:
+
 Split Features
 --------------
 
 Split features will performs two types of split depending upon the filter active in the tool. If one or more features from a single INCID are present in the current filter then the tool will perform a logical split. If two or more fragments from the same TOID and with the same TOID_Fragment_Id are present in the current filter then the tool will perform a physical split.
 
-.. Note:: If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and 'Get Map Selection' is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will automatically perform a physical split before displaying the attributes.
+.. Note:: If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and :guilabel:`Get Map Selection` is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will automatically perform a physical split before displaying the attributes.
 
 .. index::
 	single: logical split
+
+.. _logical_split:
 
 Logical Split
 ^^^^^^^^^^^^^
@@ -80,10 +88,18 @@ To perform a logical split:
 .. index::
 	single: physical split
 
+.. _physical_split:
+
 Physical Split
 ^^^^^^^^^^^^^^
 
 Physical split creates one or more new TOID fragments in the database based upon a single TOID which has been split in the GIS layer.
+
+.. note::
+
+	* Only one feature should be split in a single operation. Splitting multiple features will cause database synchronisation issues. 
+	* If several features have been split, select the fragments for one original feature and split using the tool. Repeat this operation for the remaining features.
+	* Ensure that the physical split is completed in the database prior to commencing any other operations such as ‘Select by attributes…’ to avoid database synchronisation issues.
 
 ArcGIS
 """"""
@@ -148,15 +164,11 @@ To perform a physical split:
 * Select one of the options in the ‘Process’ list.
 * Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
 
-.. note::
-
-	* Only one feature should be split in a single operation. Splitting multiple features will cause database synchronisation issues. 
-	* If several features have been split, select the fragments for one original feature and split using the tool. Repeat this operation for the remaining features.
-	* Ensure that the physical split is completed in the database prior to commencing any other operations such as ‘Select by attributes…’ to avoid database synchronisation issues.
-
 
 .. index::
 	single: merge
+
+.. _merge:
 
 Merge Features
 --------------
@@ -165,6 +177,8 @@ Merge features will performs two types of merge depending upon the filter active
 
 .. index::
 	single: Logical merge
+
+.. _logical_merge:
 
 Logical Merge
 ^^^^^^^^^^^^^
@@ -191,6 +205,8 @@ To perform a logical merge:
 
 .. index::
 	single: Physical merge
+
+.. _physical_merge:
 
 Physical Merge
 ^^^^^^^^^^^^^^

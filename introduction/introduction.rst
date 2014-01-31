@@ -13,8 +13,8 @@ The subsequent incorporation of the Ordnance Survey MasterMap boundaries and TOI
 
 	\newpage
 
-Solution
-========
+Proposed solution
+=================
 
 In 2009 exeGesIS Ltd was engaged to develop a new GIS-based application to manage habitat and land use data based upon an OS MasterMap framework. It was funded by the Local Record Centres (LRCs) in the South East of England in partnership with Natural England.
 
@@ -26,8 +26,8 @@ The application needed to provide a user interface between the spatial data data
 
 	\newpage
 
-Dataset structure
-=================
+Data structure
+==============
 
 Spatial data
 ------------
@@ -61,20 +61,20 @@ Due to the complexity of the attribute data required whilst simultaneously wishi
 
 .. table:: Effect of OS Mastermap Split (Attribute and Spatial Datasets)
 
-	+-----------------------+------------------------+----------------------------+
-	|                       | Original habitat layer | HLU attribute database and |
-	|                       |                        |    associated GIS Layer    |
-	+=======================+========================+============================+
-	| HLU Records           | 500                    | 500                        |
-	+-----------------------+------------------------+----------------------------+
-	| HLU Attributes [1]_   | 25,000                 | 25,000                     |
-	+-----------------------+------------------------+----------------------------+
-	| Spatial Features [2]_ |                        | 16,750                     |
-	+-----------------------+------------------------+----------------------------+
-	| Spatial Attributes    |                        | 100,500                    |
-	+-----------------------+------------------------+----------------------------+
-	| Total                 | 25,500                 | 142,750                    |
-	+-----------------------+------------------------+----------------------------+
+	+-----------------------+------------------------+-------------------------------------------------+
+	|                       | Original habitat layer | HLU attribute database and associated GIS Layer |
+	|                       |                        |                                                 |
+	+=======================+========================+=================================================+
+	| HLU Records           | 500                    | 500                                             |
+	+-----------------------+------------------------+-------------------------------------------------+
+	| HLU Attributes [1]_   | 25,000                 | 25,000                                          |
+	+-----------------------+------------------------+-------------------------------------------------+
+	| Spatial Features [2]_ |                        | 16,750                                          |
+	+-----------------------+------------------------+-------------------------------------------------+
+	| Spatial Attributes    |                        | 100,500                                         |
+	+-----------------------+------------------------+-------------------------------------------------+
+	| Total                 | 25,500                 | 142,750                                         |
+	+-----------------------+------------------------+-------------------------------------------------+
 
 The attribute data is stored in a ‘normalised’ relational structure which enables the attributes to be retrieved and maintained in a very logical way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
@@ -85,8 +85,8 @@ The attribute data is stored in a ‘normalised’ relational structure which en
 
 	\newpage
 
-Benefits
-========
+Benefits of the HLU Tool
+========================
 
 The tool provides a user-friendly and efficient interface enabling users to search, display and update the complex set of habitat and land use attributes held in the relational database whilst the spatial features are displayed in a GIS application. It provides a number of direct benefits and indirect benefits, including:
 1. Ensuring that all attributes selected by users are valid and compatible (e.g. IHS complex codes are relevant for the selected habitat code).

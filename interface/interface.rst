@@ -19,8 +19,7 @@ Once the HLU GIS Tool has been configured, the tool will start the associated GI
 
 .. figure:: ../images/figures/UserInterfaceMainWindow.png
 	:align: center
-	:height: 350px
-	:width: 567px
+	:scale: 75
 
 	HLU GIS Tool window
 
@@ -46,9 +45,9 @@ The ‘INCID’ box displays summary information for each INCID in the database,
 Reason/Process Section
 ----------------------
 
-‘Reason’ and ‘Process’ are required fields for all updates and are used on the History tab to indicate why the record was last updated. These fields are sticky i.e. the selected reason and process will be used for all updates in the current session unless they are altered manually.
+‘Reason’ and ‘Process’ (as shown in the figure :ref:`figUIRPS`) are required fields for all updates and are used on the History tab to indicate why the record was last updated. These fields are sticky i.e. the selected reason and process will be used for all updates in the current session unless they are altered manually.
 
-.. _figUIIS:
+.. _figUURPS:
 
 .. figure:: ../images/figures/UserInterfaceReasonProcessSection.png
 	:align: center
@@ -65,7 +64,6 @@ The IHS tab displays the IHS details for the current database record as shown in
 
 .. figure:: ../images/figures/UserInterfaceIHSTab.png
 	:align: center
-	:scale: 25
 
 	IHS Tab
 
@@ -83,7 +81,6 @@ Click on ‘Details’ to display the Details tab as shown in the figure :ref:`f
 
 .. figure:: ../images/figures/UserInterfaceDetailsTab.png
 	:align: center
-	:scale: 50
 
 	Details Tab
 
@@ -136,8 +133,10 @@ The History tab displays a list of modifications made to the current INCID and t
 .. index::
 	single: Bulk updates
 
+.. _bulk_update_window:
+
 Bulk Updates
-------------
+============
 
 Allows users to update the attributes for multiple selected database records simultaneously.
 
@@ -153,15 +152,15 @@ To perform a bulk update:
 
 * Enter the updated details in the IHS, Details, and Sources tabs, then click Apply. These fields will be updated for all the selected INCIDs.
 
-.. Warning:: If ‘Delete Empty Bulk Update Rows’ is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. For details, see section 2.8.1.1.
-
 .. _figUIBU:
 
 .. figure:: ../images/figures/UserInterfaceBulkUpdate.png
 	:align: center
-	:scale: 60
+	:scale: 75
 
 	HLU Main Window in Bulk Update Mode
+
+.. Warning:: If ‘Delete Empty Bulk Update Rows’ is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. For details, see section 2.8.1.1.
 
 
 .. raw:: latex

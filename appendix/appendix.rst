@@ -12,13 +12,13 @@ DOs and DON’Ts
 
 It is essential that the following guidelines are followed to ensure that the tool runs smoothly:
 
-DOs --
+**DOs:**
 
 * :strong:`DO` close all instances of MapInfo before launching the tool as the tool may try and communicate with the wrong instance of MapInfo.
 * :strong:`DO` close all instances of ArcGIS before launching the tool. Unlike with MapInfo, the tool will automatically communicate with the correct instance of ArcGIS, however multiple instances will require more memory and may therefore affect tool performance.
 * For ArcGIS users, :strong:`DO` use a file geodatabase or personal geodatabase to store spatial information. :strong:`DO NOT` use a shapefile as this affects performance.
 
-DO NOTs --
+**DO NOTs:**
 
 * :strong:`DO NOT` remove the HLU layer from the map while the tool is running.
 * :strong:`DO NOT` close the associated GIS while the tool is running, otherwise the tool will display an error message.
@@ -52,20 +52,20 @@ Creation of ArcGIS Map Document or MapInfo Workspace
 
 An ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor) must be created for use with the HLU GIS Tool. This should be optimised to ensure maximum performance, which should include the following:
 
-* Ensure that the .mxd or .wor file only contains one copy of the HLU layer
-* Add zoom layering to datasets so that detailed datasets such as the HLU layer and aerial photography are not displayed at smaller scales. Our recommended maximum extents are:
+* Ensure that the .mxd or .wor file only contains one copy of the HLU layer.
+* Ensure that the .mxd or .wor is saved at a sensible view level such as 1:10,000 scale rather the full extent of the HLU dataset.
+* Add zoom layering to datasets so that detailed datasets such as the HLU layer and aerial photography are not displayed at smaller scales. Our recommended maximum extents are shown in the table below):
 
-	* ArcGIS – Do not display out beyond:
+.. tabularcolumns:: |L|C|C|
 
-		* HLU Layer:		1:24,000
-		* Aerial Photography:	1:10,000
+.. table:: Recommended maximum GIS extents.
 
-	* MapInfo – Max Zoom:
-
-		* HLU Layer:		7.5 km
-		* Aerial Photography:	3 km
-
-* Ensure that the .mxd or .wor is saved at a sensible view level such as 1:10,000 scale rather the full extent of the HLU dataset
++====================================+===========+====================+
+|                GIS                 | HLU layer | Aerial Photography |
++====================================+===========+====================+
+| ArcGIS (Do not display out beyond) | 1:24,000  | 1:10,000           |
+| MapInfo (Max Zoom)                 | 7.5 km    | 3 km               |
++====================================+===========+====================+
 
 Use of HLU GIS Tool with ArcGIS or MapInfo
 ------------------------------------------
@@ -76,13 +76,13 @@ It takes a significant length of time for ArcGIS or MapInfo to draw an entire HL
 * ‘Select by Attributes’ performs complex queries and selects the results in the GIS window. If a large number of results are returned, it could take a long time to select the spatial polygons in the GIS.
 * If the layer is taking a long time to draw, pause or cancel the drawing using:
 
-	* ArcGIS - Click the Pause button in the bottom left corner of the map window
+	* ArcGIS - Click the :guilabel:`Pause` button in the bottom left corner of the map window
 	* MapInfo – Press the keyboard :kbd:`Esc` key
 
 * For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in Tools > Extensions – see section ref:`?`.
 * For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase. **The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.**
 
-	**e.g. exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.**
+	e.g. exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.
 
 * For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
 
