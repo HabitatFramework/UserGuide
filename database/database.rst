@@ -48,6 +48,7 @@ New users of the HLU GIS Tool can be added to the ‘lut_user’ table. The form
 	Format of **lut_user** table
 
 **Fields**
+
 :user_id:
 	The user’s *Windows* login ID. If the user logs in to a domain, the login should be entered in the format: [Domain]\[LoginID] as shown in the second record.
 
@@ -83,16 +84,13 @@ Additional sources can be added to the ‘lut_sources’ table . The format of t
 	Format of **lut_sources** table
 
 **Fields**
-================================================================
-:source_id:
-	A unique ID for each source.
-:source_name:
-	The name which appears in the ‘Name’ drop-down list in the 'Sources' tab.
-:source_date_default:
-	[Optional]. If a date is entered, the ‘Vague Date’ field in the 'Sources' tab will be set to this value (if blank) when this source is selected. If the date is left blank, the ‘Vague Date’ field will not be altered.
-:sort_order:
-	Determines the order source names are displayed in the ‘Name’ drop-down list in the 'sources' tab.
-================================================================
+
+=================== ==================================================================================================
+source_id			A unique ID for each source.
+source_name			The name which appears in the ‘Name’ drop-down list in the 'Sources' tab.
+source_date_default	[Optional]. If a date is entered, the ‘Vague Date’ field in the 'Sources' tab will be set to this value (if blank) when this source is selected. If the date is left blank, the ‘Vague Date’ field will not be altered.
+sort_order			Determines the order source names are displayed in the ‘Name’ drop-down list in the 'sources' tab.
+=================== ==================================================================================================
 
 .. note::
 	Existing source records cannot be removed from the 'lut_sources' table if they are referenced by any of the data records (i.e. if they have been used in any incid data records). This is because data integrity must be retained.
@@ -114,6 +112,7 @@ New processes can be added to the ‘lut_process’ table. The format of the tab
 	Format of **lut_process** table
 
 **Fields**
+
 :code:
 	A unique 3 character field for each source.
 
@@ -144,6 +143,7 @@ IHS Habitats can be flagged as **local** in the ‘lut_ihs_habitat` table. The f
 	Format of **lut_ihs_habitat** table
 
 **Fields**
+
 :code:
 	[Read only]. The unique 8 character field for each IHS Habitat. **Do not edit this value.**
 
@@ -187,6 +187,7 @@ Export types can be added or removed in the ‘exports’ table shown in the fig
 	Format of **exports** table
 
 **Fields**
+
 :export_id:
 	A unique identifier used to determines which fields are selected from the ‘exports_fields’ table – see section ?.?.?.
 
@@ -206,6 +207,7 @@ The ‘exports_fields’ table shown in the figure :ref:`figDTEF` defines which 
 	Format of **exports_fields** table
 
 **Fields**
+
 :export_field_id:
 	A unique identifier for the field.
 

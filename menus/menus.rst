@@ -50,7 +50,7 @@ Exits the HLU GIS tool and allows users to decide whether or not to close the GI
 Edit Menu
 =========
 
-.. image:: ../images/figures/UserInterfaceMenuToolbar.png
+.. image:: ../images/figures/UserInterfaceFileToolbar.png
 
 When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see section 3.2) and the spatial data must be editable in the GIS software.
 

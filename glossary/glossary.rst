@@ -45,25 +45,17 @@ Glossary
 
 	Vague Date
 
-
 	IHS
-
 
 	Source
 
-
 	Determination Quality
-
 
 	Interpretation Quality
 
-
 	Interpretation Comment
-
 
 	Process
 
-
 	Reason
 		
-

@@ -47,7 +47,7 @@ Reason/Process Section
 
 ‘Reason’ and ‘Process’ (as shown in the figure :ref:`figUIRPS`) are required fields for all updates and are used on the History tab to indicate why the record was last updated. These fields are sticky i.e. the selected reason and process will be used for all updates in the current session unless they are altered manually.
 
-.. _figUURPS:
+.. _figUIRPS:
 
 .. figure:: ../images/figures/UserInterfaceReasonProcessSection.png
 	:align: center

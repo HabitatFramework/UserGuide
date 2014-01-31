@@ -58,14 +58,14 @@ An ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor) must be created for us
 
 .. tabularcolumns:: |L|C|C|
 
-.. table:: Recommended maximum GIS extents.
+.. table:: Recommended maximum GIS extents
 
-+====================================+===========+====================+
-|                GIS                 | HLU layer | Aerial Photography |
-+====================================+===========+====================+
-| ArcGIS (Do not display out beyond) | 1:24,000  | 1:10,000           |
-| MapInfo (Max Zoom)                 | 7.5 km    | 3 km               |
-+====================================+===========+====================+
+	+====================================+===========+====================+
+	|                GIS                 | HLU layer | Aerial Photography |
+	+====================================+===========+====================+
+	| ArcGIS (Do not display out beyond) | 1:24,000  | 1:10,000           |
+	| MapInfo (Max Zoom)                 | 7.5 km    | 3 km               |
+	+====================================+===========+====================+
 
 Use of HLU GIS Tool with ArcGIS or MapInfo
 ------------------------------------------
