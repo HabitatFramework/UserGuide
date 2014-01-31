@@ -1,6 +1,6 @@
-******************
-Database Structure
-******************
+********
+Database
+********
 
 .. index::
 	single: Data tables

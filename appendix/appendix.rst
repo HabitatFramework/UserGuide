@@ -3,12 +3,49 @@ Appendix
 ********
 
 .. index::
+	single: Dos and Don'ts
+
+.. _dos_and_donts:
+
+DOs and DON’Ts
+================
+
+It is essential that the following guidelines are followed to ensure that the tool runs smoothly:
+
+DOs --
+
+* :strong:`DO` close all instances of MapInfo before launching the tool as the tool may try and communicate with the wrong instance of MapInfo.
+* :strong:`DO` close all instances of ArcGIS before launching the tool. Unlike with MapInfo, the tool will automatically communicate with the correct instance of ArcGIS, however multiple instances will require more memory and may therefore affect tool performance.
+* For ArcGIS users, :strong:`DO` use a file geodatabase or personal geodatabase to store spatial information. :strong:`DO NOT` use a shapefile as this affects performance.
+
+DO NOTs --
+
+* :strong:`DO NOT` remove the HLU layer from the map while the tool is running.
+* :strong:`DO NOT` close the associated GIS while the tool is running, otherwise the tool will display an error message.
+* :strong:`DO NOT` create or open another map document or workspace in the associated GIS window while the tool is running.
+
+
+.. note::
+
+	New in version 1.0.5:
+	
+	* It is now possible to use a HLU GIS layer containing only a subset of all the incids in the HLU database.
+	* It is also possible to switch between different HLU GIS layers present in the open document or workspace using the *Switch GIS layer* function.
+
+
+.. raw:: latex
+
+	\newpage
+
+.. index::
 	single: Optimising performance
 
 .. _optimising_performance:
 
 Optimising Performance
 ======================
+
+The Habitat and Land Use (HLU) GIS Tool has been optimised as far as possible and there are no simple technological enhancements that can be made to significantly improve performance. It is important therefore to ensure performance is optimised wherever possible through user configuration and operation. The following section suggests some simple approaches to improving performance.
 
 Creation of ArcGIS Map Document or MapInfo Workspace
 ----------------------------------------------------
@@ -40,7 +77,7 @@ It takes a significant length of time for ArcGIS or MapInfo to draw an entire HL
 * If the layer is taking a long time to draw, pause or cancel the drawing using:
 
 	* ArcGIS - Click the Pause button in the bottom left corner of the map window
-	* MapInfo – Press the Esc key on your keyboard
+	* MapInfo – Press the keyboard :kbd:`Esc` key
 
 * For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in Tools > Extensions – see section ref:`?`.
 * For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase. **The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.**
@@ -72,6 +109,10 @@ Habitat data must not be edited directly in either the database or the GIS layer
 
 However, if additional entries are required in the lookup tables, these may be added to the database directly. It is essential that the structure of these tables is not altered and we recommend that any updates to the data in these tables are carried out solely by the database administrator.
 
+
+.. raw:: latex
+
+	\newpage
 
 .. index::
 	single: Known issues

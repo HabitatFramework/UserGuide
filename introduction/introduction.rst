@@ -2,79 +2,98 @@
 Introduction
 ************
 
-What is the HLU Tool?
-=====================
+Background
+==========
 
+Since the introduction of the Integrated Habitat System (IHS) and the adoption of the habitat data standards introduced from the South-West pilot project there are now over 50 attributes for every recorded habitat feature (point, line or polygon). These attributes relate to each feature's IHS classification, source information, BAP habitats, quality, modification history, etc. Furthermore, as valid values for many of these attributes are limited to specific options, and many are inter-related and dependent upon other values, maintaining habitat data has become complex and time-consuming. And if users only have native GIS application functionality to support them (i.e. a GIS layer with a standard attribute table) the likelihood of errors and inconsistencies being introduced is high.
+
+The subsequent incorporation of the Ordnance Survey MasterMap boundaries and TOIDs into existing habitat datasets brought improved positional accuracy to the data, and in many cases also provided additional habitat and land-use source information. However, new datasets have significantly increased in volume with some county-wide datasets now containing over 2 million habitat features, with each feature having over 50 attributes. As a result the attributes and evidence-base required for habitat and land use information has grown so much in recent years that it is no longer practical to store or maintain the data in a standard GIS layer.
 
 .. raw:: latex
 
 	\newpage
 
-Why is the tool needed?
-=======================
+Solution
+========
 
-The Habitat and Land Use (HLU) data consisted of a set of habitat polygons. Each habitat polygon had approximately 80 attributes. The decision was taken by Local Records Centres to split these habitat polygons into Ordnance Survey (OS) Mastermap derived polygons.
+In 2009 exeGesIS Ltd was engaged to develop a new GIS-based application to manage habitat and land use data based upon an OS MasterMap framework. It was funded by the Local Record Centres (LRCs) in the South East of England in partnership with Natural England.
 
-Whilst there are benefits to splitting the habitat polygons by OS Mastermap, such as ensuring polygon boundaries are accurate, the splitting process significantly increases the volume of data. On average, there are 33.5 Mastermap-derived polygons for each habitat polygon in the HLU data.
+One of the key requirements for the tool was the ability to use multiple GIS and database environments, so it was designed to be compatible with both ArcGIS and MapInfo and multiple databases including SQLServer or MS Access. In principle other database systems such as PostgreSQL and Oracle can be supported but these have not been tested.
 
-For example, the table below indicates the effect on a 500 polygon dataset if the data was held in a single GIS layer.
+The application needed to provide a user interface between the spatial data data held in GIS and the attribute data held in a relational database, maintaining changes to both the attributes and the spatial data. It also had to provide an audit trail to indicate when data was last edited, why and by whom.
+
+.. raw:: latex
+
+	\newpage
+
+Dataset structure
+=================
+
+Spatial data
+------------
+
+The Habitat and Land Use (HLU) spatial data consists of one or more GIS layers containing features (points, lines or polygons). These features are combined with Ordnance Survey (OS) Mastermap features so that each HLU feature is aligned with the points, lines and boundaries of OS Mastermap. Features may not extend across or beyond OS Mastermap lines or boundaries but they can sub-divide features by splitting them into smaller fragments. A unique reference to the original OS Mastermap feature, known as a TOID (see :ref:`TOID`) is assigned to every HLU feature so that the original lines or boundaries of the OS Mastermap features can be re-established by merging features with the same TOID.
+
+Whilst there are benefits to splitting the HLU features by OS Mastermap, such as ensuring polygon boundaries are accurate and do not overlap, the splitting process significantly increases the volume of data. For example, the table below indicates the effect of splitting on a 500 feature GIS layer.
 
 .. tabularcolumns:: |L|R|R|
 
 .. table:: Effect of OS Mastermap Split (Single Dataset)
 
-	+-----------------+-------------+--------------------+
-	|                 | Original    | Split by Mastermap |
-	+=================+=============+====================+
-	| Polygons        |         500 | 16,750             |
-	+-----------------+-------------+--------------------+
-	| Attributes      |      40,000 | 1,340,000          |
-	+-----------------+-------------+--------------------+
-	| Total           |      40,500 | 1,356,750          |
-	+-----------------+-------------+--------------------+
+	+------------+------------------------+------------------------------+
+	|            | Original habitat layer | HLU layer split by Mastermap |
+	+============+========================+==============================+
+	| Features   | 500                    | 16,750                       |
+	+------------+------------------------+------------------------------+
+	| Attributes | 40,000                 | 1,340,000                    |
+	+------------+------------------------+------------------------------+
+	| Total      | 40,500                 | 1,356,750                    |
+	+------------+------------------------+------------------------------+
 
-Due to the complexity of the attribute data required by the Local Records Centres and to minimise data duplication, the habitat attribute and spatial data were split into a relational database with an associated GIS layer. Splitting the attribute and spatial data, reduces the number of attributes required for the spatial layer to 6.
+So, in this example, there are 33.5 Mastermap-derived features in the new HLU dataset for each original habitat feature.
 
-This offers a significant reduction in total attributes as shown in the table below. Nevertheless, there is still a significant increase in data volume versus the original HLU dataset.
+Attribute data
+--------------
+
+Due to the complexity of the attribute data required whilst simultaneously wishing to minimise data duplication and reduce dataset volume, the habitat attribute and spatial data were separated into a relational database with an associated GIS layer. Separating the attribute and spatial data reduced the number of attributes required for the spatial layer to only 6 (instead of the original 50+). This offers a significant reduction in the total number of attributes held in the GIS layer (as shown in the table below).
 
 .. tabularcolumns:: |L|R|R|
 
 .. table:: Effect of OS Mastermap Split (Attribute and Spatial Datasets)
 
-	+--------------------+----------+------------------------+
-	|                    | Original | Attribute database and |
-	|                    |          | associated GIS Layer   |
-	+====================+==========+========================+
-	| HLU Records        | 500      | 500                    |
-	+--------------------+----------+------------------------+
-	| HLU Attributes     | 40,000   | 40,000                 |
-	+--------------------+----------+------------------------+
-	| Spatial Polygons   |          | 16,750                 |
-	+--------------------+----------+------------------------+
-	| Spatial Attributes |          | 100,500                |
-	+--------------------+----------+------------------------+
-	| Total              | 40,500   | 157,750                |
-	+--------------------+----------+------------------------+
+	+-----------------------+------------------------+----------------------------+
+	|                       | Original habitat layer | HLU attribute database and |
+	|                       |                        |    associated GIS Layer    |
+	+=======================+========================+============================+
+	| HLU Records           | 500                    | 500                        |
+	+-----------------------+------------------------+----------------------------+
+	| HLU Attributes [1]_   | 25,000                 | 25,000                     |
+	+-----------------------+------------------------+----------------------------+
+	| Spatial Features [2]_ |                        | 16,750                     |
+	+-----------------------+------------------------+----------------------------+
+	| Spatial Attributes    |                        | 100,500                    |
+	+-----------------------+------------------------+----------------------------+
+	| Total                 | 25,500                 | 142,750                    |
+	+-----------------------+------------------------+----------------------------+
 
-The HLU GIS Tool provides a user interface for maintaining the habitat and spatial data, including changes to attributes and changes to the spatial data. It also provides an audit trail to indicate when it was last edited, why and by whom.
+The attribute data is stored in a ‘normalised’ relational structure which enables the attributes to be retrieved and maintained in a very logical way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
-The toolkit provides an interface that links the spatial and attribute data in multiple software environments. It can link ArcGIS and MapInfo with databases held in Access or SQL Server In principle, the toolkit could link to other database systems such as PostgreSQL and Oracle but these have not been tested and are not supported.
-
-The performance of the tool is limited by the capabilities of third party software, particularly GIS software, which were not designed to handle large datasets split across multiple platforms.
-
-In addition, one of the key requirements for this tool was the ability to use multiple GIS and database environments. Significant improvements in performance could have been achieved if the tool had been designed to work with a single environment e.g. ArcGIS and SQL Server but multiple environment functionality was a key requirement.
-
-The HLU GIS Tool has been optimised as far as possible and there are no further technological enhancements that can be made to significantly improve performance. It is important therefore to ensure performance is optimised wherever possible through user operation. The following section suggests some simple approaches to improving performance.
+.. [1] Assuming 50 attributes per feature
+.. [2] Assuming an average of 33.5 Mastermap-derived HLU features per original habitat feature
 
 .. raw:: latex
 
 	\newpage
 
+Benefits
+========
 
-History of the tool
-===================
-
-
-
-In August 2009 Hampshire Biodiversity Information Centre (HBIC) awarded exeGesIS SDM the contract to develop a new toolkit which would manage their Habitat and Land Use spatial data. The new toolkit would be used by HBIC and Local Record Centres in the South-East of England, and therefore needed to be compatible with both ArcGIS and MapInfo.
+The tool provides a user-friendly and efficient interface enabling users to search, display and update the complex set of habitat and land use attributes held in the relational database whilst the spatial features are displayed in a GIS application. It provides a number of direct benefits and indirect benefits, including:
+1. Ensuring that all attributes selected by users are valid and compatible (e.g. IHS complex codes are relevant for the selected habitat code).
+2. Maintaining a brief but comprehensive history of all changes made to every habitat polygon.
+3. Enabling management queries and statistics to be produced for a range of purposes using the relational database (e.g. the extent and reason for all BAP habitat gains/losses in the last financial year).
+4. Storing the data in a relational structure to reduce GIS data volumes and provide access efficiencies and flexibility.
+5. Enabling data to be extracted in an number of formats, including the National Inventory dataset format, as BAP Broad layers or as BAP Priority layers.
+6. Ensuring that all local datasets can be readily combined into regional or national datasets and direct comparisons can be made between local datasets.
+7. Improved data retrieval/update response times which would otherwise be unacceptable directly in GIS given the volume and complexity of the underlying data.
 

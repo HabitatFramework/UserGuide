@@ -2,7 +2,7 @@
 Preface
 *******
 
-You can find the most up to date version of this documentation, in *html* and *PDF* form at `HLUTool-UserGuide <https://readthedocs.org/projects/hlugistool-userguide/>`_.
+The most up to date version of this documentation can be found in *html* and *PDF* form at `HLUTool-UserGuide <https://readthedocs.org/projects/hlugistool-userguide/>`_.
 
 Recommended User Knowledge
 ==========================
@@ -35,9 +35,9 @@ Reading Guide
 
 This Preface explains a little about the HLU Tool, the community of people who develop and use it, and the licensing conditions for using and distributing it.
 
-The :doc:`../introduction/introduction` explains why the HLU Tool is needed, what it does and where it comes from.
+:doc:`../introduction/introduction` explains why the HLU Tool is needed, what it does and where it comes from.
 
-:doc:`../concepts/concepts` is a quick tutorial on the key concepts of the HLU Tool.
+:doc:`../concepts/concepts` is a brief outline of the key concepts of the HLU Tool.
 
 :doc:`../menus/menus` describes all the user interface menu items and buttons on the HLU Tool.
 
@@ -56,7 +56,7 @@ The :doc:`../introduction/introduction` explains why the HLU Tool is needed, wha
 Licensing
 =========
 
-The code for the HLU GIS Tool is ‘open source’ and is released under `GPLv3 <http://www.gnu.org/licenses/gpl.html>`_. You are free to install it on as many computers as you like, and to redistribute it according to the GPLv3 license.
+The code for the HLU GIS Tool is ‘open source’ and is released under `GPLv3 <http://www.gnu.org/licenses/gpl.html>`_. Users are free to install it on as many computers as they like, and to redistribute it according to the GPLv3 license.
 
 Please remember, however, that the tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefuly received. Enquiries can be made via the `ALERC forum <http://forum.lrcs.org.uk/viewforum.php?id=24>`_.
 

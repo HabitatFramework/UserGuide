@@ -15,6 +15,8 @@ The following sections summarise the menu functionality and provide some guideli
 File Menu
 =========
 
+.. image:: ../images/icons/UserInterfaceFileToolbar.png
+
 .. |export| image:: ../images/icons/FileExport.png
 	:height: 16px
 	:width: 16px
@@ -22,10 +24,10 @@ File Menu
 |export| Export
 ---------------
 
-Allows you to export data from the HLU database to a GIS layer using a pre-defined export format.
+Allows users to export data from the HLU database to a GIS layer using a pre-defined export format.
 
 .. seealso::
-	See :ref:`export_window` for more information.
+	:ref:`export_window` for more information.
 
 .. |exit| image:: ../images/icons/FileExit.png
 	:height: 16px
@@ -34,7 +36,7 @@ Allows you to export data from the HLU database to a GIS layer using a pre-defin
 |exit| Exit
 -----------
 
-Exits the HLU GIS tool and allows you to decide whether or not to close the GIS window.
+Exits the HLU GIS tool and allows users to decide whether or not to close the GIS window.
 
 .. raw:: latex
 
@@ -47,6 +49,8 @@ Exits the HLU GIS tool and allows you to decide whether or not to close the GIS 
 
 Edit Menu
 =========
+
+.. image:: ../images/icons/UserInterfaceMenuToolbar.png
 
 When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see section 3.2) and the spatial data must be editable in the GIS software.
 
@@ -66,7 +70,7 @@ Copies selected attributes so they can be applied to these fields in another rec
 
 	Checkboxes ticked to copy data
 
-Tick the checkboxes next to the fields you wish to copy, as shown in the figure :ref:`figCC`, then click ‘Copy’.
+Tick the checkboxes next to the fields to be copied, as shown in the figure :ref:`figCC`, then click ‘Copy’.
 
 .. |paste| image:: ../images/icons/EditPaste.png
 	:height: 16px
@@ -88,31 +92,8 @@ For example, the fields copied in the figure above would be pasted into 'Source 
 |bulkupdate| Bulk Update
 ------------------------
 
-Allows you to update the attributes for all selected database records.
+Allows users to update the attributes for multiple selected database records simultaneously.
 
-.. Note:: This feature is only available to configured users who have been given bulk update permissions. For details on configuring users, see section 3.2.
-
-To perform a bulk update:
-
-* Filter the database records using ‘Select by attributes’ or select polygons in the GIS layer and click ‘Get Map Selection’. For details on filtering records, see section 2.6.
-
-* Click ‘Bulk Update’ on the Edit menu or toolbar. The HLU GIS Tool enters bulk update mode and an empty form is displayed as shown in the figure :ref:`figUIBU`.
-
-* The ‘Bulk Update’ box displays the number of INCIDs, TOIDs and fragments affected by the update and allows you to select whether to create a History record for this process.
-
-* Enter the updated details in the IHS, Details, and Sources tabs, then click Apply. These fields will be updated for all the selected INCIDs.
-
-
-
-.. Warning:: If ‘Delete Empty Bulk Update Rows’ is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. For details, see section 2.8.1.1.
-
-.. _figUIBU:
-
-.. figure:: ../images/figures/UserInterfaceBulkUpdate.png
-	:align: center
-	:scale: 60
-
-	HLU Main Window in Bulk Update Mode
 
 .. raw:: latex
 
@@ -123,6 +104,8 @@ To perform a bulk update:
 
 View Menu
 =========
+
+.. image:: ../images/icons/UserInterfaceViewToolbar.png
 
 .. |winmaximise| image:: ../images/icons/GisWinMaximise.png
 	:height: 16px
@@ -188,6 +171,8 @@ Zooms to the current database selection in the GIS window.
 Select Menu
 ===========
 
+.. image:: ../images/icons/UserInterfaceSelectToolbar.png
+
 .. |selectbyattr| image:: ../images/icons/SelectByAttributes.png
 	:height: 16px
 	:width: 16px
@@ -195,39 +180,7 @@ Select Menu
 |selectbyattr| Select by Attributes
 -----------------------------------
 
-Allows you to filter the database records using the query builder shown in the figure :ref:`figQB`.
-
-.. _figQB:
-
-.. figure:: ../images/figures/QueryBuilder.png
-	:align: center
-
-	HLU Query Builder
-
-* Boolean Operator allows you to perform logical selections using:
-
-	* 'AND', 'AND NOT', 'OR', 'OR NOT'.
-
-.. Note:: The value of the ‘Boolean Operator’ field on the first row is not used.
-
-* ‘(‘ and ‘)’ fields allow you to add additional brackets as shown in the example in the figure :ref:`figQB` to define how the query is executed.
-* ‘Table’ and ‘Column’ define the table and field to be searched.
-* ‘Operator’ provides a drop-down list of the available operators as shown in the figure :ref:`figSOL`.
-* Value’ is the value to search for. Values can either be entered as text or selected from the drop-down list (where available).
-
-.. _figSOL:
-
-.. figure:: ../images/figures/SQLOperatorList.png
-	:align: center
-
-	List of Operators
-
-Once you have entered the values for the current row, click on another row in the query builder to confirm the entry and enable the ‘OK’ button.
-
-If you have made a mistake when entering the selection criteria, click on the grey box to the left of ‘Boolean Operator’ to select the row, then press the ‘Delete’ key on your keyboard to remove it.
-
-
-.. Tip:: It will typically be quicker to select data from these fields in the GIS, then use ‘Get Map Selection’.
+Allows users to filter the database records based upon non-spatial or complex criteria using the query builder.
 
 .. |clearfilter| image:: ../images/icons/ClearFilter.png
 	:height: 16px
@@ -265,7 +218,7 @@ Filters the database records to retrieve the attributes associated with the sele
 
 Select a polygon on the map and go to ‘Get Map Selection’ to select the database records.
 
-Once the records are filtered in the database, if all the polygons are part of the same INCID, ‘Select by INCID’ allows you to expand the map selection to include all polygons belonging to that INCID.
+Once the records are filtered in the database, if all the polygons are part of the same INCID, ‘Select by INCID’ allows users to expand the map selection to include all polygons belonging to that INCID.
 
 .. raw:: latex
 
@@ -279,6 +232,8 @@ Once the records are filtered in the database, if all the polygons are part of t
 Split/Merge Menu
 ================
 
+.. image:: ../images/icons/UserInterfaceSplitMergeToolbar.png
+
 .. Note:: Both options in this menu are disabled until the database records have been filtered and a process has been selected from the ‘Process’ drop-down list in the INCID box on the main window. For details on the INCID box, see section 2.9.1.
 
 .. |split| image:: ../images/icons/SplitFeatures.png
@@ -288,96 +243,7 @@ Split/Merge Menu
 |split| Split Features
 ----------------------
 
-Split features performs two types of split: Logical Split and Physical Split.
-
-Logical Split
-^^^^^^^^^^^^^
-
-Logical split is used to create a new INCID in the database based upon polygons selected from the GIS layer. The habitat details for the new INCID can then be updated.
-
-To perform a logical split:
-
-* Click ‘Switch to GIS Window’ and select the polygons in the GIS layer.
-* Return to the HLU main window and click ‘Get Map Selection’.
-* Select one of the options in the ‘Process’ list.
-* Click on ‘Split Features’. The new INCID will be created and set as the current record.
-
-.. Note:: The selected polygons must all belong to the same INCID.
-
-Physical Split
-^^^^^^^^^^^^^^
-
-Physical split creates a new TOID fragment in the database based upon a single TOID which has been split in the GIS layer.
-
-ArcGIS
-""""""
-
-To perform a physical split:
-
-* On the ‘Editor’ toolbar, click on ‘Editor’ and select ‘Start Editing’.
-* Select the polygon you wish to split.
-* In the ‘Task’ drop-down list on the ‘Editor’ toolbar, select ‘Cut Polygon Features’ as shown in the figure :ref:`figArcEMB`.
-
-.. _figArcEMB:
-
-.. figure:: ../images/figures/ArcGISEditMenuBar.png
-	:align: center
-
-	Edit Settings for Physical Split (ArcGIS)
-
-* Using the Sketch tool on ‘Editor’ toolbar, draw a polyline.
-* On the ‘Editor’ toolbar, click on ‘Editor’ and select ‘Save Edits’.
-* The polygon will be split but still selected as shown in the figure :ref:`figArcSFD`. Return to the HLU GIS Tool and click ‘Get Map Selection’.
-
-.. _figArcSFD:
-
-.. figure:: ../images/figures/ArcGISSplitFeaturesDiagram.png
-	:align: center
-
-	Split Features (ArcGIS)
-
-* Select one of the options in the ‘Process’ list.
-* Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID.
-
-MapInfo
-"""""""
-
-To perform a physical split:
-
-* Set the Cosmetic layer as ‘Editable’ and draw the polygon to split by.
-
-.. Tip:: The Cosmetic layer should be used due to the time required for MapInfo to add a new polygon to the full HLU layer.
-
-* Set the HLU layer as ‘Editable’.
-* Select the polygon you wish to split and go to Objects > Set Target.
-* Select the polygon in the Cosmetic layer and go to Objects > Split.
-* In the Data Disaggregation box, ensure that ‘Method’ for all fields is set to ‘Value’ as shown in the figure :ref:`figMIDD`, then click OK.
-
-.. _figMIDD:
-
-.. figure:: ../images/figures/MapInfoDataDisaggregationDialog.png
-	:align: center
-
-	Data Disaggregation Dialog (MapInfo)
-
-* The polygon will be split but still selected as shown in :ref:`figMISF`. Return to the HLU GIS Tool and click ‘Get Map Selection’.
-
-.. _figMISF:
-
-.. figure:: ../images/figures/MapInfoSplitFeaturesDiagram.png
-	:align: center
-
-	Split Features (MapInfo)
-
-* Select one of the options in the ‘Process’ list.
-* Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
-
-
-.. note::
-
-	* Only one polygon should be split in a single operation. Splitting multiple polygons will cause database synchronisation issues. 
-	* If several polygons have been split, select the fragments for one original polygon and split using the tool. Repeat this operation for the remaining polygons.
-	* Ensure that the physical split is completed in the database prior to commencing any other operations such as ‘Select by attributes…’ to avoid database synchronisation issues.
+Split features performs two types of split: Logical Split and Physical Split. Logical splits are used to isolate one or more features from one INCID into a new INCID so that they can be updated independently. Physical splits can be used to sub-divide a single feature, that has been split in the GIS layer, into one or more new TOID fragments in the database so that they can then be assigned different attributes.
 
 .. |merge| image:: ../images/icons/MergeFeatures.png
 	:height: 16px
@@ -386,52 +252,8 @@ To perform a physical split:
 |merge| Merge Features
 ----------------------
 
-Merge features performs two types of merge: Logical Merge and Physical Merge
+Merge features performs two types of merge: Logical Merge and Physical Merge. Logical merges are used to combine two or more fragments selected in GIS into the INCID of one of the selected fragments by selecting it from a list. Physical merges will combine fragments of a single TOID into a single feature in the GIS layer.
 
-Logical Merge
-^^^^^^^^^^^^^
-
-Logical merge combines the selected TOIDs on the map with the INCID selected from the list.
-
-To perform a logical merge:
-
-* Click ‘Switch to GIS Window’ and select the polygons you wish to merge and a polygon from the INCID you wish to merge them with in the GIS layer.
-* Return to the HLU main window and click ‘Get Map Selection’.
-* Select one of the options in the ‘Process’ list.
-* Click on ‘Merge Features’. A list of INCIDs will be displayed as shown in the figure :ref:`figLMD`.
-
-.. _figLMD:
-
-.. figure:: ../images/figures/LogicalMergeDialog.png
-	:align: center
-
-	Select INCID to Keep Dialog
-
-* Click on the grey box to the left of the row to select an INCID. The associated polygon will blink in the GIS window. Click ‘OK’.
-* The selected Mastermap polygons will be merged with the selected INCID and details added to the History tab.
-* If the merge polygons are fragments of a single TOID, you will be given the option to perform a physical merge.
-
-Physical Merge
-^^^^^^^^^^^^^^
-
-Physical merge combines fragments of a single TOID into a single polygon in the GIS layer.
-
-To perform a physical merge:
-
-* Select two or more fragments from one TOID in the GIS layer as shown in the figure :Ref:`figPMD` (left).
-* Return to the HLU main window and click ‘Get Map Selection’.
-* Select one of the options in the ‘Process’ list.
-* Click on ‘Merge Features’. The polygons will be combined in the GIS layer as shown in figure :Ref:`figPMD` (right).
-
-.. _figPMD:
-
-.. figure:: ../images/figures/PhysicalMergeDiagram.png
-	:align: center
-
-	Physical Merge – Before (left) and After (right)
-
-
-.. Note:: Only fragments belonging to the same TOID can be merged in a single operation. If fragments for several TOIDs need to be merged, the operation must be repeated for each TOID.
 
 .. raw:: latex
 
@@ -445,6 +267,8 @@ To perform a physical merge:
 Tools Menu
 ==========
 
+.. image:: ../images/icons/UserInterfaceToolsToolbar.png
+
 .. |options| image:: ../images/icons/Options.png
 	:height: 16px
 	:width: 16px
@@ -455,5 +279,5 @@ Tools Menu
 Allows users to alter some aspects of the HLU Tool configuration.
 
 .. seealso::
-	See :ref:`options_window` for more information.
+	:ref:`options_window` for more information.
 
