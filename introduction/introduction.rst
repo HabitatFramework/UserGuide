@@ -63,7 +63,6 @@ Due to the complexity of the attribute data required whilst simultaneously wishi
 
 	+-----------------------+------------------------+-------------------------------------------------+
 	|                       | Original habitat layer | HLU attribute database and associated GIS Layer |
-	|                       |                        |                                                 |
 	+=======================+========================+=================================================+
 	| HLU Records           | 500                    | 500                                             |
 	+-----------------------+------------------------+-------------------------------------------------+
@@ -75,6 +74,20 @@ Due to the complexity of the attribute data required whilst simultaneously wishi
 	+-----------------------+------------------------+-------------------------------------------------+
 	| Total                 | 25,500                 | 142,750                                         |
 	+-----------------------+------------------------+-------------------------------------------------+
+
+	======================= ======================== =================================================
+	                         Original habitat layer   HLU attribute database and associated GIS Layer
+	======================= ======================== =================================================
+	 HLU Records             500                      500                                             
+	----------------------- ------------------------ -------------------------------------------------
+	 HLU Attributes [1]_     25,000                   25,000                                          
+	----------------------- ------------------------ -------------------------------------------------
+	 Spatial Features [2]_                            16,750                                          
+	----------------------- ------------------------ -------------------------------------------------
+	 Spatial Attributes                               100,500                                         
+	----------------------- ------------------------ -------------------------------------------------
+	 *Total**                **25,500**               **142,750**                                         
+	======================= ======================== =================================================
 
 The attribute data is stored in a ‘normalised’ relational structure which enables the attributes to be retrieved and maintained in a very logical way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
@@ -89,6 +102,7 @@ Benefits of the HLU Tool
 ========================
 
 The tool provides a user-friendly and efficient interface enabling users to search, display and update the complex set of habitat and land use attributes held in the relational database whilst the spatial features are displayed in a GIS application. It provides a number of direct benefits and indirect benefits, including:
+
 1. Ensuring that all attributes selected by users are valid and compatible (e.g. IHS complex codes are relevant for the selected habitat code).
 2. Maintaining a brief but comprehensive history of all changes made to every habitat polygon.
 3. Enabling management queries and statistics to be produced for a range of purposes using the relational database (e.g. the extent and reason for all BAP habitat gains/losses in the last financial year).

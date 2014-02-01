@@ -7,6 +7,13 @@ Menus
 
 The following sections summarise the menu functionality and provide some guidelines for their use. Where menu functions are also available on one of the toolbars the relevant icon is shown next to each heading.
 
+.. _figUITB:
+
+.. figure:: ../images/figures/UserInterfaceToolbars.png
+	:align: center
+
+	Main window toolbars
+
 .. index::
 	single: Menus; File menu
 
@@ -15,7 +22,14 @@ The following sections summarise the menu functionality and provide some guideli
 File Menu
 =========
 
-.. image:: ../images/figures/UserInterfaceFileToolbar.png
+.. |exit| image:: ../images/icons/FileExit.png
+	:height: 16px
+	:width: 16px
+
+|exit| Exit
+-----------
+
+Exits the HLU GIS tool and allows users to decide whether or not to close the GIS window.
 
 .. |export| image:: ../images/icons/FileExport.png
 	:height: 16px
@@ -29,15 +43,6 @@ Allows users to export data from the HLU database to a GIS layer using a pre-def
 .. seealso::
 	:ref:`export_window` for more information.
 
-.. |exit| image:: ../images/icons/FileExit.png
-	:height: 16px
-	:width: 16px
-
-|exit| Exit
------------
-
-Exits the HLU GIS tool and allows users to decide whether or not to close the GIS window.
-
 .. raw:: latex
 
 	\newpage
@@ -50,9 +55,7 @@ Exits the HLU GIS tool and allows users to decide whether or not to close the GI
 Edit Menu
 =========
 
-.. image:: ../images/figures/UserInterfaceFileToolbar.png
-
-When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see section 3.2) and the spatial data must be editable in the GIS software.
+When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see section 3.2) and the spatial data must be editable in the GIS application.
 
 .. |copy| image:: ../images/icons/EditCopy.png
 	:height: 16px
@@ -85,12 +88,8 @@ For example, the fields copied in the figure above would be pasted into 'Source 
 
 .. Note:: It is not possible to copy data from one field in one record and paste it into a different field in another.
 
-.. |bulkupdate| image:: ../images/icons/EditBulkUpdate.png
-	:height: 16px
-	:width: 16px
-
-|bulkupdate| Bulk Update
-------------------------
+Bulk Update
+-----------
 
 Allows users to update the attributes for multiple selected database records simultaneously.
 
@@ -104,8 +103,6 @@ Allows users to update the attributes for multiple selected database records sim
 
 View Menu
 =========
-
-.. image:: ../images/figures/UserInterfaceViewToolbar.png
 
 .. |winmaximise| image:: ../images/icons/GisWinMaximise.png
 	:height: 16px
@@ -138,12 +135,8 @@ Keep DB window on top
 
 Sets the HLU database window to remain floating on top of any other open windows so that the database window is always visible. Enabling this option will ensure that the database window will not disappear behind the GIS window when the GIS window is active.
 
-.. |winswitch| image:: ../images/icons/GisWinSwitchTo.png
-	:height: 16px
-	:width: 16px
-
-|winswitch| Switch to GIS window
---------------------------------
+Switch to GIS window
+--------------------
 
 Sets ArcGIS or MapInfo as the active window but does not alter its size.
 
@@ -155,7 +148,6 @@ Sets ArcGIS or MapInfo as the active window but does not alter its size.
 ---------------------------
 
 Zooms to the current database selection in the GIS window.
-
 
 
 .. Warning:: This process may take a long time depending upon the layer size, the number of selected records and their geographical distribution.
@@ -172,8 +164,6 @@ Zooms to the current database selection in the GIS window.
 Select Menu
 ===========
 
-.. image:: ../images/figures/UserInterfaceSelectToolbar.png
-
 .. |selectbyattr| image:: ../images/icons/SelectByAttributes.png
 	:height: 16px
 	:width: 16px
@@ -183,15 +173,6 @@ Select Menu
 
 Allows users to filter the database records based upon non-spatial or complex criteria using the query builder.
 
-.. |clearfilter| image:: ../images/icons/ClearFilter.png
-	:height: 16px
-	:width: 16px
-
-|clearfilter| Clear Filter
---------------------------
-
-Removes the current filter so that all database records are visible.
-
 .. |selectonmap| image:: ../images/icons/SelectOnMap.png
 	:height: 16px
 	:width: 16px
@@ -200,6 +181,15 @@ Removes the current filter so that all database records are visible.
 -----------------------------------------
 
 Selects all MasterMap polygons associated with the INCID on the current database record in the GIS layer.
+
+.. |clearfilter| image:: ../images/icons/ClearFilter.png
+	:height: 16px
+	:width: 16px
+
+|clearfilter| Clear Filter
+--------------------------
+
+Removes the current filter so that all database records are visible.
 
 .. |getmapsel| image:: ../images/icons/ReadMapSelection.png
 	:height: 16px
@@ -232,8 +222,6 @@ Once the records are filtered in the database, if all the polygons are part of t
 
 Split/Merge Menu
 ================
-
-.. image:: ../images/figures/UserInterfaceSplitMergeToolbar.png
 
 .. Note:: Both options in this menu are disabled until the database records have been filtered and a process has been selected from the ‘Process’ drop-down list in the INCID box on the main window. For details on the INCID box, see section 2.9.1.
 
@@ -274,8 +262,6 @@ Merge features performs two types of merge:
 Tools Menu
 ==========
 
-.. image:: ../images/figures/UserInterfaceToolsToolbar.png
-
 .. |options| image:: ../images/icons/Options.png
 	:height: 16px
 	:width: 16px
@@ -284,6 +270,25 @@ Tools Menu
 -----------------
 
 Allows users to alter some aspects of the HLU Tool configuration.
+
+
+.. |switch| image:: ../images/icons/SwitchGISLayer.png
+	:height: 16px
+	:width: 16px
+
+|switch| Switch GIS Layer
+-------------------------
+
+Allows users to switch between valid HLU layers in the GIS application.
+
+
+.. image:: ../images/figures/UserInterfaceToolsToolbar.png
+
+|about| About
+-------------
+
+Displays the current version of the HLU Tool and the user's id and name.
+
 
 .. seealso::
 	See :ref:`options_window`  for more information.

@@ -83,14 +83,19 @@ Additional sources can be added to the ‘lut_sources’ table . The format of t
 
 	Format of **lut_sources** table
 
-**Fields**
-
-=================== ==================================================================================================
-source_id			A unique ID for each source.
-source_name			The name which appears in the ‘Name’ drop-down list in the 'Sources' tab.
-source_date_default	[Optional]. If a date is entered, the ‘Vague Date’ field in the 'Sources' tab will be set to this value (if blank) when this source is selected. If the date is left blank, the ‘Vague Date’ field will not be altered.
-sort_order			Determines the order source names are displayed in the ‘Name’ drop-down list in the 'sources' tab.
-=================== ==================================================================================================
++=====================+====================================================================================================+
+|        Field        |                                            Description                                             |
++=====================+====================================================================================================+
+| source_id           | A unique ID for each source.                                                                       |
++---------------------+----------------------------------------------------------------------------------------------------+
+| source_name         | The name which appears in the ‘Name’ drop-down list in the 'Sources' tab.                          |
++---------------------+----------------------------------------------------------------------------------------------------+
+| source_date_default | [Optional]. If a date is entered, the ‘Vague Date’ field in the 'Sources' tab will be set          |
+|                     | to this value (if blank) when this source is selected. If the date is left blank, the ‘Vague Date’ |
+|                     | field will not be altered.                                                                         |
++---------------------+----------------------------------------------------------------------------------------------------+
+| sort_order          | Determines the order source names are displayed in the ‘Name’ drop-down list in the 'sources' tab. |
++=====================+====================================================================================================+
 
 .. note::
 	Existing source records cannot be removed from the 'lut_sources' table if they are referenced by any of the data records (i.e. if they have been used in any incid data records). This is because data integrity must be retained.
@@ -224,7 +229,7 @@ The ‘exports_fields’ table shown in the figure :ref:`figDTEF` defines which 
 	The number of the column within the source table starting from 1. The export function does not require this column to be completed.
 
 :field_name:
-	The name of the column in the exported GIS layer. [1]_
+	The name of the column in the exported GIS layer.  [1]_
 
 .. [1] The 'column_name ' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
 

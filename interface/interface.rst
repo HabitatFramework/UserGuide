@@ -21,7 +21,7 @@ Once the HLU GIS Tool has been configured, the tool will start the associated GI
 	:align: center
 	:scale: 75
 
-	HLU GIS Tool window
+	HLU GIS Tool - Main window
 
 
 Records can be viewed or updated through the main window of the HLU GIS Tool. The following sections summarise the details available for each record. 
@@ -40,7 +40,7 @@ The ‘INCID’ box displays summary information for each INCID in the database,
 .. figure:: ../images/figures/UserInterfaceIncidSection.png
 	:align: center
 
-	INCID Section
+	Main window - INCID Section
 
 Reason/Process Section
 ----------------------
@@ -52,7 +52,7 @@ Reason/Process Section
 .. figure:: ../images/figures/UserInterfaceReasonProcessSection.png
 	:align: center
 
-	Reason/Process Section
+	Main window - Reason/Process Section
 
 
 IHS Tab
@@ -65,7 +65,7 @@ The IHS tab displays the IHS details for the current database record as shown in
 .. figure:: ../images/figures/UserInterfaceIHSTab.png
 	:align: center
 
-	IHS Tab
+	Main window - IHS Tab
 
 * ‘Category’ and ‘NVC’ drop-down lists are used to filter the ‘Habitat’ drop-down list to relevant IHS codes. The entries in these fields are not saved to the database.
 * The drop-down lists in the IHS Matrix, IHS Formation, IHS Management and IHS Complex boxes allow users to define the habitat according to the SERC IHS guidelines.
@@ -82,7 +82,7 @@ Click on ‘Details’ to display the Details tab as shown in the figure :ref:`f
 .. figure:: ../images/figures/UserInterfaceDetailsTab.png
 	:align: center
 
-	Details Tab
+	Main window - Details Tab
 
 * ‘BAP Habitats’ is automatically updated based upon the habitat code selected on the ‘IHS’ tab. For new BAPhabitats, ‘Determination Quality’ and ‘Interpretation Quality’ must be entered.
 * ‘Potential BAP Habitats’ allows users to define other BAP habitats which may also be present within the BAP habitat. An INCID may have a potential BAP habitat even if no BAP habitats are present.
@@ -102,7 +102,7 @@ Click on ‘Sources’ to display the Sources tab as shown in the figure :ref:`f
 .. figure:: ../images/figures/UserInterfaceSourcesTab.png
 	:align: center
 
-	Sources Tab
+	Main window - Sources Tab
 
 * ‘Name’ contains a list of data sources. For details on adding new sources, see section 3.1.
 * ‘Vague Date’ allows users to enter the date of the dataset. This can be either a precise date e.g. 01/04/2010 or a vague date e.g. Spring 2010-Summer 2010, 1980-2010 or ‘Unknown’. For details on defining vague dates, see section 2.8.1.3.
@@ -127,7 +127,7 @@ The History tab displays a list of modifications made to the current INCID and t
 .. figure:: ../images/figures/UserInterfaceHistoryTab.png
 	:align: center
 
-	History Tab
+	Main window - History Tab
 
 
 .. index::
@@ -158,7 +158,7 @@ To perform a bulk update:
 	:align: center
 	:scale: 75
 
-	HLU Main Window in Bulk Update Mode
+	Main Window - Bulk Update Mode
 
 .. Warning:: If ‘Delete Empty Bulk Update Rows’ is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. For details, see section 2.8.1.1.
 
@@ -290,7 +290,10 @@ Allows users to filter the database records using the query builder shown in the
 
 * Boolean Operator allows users to perform logical selections using:
 
-	* 'AND', 'AND NOT', 'OR', 'OR NOT'.
+	* 'AND'
+	* 'AND NOT'
+	* 'OR'
+	* 'OR NOT'.
 
 .. Note:: The value of the ‘Boolean Operator’ field on the first row is not used.
 
