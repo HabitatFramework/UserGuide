@@ -75,6 +75,7 @@ Due to the complexity of the attribute data required whilst simultaneously wishi
 	| Total                 | 25,500                 | 142,750                                         |
 	+-----------------------+------------------------+-------------------------------------------------+
 
+
 	======================= ======================== =================================================
 	                         Original habitat layer   HLU attribute database and associated GIS Layer
 	======================= ======================== =================================================
@@ -86,7 +87,7 @@ Due to the complexity of the attribute data required whilst simultaneously wishi
 	----------------------- ------------------------ -------------------------------------------------
 	 Spatial Attributes                               100,500                                         
 	----------------------- ------------------------ -------------------------------------------------
-	 *Total**                **25,500**               **142,750**                                         
+	 **Total**               **25,500**               **142,750**                                         
 	======================= ======================== =================================================
 
 The attribute data is stored in a ‘normalised’ relational structure which enables the attributes to be retrieved and maintained in a very logical way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.

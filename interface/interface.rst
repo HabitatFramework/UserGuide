@@ -19,7 +19,7 @@ Once the HLU GIS Tool has been configured, the tool will start the associated GI
 
 .. figure:: ../images/figures/UserInterfaceMainWindow.png
 	:align: center
-	:scale: 75
+	:scale: 70
 
 	HLU GIS Tool - Main window
 
@@ -39,6 +39,7 @@ The ‘INCID’ box displays summary information for each INCID in the database,
 
 .. figure:: ../images/figures/UserInterfaceIncidSection.png
 	:align: center
+	:scale: 85
 
 	Main window - INCID Section
 
@@ -51,6 +52,7 @@ Reason/Process Section
 
 .. figure:: ../images/figures/UserInterfaceReasonProcessSection.png
 	:align: center
+	:scale: 85
 
 	Main window - Reason/Process Section
 
@@ -64,6 +66,7 @@ The IHS tab displays the IHS details for the current database record as shown in
 
 .. figure:: ../images/figures/UserInterfaceIHSTab.png
 	:align: center
+	:scale: 85
 
 	Main window - IHS Tab
 
@@ -81,6 +84,7 @@ Click on ‘Details’ to display the Details tab as shown in the figure :ref:`f
 
 .. figure:: ../images/figures/UserInterfaceDetailsTab.png
 	:align: center
+	:scale: 85
 
 	Main window - Details Tab
 
@@ -101,6 +105,7 @@ Click on ‘Sources’ to display the Sources tab as shown in the figure :ref:`f
 
 .. figure:: ../images/figures/UserInterfaceSourcesTab.png
 	:align: center
+	:scale: 85
 
 	Main window - Sources Tab
 
@@ -126,6 +131,7 @@ The History tab displays a list of modifications made to the current INCID and t
 
 .. figure:: ../images/figures/UserInterfaceHistoryTab.png
 	:align: center
+	:scale: 85
 
 	Main window - History Tab
 
@@ -156,7 +162,7 @@ To perform a bulk update:
 
 .. figure:: ../images/figures/UserInterfaceBulkUpdate.png
 	:align: center
-	:scale: 75
+	:scale: 70
 
 	Main Window - Bulk Update Mode
 
@@ -181,6 +187,7 @@ Allows users to alter the HLU configuration. There are three categories of optio
 
 .. figure:: ../images/figures/OptionsDialog.png
 	:align: center
+	:scale: 90
 
 	HLU Options Dialog
 
@@ -259,11 +266,11 @@ For details on defining export formats, see section 3.3.
 
 	Export dialog
 
-Select one of the export formats from the drop-down list.
+* Select one of the export formats from the drop-down list.
 
-If the database records have been filtered, the 'Selected only' checkbox is automatically ticked as shown in Figure 2 and only the records related to the selected INCIDs will be exported. Untick this box to export all records. For details on how to filter records, see section 2.6.
+* If the database records have been filtered, the 'Selected only' checkbox is automatically ticked as shown in Figure 2 and only the records related to the selected INCIDs will be exported. Untick this box to export all records. For details on how to filter records, see section 2.6.
 
-The 'Export Descriptions' checkbox replaces habitat codes with textual descriptions. This feature is only available for ArcGIS users due to record length restrictions in MapInfo.
+* The 'Export Descriptions' checkbox replaces habitat codes with textual descriptions. This feature is only available for ArcGIS users due to record length restrictions in MapInfo.
 
 
 .. raw:: latex

@@ -12,7 +12,7 @@ The following sections summarise the menu functionality and provide some guideli
 .. figure:: ../images/figures/UserInterfaceToolbars.png
 	:align: center
 
-	Main window toolbars
+	Main window - Toolbars
 
 .. index::
 	single: Menus; File menu
@@ -70,6 +70,7 @@ Copies selected attributes so they can be applied to these fields in another rec
 
 .. figure:: ../images/figures/CopyCheckboxes.png
 	:align: center
+	:scale: 90
 
 	Checkboxes ticked to copy data
 
@@ -86,7 +87,7 @@ Pastes the data copied by the ‘Copy’ tool into the same fields in another re
 
 For example, the fields copied in the figure above would be pasted into 'Source 3' on the new record.
 
-.. Note:: It is not possible to copy data from one field in one record and paste it into a different field in another.
+.. Note:: It is not possible to copy data from one field in one record and paste it into a different field in another record.
 
 Bulk Update
 -----------
@@ -126,7 +127,7 @@ Aligns the HLU window to the top left of the screen and expands the GIS window t
 
 .. figure:: ../images/figures/WindowsSideBySide.png
 	:align: center
-	:scale: 50
+	:scale: 70
 
 	Windows arranged side by side
 
@@ -281,11 +282,8 @@ Allows users to alter some aspects of the HLU Tool configuration.
 
 Allows users to switch between valid HLU layers in the GIS application.
 
-
-.. image:: ../images/figures/UserInterfaceToolsToolbar.png
-
-|about| About
--------------
+About
+-----
 
 Displays the current version of the HLU Tool and the user's id and name.
 

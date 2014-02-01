@@ -2,9 +2,9 @@
 	single: faq
 	see: Frequently asked questions; faq
 
-***
-FAQ
-***
+**************************
+Frequently Asked Questions
+**************************
 
 Do I have to use IHS with the tool?
 
