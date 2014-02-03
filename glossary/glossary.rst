@@ -44,7 +44,7 @@ Glossary
 		Enables updates to the attributes for multiple selected Incids simultaneously. See :Ref:`bulk_update_window` for more details.
 
 	IHS
-		Integrated Habitat System - a hierarchical integration of existing habitat and land use classifications used in the UK. IHS was devised by Somerset Environmental Records Centre.
+		Integrated Habitat System - a hierarchical integration of existing habitat and land use classifications used in the UK. IHS was devised by the Somerset Environmental Records Centre.
 
 	Priority Habitat
 		Habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UHS Post-2010 Biodiversity Framework.
@@ -74,13 +74,13 @@ Glossary
 		Categorises the accuracy with which a priority habitat has been determined (e.g. 'Definitely is the priority habitat'). See :Ref:`determination_quality` for more details.
 
 	Interpretation Quality
-		A combination of the assessment of the quality of the original habitat identification in the data sources, the age of the original habitat data sources and the relationship between the original habitat type(s) and the priority habitat type (e.g. a Phase 1 habitat type with target notes within the last 5 years that has a strong correlation to the selected IHS habitat would be 'Medium (3)'). See :Ref:`interpretation_quality` for more details.
+		A combination of the assessment of the quality and age of the original source habitat identification and the relationship between the original habitat type and the priority habitat type. See :Ref:`interpretation_quality` for more details.
 
 	Interpretation Comment
-		Um
+		A free text field to explain or provide additional reasoning behind the priority habitat determination and interpretation.
 
 	Process
-		The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current Incid. May relate to a specific project (e.g. 'Grassland Inventory Updates 2008'), an ongoing process (e.g. 'SINC habitat monitoring') or an adhoc update based on new information available (e.g. 'Aerial photo interpretation').
+		The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current Incid. It may relate to a specific project, an ongoing process or an adhoc update.
 
 	Reason
-		The underlying explanation for the change in habitat or land use. It may be as a result of known changes in the habitat (e.g. 'Habitat loss', 'Habitat degredation', 'Habitat creation' or 'Habitat enhancement') or it may be that new information indicates the existing data is wrong or that there has been a change but the underlying the cause is unknown (e.g. 'New survey information or re-interpretation').
+		The underlying explanation for the change in habitat or land use. It may be as a result of known changes in the habitat (such as habitat loss or habitat restoration) or it may be that new information indicates the existing data is wrong or that there has been a change but the underlying the cause is unknown.

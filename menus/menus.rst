@@ -41,7 +41,7 @@ Exits the HLU GIS tool and allows users to decide whether or not to close the GI
 Allows users to export data from the HLU database to a GIS layer using a pre-defined export format.
 
 .. seealso::
-	:ref:`export_window` for more information.
+	See :ref:`export_window` for more information.
 
 .. raw:: latex
 

@@ -188,28 +188,36 @@ IHS Habitats can be flagged as **local** in the ‘lut_ihs_habitat` table. The f
 Configuring Exports
 ===================
 
-Adding Export Types
--------------------
+Adding export formats
+---------------------
 
-Export types can be added or removed in the ‘exports’ table shown in the figure :ref:`figDTE`.
+Export formats can be added or removed in the ‘exports’ table shown in the figure :ref:`figDTE`.
 
 .. _figDTE:
 
 .. figure:: ../images/figures/DatabaseTableExportsFields.png
 	:align: center
 
-	Format of **exports** table
+	Format of the exports table
 
-**Fields**
+.. tabularcolumns:: |L|L|
 
-:export_id:
-	A unique identifier used to determines which fields are selected from the ‘exports_fields’ table – see section ?.?.?.
+.. table:: Table exports fields and descriptions
 
-:export_name:
-	The name which will be displayed in the ‘Export Format’ drop-down list – see section 2.3.1.
+	+-------------+---------------------------------------------------------------------------------------------------+
+	|    Field    |                                            Description                                            |
+	+=============+===================================================================================================+
+	| export_id   | A unique identifier used to determines which fields are selected from the ‘exports_fields’ table. |
+	+-------------+---------------------------------------------------------------------------------------------------+
+	| export_name | The name which will be displayed in the ‘Export Format’ drop-down. list                           |
+	+-------------+---------------------------------------------------------------------------------------------------+
 
-Adding Fields to an Export Type
--------------------------------
+Once a new export format has been added to the 'exports' table the fields to be included in the export must be added to the 'export_fields' table.
+
+.. _exports:
+
+Adding fields to an export format
+---------------------------------
 
 The ‘exports_fields’ table shown in the figure :ref:`figDTEF` defines which fields are exported for each export type in the ‘exports’ table.
 
@@ -218,35 +226,36 @@ The ‘exports_fields’ table shown in the figure :ref:`figDTEF` defines which 
 .. figure:: ../images/figures/DatabaseTableExportsFields.png
 	:align: center
 
-	Format of **exports_fields** table
+	Format of exports_fields table
 
-**Fields**
+.. tabularcolumns:: |L|L|
 
-:export_field_id:
-	A unique identifier for the field.
+.. table:: Table exports_fields fields and descriptions
 
-:export_id:
-	The unique identifier for the export type in the ‘exports’ table – see section 3.3.1.
-
-:table_name:
-	The name of the source table in the database containing the column to be exported.
-
-:column_name:
-	The name of the column within the source table.
-
-:column_ordinal:
-	The number of the column within the source table starting from 1. The export function does not require this column to be completed.
-
-:field_name:
-	The name of the column in the exported GIS layer.  [3]_
+	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
+	|      Field      |                                                             Description                                                             |
+	+=================+=====================================================================================================================================+
+	| export_field_id | A unique identifier for the field.                                                                                                  |
+	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
+	| export_id       | The unique identifier for the export type in the ‘exports’ table (see :ref:`exports`)                                               |
+	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
+	| table_name      | The name of the source table in the database containing the column to be exported.                                                  |
+	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
+	| column_name     | The name of the column within the source table.                                                                                     |
+	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
+	| column_ordinal  | The number of the column within the source table starting from 1. The export function does not require this column to be completed. |
+	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
+	| field_name      | The name of the column in the exported GIS layer. [3]_                                                                              |
+	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
+	| field_ordinal   | Sets the order of the fields in the exported GIS layer.                                                                             |
+	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
+	| fields_count    | Allows users to determine the number of child records to be exported.                                                               |
+	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
 
 .. [3] The 'column_name ' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
 
-:field ordinal:
-	Sets the order of the fields in the exported GIS layer.
-
-:fields_count:
-	Allows users to determine the number of child records to be exported.
-
 .. Note:: As shown in the example in the figure :ref:`figDTEF`, geometry fields should not be included. This includes: obj, shape, perimeter, area, x, y etc. These fields will be added automatically to the exported layer.
 
+
+.. seealso::
+	See :ref:`export_window` for more information.

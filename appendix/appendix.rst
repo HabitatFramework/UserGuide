@@ -12,19 +12,18 @@ DOs and DON’Ts
 
 It is essential that the following guidelines are followed to ensure that the tool runs smoothly:
 
-DOs:
-----
+**DOs:**
 
 * :strong:`DO` close all instances of MapInfo before launching the tool as the tool may try and communicate with the wrong instance of MapInfo.
 * :strong:`DO` close all instances of ArcGIS before launching the tool. Unlike with MapInfo, the tool will automatically communicate with the correct instance of ArcGIS, however multiple instances will require more memory and may therefore affect tool performance.
-* For ArcGIS users, :strong:`DO` use a file geodatabase or personal geodatabase to store spatial information. :strong:`DO NOT` use a shapefile as this affects performance.
+* :strong:`DO` use a file geodatabase or personal geodatabase to store spatial information (ArcGIS users only).
 
-DO NOTs:
---------
+**DO NOTs:**
 
 * :strong:`DO NOT` remove the HLU layer from the map while the tool is running.
 * :strong:`DO NOT` close the associated GIS while the tool is running, otherwise the tool will display an error message.
 * :strong:`DO NOT` create or open another map document or workspace in the associated GIS window while the tool is running.
+* :strong:`DO NOT` use a shapefile as this affects performance (ArcGIS users only).
 
 
 .. note::
