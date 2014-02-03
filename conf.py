@@ -196,6 +196,10 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
+
+# Print the index at the end
+'printindex': '\\printindex',
+
 }
 
 # Grouping the document tree into LaTeX files. List of tuples

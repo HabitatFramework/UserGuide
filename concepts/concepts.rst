@@ -8,14 +8,22 @@ Concepts
 .. index::
 	single: OS Mastermap
 	single: toid
-	see: Topographical identifier; toid
 	single: toid_fragment_id
+	see: Topographical identifier; toid
 	see: fragment; toid_fragment_id
 
 .. _mastermap:
 
 OS MasterMap Framework
 ======================
+
+Mastermap is the largest scale national mapping produced by the Ordnance Survey.
+
+For the mapping framework, vector polygons from the Topographic Area layer of the Mastermap data were used as the spatial base. The polygons form a subdivision or segmentation of the landscape which is complete and continuous, detailed and accurate.
+
+OS Mastermap Topographic Area polygons have a number of associated attributes that provide information about the real world object that the polygon represents, along with others relevant to data management, including a numeric ID that uniquely identifies each object. The real world description attributes, chiefly the Descriptive Group and Descriptive Term, were used for habitat classification and are covered later in this document.
+The habitat framework product retains only two of the original Mastermap attributes, the unique ID known as the Topographic Identity or TOID
+
 
 TOID
 TOID_Fragment_Id
@@ -44,7 +52,48 @@ INCID
 GIS layer and Database Separation
 =================================
 
+Due to the number and complexity of data attributes and the need to minimise data duplication and reduce data volume the spatial data and attribute data are separated into separate components:
 
+1. The spatial data is stored in one or more GIS layers together with a minimal set of attributes that uniquely identifies and summarises each spatial feature. Separating the spatial data from the attribute data reduces the number of attributes required for the spatial layer which improves performance in the GIS application.
+
+2. The attribute data is stored in a relational database in a ‘normalised’ relational structure (i.e. groups of related attributes are divided into smaller, separate tables and relationships are defined between the tables). A normalised relational database enables the attributes to be retrieved and maintained in a very logical, and universal, way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
+   
+The HLU Tool provides an interface that links the spatial and attribute data and presents them to the user as a single entity.
+
+
+
+.. raw:: latex
+
+	\newpage
+
+Priority Habitats
+=================
+
+
+
+.. tabularcolumns:: |L|C|C|C|
+
+.. table:: Determination Quality matrix for different survey types and ages
+
++==========================================+===============+============+============+
+|               Survey Type                | Age of Survey                           |
+|                                          +---------------+------------+------------+
+|                                          | < 5 years     | 5-10 years | > 10 years |
++==========================================+===============+============+============+
+| NVC quadrat                              | High (1)      | Medium (2) | Medium (3) |
++------------------------------------------+---------------+------------+------------+
+| NVC rapid                                | Medium (2)    | Medium (3) | Medium (4) |
++------------------------------------------+---------------+------------+------------+
+| Phase 1 and target notes                 | Medium (3)    | Medium (4) | Low (5)    |
++------------------------------------------+---------------+------------+------------+
+| Phase 1 map only                         | Low(5)        | Low (5)    | Low (6)    |
++------------------------------------------+---------------+------------+------------+
+| ESA/ SSSI site description/ species list | Medium (3)    | Medium (3) | Medium (4) |
++------------------------------------------+---------------+------------+------------+
+| Aerial Photo, Landcover                  | Low (5)       | Low (6)    | Low (7)    |
++------------------------------------------+---------------+------------+------------+
+| Expert knowledge of site quality         | Medium(4)     | Medium (4) | Low (5)    |
++==========================================+===============+============+============+
 
 
 .. raw:: latex

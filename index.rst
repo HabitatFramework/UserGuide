@@ -22,21 +22,14 @@ Contents
    menus/menus
    interface/interface
    database/database
-   faq/faq
+   FAQ <faq/faq>
    glossary/glossary
    appendix/appendix
 
 
 .. only:: html
 
-	Todo List
-	=========
-	.. todolist::
-
-.. only:: html
-
-	Indices and Search
-	==================
+	Index
+	=====
 
 	* :ref:`genindex`
-	* :ref:`search`

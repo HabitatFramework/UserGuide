@@ -24,6 +24,10 @@ Once the HLU GIS Tool has been configured, the tool will start the associated GI
 	HLU GIS Tool - Main window
 
 
+.. raw:: latex
+
+	\newpage
+
 Records can be viewed or updated through the main window of the HLU GIS Tool. The following sections summarise the details available for each record. 
 
 Required fields are highlighted in red on each tab. The ‘Apply’ button will be active when the required fields have been completed on all tabs.
@@ -136,6 +140,10 @@ The History tab displays a list of modifications made to the current INCID and t
 	Main window - History Tab
 
 
+.. raw:: latex
+
+	\newpage
+
 .. index::
 	single: Bulk updates
 
@@ -148,6 +156,14 @@ Allows users to update the attributes for multiple selected database records sim
 
 .. Note:: This feature is only available to configured users who have been given bulk update permissions. For details on configuring users, see section 3.2.
 
+.. _figUIBU:
+
+.. figure:: ../images/figures/UserInterfaceBulkUpdate.png
+	:align: center
+	:scale: 70
+
+	Main Window - Bulk Update Mode
+
 To perform a bulk update:
 
 * Filter the database records using ‘Select by attributes’ or select polygons in the GIS layer and click ‘Get Map Selection’. For details on filtering records, see section 2.6.
@@ -157,14 +173,6 @@ To perform a bulk update:
 * The ‘Bulk Update’ box displays the number of INCIDs, TOIDs and fragments affected by the update and allows users to select whether to create a History record for this process.
 
 * Enter the updated details in the IHS, Details, and Sources tabs, then click Apply. These fields will be updated for all the selected INCIDs.
-
-.. _figUIBU:
-
-.. figure:: ../images/figures/UserInterfaceBulkUpdate.png
-	:align: center
-	:scale: 70
-
-	Main Window - Bulk Update Mode
 
 .. Warning:: If ‘Delete Empty Bulk Update Rows’ is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. For details, see section 2.8.1.1.
 
@@ -239,7 +247,6 @@ Vague Date Season Names
 
 These fields allow users to define how vague dates, such as 'Spring 2010-Autumn 2010' or '1989-2010', are entered so that they can be converted to dates in the HLU database.
 
- 
 The default value for the ‘Vague Date Delimiter’ is a hyphen ( - ). This can be altered to any character, however it must not be the same delimiter used by the computer to enter precise dates, such as 01/04/2010. The default delimiter used by Windows for English-format dates is a forward slash ( / ).
 
 

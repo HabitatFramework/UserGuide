@@ -127,7 +127,7 @@ Aligns the HLU window to the top left of the screen and expands the GIS window t
 
 .. figure:: ../images/figures/WindowsSideBySide.png
 	:align: center
-	:scale: 70
+	:scale: 80
 
 	Windows arranged side by side
 

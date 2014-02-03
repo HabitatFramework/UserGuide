@@ -83,6 +83,10 @@ Additional sources can be added to the ‘lut_sources’ table . The format of t
 
 	Format of **lut_sources** table
 
+.. tabularcolumns:: |L|L|
+
+.. table:: Table lut_sources fields and descriptions
+
 +---------------------+----------------------------------------------------------------------------------------------------+
 |        Field        |                                            Description                                             |
 +=====================+====================================================================================================+
@@ -91,7 +95,9 @@ Additional sources can be added to the ‘lut_sources’ table . The format of t
 | source_name         | The name which appears in the ‘Name’ drop-down list in the 'Sources' tab.                          |
 +---------------------+----------------------------------------------------------------------------------------------------+
 | source_date_default | [Optional]. If a date is entered, the ‘Vague Date’ field in the 'Sources' tab will be set          |
++                     +----------------------------------------------------------------------------------------------------+
 |                     | to this value (if blank) when this source is selected. If the date is left blank, the ‘Vague Date’ |
++                     +----------------------------------------------------------------------------------------------------+
 |                     | field will not be altered.                                                                         |
 +---------------------+----------------------------------------------------------------------------------------------------+
 | sort_order          | Determines the order source names are displayed in the ‘Name’ drop-down list in the 'sources' tab. |
@@ -99,6 +105,18 @@ Additional sources can be added to the ‘lut_sources’ table . The format of t
 
 .. note::
 	Existing source records cannot be removed from the 'lut_sources' table if they are referenced by any of the data records (i.e. if they have been used in any incid data records). This is because data integrity must be retained.
+
+=====                   ===========
+Field					Description
+=====                   ===========
+source_id           	A unique ID for each source.
+source_name         	The name which appears in the ‘Name’ drop-down list in the 'Sources' tab.
+source_date_default 	[Optional]. If a date is entered, the ‘Vague Date’ field in the 'Sources' tab will be set
+                    	to this value (if blank) when this source is selected. If the date is left blank, the ‘Vague Date’
+                    	field will not be altered.
+sort_order          	Determines the order source names are displayed in the ‘Name’ drop-down list in the 'sources' tab.
+=====                   ===========
+
 
 
 .. index::
