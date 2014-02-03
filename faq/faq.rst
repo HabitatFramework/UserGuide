@@ -6,6 +6,9 @@
 Frequently Asked Questions
 **************************
 
+This is a list of Frequently Asked Questions about the HLU Tool. Feel free to
+suggest new entries!
+
 Do I have to use IHS with the tool?
 
 Why does the tool title bar show [Read Only]?

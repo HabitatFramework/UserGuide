@@ -198,7 +198,7 @@ latex_elements = {
 #'preamble': '',
 
 # Print the index at the end
-'printindex': '\\printindex',
+#'printindex': '\\printindex',
 
 }
 

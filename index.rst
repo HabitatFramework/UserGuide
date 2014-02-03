@@ -27,9 +27,14 @@ Contents
    appendix/appendix
 
 
-.. only:: html
+* :ref:`genindex`
+* :ref:`search`
+* :ref:`glossary`
 
-	Index
-	=====
 
-	* :ref:`genindex`
+.. .. only:: html
+
+..	Index
+..	=====
+..
+..	* :ref:`genindex`

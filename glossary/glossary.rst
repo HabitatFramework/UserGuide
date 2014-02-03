@@ -71,10 +71,13 @@ Glossary
 		The relative importance of each source when determining the IHS habitat and associated IHS codes for all the features in an Incid (e.g. of 'Primary' or 'Secondary' importance).
 
 	Determination Quality
+		Um
 
 	Interpretation Quality
+		Um
 
 	Interpretation Comment
+		Um
 
 	Process
 		The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current Incid. May relate to a specific project (e.g. 'Grassland Inventory Updates 2008'), an ongoing process (e.g. 'SINC habitat monitoring') or an adhoc update based on new information available (e.g. 'Aerial photo interpretation').
