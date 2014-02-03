@@ -2,7 +2,7 @@
 Preface
 *******
 
-The most up to date version of this documentation can be found in *html* and *PDF* form at `HLUTool-UserGuide <https://readthedocs.org/projects/hlugistool-userguide/>`_.
+The most up to date version of this documentation can be found in **html** and **PDF** form on `ReadTheDocs <https://readthedocs.org/projects/hlugistool-userguide/>`_.
 
 Recommended User Knowledge
 ==========================
@@ -13,7 +13,7 @@ Users
 This user guide assumes that users of the HLU GIS Tool have:
 
 * General IT experience including use of Microsoft Windows.
-* Experience in the use of a relevant GIS software (currently ArcGIS or MapInfo).
+* Experience in the use of a relevant GIS software (currently ArcGIS or MapInfo), including selecting, querying and editing features and attributes.
 * An understanding of habitat survey methodologies, especially the Integrated Habitat System (IHS).
 
 
@@ -25,7 +25,7 @@ We recommend that a person within each organisation should be designated as the 
 * Understand relational database structures.
 * Be an expert user of the chosen database system.
 * Have qualifications, certified training or equivalent experience in managing databases using that system.
-* Have certified training or equivalent experience in advanced features of the relevant GIS software.
+* Have certified training or equivalent experience in advanced features of the relevant GIS software, including defining, joining and exporting layers and creating spatial and attribute indexes.
 
 A technical guide is also available at `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlugistool-technicalguide/>`_ for those of a more 'techie' nature with details on how to install, configure, maintain and upgrade the HLU Tool and associated relational database.
 
@@ -45,7 +45,7 @@ This Preface explains a little about the HLU Tool, the community of people who d
 
 :doc:`../database/database` outlines the database structure and how to adapt the data for local requirements.
 
-:doc:`../faq/faq` has a list of commonly asked questions and their answers.
+:doc:`FAQ <../faq/faq>` has a list of commonly asked questions and their answers.
 
 :doc:`../appendix/appendix` introduces tips for optimising performance and known issues with the tool.
 

@@ -19,18 +19,18 @@ Once the HLU GIS Tool has been configured, the tool will start the associated GI
 
 .. figure:: ../images/figures/UserInterfaceMainWindow.png
 	:align: center
-	:scale: 70
+	:scale: 60
 
 	HLU GIS Tool - Main window
 
 
-.. raw:: latex
-
-	\newpage
-
 Records can be viewed or updated through the main window of the HLU GIS Tool. The following sections summarise the details available for each record. 
 
 Required fields are highlighted in red on each tab. The ‘Apply’ button will be active when the required fields have been completed on all tabs.
+
+.. raw:: latex
+
+	\newpage
 
 INCID Section
 -------------
