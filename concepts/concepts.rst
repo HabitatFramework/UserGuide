@@ -71,9 +71,27 @@ Priority Habitats
 
 
 
+
+.. index::
+	single: determination quality
+
+.. _determination_quality:
+
+Determination Quality
+---------------------
+
+
+.. index::
+	single: interpretation quality
+
+.. _interpretation_quality:
+
+Interpretation Quality
+----------------------
+
 .. tabularcolumns:: |L|C|C|C|
 
-.. table:: Determination Quality matrix for different survey types and ages
+.. table:: Interpretation Quality matrix for different survey types and ages
 
 	+------------------------------------------+-----------------------------------------+
 	|               Survey Type                | Age of Survey                           |

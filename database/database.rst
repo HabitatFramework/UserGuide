@@ -45,21 +45,26 @@ New users of the HLU GIS Tool can be added to the ‘lut_user’ table. The form
 .. figure:: ../images/figures/DatabaseTableLutUser.png
 	:align: center
 
-	Format of **lut_user** table
+	Format of the lut_user table
 
-**Fields**
+.. tabularcolumns:: |L|L|
 
-:user_id:
-	The user’s *Windows* login ID. If the user logs in to a domain, the login should be entered in the format: [Domain]\[LoginID] as shown in the second record.
+.. table:: Table lut_user fields and descriptions
 
-:user_name:
-	The name which will be displayed in the ‘By’ fields of the INCID box and the History tab.
+	+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+	|    Field    |                                                                         Description                                                                          |
+	+=============+==============================================================================================================================================================+
+	| user_id     | The user’s *Windows* login ID. If the user logs in to a domain, the login should be entered in the format: [Domain]\[LoginID] as shown in the second record. |
+	+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+	| user_name   | The name which will be displayed in the ‘By’ fields of the INCID box and the History tab.                                                                    |
+	+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+	| bulk_update | Determines whether the user has permissions to run a bulk update to change attributes for all selected records.                                              |
+	|             | Ticking this box gives the user permission to run bulk updates.                                                                                              |
+	+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+	| sort_order  | Determines the order user names would be displayed in any relevant drop-down                                                                                 |
+	|             | This field is not currently used (as there are no drop-down lists that display users.)                                                                       |
+	+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-:bulk_update:
-	Determines whether the user has permissions to run a bulk update to change attributes for all selected records. Ticking this box gives the user permission to run bulk updates.
-
-:sort_order:
-	Determines the order user names would be displayed in any relevant drop-down lists. This field is not currently used (as there are no drop-down lists that display users.)
 
 .. note::
 	Existing user records cannot be removed from the 'lut_user' table if they are referenced by any of the data records (i.e. if they have applied any changes to the data). This is because data integrity must be retained.
@@ -81,42 +86,28 @@ Additional sources can be added to the ‘lut_sources’ table . The format of t
 .. figure:: ../images/figures/DatabaseTableLutSources.png
 	:align: center
 
-	Format of **lut_sources** table
+	Format of the lut_sources table
 
 .. tabularcolumns:: |L|L|
 
 .. table:: Table lut_sources fields and descriptions
 
-+---------------------+----------------------------------------------------------------------------------------------------+
-|        Field        |                                            Description                                             |
-+=====================+====================================================================================================+
-| source_id           | A unique ID for each source.                                                                       |
-+---------------------+----------------------------------------------------------------------------------------------------+
-| source_name         | The name which appears in the ‘Name’ drop-down list in the 'Sources' tab.                          |
-+---------------------+----------------------------------------------------------------------------------------------------+
-| source_date_default | [Optional]. If a date is entered, the ‘Vague Date’ field in the 'Sources' tab will be set          |
-+                     +----------------------------------------------------------------------------------------------------+
-|                     | to this value (if blank) when this source is selected. If the date is left blank, the ‘Vague Date’ |
-+                     +----------------------------------------------------------------------------------------------------+
-|                     | field will not be altered.                                                                         |
-+---------------------+----------------------------------------------------------------------------------------------------+
-| sort_order          | Determines the order source names are displayed in the ‘Name’ drop-down list in the 'sources' tab. |
-+---------------------+----------------------------------------------------------------------------------------------------+
+	+---------------------+----------------------------------------------------------------------------------------------------+
+	|        Field        |                                            Description                                             |
+	+=====================+====================================================================================================+
+	| source_id           | A unique ID for each source.                                                                       |
+	+---------------------+----------------------------------------------------------------------------------------------------+
+	| source_name         | The name which appears in the ‘Name’ drop-down list in the 'Sources' tab.                          |
+	+---------------------+----------------------------------------------------------------------------------------------------+
+	| source_date_default | [Optional]. If a date is entered, the ‘Vague Date’ field in the 'Sources' tab will be set          |
+	|                     | to this value (if blank) when this source is selected. If the date is left blank, the ‘Vague Date’ |
+	|                     | field will not be altered.                                                                         |
+	+---------------------+----------------------------------------------------------------------------------------------------+
+	| sort_order          | Determines the order source names are displayed in the ‘Name’ drop-down list in the 'sources' tab. |
+	+---------------------+----------------------------------------------------------------------------------------------------+
 
 .. note::
 	Existing source records cannot be removed from the 'lut_sources' table if they are referenced by any of the data records (i.e. if they have been used in any incid data records). This is because data integrity must be retained.
-
-=====                   ===========
-Field					Description
-=====                   ===========
-source_id           	A unique ID for each source.
-source_name         	The name which appears in the ‘Name’ drop-down list in the 'Sources' tab.
-source_date_default 	[Optional]. If a date is entered, the ‘Vague Date’ field in the 'Sources' tab will be set
-                    	to this value (if blank) when this source is selected. If the date is left blank, the ‘Vague Date’
-                    	field will not be altered.
-sort_order          	Determines the order source names are displayed in the ‘Name’ drop-down list in the 'sources' tab.
-=====                   ===========
-
 
 
 .. index::
@@ -132,18 +123,21 @@ New processes can be added to the ‘lut_process’ table. The format of the tab
 .. figure:: ../images/figures/DatabaseTableLutProcess.png
 	:align: center
 
-	Format of **lut_process** table
+	Format of the lut_process table
 
-**Fields**
+.. tabularcolumns:: |L|L|
 
-:code:
-	A unique 3 character field for each source.
+.. table:: Table lut_process fields and descriptions
 
-:description:
-	A brief description or name that will appear in the 'Process' drop-down list in the main window.
-
-:sort_order:
-	Determines the order processes are displayed in the 'Process' drop-down list in the main window.
+	+-------------+--------------------------------------------------------------------------------------------------+
+	|    Field    |                                           Description                                            |
+	+=============+==================================================================================================+
+	| code        | A unique 3 character field for each source.                                                      |
+	+-------------+--------------------------------------------------------------------------------------------------+
+	| description | A brief description or name that will appear in the 'Process' drop-down list in the main window. |
+	+-------------+--------------------------------------------------------------------------------------------------+
+	| sort_order  | Determines the order processes are displayed in the 'Process' drop-down list in the main window. |
+	+-------------+--------------------------------------------------------------------------------------------------+
 
 
 .. index::
@@ -163,26 +157,23 @@ IHS Habitats can be flagged as **local** in the ‘lut_ihs_habitat` table. The f
 .. figure:: ../images/figures/DatabaseTableLutIHSHabitat.png
 	:align: center
 
-	Format of **lut_ihs_habitat** table
+	Format of the lut_ihs_habitat table
 
-**Fields**
+.. tabularcolumns:: |L|L|
 
-:code:
-	[Read only]. The unique 8 character field for each IHS Habitat. **Do not edit this value.**
+.. table:: Table lut_ihs_habitat fields (subset) and descriptions
 
-:description:
-	[Read only]. The brief description or name that appears in the 'IHS Habitat' drop-down list in the main window. **Do not edit this value.**
-
-:is_local:
-	Indicates if the IHS Habitat can be found in the local area.
-
-		==	====================
-		-1	True (is local)
-		0	False (is not local)
-		==	====================
-
-:sort_order:
-	Determines the order IHS Habitats are displayed in the 'IHS Habitat' drop-down list in the main window.
+	+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+	|    Field    |                                                                 Description                                                                 |
+	+=============+=============================================================================================================================================+
+	| code        | [Read only]. The unique 8 character field for each IHS Habitat. **Do not edit this value.**                                                 |
+	+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+	| description | [Read only]. The brief description or name that appears in the 'IHS Habitat' drop-down list in the main window. **Do not edit this value.** |
+	+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+	| is_local    | Indicates if the IHS Habitat can be found in the local area. -1 = True (is local), 0 = False (is not local).                                |
+	+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+	| sort_order  | Determines the order IHS Habitats are displayed in the 'IHS Habitat' drop-down list in the main window.                                     |
+	+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 .. raw:: latex

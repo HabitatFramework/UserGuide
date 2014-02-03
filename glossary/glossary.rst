@@ -71,10 +71,10 @@ Glossary
 		The relative importance of each source when determining the IHS habitat and associated IHS codes for all the features in an Incid (e.g. of 'Primary' or 'Secondary' importance).
 
 	Determination Quality
-		Um
+		Categorises the accuracy with which a priority habitat has been determined (e.g. 'Definitely is the priority habitat'). See :Ref:`determination_quality` for more details.
 
 	Interpretation Quality
-		Um
+		A combination of the assessment of the quality of the original habitat identification in the data sources, the age of the original habitat data sources and the relationship between the original habitat type(s) and the priority habitat type (e.g. a Phase 1 habitat type with target notes within the last 5 years that has a strong correlation to the selected IHS habitat would be 'Medium (3)'). See :Ref:`interpretation_quality` for more details.
 
 	Interpretation Comment
 		Um

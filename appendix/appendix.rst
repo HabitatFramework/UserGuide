@@ -66,6 +66,7 @@ An ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor) must be created for us
 	|                GIS                 | HLU layer | Aerial Photography |
 	+====================================+===========+====================+
 	| ArcGIS (Do not display out beyond) | 1:24,000  | 1:10,000           |
+	+------------------------------------+-----------+--------------------+
 	| MapInfo (Max Zoom)                 | 7.5 km    | 3 km               |
 	+------------------------------------+-----------+--------------------+
 
