@@ -1,16 +1,14 @@
 .. index::
-	single: Key concepts
+	single: Key Concepts
 
 ********
 Concepts
 ********
 
 .. index::
-	single: OS Mastermap
-	single: toid
-	single: toid_fragment_id
-	see: Topographical identifier; toid
-	see: fragment; toid_fragment_id
+	single: Mastermap Framework
+	see: Topographical identifier; TOID
+	see: fragment; TOID_Fragment_ID
 
 .. _mastermap_framework:
 
@@ -26,6 +24,8 @@ The habitat framework product retains only two of the original Mastermap attribu
 
 
 TOID
+
+
 TOID_Fragment_Id
 
 
@@ -34,8 +34,7 @@ TOID_Fragment_Id
 	\newpage
 
 .. index::
-	single: incid
-	see: Incremental Identifier; incid
+	see: Incremental Identifier; Incid
 
 .. _incid:
 
@@ -73,7 +72,7 @@ Priority Habitats
 
 
 .. index::
-	single: determination quality
+	single: Determination Quality
 
 .. _determination_quality:
 
@@ -82,7 +81,7 @@ Determination Quality
 
 
 .. index::
-	single: interpretation quality
+	single: Interpretation Quality
 
 .. _interpretation_quality:
 
@@ -122,7 +121,7 @@ Splits and Merges
 =================
 
 .. index::
-	single: split
+	single: Split
 
 .. _split:
 
@@ -134,7 +133,8 @@ Split features will performs two types of split depending upon the filter active
 .. Note:: If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and :guilabel:`Get Map Selection` is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will automatically perform a physical split before displaying the attributes.
 
 .. index::
-	single: logical split
+	single: Logical Split
+	single: Split; Logical
 
 .. _logical_split:
 
@@ -153,7 +153,8 @@ To perform a logical split:
 .. Note:: The selected features must all belong to the same INCID.
 
 .. index::
-	single: physical split
+	single: Physical Split
+	single: Split; Physical
 
 .. _physical_split:
 
@@ -233,7 +234,7 @@ To perform a physical split:
 
 
 .. index::
-	single: merge
+	single: Merge
 
 .. _merge:
 
@@ -243,7 +244,8 @@ Merge Features
 Merge features will performs two types of merge depending upon the filter active in the tool. If two or more features from multiple INCIDs are present in the current filter then the tool will perform a logical merge. If two or more fragments from the same TOID and with different TOID_Fragment_Ids are present in the current filter then the tool will perform a physical merge.
 
 .. index::
-	single: Logical merge
+	single: Logical Merge
+	single: Merge; Logical
 
 .. _logical_merge:
 
@@ -271,7 +273,8 @@ To perform a logical merge:
 * If the merged features are fragments of the same TOID the user will be given the option to then perform a physical merge.
 
 .. index::
-	single: Physical merge
+	single: Physical Merge
+	single: Merge; Physical
 
 .. _physical_merge:
 

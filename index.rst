@@ -21,19 +21,15 @@ Contents
    concepts/concepts
    menus/menus
    interface/interface
-   database/database
    FAQ <faq/faq>
    glossary/glossary
    appendix/appendix
 
 
-Index
-=====
-
-* :ref:`genindex`
-* :ref:`search`
-
-
 .. only:: html
 
+   Index
+   =====
+
+   * :ref:`genindex`
 

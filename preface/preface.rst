@@ -27,7 +27,7 @@ We recommend that a person within each organisation should be designated as the 
 * Have qualifications, certified training or equivalent experience in managing databases using that system.
 * Have certified training or equivalent experience in advanced features of the relevant GIS software, including defining, joining and exporting layers and creating spatial and attribute indexes.
 
-A technical guide is also available at `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlugistool-technicalguide/>`_ for those of a more 'techie' nature with details on how to install, configure, maintain and upgrade the HLU Tool and associated relational database.
+A technical guide is also available at `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for those of a more 'techie' nature with details on how to install, configure, maintain and upgrade the HLU Tool and associated relational database.
 
 
 Reading Guide
@@ -42,8 +42,6 @@ This Preface explains a little about the HLU Tool, the community of people who d
 :doc:`../menus/menus` describes all the user interface menu items and buttons on the HLU Tool.
 
 :doc:`../interface/interface` describes all the user interface windows and components of the HLU Tool.
-
-:doc:`../database/database` outlines the database structure and how to adapt the data for local requirements.
 
 :doc:`FAQ <../faq/faq>` has a list of commonly asked questions and their answers.
 
@@ -62,7 +60,7 @@ Please remember, however, that the tool cost a lot of money to develop and still
 
 
 .. index::
-	single: Useful links
+	single: Useful Links
 
 Useful links
 ============

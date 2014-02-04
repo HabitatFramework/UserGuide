@@ -6,7 +6,7 @@ Interface
 *********
 
 .. index::
-	single: Windows; Main window
+	single: Windows; Main Window
 
 .. _main_window:
 
@@ -39,7 +39,7 @@ INCID Section
 
 The ‘INCID’ section displays summary information for each INCID in the database, including area, perimeter, date created and date last modified as shown in the figure :ref:`figUIIS`.
 
-.. Note:: If the user is not configured, the ‘By’ fields will display their Windows login. For details on configuring users see :ref:`lookup_tables`.
+.. Note:: If the user is not configured, the ‘By’ fields will display their Windows login. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 .. _figUIIS:
 
@@ -123,7 +123,7 @@ Click on ‘Sources’ to display the Sources tab as shown in the figure :ref:`f
 
 	Main window - Sources Tab
 
-* ‘Name’ contains a list of data sources. For details on adding new sources see :ref:`lookup_tables`.
+* ‘Name’ contains a list of data sources. For details on adding new sources see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 * ‘Vague Date’ allows users to enter the date of the dataset. This can be either a precise date e.g. 01/04/2010 or a vague date e.g. Spring 2010-Summer 2010, 1980-2010 or ‘Unknown’. For details on configuring vague dates see :ref:`vague_date_options`.
 * ‘Habitat Class’ defines the habitat classification used for this data source. If no habitat classification is used, select ‘Not Applicable’.
 * ‘Habitat Type’ defines the type of habitat. This list is filtered based upon the habitat class.
@@ -157,7 +157,7 @@ The History tab displays a list of modifications made to the current INCID and t
 	\newpage
 
 .. index::
-	single: Bulk updates
+	single: Bulk Updates
 
 .. _bulk_update_window:
 
@@ -166,7 +166,7 @@ Bulk Updates
 
 Allows users to update the attributes for multiple selected database records simultaneously.
 
-.. Note:: This feature is only available to configured users who have been given bulk update permissions. For details on configuring users see :ref:`lookup_tables`.
+.. Note:: This feature is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 .. _figUIBU:
 
@@ -194,7 +194,7 @@ To perform a bulk update:
 	\newpage
 
 .. index::
-	single: Windows; Options window
+	single: Windows; Options Window
 
 .. _options_window:
 
@@ -275,7 +275,7 @@ The default value for the ‘Vague Date Delimiter’ is a hyphen ( - ). This can
 	\newpage
 
 .. index::
-	single: Windows; Export window
+	single: Windows; Export Window
 
 .. _export_window:
 
@@ -286,7 +286,7 @@ Click |export| or :menuselection:`File... --> Export` to open the window.
 
 Allows users to export data from the HLU database to a GIS layer using a pre-defined export format (see the figure :ref:`figED`).
 
-For details on defining export formats see :ref:`configuring_exports`.
+For details on defining export formats see 'Configuring Exports' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 .. _figED:
 
@@ -307,7 +307,7 @@ For details on defining export formats see :ref:`configuring_exports`.
 	\newpage
 
 .. index::
-	single: Windows; Query Builder window
+	single: Windows; Query Builder Window
 
 .. _query_builder_window:
 
@@ -360,7 +360,7 @@ If a mistake has been made when entering the selection criteria, click on the gr
 	\newpage
 
 .. index::
-	single: Windows; Switch GIS Layer window
+	single: Windows; Switch GIS Layer Window
 
 .. _switch_layer_window:
 

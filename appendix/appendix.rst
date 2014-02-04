@@ -122,7 +122,7 @@ However, if additional entries are required in the lookup tables, these may be a
 	\newpage
 
 .. index::
-	single: Known issues
+	single: Known Issues
 
 .. _known_issues:
 

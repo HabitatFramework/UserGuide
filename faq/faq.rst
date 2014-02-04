@@ -1,6 +1,6 @@
 .. index::
-	single: faq
-	see: Frequently asked questions; faq
+	single: FAQ
+	see: Frequently asked questions; FAQ
 
 **************************
 Frequently Asked Questions
@@ -19,7 +19,7 @@ suggest new entries!
 
 **Why does the tool title bar show [Read Only]?**
 
-	This shows that the data cannot currently be edited. This is either because your userid has not been added to the database or has been added incorrectly (see :ref:`lookup_tables` for details), or the active GIS layer is not in an active edit state. Once both of these conditions have been met, click on the main window and the [READ ONLY] status should disappear.
+	This shows that the data cannot currently be edited. This is either because your userid has not been added to the database or has been added incorrectly (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details), or the active GIS layer is not in an active edit state. Once both of these conditions have been met, click on the main window and the [READ ONLY] status should disappear.
 
 **Can I use data that isn't snapped to OS MasterMap?**
 
@@ -38,7 +38,7 @@ suggest new entries!
 
 **Can I hide IHS habitats that don't occur in my region from the drop-down lists?**
 
-	You can currently currently hide IHS habitats from the `Habitat` list on the IHS tab in the main window (see :ref:`configuring_habitats` for details). There is also a planned change request to enable non-local IHS Habitats to be hidden from the `Habitat Type` list on the `Sources` tab in the main window.	
+	You can currently currently hide IHS habitats from the `Habitat` list on the IHS tab in the main window (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details). There is also a planned change request to enable non-local IHS Habitats to be hidden from the `Habitat Type` list on the `Sources` tab in the main window.	
 
 **Can more several people use the tool at the same time?**
 

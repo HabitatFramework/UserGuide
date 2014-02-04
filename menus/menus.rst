@@ -15,7 +15,7 @@ The following sections summarise the menu functionality and provide some guideli
 	Main window - Toolbars
 
 .. index::
-	single: Menus; File menu
+	single: Menus; File Menu
 
 .. _file_menu:
 
@@ -48,14 +48,14 @@ Allows users to export data from the HLU database to a GIS layer using a pre-def
 	\newpage
 
 .. index::
-	single: Menus; Edit menu
+	single: Menus; Edit Menu
 
 .. _edit_menu:
 
 Edit Menu
 =========
 
-When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see :ref:`lookup_tables`) and the spatial data must be editable in the GIS application.
+When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details) and the spatial data must be editable in the GIS application.
 
 .. |copy| image:: ../images/icons/EditCopy.png
 	:height: 16px
@@ -100,7 +100,7 @@ Allows users to update the attributes for multiple selected database records sim
 	\newpage
 
 .. index::
-	single: Menus; View menu
+	single: Menus; View Menu
 
 View Menu
 =========
@@ -158,7 +158,7 @@ Zooms to the current database selection in the GIS window.
 	\newpage
 
 .. index::
-	single: Menus; Select menu
+	single: Menus; Select Menu
 
 .. _select_menu:
 
@@ -217,7 +217,7 @@ Once the records are filtered in the database, if all the polygons are part of t
 	\newpage
 
 .. index::
-	single: Menus; Split/Merge menu
+	single: Menus; Split/Merge Menu
 
 .. _split_merge_menu:
 
@@ -256,7 +256,7 @@ Merge features performs two types of merge:
 	\newpage
 
 .. index::
-	single: Menus; Tools menu
+	single: Menus; Tools Menu
 
 .. _tools_menu:
 
