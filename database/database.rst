@@ -32,6 +32,8 @@ Tables in the database prefixed by `lut_` are *lookup tables* and are used in ma
 .. index::
 	single: Adding; Users
 
+.. _configuring_users:
+
 Users
 -----
 
@@ -47,24 +49,31 @@ New users of the HLU GIS Tool can be added to the ‘lut_user’ table. The form
 
 	Format of the lut_user table
 
-.. tabularcolumns:: |L|L|
+.. tabularcolumns:: |p{3cm}|p{8cm}|
 
 .. table:: Table lut_user fields and descriptions
 
-	+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-	|    Field    |                                                                         Description                                                                          |
-	+=============+==============================================================================================================================================================+
-	| user_id     | The user’s *Windows* login ID. If the user logs in to a domain, the login should be entered in the format: [Domain]\[LoginID] as shown in the second record. |
-	+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-	| user_name   | The name which will be displayed in the ‘By’ fields of the INCID box and the History tab.                                                                    |
-	+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-	| bulk_update | Determines whether the user has permissions to run a bulk update to change attributes for all selected records.                                              |
-	|             | Ticking this box gives the user permission to run bulk updates.                                                                                              |
-	+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-	| sort_order  | Determines the order user names would be displayed in any relevant drop-down                                                                                 |
-	|             | This field is not currently used (as there are no drop-down lists that display users.)                                                                       |
-	+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+	+-------------+----------------------------------------------------------------------+
+	|    Field    |                             Description                              |
+	+=============+======================================================================+
+	| user_id     | The user’s *Windows* login ID. If the user logs in to a domain,      |
+	|             | the login should be entered in the format: [Domain]\[LoginID]        |
+	|             | as shown in the second record. [4]_                                  |
+	+-------------+----------------------------------------------------------------------+
+	| user_name   | The name which will be displayed in the ‘By’ fields of the INCID     |
+	|             | section and the History tab.                                         |
+	+-------------+----------------------------------------------------------------------+
+	| bulk_update | Determines whether the user has permissions to run a bulk update     |
+	|             | to change attributes for all selected records.                       |
+	|             | Ticking this checkbox gives the user permission to run bulk updates. |
+	+-------------+----------------------------------------------------------------------+
+	| sort_order  | Determines the order user names would be displayed in any relevant   |
+	|             | drop-down. This field is not currently used (as there are no         |
+	|             | drop-down lists that display users.)                                 |
+	+-------------+----------------------------------------------------------------------+
 
+
+.. [4] The 'user_id' of the current user can shown in the :menuselection:`Tools... --> About` window.
 
 .. note::
 	Existing user records cannot be removed from the 'lut_user' table if they are referenced by any of the data records (i.e. if they have applied any changes to the data). This is because data integrity must be retained.
@@ -75,6 +84,8 @@ New users of the HLU GIS Tool can be added to the ‘lut_user’ table. The form
 
 .. index::
 	single: Adding; Sources
+
+.. _configuring_sources:
 
 Sources
 -------
@@ -88,7 +99,7 @@ Additional sources can be added to the ‘lut_sources’ table . The format of t
 
 	Format of the lut_sources table
 
-.. tabularcolumns:: |L|L|
+.. tabularcolumns:: |p{3cm}|p{8cm}|
 
 .. table:: Table lut_sources fields and descriptions
 
@@ -112,6 +123,8 @@ Additional sources can be added to the ‘lut_sources’ table . The format of t
 
 .. index::
 	single: Adding; Processes
+
+.. _configuring_processes:
 
 Processes
 ---------
@@ -142,6 +155,8 @@ New processes can be added to the ‘lut_process’ table. The format of the tab
 
 .. index::
 	single: Adding; IHS Habitats
+
+.. _configuring_habitats:
 
 IHS Habitats
 ------------
@@ -226,7 +241,7 @@ The ‘exports_fields’ table shown in the figure :ref:`figDTEF` defines which 
 .. figure:: ../images/figures/DatabaseTableExportsFields.png
 	:align: center
 
-	Format of exports_fields table
+	Format of the exports_fields table
 
 .. tabularcolumns:: |L|L|
 
@@ -252,7 +267,7 @@ The ‘exports_fields’ table shown in the figure :ref:`figDTEF` defines which 
 	| fields_count    | Allows users to determine the number of child records to be exported.                                                               |
 	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
 
-.. [3] The 'column_name ' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
+.. [3] The 'column_name' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
 
 .. Note:: As shown in the example in the figure :ref:`figDTEF`, geometry fields should not be included. This includes: obj, shape, perimeter, area, x, y etc. These fields will be added automatically to the exported layer.
 

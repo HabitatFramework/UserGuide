@@ -55,7 +55,7 @@ Allows users to export data from the HLU database to a GIS layer using a pre-def
 Edit Menu
 =========
 
-When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see section 3.2) and the spatial data must be editable in the GIS application.
+When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see :ref:`lookup_tables`) and the spatial data must be editable in the GIS application.
 
 .. |copy| image:: ../images/icons/EditCopy.png
 	:height: 16px
@@ -224,7 +224,7 @@ Once the records are filtered in the database, if all the polygons are part of t
 Split/Merge Menu
 ================
 
-.. Note:: Both options in this menu are disabled until the database records have been filtered and a process has been selected from the ‘Process’ drop-down list in the INCID box on the main window. For details on the INCID box, see section 2.9.1.
+.. Note:: Both options in this menu are disabled until the database records have been filtered and a process has been selected from the ‘Process’ drop-down list in the INCID section on the main window. For details on the INCID section see :ref:`_incid_section`.
 
 .. |split| image:: ../images/icons/SplitFeatures.png
 	:height: 16px
@@ -273,6 +273,10 @@ Tools Menu
 Allows users to alter some aspects of the HLU Tool configuration.
 
 
+.. seealso::
+	See :ref:`options_window`  for more information.
+
+
 .. |switch| image:: ../images/icons/SwitchGISLayer.png
 	:height: 16px
 	:width: 16px
@@ -286,8 +290,4 @@ About
 -----
 
 Displays the current version of the HLU Tool and the user's id and name.
-
-
-.. seealso::
-	See :ref:`options_window`  for more information.
 

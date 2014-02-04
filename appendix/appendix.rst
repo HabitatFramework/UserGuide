@@ -28,7 +28,7 @@ It is essential that the following guidelines are followed to ensure that the to
 
 .. note::
 
-	New in version 1.0.5:
+	New in version 1.0.7:
 	
 	* It is now possible to use a HLU GIS layer containing only a subset of all the incids in the HLU database.
 	* It is also possible to switch between different HLU GIS layers present in the open document or workspace using the *Switch GIS layer* function.
@@ -46,7 +46,8 @@ It is essential that the following guidelines are followed to ensure that the to
 Optimising Performance
 ======================
 
-The Habitat and Land Use (HLU) GIS Tool has been optimised as far as possible and there are no simple technological enhancements that can be made to significantly improve performance. It is important therefore to ensure performance is optimised wherever possible through user configuration and operation. The following section suggests some simple approaches to improving performance.
+The Habitat and Land Use (HLU) GIS Tool has been optimised as far as possible and there are no simple technological enhancements that can be made to significantly improve performance. It is important therefore to ensure performance is optimised wherever possible through user configuration and operation. The following suggestions show some simple approaches to improving performance.
+
 
 Creation of ArcGIS Map Document or MapInfo Workspace
 ----------------------------------------------------
@@ -55,19 +56,20 @@ An ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor) must be created for us
 
 * Ensure that the .mxd or .wor file only contains one copy of the HLU layer.
 * Ensure that the .mxd or .wor is saved at a sensible view level such as 1:10,000 scale rather the full extent of the HLU dataset.
-* Add zoom layering to datasets so that detailed datasets such as the HLU layer and aerial photography are not displayed at smaller scales. Our recommended maximum extents are shown in the table below):
+* Add zoom layering to datasets so that detailed datasets such as the HLU layer and aerial photography are not displayed at smaller scales. Recommended maximum extents are shown in the table below):
 
 .. tabularcolumns:: |L|C|C|
 
 .. table:: Recommended maximum GIS extents
 
 	+------------------------------------+-----------+--------------------+
-	|                GIS                 | HLU layer | Aerial Photography |
+	|          GIS Application           | HLU layer | Aerial Photography |
 	+====================================+===========+====================+
 	| ArcGIS (Do not display out beyond) | 1:24,000  | 1:10,000           |
 	+------------------------------------+-----------+--------------------+
 	| MapInfo (Max Zoom)                 | 7.5 km    | 3 km               |
 	+------------------------------------+-----------+--------------------+
+
 
 Use of HLU GIS Tool with ArcGIS or MapInfo
 ------------------------------------------
@@ -81,12 +83,13 @@ It takes a significant length of time for ArcGIS or MapInfo to draw an entire HL
 	* ArcGIS - Click the :guilabel:`Pause` button in the bottom left corner of the map window
 	* MapInfo – Press the keyboard :kbd:`Esc` key
 
-* For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in Tools > Extensions – see section ref:`?`.
+* For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in ArcGIS via :menuselection:`Tools --> Extensions`.  See `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlugistool-technicalguide/>`_ for more details.
 * For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase. **The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.**
 
 	e.g. exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.
 
 * For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
+
 
 Selection of Database Type
 --------------------------
@@ -97,10 +100,12 @@ Microsoft Access is a versatile desktop database application, but does not have 
 
 We therefore recommend using the HLU GIS Tool with SQL Server or a similar database management system, as this will improve performance when filtering the database records and updating attribute data.
 
+
 Local vs. Network Storage
 -------------------------
 
 It is important to remember that application performance will depend upon the data transfer speed. Data stored locally on a single computer will provide good performance, but will limit access to the data to a single user. Data stored on a network drive is accessible to all users, but performance will be limited by the speed that the data can be transferred across the network.
+
 
 Data Management
 ---------------

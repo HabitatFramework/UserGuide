@@ -12,7 +12,7 @@ Concepts
 	see: Topographical identifier; toid
 	see: fragment; toid_fragment_id
 
-.. _mastermap:
+.. _mastermap_framework:
 
 OS MasterMap Framework
 ======================
@@ -210,7 +210,7 @@ To perform a physical split:
 * Set the HLU layer as ‘Editable’.
 * Select the feature to be split and go to Objects > Set Target.
 * Select the polygon in the Cosmetic layer and go to Objects > Split.
-* In the Data Disaggregation box, ensure that ‘Method’ for all fields is set to ‘Value’ as shown in the figure :ref:`figMIDD`, then click OK.
+* In the Data Disaggregation dialog ensure that ‘Method’ for all fields is set to ‘Value’ as shown in the figure :ref:`figMIDD`, then click OK.
 
 .. _figMIDD:
 
@@ -282,10 +282,10 @@ Physical merge combines fragments of a single TOID into a single, larger, featur
 
 To perform a physical merge:
 
-* Select two or more fragments from one TOID in the GIS layer as shown in the figure :Ref:`figPMD` (left).
+* Select two or more fragments from one TOID in the GIS layer as shown in the figure :ref:`figPMD` (left).
 * Return to the HLU main window and click ‘Get Map Selection’.
 * Select one of the options in the ‘Process’ list.
-* Click on ‘Merge Features’. The features will be combined in the GIS layer as shown in figure :Ref:`figPMD` (right).
+* Click on ‘Merge Features’. The features will be combined in the GIS layer as shown in figure :ref:`figPMD` (right).
 
 .. _figPMD:
 
