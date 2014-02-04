@@ -23,7 +23,7 @@ Glossary
 		Combines spatial data for the selected features from GIS with the associated attribute data from the database into a single new GIS layer based upon a pre-defined export format. See :ref:`export_window` for more details.
 
 	Fragment ID
-		An incremental number used as a unique reference to individual features (fragments) of a single TOID. See :ref:`mastermap` for more details.
+		An incremental number used as a unique reference to individual features (fragments) of a single TOID. See :ref:`_mastermap_framework` for more details.
 
 	Habitat Class
 		One of the habitat classification systems used in the UK to record or describe an area of habitat (e.g. 'Phase 1', 'NVC', 'BAP Priority').
@@ -80,7 +80,7 @@ Glossary
 		The tool can perform two types of split, Logical Split or Physical Split, depending upon the filter active in the tool. See :ref:`split` for more details.
 
 	TOID
-		A unique *topographical identifier* applied to features in Ordnance Survey's MasterMap product. See :ref:`mastermap` for more details.
+		A unique *topographical identifier* applied to features in Ordnance Survey's MasterMap product. See :ref:`_mastermap_framework` for more details.
 
 	Vague Date
 		A specific date, range of dates or imprecise date that can be specified in a variety of formats (e.g. '23 Mar 1987', 'Mar 1987 - Jun 1987', 'Spring 1987').

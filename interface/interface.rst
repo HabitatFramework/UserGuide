@@ -201,6 +201,10 @@ To perform a bulk update:
 Options Window
 ==============
 
+.. |options| image:: ../images/icons/Options.png
+	:height: 16px
+	:width: 16px
+
 Click |options| or :menuselection:`Tools... --> Options` to open the window.
 
 Allows users to alter the HLU configuration. There are three categories of options as shown in the figure :ref:`figOD`.
@@ -282,6 +286,10 @@ The default value for the ‘Vague Date Delimiter’ is a hyphen ( - ). This can
 Export Window
 =============
 
+.. |export| image:: ../images/icons/FileExport.png
+	:height: 16px
+	:width: 16px
+
 Click |export| or :menuselection:`File... --> Export` to open the window.
 
 Allows users to export data from the HLU database to a GIS layer using a pre-defined export format (see the figure :ref:`figED`).
@@ -313,6 +321,10 @@ For details on defining export formats see 'Configuring Exports' in the `HLUTool
 
 Select by Attributes - Query Builder Window
 ===========================================
+
+.. |selectbyattr| image:: ../images/icons/SelectByAttributes.png
+	:height: 16px
+	:width: 16px
 
 Click |selectbyattr| or :menuselection:`Select... --> Select by Attributes` to open the window.
 
@@ -366,6 +378,10 @@ If a mistake has been made when entering the selection criteria, click on the gr
 
 Switch GIS Layer Window
 =======================
+
+.. |switch| image:: ../images/icons/SwitchGISLayer.png
+	:height: 16px
+	:width: 16px
 
 Click |switch| or :menuselection:`Tools... --> Switch GIS Layer` to open the window.
 

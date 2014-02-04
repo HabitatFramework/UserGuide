@@ -224,7 +224,7 @@ Once the records are filtered in the database, if all the polygons are part of t
 Split/Merge Menu
 ================
 
-.. Note:: Both options in this menu are disabled until the database records have been filtered and a process has been selected from the ‘Process’ drop-down list in the INCID section on the main window. For details on the INCID section see :ref:`_incid_section`.
+.. Note:: Both options in this menu are disabled until the database records have been filtered and a process has been selected from the ‘Process’ drop-down list in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
 
 .. |split| image:: ../images/icons/SplitFeatures.png
 	:height: 16px

@@ -32,7 +32,7 @@ Data structure
 Spatial data
 ------------
 
-The Habitat and Land Use (HLU) spatial data consists of one or more GIS layers containing features (points, lines or polygons). These features are combined with Ordnance Survey (OS) Mastermap features so that each HLU feature is aligned with the points, lines and boundaries of OS Mastermap. Features may not extend across or beyond OS Mastermap lines or boundaries but they can sub-divide features by splitting them into smaller fragments. A unique reference to the original OS Mastermap feature, known as a TOID (see :ref:`mastermap`) is assigned to every HLU feature so that the original lines or boundaries of the OS Mastermap features can be re-established by merging features with the same TOID.
+The Habitat and Land Use (HLU) spatial data consists of one or more GIS layers containing features (points, lines or polygons). These features are combined with Ordnance Survey (OS) Mastermap features so that each HLU feature is aligned with the points, lines and boundaries of OS Mastermap. Features may not extend across or beyond OS Mastermap lines or boundaries but they can sub-divide features by splitting them into smaller fragments. A unique reference to the original OS Mastermap feature, known as a TOID (see :ref:`_mastermap_framework`) is assigned to every HLU feature so that the original lines or boundaries of the OS Mastermap features can be re-established by merging features with the same TOID.
 
 Whilst there are benefits to splitting the HLU features by OS Mastermap, such as ensuring polygon boundaries are accurate and do not overlap, the splitting process significantly increases the volume of data. For example, the table below indicates the effect of splitting on a 500 feature GIS layer.
 

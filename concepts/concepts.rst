@@ -8,7 +8,7 @@ Concepts
 .. index::
 	single: Mastermap Framework
 	see: Topographical identifier; TOID
-	see: fragment; TOID_Fragment_ID
+	see: Fragment; TOID_Fragment_ID
 
 .. _mastermap_framework:
 
@@ -32,9 +32,6 @@ TOID_Fragment_Id
 .. raw:: latex
 
 	\newpage
-
-.. index::
-	see: Incremental Identifier; Incid
 
 .. _incid:
 
@@ -71,17 +68,11 @@ Priority Habitats
 
 
 
-.. index::
-	single: Determination Quality
-
 .. _determination_quality:
 
 Determination Quality
 ---------------------
 
-
-.. index::
-	single: Interpretation Quality
 
 .. _interpretation_quality:
 
@@ -120,9 +111,6 @@ Interpretation Quality
 Splits and Merges
 =================
 
-.. index::
-	single: Split
-
 .. _split:
 
 Split Features
@@ -133,7 +121,6 @@ Split features will performs two types of split depending upon the filter active
 .. Note:: If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and :guilabel:`Get Map Selection` is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will automatically perform a physical split before displaying the attributes.
 
 .. index::
-	single: Logical Split
 	single: Split; Logical
 
 .. _logical_split:
@@ -153,7 +140,6 @@ To perform a logical split:
 .. Note:: The selected features must all belong to the same INCID.
 
 .. index::
-	single: Physical Split
 	single: Split; Physical
 
 .. _physical_split:
@@ -233,9 +219,6 @@ To perform a physical split:
 * Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
 
 
-.. index::
-	single: Merge
-
 .. _merge:
 
 Merge Features
@@ -244,7 +227,6 @@ Merge Features
 Merge features will performs two types of merge depending upon the filter active in the tool. If two or more features from multiple INCIDs are present in the current filter then the tool will perform a logical merge. If two or more fragments from the same TOID and with different TOID_Fragment_Ids are present in the current filter then the tool will perform a physical merge.
 
 .. index::
-	single: Logical Merge
 	single: Merge; Logical
 
 .. _logical_merge:
@@ -273,7 +255,6 @@ To perform a logical merge:
 * If the merged features are fragments of the same TOID the user will be given the option to then perform a physical merge.
 
 .. index::
-	single: Physical Merge
 	single: Merge; Physical
 
 .. _physical_merge:
