@@ -203,6 +203,7 @@ Physical split creates one or more new TOID fragments in the database based upon
 	* Ensure that the physical split is completed in the database prior to commencing any other operations such as 'Select by attributes…' to avoid database synchronisation issues.
 
 **ArcGIS**
+
 To perform a physical split:
 
 * On the 'Editor' toolbar, click **Editor** and select **Start Editing**.
@@ -231,6 +232,7 @@ To perform a physical split:
 * Click **Split Features**. The record will be updated and details added to the History tab for the INCID.
 
 **MapInfo**
+
 To perform a physical split:
 
 * Set the Cosmetic layer as 'Editable' and draw the feature to split by.

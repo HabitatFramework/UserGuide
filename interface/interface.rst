@@ -273,13 +273,13 @@ Delete Empty Bulk Update Rows
 
 	This option affects the following sections of the main window when performing bulk updates:
 
-	* IHS Matrix
-	* IHS Formation
-	* IHS Management
-	* IHS Complex
-	* Priority Habitats
-	* Potential Priority Habitats
-	* Sources
+		* IHS Matrix
+		* IHS Formation
+		* IHS Management
+		* IHS Complex
+		* Priority Habitats
+		* Potential Priority Habitats
+		* Sources
 
 	.. caution::
 
@@ -404,7 +404,7 @@ Boolean Operator
 	.. note::
 		The value of the 'Boolean Operator' field on the first row is not used.
 
-'(' and ')'
+( and )
 	Allow users to add additional brackets as shown in the example in the figure :ref:`figQB` to define how the query is executed.
 
 Table
