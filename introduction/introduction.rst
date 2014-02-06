@@ -74,7 +74,7 @@ Due to the complexity of the attribute data required whilst simultaneously wishi
 	| **Total**             | **25,500**             | **142,750**                |
 	+-----------------------+------------------------+----------------------------+
 
-The attribute data is stored in a ‘normalised’ relational structure which enables the attributes to be retrieved and maintained in a very logical way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
+The attribute data is stored in a 'normalised' relational structure which enables the attributes to be retrieved and maintained in a very logical way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
 .. [1] Assuming 50 attributes per feature.
 .. [2] Assuming an average of 33.5 Mastermap-derived HLU features per original habitat feature.

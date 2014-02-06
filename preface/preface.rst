@@ -35,19 +35,19 @@ Reading Guide
 
 This Preface explains a little about the HLU Tool, the community of people who develop and use it, and the licensing conditions for using and distributing it.
 
-**:doc:`../introduction/introduction`**  explains why the HLU Tool is needed, what it does and where it comes from.
+:doc:`../introduction/introduction` \ explains why the HLU Tool is needed, what it does and where it comes from.
 
-:doc:`../concepts/concepts`  is a brief outline of the key concepts of the HLU Tool.
+:doc:`../concepts/concepts` \ is a brief outline of the key concepts of the HLU Tool.
 
-:doc:`../menus/menus`  describes all the user interface menu items and buttons on the HLU Tool.
+:doc:`../menus/menus` \ describes all the user interface menu items and buttons on the HLU Tool.
 
-:doc:`../interface/interface`  describes all the user interface windows and components of the HLU Tool.
+:doc:`../interface/interface` \ describes all the user interface windows and components of the HLU Tool.
 
-:doc:`FAQ <../faq/faq>`  has a list of commonly asked questions and their answers.
+:doc:`FAQ <../faq/faq>` \ has a list of commonly asked questions and their answers.
 
-:doc:`../glossary/glossary`  contains a brief glossary and description of commonly used terms.
+:doc:`../glossary/glossary` \ contains a brief glossary and description of commonly used terms.
 
-:doc:`../appendix/appendix`  introduces tips for optimising performance and known issues with the tool.
+:doc:`../appendix/appendix` \ introduces tips for optimising performance and known issues with the tool.
 
 
 .. index::
@@ -56,7 +56,7 @@ This Preface explains a little about the HLU Tool, the community of people who d
 Licensing
 =========
 
-The code for the HLU GIS Tool is ‘open source’ and is released under `GPLv3 <http://www.gnu.org/licenses/gpl.html>`_. Users are free to install it on as many computers as they like, and to redistribute it according to the GPLv3 license.
+The code for the HLU GIS Tool is 'open source' and is released under `GPLv3 <http://www.gnu.org/licenses/gpl.html>`_. Users are free to install it on as many computers as they like, and to redistribute it according to the GPLv3 license.
 
 Please remember, however, that the tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefuly received. Enquiries can be made via the `ALERC forum <http://forum.lrcs.org.uk/viewforum.php?id=24>`_.
 
@@ -99,7 +99,7 @@ The following typographical conventions are used in this manual:
 :guilabel:`Commit`
 	Indicates a label, button or anything that appears in user interfaces.
 
-:menuselection:`Tools... --> About`
+**Tools... --> About**
 	Indicates a menu choice, or a combination of menu choices, tab selections or GUI buttons.
 
 :file:`C:\\Program Files\\HLU Tool`

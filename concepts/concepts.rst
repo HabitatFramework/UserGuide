@@ -25,7 +25,7 @@ The spatial data is stored in one or more GIS layers together with a minimal set
 Attribute Data
 --------------
 
-The attribute data is stored in a relational database in a ‘normalised’ relational structure (i.e. groups of related attributes are divided into smaller, separate tables and relationships are defined between the tables). A normalised relational database enables the attributes to be retrieved and maintained in a very logical, and universal, way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
+The attribute data is stored in a relational database in a 'normalised' relational structure (i.e. groups of related attributes are divided into smaller, separate tables and relationships are defined between the tables). A normalised relational database enables the attributes to be retrieved and maintained in a very logical, and universal, way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
 
 .. _habitat_framework:
@@ -178,10 +178,10 @@ Logical split is used to create a new INCID in the database based upon the subse
 
 To perform a logical split:
 
-* Click ‘Switch to GIS Window’ and select the required features in the GIS layer.
-* Return to the HLU main window and click ‘Get Map Selection’.
-* Select one of the options in the ‘Process’ list.
-* Click on ‘Split Features’. The new INCID will be created and set as the current record.
+* Click **Switch to GIS Window** and select the required features in the GIS layer.
+* Return to the HLU main window and click 'Get Map Selection'.
+* Select one of the options in the 'Process' list.
+* Click **Split Features**. The new INCID will be created and set as the current record.
 
 .. note::
 	The selected features must all belong to the same INCID.
@@ -200,16 +200,14 @@ Physical split creates one or more new TOID fragments in the database based upon
 
 	* Only one feature should be split in a single operation. Splitting multiple features will cause database synchronisation issues. 
 	* If several features have been split, select the fragments for one original feature and split using the tool. Repeat this operation for the remaining features.
-	* Ensure that the physical split is completed in the database prior to commencing any other operations such as ‘Select by attributes…’ to avoid database synchronisation issues.
+	* Ensure that the physical split is completed in the database prior to commencing any other operations such as 'Select by attributes…' to avoid database synchronisation issues.
 
-ArcGIS
-^^^^^^
-
+**ArcGIS**
 To perform a physical split:
 
-* On the ‘Editor’ toolbar, click on ‘Editor’ and select ‘Start Editing’.
+* On the 'Editor' toolbar, click **Editor** and select **Start Editing**.
 * Select the feature to be split.
-* On the ‘Editor’ toolbar, select the ‘Cut Polygons Tool’ (for polygon features) or `Split Tool` (for lines) button as shown in the figure :ref:`figArcEMB`.
+* On the 'Editor' toolbar, select **Cut Polygons Tool** (for polygon features) or **Split Tool** (for lines) button as shown in the figure :ref:`figArcEMB`.
 
 .. _figArcEMB:
 
@@ -218,9 +216,9 @@ To perform a physical split:
 
 	Edit Settings for Physical Split (ArcGIS)
 
-* Using the Sketch tool on ‘Editor’ toolbar, draw a polyline.
-* On the ‘Editor’ toolbar, click on ‘Editor’ and select ‘Save Edits’.
-* The feature will be split but still selected as shown in the figure :ref:`figArcSFD`. Return to the HLU GIS Tool and click ‘Get Map Selection’.
+* Using the Sketch tool on 'Editor' toolbar, draw a polyline.
+* On the 'Editor' toolbar, click **Editor** and select **Save Edits**.
+* The feature will be split but still selected as shown in the figure :ref:`figArcSFD`. Return to the HLU GIS Tool and click **Get Map Selection**.
 
 .. _figArcSFD:
 
@@ -229,23 +227,21 @@ To perform a physical split:
 
 	Split Features (ArcGIS)
 
-* Select one of the options in the ‘Process’ list.
-* Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID.
+* Select one of the options in the 'Process' list.
+* Click **Split Features**. The record will be updated and details added to the History tab for the INCID.
 
-MapInfo
-^^^^^^^
-
+**MapInfo**
 To perform a physical split:
 
-* Set the Cosmetic layer as ‘Editable’ and draw the feature to split by.
+* Set the Cosmetic layer as 'Editable' and draw the feature to split by.
 
 .. Tip::
 	The Cosmetic layer should be used due to the time required for MapInfo to add a new feature to the full HLU layer.
 
-* Set the HLU layer as ‘Editable’.
+* Set the HLU layer as 'Editable'.
 * Select the feature to be split and go to Objects > Set Target.
 * Select the polygon in the Cosmetic layer and go to Objects > Split.
-* In the Data Disaggregation dialog ensure that ‘Method’ for all fields is set to ‘Value’ as shown in the figure :ref:`figMIDD`, then click OK.
+* In the Data Disaggregation dialog ensure that 'Method' for all fields is set to 'Value' as shown in the figure :ref:`figMIDD`, then click **OK**.
 
 .. _figMIDD:
 
@@ -254,7 +250,7 @@ To perform a physical split:
 
 	Data Disaggregation Dialog (MapInfo)
 
-* The feature will be split but still selected as shown in :ref:`figMISF`. Return to the HLU GIS Tool and click ‘Get Map Selection’.
+* The feature will be split but still selected as shown in :ref:`figMISF`. Return to the HLU GIS Tool and click **Get Map Selection**.
 
 .. _figMISF:
 
@@ -263,8 +259,8 @@ To perform a physical split:
 
 	Split Features (MapInfo)
 
-* Select one of the options in the ‘Process’ list.
-* Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
+* Select one of the options in the 'Process' list.
+* Click **Split Features**. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
 
 
 .. _merge:
@@ -286,10 +282,10 @@ Logical merge combines all the features selected in the GIS into a single INCID 
 
 To perform a logical merge:
 
-* Click ‘Switch to GIS Window’ and select the features to be merged and a feature from the INCID they are to be merged with in the GIS layer.
-* Return to the HLU main window and click ‘Get Map Selection’.
-* Select one of the options in the ‘Process’ list.
-* Click on ‘Merge Features’. A list of INCIDs will be displayed as shown in the figure :ref:`figLMD`.
+* Click **Switch to GIS Window** and select the features to be merged and a feature from the INCID they are to be merged with in the GIS layer.
+* Return to the HLU main window and click 'Get Map Selection'.
+* Select one of the options in the 'Process' list.
+* Click **Merge Features**. A list of INCIDs will be displayed as shown in the figure :ref:`figLMD`.
 
 .. _figLMD:
 
@@ -298,7 +294,7 @@ To perform a logical merge:
 
 	Select INCID to Keep Dialog
 
-* Click on the grey box to the left of the row to select an INCID. The associated feature will blink in the GIS window. Click ‘OK’.
+* Click on the grey box to the left of the row to select an INCID. The associated feature will blink in the GIS window. Click **OK**.
 * The selected features will be assigned to the selected INCID and details added to the History tab.
 * If the merged features are fragments of the same TOID the user will be given the option to then perform a physical merge.
 
@@ -315,9 +311,9 @@ Physical merge combines fragments of a single TOID into a single, larger, featur
 To perform a physical merge:
 
 * Select two or more fragments from one TOID in the GIS layer as shown in the figure :ref:`figPMD` (left).
-* Return to the HLU main window and click ‘Get Map Selection’.
-* Select one of the options in the ‘Process’ list.
-* Click on ‘Merge Features’. The features will be combined in the GIS layer as shown in figure :ref:`figPMD` (right).
+* Return to the HLU main window and click **Get Map Selection**.
+* Select one of the options in the 'Process' list.
+* Click **Merge Features**. The features will be combined in the GIS layer as shown in figure :ref:`figPMD` (right).
 
 .. _figPMD:
 

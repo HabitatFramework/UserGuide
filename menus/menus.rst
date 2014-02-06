@@ -74,7 +74,7 @@ Copies selected attributes so they can be applied to these fields in another rec
 
 	Checkboxes ticked to copy data
 
-Tick the checkboxes next to the fields to be copied, as shown in the figure :ref:`figCC`, then click ‘Copy’.
+Tick the checkboxes next to the fields to be copied, as shown in the figure :ref:`figCC`, then click **Copy**.
 
 .. |paste| image:: ../images/icons/EditPaste.png
 	:height: 16px
@@ -83,7 +83,7 @@ Tick the checkboxes next to the fields to be copied, as shown in the figure :ref
 |paste| Paste
 -------------
 
-Pastes the data copied by the ‘Copy’ tool into the same fields in another record.
+Pastes the data copied by the 'Copy' tool into the same fields in another record.
 
 For example, the fields copied in the figure above would be pasted into 'Source 3' on the new record.
 
@@ -210,9 +210,9 @@ Filters the database records to retrieve the attributes associated with the sele
 |selectbyincid| Select by INCID
 -------------------------------
 
-Select a polygon on the map and go to ‘Get Map Selection’ to select the database records.
+Select a polygon on the map and go to 'Get Map Selection' to select the database records.
 
-Once the records are filtered in the database, if all the polygons are part of the same INCID, ‘Select by INCID’ allows users to expand the map selection to include all polygons belonging to that INCID.
+Once the records are filtered in the database, if all the polygons are part of the same INCID, 'Select by INCID' allows users to expand the map selection to include all polygons belonging to that INCID.
 
 .. raw:: latex
 
@@ -227,7 +227,7 @@ Split/Merge Menu
 ================
 
 .. note::
-	Both options in this menu are disabled until the database records have been filtered and a process has been selected from the ‘Process’ drop-down list in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
+	Both options in this menu are disabled until the database records have been filtered and a process has been selected from the 'Process' drop-down list in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
 
 .. |split| image:: ../images/icons/SplitFeatures.png
 	:height: 16px

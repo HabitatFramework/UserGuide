@@ -26,17 +26,17 @@ Once the HLU GIS Tool has been configured, the tool will start the associated GI
 
 Records can be viewed or updated through the main window of the HLU GIS Tool. The following sections summarise the details available for each record. 
 
-Required fields are highlighted in red on each tab. The ‘Apply’ button will be active when the required fields have been completed on all tabs.
+Required fields are highlighted in red on each tab. The 'Apply' button will be active when the required fields have been completed on all tabs.
 
 .. _incid_section:
 
 INCID Section
 -------------
 
-The ‘INCID’ section displays summary information for each INCID in the database, including area, perimeter, date created and date last modified as shown in the figure :ref:`figUIIS`.
+The 'INCID' section displays summary information for each INCID in the database, including area, perimeter, date created and date last modified as shown in the figure :ref:`figUIIS`.
 
 .. note::
-	If the user is not configured, the ‘By’ fields will display their Windows login. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+	If the user is not configured, the 'By' fields will display their Windows login. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 .. _figUIIS:
 
@@ -51,7 +51,7 @@ The ‘INCID’ section displays summary information for each INCID in the datab
 Reason/Process Section
 ----------------------
 
-‘Reason’ and ‘Process’ (as shown in the figure :ref:`figUIRPS`) are required fields for all updates and are used on the History tab to indicate why the record was last updated. These fields are sticky i.e. the selected reason and process will be used for all updates in the current session unless they are altered manually.
+'Reason' and 'Process' (as shown in the figure :ref:`figUIRPS`) are required fields for all updates and are used on the History tab to indicate why the record was last updated. These fields are sticky i.e. the selected reason and process will be used for all updates in the current session unless they are altered manually.
 
 .. _figUIRPS:
 
@@ -78,17 +78,11 @@ The IHS tab displays the IHS details for the current database record as shown in
 	Main window - IHS Tab
 
 
-.. topic:: Topic title
-	Topic body text
-	spread over several
-	lines
-
-
 Category
-	Drop-down list of broad habitats used to filter the ‘Habitat’ drop-down list to relevant IHS codes. The entries in this field correspond to the first 2 characters of the IHS Habitat code.
+	Drop-down list of broad habitats used to filter the 'Habitat' drop-down list to relevant IHS codes. The entries in this field correspond to the first 2 characters of the IHS Habitat code.
 
 NVC
-	Drop-down list of National Vegetation Classification (NVC) types used to filter the ‘Habitat’ drop-down list to relevant IHS codes. The entries in this field are not saved to the database.
+	Drop-down list of National Vegetation Classification (NVC) types used to filter the 'Habitat' drop-down list to relevant IHS codes. The entries in this field are not saved to the database.
 
 Habitat
 	Drop-down list of the IHS habitat codes relating to the selected Category or NVC.
@@ -107,7 +101,7 @@ Legacy Habitat
 Details Tab
 -----------
 
-Click on ‘Details’ to display the Details tab as shown in the figure :ref:`figUIDT`.
+Click on **Details** to display the Details tab as shown in the figure :ref:`figUIDT`.
 
 .. _figUIDT:
 
@@ -118,7 +112,7 @@ Click on ‘Details’ to display the Details tab as shown in the figure :ref:`f
 	Main window - Details Tab
 
 Priority Habitats
-	Automatically added based upon the Habitat and multiplex codes selected on the :ref:`ihs_tab`. For new priority habitats, ‘Determination Quality’ and ‘Interpretation Quality’ must be entered.
+	Automatically added based upon the Habitat and multiplex codes selected on the :ref:`ihs_tab`. For new priority habitats, 'Determination Quality' and 'Interpretation Quality' must be entered.
 
 Potential Priority Habitats
 	Allows users to define other priority habitats that may also be present in the future given appropriate management or restoration. An INCID may have a potential priority habitat even if no priority habitats are present.
@@ -143,7 +137,7 @@ Biosite Name
 Sources Tab
 -----------
 
-Click on ‘Sources’ to display the Sources tab as shown in the figure :ref:`figUIST`. Up to three sources can be defined for each INCID.
+Click on **Sources** to display the Sources tab as shown in the figure :ref:`figUIST`. Up to three sources can be defined for each INCID.
 
 .. _figUIST:
 
@@ -157,10 +151,10 @@ Name
 	Drop-down list containing a list of data sources. For details on adding new sources see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 Vague Date
-	Allows users to enter the date of the dataset. This can be either a precise date e.g. 01/04/2010 or a vague date e.g. Spring 2010-Summer 2010, 1980-2010 or ‘Unknown’. For details on configuring vague dates see :ref:`vague_date_options`.
+	Allows users to enter the date of the dataset. This can be either a precise date e.g. 01/04/2010 or a vague date e.g. Spring 2010-Summer 2010, 1980-2010 or 'Unknown'. For details on configuring vague dates see :ref:`vague_date_options`.
 
 Habitat Class
-	Drop-down list defining the habitat classification used for this data source. If no habitat classification is used, select ‘Not Applicable’.
+	Drop-down list defining the habitat classification used for this data source. If no habitat classification is used, select 'Not Applicable'.
 
 Habitat Type
 	Drop-down list defining the type of habitat. This list is filtered based upon the habitat class.
@@ -174,8 +168,8 @@ Habitat Imp.
 
 .. note::
 
-	* If the default date for the selected data source has been configured, the ‘Vague Date’ field will be updated to the default date. If the default date has not been defined, then the ‘Vague Date’ field must be updated manually. See 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to define default source dates.
-	* For boundary importance and habitat importance there can only be one source set as ‘Primary’ or ‘Secondary’ for each field.
+	* If the default date for the selected data source has been configured, the 'Vague Date' field will be updated to the default date. If the default date has not been defined, then the 'Vague Date' field must be updated manually. See 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to define default source dates.
+	* For boundary importance and habitat importance there can only be one source set as 'Primary' or 'Secondary' for each field.
 
 .. _history_tab:
 
@@ -220,16 +214,16 @@ Allows users to update the attributes for multiple selected database records sim
 
 To perform a bulk update:
 
-* Filter the database records using ‘Select by attributes’ or select polygons in the GIS layer and click ‘Get Map Selection’. For details on filtering records see :ref:`query_builder_window`.
+* Filter the database records using 'Select by attributes' or select polygons in the GIS layer and click **Get Map Selection**. For details on filtering records see :ref:`query_builder_window`.
 
-* Click **:menuselection:`Edit... --> Bulk Update`** :menuselection:**`Edit... --> Bulk Update`** :menuselection:`\ **Edit... --> Bulk Update** ` to enter bulk update mode. An empty form is displayed as shown in the figure :ref:`figUIBU`.
+* Click **Edit... --> Bulk Update** to enter bulk update mode. An empty form is displayed as shown in the figure :ref:`figUIBU`.
 
-* The ‘Bulk Update’ section displays the number of INCIDs, TOIDs and fragments affected by the update and allows users to select whether to create a History record for this process.
+* The 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments affected by the update and allows users to select whether to create a History record for this process.
 
-* Enter the updated details in the IHS, Details, and Sources tabs, then click Apply. These fields will be updated for all the selected INCIDs.
+* Enter the updated details in the IHS, Details, and Sources tabs, then click **Apply**. These fields will be updated for all the selected INCIDs.
 
 .. caution::
-	If ‘Delete Empty Bulk Update Rows’ is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. See :ref:`database_options` for more details.
+	If 'Delete Empty Bulk Update Rows' is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. See :ref:`database_options` for more details.
 
 
 .. raw:: latex
@@ -248,7 +242,7 @@ Options Window
 	:height: 16px
 	:width: 16px
 
-Click |options| or :menuselection:`Tools... --> Options` to open the window.
+Click |options| or **Tools... --> Options** to open the window.
 
 Allows users to alter the HLU configuration. There are three categories of options as shown in the figure :ref:`figOD`.
 
@@ -266,13 +260,13 @@ Database Options
 ----------------
 
 Timeout
-	Sets the amount of time the tool will wait for the database to respond. The default value is 15. This value should be increased if an error occurs such as ‘The connection to the database timed out’.
+	Sets the amount of time the tool will wait for the database to respond. The default value is 15. This value should be increased if an error occurs such as 'The connection to the database timed out'.
 
 Page Size
 	Sets how many records are retrieved from the database and stored in memory. The default value is 100. Increasing this value can improve performance when browsing records, however this will increase the amount of RAM required by the application and significant increases in the page size value could cause the tool to stop responding.
 
 Display History Rows
-	Sets the number of entries displayed in the ‘History’ tab of the main window. For more details on the ‘History’ tab see :ref:`history_tab`.
+	Sets the number of entries displayed in the 'History' tab of the main window. For more details on the 'History' tab see :ref:`history_tab`.
 
 Delete Empty Bulk Update Rows
 	Removes the details of child records if they are these fields are not completed in the bulk update form if this checkbox is ticked. By default this box is unticked.
@@ -296,22 +290,22 @@ Delete Empty Bulk Update Rows
 GIS Options
 -----------
 
-History Columns
+History Display Columns
 	Allows users to select which additional columns from the GIS layer are displayed in the History tab for each update. If the checkbox is ticked, the field will be displayed.
 
-Preferred GIS
+Preferred GIS Application
 	Allows users to select whether the tool should use ArcGIS or MapInfo if both applications are installed on their computer.
 
 	.. note::
 		The tool must be closed and restarted for this change to take effect.
 
 Map Document/Workspace
-	Sets the default map document or workspace opened by the HLU GIS Tool. As this field cannot be edited directly, users must click on the “…” button and browse to the new map document or workspace. 
+	Sets the default map document or workspace opened by the HLU GIS Tool. As this field cannot be edited directly, users must click on the **…** button and browse to the new map document or workspace. 
 
 	.. note::
 		If the 'Preferred GIS' option is altered, this field must also be updated.
 
-Warn before GIS selection
+Warn Before Applying GIS Selection
 	Allows users to enable or disable the warning message indicating the number of polygons which will be selected by the current query as shown in the figure :ref:`figGSWD`.
 
 .. _figGSWD:
@@ -332,7 +326,7 @@ Seasons
 Vague Date Delimiter
 	This field allow users to define how date ranges, such as 'Spring 2010-Autumn 2010' or '1989-2010', are entered so that they can be converted to dates in the HLU database.
 
-	The default value for the ‘Vague Date Delimiter’ is a hyphen ( - ). This can be altered to any character, however, it must not be the same delimiter used by the computer to enter precise dates, such as 01/04/2010. The default delimiter used by Windows for English-format dates is a forward slash ( / ).
+	The default value for the 'Vague Date Delimiter' is a hyphen ( - ). This can be altered to any character, however, it must not be the same delimiter used by the computer to enter precise dates, such as 01/04/2010. The default delimiter used by Windows for English-format dates is a forward slash ( / ).
 
 
 .. raw:: latex
@@ -351,7 +345,7 @@ Export Window
 	:height: 16px
 	:width: 16px
 
-Click |export| or :menuselection:`File... --> Export` to open the window.
+Click |export| or **File... --> Export** to open the window.
 
 Allows users to export data from the HLU database to a GIS layer using a pre-defined export format (see the figure :ref:`figED`).
 
@@ -387,7 +381,7 @@ Query Builder Window
 	:height: 16px
 	:width: 16px
 
-Click |selectbyattr| or :menuselection:`Select... --> Select by Attributes` to open the window.
+Click |selectbyattr| or **Select... --> Select by Attributes** to open the window.
 
 Allows users to filter the database records using the query builder shown in the figure :ref:`figQB`.
 
@@ -407,10 +401,10 @@ Boolean Operator
 		* 'OR'
 		* 'OR NOT'.
 
-.. note::
-	The value of the ‘Boolean Operator’ field on the first row is not used.
+	.. note::
+		The value of the 'Boolean Operator' field on the first row is not used.
 
-‘(‘ and ‘)’
+'(' and ')'
 	Allow users to add additional brackets as shown in the example in the figure :ref:`figQB` to define how the query is executed.
 
 Table
@@ -432,13 +426,13 @@ Value
 
 	List of Operators
 
-Once users have entered the values for the current row, click on another row in the query builder to confirm the entry and enable the ‘OK’ button.
+Once users have entered the values for the current row, click on another row in the query builder to confirm the entry and enable the 'OK' button.
 
-If a mistake has been made when entering the selection criteria, click on the grey box to the left of ‘Boolean Operator’ to select the row, then press the keyboard :kbd:`Delete` key to remove it.
+If a mistake has been made when entering the selection criteria, click on the grey box to the left of 'Boolean Operator' to select the row, then press the keyboard :kbd:`Delete` key to remove it.
 
 
 .. Tip::
-	If features are likely to be selected from multiple INCIDs it will typically be much quicker to select features in the GIS (if the available attributes are sufficient for the selection) then use ‘Get Map Selection’.
+	If features are likely to be selected from multiple INCIDs it will typically be much quicker to select features in the GIS (if the available attributes are sufficient for the selection) then use 'Get Map Selection'.
 
 
 .. raw:: latex
@@ -457,7 +451,7 @@ Switch GIS Layer Window
 	:height: 16px
 	:width: 16px
 
-Click |switch| or :menuselection:`Tools... --> Switch GIS Layer` to open the window.
+Click |switch| or **Tools... --> Switch GIS Layer** to open the window.
 
 Allows users to switch between GIS layers by selecting a different layer in the drop-down list (see the figure :ref:`figSGLD`). Only layers from the current workspace/document that are valid HLU layers (i.e. have the correct attribute names and formats) will appear in the drop-down list.
 

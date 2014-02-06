@@ -7,7 +7,7 @@ Appendix
 
 .. _dos_and_donts:
 
-DOs and DON’Ts
+DOs and DON'Ts
 ================
 
 It is essential that the following guidelines are followed to ensure that the tool runs smoothly:
@@ -46,7 +46,7 @@ It is essential that the following guidelines are followed to ensure that the to
 What Happened?
 ==============
 
-* ArcGIS generates a ‘hard error’ when the HLU GIS Tool is used.
+* ArcGIS generates a 'hard error' when the HLU GIS Tool is used.
 
 	* Solution 1:	The HLU ArcMap extension has not been enabled. Close and relaunch the tool, then enable the extension in ArcMap before using the toolkit.
 	* Solution 2: 	ArcGIS has been closed while the tool was running. Close and relaunch the tool.
