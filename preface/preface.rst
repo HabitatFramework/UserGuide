@@ -2,7 +2,7 @@
 Preface
 *******
 
-The most up to date version of this documentation can be found in **html** and **PDF** form on `ReadTheDocs <https://readthedocs.org/projects/hlugistool-userguide/>`_.
+The most up to date version of this documentation can be found in **HTML** and **PDF** form on `ReadTheDocs <https://readthedocs.org/projects/hlugistool-userguide/>`_.
 
 Recommended User Knowledge
 ==========================
@@ -19,7 +19,7 @@ This user guide assumes that users of the HLU GIS Tool have:
 
 Administrators
 --------------
-We recommend that a person within each organisation should be designated as the tool and database administrator. This person should:
+It is recommend that a person within each organisation is designated as the tool and database administrator. This person should:
 
 * Have and understanding and experience of IT systems management.
 * Understand relational database structures.
@@ -35,17 +35,19 @@ Reading Guide
 
 This Preface explains a little about the HLU Tool, the community of people who develop and use it, and the licensing conditions for using and distributing it.
 
-:doc:`../introduction/introduction` explains why the HLU Tool is needed, what it does and where it comes from.
+:doc:`../introduction/introduction`  explains why the HLU Tool is needed, what it does and where it comes from.
 
-:doc:`../concepts/concepts` is a brief outline of the key concepts of the HLU Tool.
+:doc:`../concepts/concepts`  is a brief outline of the key concepts of the HLU Tool.
 
-:doc:`../menus/menus` describes all the user interface menu items and buttons on the HLU Tool.
+:doc:`../menus/menus`  describes all the user interface menu items and buttons on the HLU Tool.
 
-:doc:`../interface/interface` describes all the user interface windows and components of the HLU Tool.
+:doc:`../interface/interface`  describes all the user interface windows and components of the HLU Tool.
 
-:doc:`FAQ <../faq/faq>` has a list of commonly asked questions and their answers.
+:doc:`FAQ <../faq/faq>`  has a list of commonly asked questions and their answers.
 
-:doc:`../appendix/appendix` introduces tips for optimising performance and known issues with the tool.
+:doc:`../glossary/glossary`  contains a brief glossary and description of commonly used terms.
+
+:doc:`../appendix/appendix`  introduces tips for optimising performance and known issues with the tool.
 
 
 .. index::
@@ -69,8 +71,8 @@ Related community links:
 
 * `Users <http://forum.lrcs.org.uk/viewforum.php?id=24>`_ - Announcements, bug reports, user Q&A and feature discussions.
 * `Administrators <https://github.com/HabitatFramework/HLUTool/releases>`_ - Release notes and installers for ArcGIS and MapInfo systems.
-* `Developers <https://github.com/HabitatFramework/HLUTool>`_ - Tool source code.
-* `Issues <https://github.com/HabitatFramework/HLUTool/issues>`_ - Known issues and existing change requests.
+* `Developers <https://github.com/HabitatFramework/HLUTool>`_ - Source code for the HLU Tool.
+* `Issues <https://github.com/HabitatFramework/HLUTool/issues>`_ - Details of known issues and existing change requests.
 
 
 .. index::

@@ -11,15 +11,15 @@ suggest new entries!
 
 **How do I get a copy of the tool?**
 
-	The source code can be downloaded from `HabitatFramework/HLUTool <https://github.com/HabitatFramework/HLUTool>`_ and installer setups for ArcGIS/MapInfo and MapInfo only can be downloaded from `HabitatFramework/HLUTool/Releases <https://github.com/HabitatFramework/HLUTool/releases>`_.
+	The source code can be downloaded from `HabitatFramework/HLUTool <https://github.com/HabitatFramework/HLUTool>`_ and the latest installer setups for ArcGIS/MapInfo and MapInfo only can be downloaded from `HabitatFramework/HLUTool/Releases <https://github.com/HabitatFramework/HLUTool/releases>`_.
 
 **Do I have to use IHS with the tool?**
 
 	Yes, IHS is an integral part of the tool and data structure. It is likely that your existing habitat data can be translated into IHS and, once in IHS, it can easily be exported as IHS habitats, Broad habitats or Priority habitats.
 
-**Why does the tool title bar show [Read Only]?**
+**Why does the tool title bar show [READ ONLY]?**
 
-	This shows that the data cannot currently be edited. This is either because your userid has not been added to the database or has been added incorrectly (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details), or the active GIS layer is not in an active edit state. Once both of these conditions have been met, click on the main window and the [READ ONLY] status should disappear.
+	This shows that the data cannot currently be edited. This is either because your userid has not been added to the database or has been added incorrectly (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details), or the active GIS layer is not in an active edit state. Once both of these conditions have been met click on the main window and the [READ ONLY] status should disappear.
 
 **Can I use data that isn't snapped to OS MasterMap?**
 
@@ -47,4 +47,8 @@ suggest new entries!
 **Does the tool work with QGIS?**
 
 	Currently only ArcGIS and MapInfo are supported with the tool. However, if funding was available the tool could be adapted to also support QGIS.
+
+**How do I report a new bug or propose a change in the tool?**
+
+	Please check the existing known issues and change requests on `HabitatFramework/HLUTool/Issues <https://github.com/HabitatFramework/HLUTool/issues>`_ before reporting/proposing new issues or changes. New issues or proposed changes can be posted on the `ALERC forum <http://forum.lrcs.org.uk/viewforum.php?id=24>`_
 

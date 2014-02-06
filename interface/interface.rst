@@ -39,7 +39,8 @@ INCID Section
 
 The ‘INCID’ section displays summary information for each INCID in the database, including area, perimeter, date created and date last modified as shown in the figure :ref:`figUIIS`.
 
-.. Note:: If the user is not configured, the ‘By’ fields will display their Windows login. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+.. note::
+	If the user is not configured, the ‘By’ fields will display their Windows login. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 .. _figUIIS:
 
@@ -80,10 +81,30 @@ The IHS tab displays the IHS details for the current database record as shown in
 
 	Main window - IHS Tab
 
-* ‘Category’ and ‘NVC’ drop-down lists are used to filter the ‘Habitat’ drop-down list to relevant IHS codes. The entries in these fields are not saved to the database.
-* The drop-down lists in the IHS Matrix, IHS Formation, IHS Management and IHS Complex boxes allow users to define the habitat according to the SERC IHS guidelines.
-* ‘IHS Summary’ is automatically generated based upon the options selected from the preceding drop-down lists.
-* ‘Legacy Habitat’ is the pre-IHS habitat code.
+
+.. topic:: Topic title
+
+	Topic body text
+	spread over several
+	lines
+
+
+
+
+Category
+	Drop-down list of broad habitats used to filter the ‘Habitat’ drop-down list to relevant IHS codes. The entries in this field correspond to the first 2 characters of the IHS Habitat code.
+
+NVC
+	Drop-down list of National Vegetation Classification (NVC) types used to filter the ‘Habitat’ drop-down list to relevant IHS codes. The entries in this field are not saved to the database.
+
+IHS Matrix / IHS Formation / IHS Management / IHS Complex
+	Drop-down lists allowing users to refine the habitat definition by adding 'multiplex' codes according to the guidelines of IHS.
+
+IHS Summary
+	This field is automatically generated based upon the options selected from the preceding IHS drop-down lists.
+
+Legacy Habitat
+	[Read only]. Displays the primary 'pre-IHS' habitat code (if present).
 
 .. _details_tab:
 
@@ -100,13 +121,15 @@ Click on ‘Details’ to display the Details tab as shown in the figure :ref:`f
 
 	Main window - Details Tab
 
-* ‘BAP Habitats’ is automatically updated based upon the habitat code selected on the ‘IHS’ tab. For new BAPhabitats, ‘Determination Quality’ and ‘Interpretation Quality’ must be entered.
-* ‘Potential BAP Habitats’ allows users to define other BAP habitats which may also be present within the BAP habitat. An INCID may have a potential BAP habitat even if no BAP habitats are present.
+* ‘Priority Habitats’ are automatically added based upon the Habitat and multiplex codes selected on the :ref:`ihs_tab`. For new priority habitats, ‘Determination Quality’ and ‘Interpretation Quality’ must be entered.
+* ‘Potential Priority Habitats’ allows users to define other priority habitats that may also be present in the future given appropriate management or restoration. An INCID may have a potential priority habitat even if no priority habitats are present.
 * ‘General Comments’ is a text field which allows users to enter any additional comments up to 254 characters.
 * ‘Maps’ contains two drop-down lists:
 * ‘Boundary Map’ defines the source data used to identify the boundary.
 * ‘Digitisation Map’ defines the map data used to digitise the boundary.
 * ‘BiositeName’ is a text field which allows users to enter the name of the biosite.
+
+To delete a potential priority habitat click on the grey box to the left of the potential priority habitat to select the row, then press the keyboard :kbd:`Delete` key to remove it.
 
 .. _source_tab:
 
@@ -131,7 +154,7 @@ Click on ‘Sources’ to display the Sources tab as shown in the figure :ref:`f
 * ‘Habitat Imp.’ sets the importance of the source data in determining the habitat type.
 
 
-.. Note::
+.. note::
 
 	* If the default date for the selected data source has been configured, the ‘Vague Date’ field will be updated to the default date. If the default date has not been defined, then the ‘Vague Date’ field must be updated manually.
 	* For boundary importance and habitat importance, there must only be one source set as ‘Primary’ or ‘Secondary’ for each field.
@@ -166,7 +189,8 @@ Bulk Updates
 
 Allows users to update the attributes for multiple selected database records simultaneously.
 
-.. Note:: This feature is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+.. note::
+	This feature is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 .. _figUIBU:
 
@@ -186,7 +210,8 @@ To perform a bulk update:
 
 * Enter the updated details in the IHS, Details, and Sources tabs, then click Apply. These fields will be updated for all the selected INCIDs.
 
-.. Warning:: If ‘Delete Empty Bulk Update Rows’ is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. See :ref:`database_options` for more details.
+.. caution::
+	If ‘Delete Empty Bulk Update Rows’ is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. See :ref:`database_options` for more details.
 
 
 .. raw:: latex
@@ -233,12 +258,11 @@ Database Options
 	* IHS Formation
 	* IHS Management
 	* IHS Complex
-	* BAP Habitat
-	* Potential BAP Habitats
+	* Priority Habitat
+	* Potential Priority Habitats
 	* Sources
 
-.. Warning::
-
+.. caution::
 	If the 'Delete Empty Bulk Update Rows' option is checked and a bulk update record has only 1 source record completed then, for each of the selected records, source 1 will be updated and if the selected record has data entered in sources 2 and 3, it will be deleted.
 
 .. _gis_options:
@@ -249,11 +273,13 @@ GIS Options
 * ‘History Columns’ allows users to select which additional columns from the GIS layer are displayed in the History tab for each update. If the checkbox is ticked, the field will not be displayed.
 * ‘Preferred GIS’ allows users to select whether the tool should use ArcGIS or MapInfo if both applications are installed on their computer. 
 
-.. Note:: The tool must be closed and restarted for this change to take effect.
+.. note::
+	The tool must be closed and restarted for this change to take effect.
 
 * ‘Map Document/Workspace’ sets the default map document or workspace opened by the HLU GIS Tool. As this field cannot be edited directly, users must click on the “…” button and browse to the new map document or workspace. 
 
-.. Note:: If the preferred GIS is altered, this field must also be updated.
+.. note::
+	If the preferred GIS is altered, this field must also be updated.
 
 * ‘Warn before GIS selection’ allows users to enable or disable the warning message indicating the number of polygons which will be selected by the current query as shown in the figure :ref:`figGSWD`.
 
@@ -345,7 +371,8 @@ Allows users to filter the database records using the query builder shown in the
 	* 'OR'
 	* 'OR NOT'.
 
-.. Note:: The value of the ‘Boolean Operator’ field on the first row is not used.
+.. note::
+	The value of the ‘Boolean Operator’ field on the first row is not used.
 
 * ‘(‘ and ‘)’ fields allow users to add additional brackets as shown in the example in the figure :ref:`figQB` to define how the query is executed.
 * ‘Table’ and ‘Column’ define the table and field to be searched.
@@ -364,7 +391,8 @@ Once users have entered the values for the current row, click on another row in 
 If a mistake has been made when entering the selection criteria, click on the grey box to the left of ‘Boolean Operator’ to select the row, then press the keyboard :kbd:`Delete` key to remove it.
 
 
-.. Tip:: If features are likely to be selected from multiple INCIDs it will typically be much quicker to select features in the GIS (if the available attributes are sufficient for the selection) then use ‘Get Map Selection’.
+.. Tip::
+	If features are likely to be selected from multiple INCIDs it will typically be much quicker to select features in the GIS (if the available attributes are sufficient for the selection) then use ‘Get Map Selection’.
 
 
 .. raw:: latex
@@ -395,6 +423,5 @@ Allows users to switch between GIS layers by selecting a different layer in the 
 	Switch GIS Layer Dialog
 
 .. note::
-
 	The currently active GIS layer is automatically selected in the drop-down list when the Switch GIS Layer window opens. The active layer also appears in the main window title bar.
 

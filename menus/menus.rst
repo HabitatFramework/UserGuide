@@ -87,7 +87,8 @@ Pastes the data copied by the ‘Copy’ tool into the same fields in another re
 
 For example, the fields copied in the figure above would be pasted into 'Source 3' on the new record.
 
-.. Note:: It is not possible to copy data from one field in one record and paste it into a different field in another record.
+.. note::
+	It is not possible to copy data from one field in one record and paste it into a different field in another record.
 
 Bulk Update
 -----------
@@ -151,7 +152,8 @@ Sets ArcGIS or MapInfo as the active window but does not alter its size.
 Zooms to the current database selection in the GIS window.
 
 
-.. Warning:: This process may take a long time depending upon the layer size, the number of selected records and their geographical distribution.
+.. caution::
+	This process may take a long time depending upon the layer size, the number of selected records and their geographical distribution.
 
 .. raw:: latex
 
@@ -224,7 +226,8 @@ Once the records are filtered in the database, if all the polygons are part of t
 Split/Merge Menu
 ================
 
-.. Note:: Both options in this menu are disabled until the database records have been filtered and a process has been selected from the ‘Process’ drop-down list in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
+.. note::
+	Both options in this menu are disabled until the database records have been filtered and a process has been selected from the ‘Process’ drop-down list in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
 
 .. |split| image:: ../images/icons/SplitFeatures.png
 	:height: 16px

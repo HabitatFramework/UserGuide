@@ -5,7 +5,7 @@ Introduction
 Background
 ==========
 
-Since the introduction of the Integrated Habitat System (IHS) and the adoption of the habitat data standards introduced from the South-West pilot project there are now over 50 attributes for every recorded habitat feature (point, line or polygon). These attributes relate to each feature's IHS classification, source information, BAP habitats, quality, modification history, etc. Furthermore, as valid values for many of these attributes are limited to specific options, and many are inter-related and dependent upon other values, maintaining habitat data has become complex and time-consuming. And if users only have native GIS application functionality to support them (i.e. a GIS layer with a standard attribute table) the likelihood of errors and inconsistencies being introduced is high.
+Since the introduction of the Integrated Habitat System (IHS) and the adoption of the habitat data standards introduced from the South-West pilot project there are now over 50 attributes for every recorded habitat feature (point, line or polygon). These attributes relate to each feature's IHS classification, source information, priority habitats, quality, modification history, etc. Furthermore, as valid values for many of these attributes are limited to specific options, and many are inter-related and dependent upon other values, maintaining habitat data has become complex and time-consuming. And if users only have native GIS application functionality to support them (i.e. a GIS layer with a standard attribute table) the likelihood of errors and inconsistencies being introduced is high.
 
 The subsequent incorporation of the Ordnance Survey MasterMap boundaries and TOIDs into existing habitat datasets brought improved positional accuracy to the data, and in many cases also provided additional habitat and land-use source information. However, new datasets have significantly increased in volume with some county-wide datasets now containing over 2 million habitat features, with each feature having over 50 attributes. As a result the attributes and evidence-base required for habitat and land use information has grown so much in recent years that it is no longer practical to store or maintain the data in a standard GIS layer.
 
@@ -32,7 +32,7 @@ Data structure
 Spatial data
 ------------
 
-The Habitat and Land Use (HLU) spatial data consists of one or more GIS layers containing features (points, lines or polygons). These features are combined with Ordnance Survey (OS) Mastermap features so that each HLU feature is aligned with the points, lines and boundaries of OS Mastermap. Features may not extend across or beyond OS Mastermap lines or boundaries but they can sub-divide features by splitting them into smaller fragments. A unique reference to the original OS Mastermap feature, known as a TOID (see :ref:`_mastermap_framework`) is assigned to every HLU feature so that the original lines or boundaries of the OS Mastermap features can be re-established by merging features with the same TOID.
+The Habitat and Land Use (HLU) spatial data consists of one or more GIS layers containing features (points, lines or polygons). These features are combined with Ordnance Survey (OS) Mastermap features so that each HLU feature is aligned with the points, lines and boundaries of OS Mastermap. Features may not extend across or beyond OS Mastermap lines or boundaries but they can sub-divide features by splitting them into smaller fragments. A unique reference to the original OS Mastermap feature, known as a TOID (see :ref:`mastermap_framework`) is assigned to every HLU feature so that the original lines or boundaries of the OS Mastermap features can be re-established by merging features with the same TOID.
 
 Whilst there are benefits to splitting the HLU features by OS Mastermap, such as ensuring polygon boundaries are accurate and do not overlap, the splitting process significantly increases the volume of data. For example, the table below indicates the effect of splitting on a 500 feature GIS layer.
 
@@ -78,8 +78,8 @@ Due to the complexity of the attribute data required whilst simultaneously wishi
 
 The attribute data is stored in a ‘normalised’ relational structure which enables the attributes to be retrieved and maintained in a very logical way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
-.. [1] Assuming 50 attributes per feature
-.. [2] Assuming an average of 33.5 Mastermap-derived HLU features per original habitat feature
+.. [1] Assuming 50 attributes per feature.
+.. [2] Assuming an average of 33.5 Mastermap-derived HLU features per original habitat feature.
 
 .. raw:: latex
 
@@ -92,9 +92,9 @@ The tool provides a user-friendly and efficient interface enabling users to sear
 
 1. Ensuring that all attributes selected by users are valid and compatible (e.g. IHS complex codes are relevant for the selected habitat code).
 2. Maintaining a brief but comprehensive history of all changes made to every habitat polygon.
-3. Enabling management queries and statistics to be produced for a range of purposes using the relational database (e.g. the extent and reason for all BAP habitat gains/losses in the last financial year).
+3. Enabling management queries and statistics to be produced for a range of purposes using the relational database (e.g. the extent and reason for all priority habitat gains/losses in the last financial year).
 4. Storing the data in a relational structure to reduce GIS data volumes and provide access efficiencies and flexibility.
-5. Enabling data to be extracted in an number of formats, including the National Inventory dataset format, as BAP Broad layers or as BAP Priority layers.
+5. Enabling data to be extracted in an number of formats, including the National Inventory dataset format, as broad habitat layers or as priority habitat layers.
 6. Ensuring that all local datasets can be readily combined into regional or national datasets and direct comparisons can be made between local datasets.
 7. Improved data retrieval/update response times which would otherwise be unacceptable directly in GIS given the volume and complexity of the underlying data.
 
