@@ -6,7 +6,7 @@ Concepts
 ********
 
 .. index::
-	single: Mastermap Framework
+	single: MasterMap Framework
 	see: Topographical identifier; TOID
 	see: Fragment; TOID_Fragment_ID
 
@@ -15,15 +15,13 @@ Concepts
 Data Components
 ===============
 
-Due to the number and complexity of data attributes and the need to minimise data duplication and reduce data volume the spatial data and attribute data are separated into separate components. The HLU Tool provides an interface that links the spatial and attribute data and presents them to the user as a single entity.
+Due to the number and complexity of data attributes and the need to minimise data duplication and reduce data volumes the spatial data and attribute data are separated into separate components. The HLU Tool provides an interface that links the spatial and attribute data and presents them to the user as a single entity.
 
-Spatial Data
-------------
+**Spatial Data**
 
 The spatial data is stored in one or more GIS layers together with a minimal set of attributes that uniquely identifies and summarises each spatial feature. Separating the spatial data from the attribute data reduces the number of attributes required for the spatial layer which improves performance in the GIS application.
 
-Attribute Data
---------------
+**Attribute Data**
 
 The attribute data is stored in a relational database in a 'normalised' relational structure (i.e. groups of related attributes are divided into smaller, separate tables and relationships are defined between the tables). A normalised relational database enables the attributes to be retrieved and maintained in a very logical, and universal, way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
@@ -35,16 +33,16 @@ Habitat Framework
 
 Although most habitat surveys performed in the last 20 years are typically available as GIS layers, the spatial accuracy of the feature boundaries can be very variable. The quality will typically depend upon a range of factors, such as:
 
-	* The quality of any field survey maps and notes.
-	* The scale and age of digitial mapping layers.
-	* The quality and age of aerial photography layers.
+	* The quality of the original field survey maps and notes.
+	* The scale and age of the base digital mapping.
+	* The quality and age of any aerial photography layers.
 	* The skill and patience of the GIS user digitising the data.
 
 This variability can make it very difficult to combine habitat layers and to compare changes between surveys from different years. Moreover, unless the GIS user was very skilled or geospatial topology [3]_ was employed there will be overlaps and gaps between features which can bring problems when using the data in spatial or statistical queries.
 
 .. [3] Geospatial topology is the arrangement for how point, line, and polygon features share geometry and is often used to define and enforce data integrity rules (e.g. no gaps should exist between polygons, there should be no overlapping features, etc).
 
-One solution to these problems is to integrate all the habitat layers into a single framework based on Ordnance Survey's MasterMap dataset. MasterMap is the largest scale national mapping produced by the Ordnance Survey and provides highly detailed and seemless coverage.
+One solution to these problems is to integrate all the habitat layers into a single framework based on Ordnance Survey's MasterMap dataset. MasterMap is the largest scale national mapping produced by the Ordnance Survey and provides highly detailed and seamless coverage.
 
 All OS MasterMap features have a Topographic Identity or 'TOID' that uniquely identifies each object. OS MasterMap Topographic Area features also have a number of attributes (chiefly the Descriptive Group and Descriptive Term) that provide information about the real world object that the feature represents and these can provide basic habitat and land use information that can supplment any available habitat survey data.
 
@@ -142,13 +140,13 @@ Every priority habitat and potential priority habitat must be assigned a determi
 	+------------------------------------------+---------------+------------+------------+
 	| Phase 1 and target notes                 | Medium (3)    | Medium (4) | Low (5)    |
 	+------------------------------------------+---------------+------------+------------+
-	| Phase 1 map only                         | Low(5)        | Low (5)    | Low (6)    |
+	| Phase 1 map only                         | Low (5)       | Low (5)    | Low (6)    |
 	+------------------------------------------+---------------+------------+------------+
 	| ESA/ SSSI site description/ species list | Medium (3)    | Medium (3) | Medium (4) |
 	+------------------------------------------+---------------+------------+------------+
 	| Aerial Photo, Landcover                  | Low (5)       | Low (6)    | Low (7)    |
 	+------------------------------------------+---------------+------------+------------+
-	| Expert knowledge of site quality         | Medium(4)     | Medium (4) | Low (5)    |
+	| Expert knowledge of site quality         | Medium (4)    | Medium (4) | Low (5)    |
 	+------------------------------------------+---------------+------------+------------+
 
 
@@ -200,7 +198,7 @@ Physical split creates one or more new TOID fragments in the database based upon
 
 	* Only one feature should be split in a single operation. Splitting multiple features will cause database synchronisation issues. 
 	* If several features have been split, select the fragments for one original feature and split using the tool. Repeat this operation for the remaining features.
-	* Ensure that the physical split is completed in the database prior to commencing any other operations such as 'Select by attributes…' to avoid database synchronisation issues.
+	* Ensure that the physical split is completed in the database prior to commencing any other operations such as 'Select by attributes …' to avoid database synchronisation issues.
 
 **ArcGIS**
 

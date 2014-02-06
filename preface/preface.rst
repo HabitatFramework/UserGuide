@@ -58,7 +58,7 @@ Licensing
 
 The code for the HLU GIS Tool is 'open source' and is released under `GPLv3 <http://www.gnu.org/licenses/gpl.html>`_. Users are free to install it on as many computers as they like, and to redistribute it according to the GPLv3 license.
 
-Please remember, however, that the tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefuly received. Enquiries can be made via the `ALERC forum <http://forum.lrcs.org.uk/viewforum.php?id=24>`_.
+Please remember, however, that the tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefully received. Enquiries can be made via the `ALERC forum <http://forum.lrcs.org.uk/viewforum.php?id=24>`_.
 
 
 .. index::

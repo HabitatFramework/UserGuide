@@ -64,6 +64,10 @@ Reason/Process Section
 
 .. _ihs_tab:
 
+.. raw:: latex
+
+	\newpage
+
 IHS Tab
 -------
 
@@ -87,7 +91,7 @@ NVC
 Habitat
 	Drop-down list of the IHS habitat codes relating to the selected Category or NVC.
 
-IHS Matrix / IHS Formation / IHS Management / IHS Complex
+IHS Matrix / Formation / Management / Complex
 	Drop-down lists allowing users to refine the habitat definition by adding 'multiplex' codes according to the guidelines of IHS.
 
 IHS Summary
@@ -97,6 +101,10 @@ Legacy Habitat
 	[Read only]. Displays the primary 'pre-IHS' habitat code (if present).
 
 .. _details_tab:
+
+.. raw:: latex
+
+	\newpage
 
 Details Tab
 -----------
@@ -133,6 +141,10 @@ Biosite Name
 	To delete a potential priority habitat click on the grey box to the left of the potential priority habitat to select the row, then press the keyboard :kbd:`Delete` key to remove it.
 
 .. _source_tab:
+
+.. raw:: latex
+
+	\newpage
 
 Sources Tab
 -----------
@@ -172,6 +184,10 @@ Habitat Imp.
 	* For boundary importance and habitat importance there can only be one source set as 'Primary' or 'Secondary' for each field.
 
 .. _history_tab:
+
+.. raw:: latex
+
+	\newpage
 
 History Tab
 -----------
@@ -404,7 +420,7 @@ Boolean Operator
 	.. note::
 		The value of the 'Boolean Operator' field on the first row is not used.
 
-( and )
+'(' and ')'
 	Allow users to add additional brackets as shown in the example in the figure :ref:`figQB` to define how the query is executed.
 
 Table
@@ -443,6 +459,10 @@ If a mistake has been made when entering the selection criteria, click on the gr
 	single: Windows; Switch GIS Layer Window
 
 .. _switch_layer_window:
+
+.. raw:: latex
+
+	\newpage
 
 Switch GIS Layer Window
 =======================

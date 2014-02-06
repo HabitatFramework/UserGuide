@@ -30,7 +30,7 @@ It is essential that the following guidelines are followed to ensure that the to
 
 	New in version 1.0.7:
 	
-	* It is now possible to use a HLU GIS layer containing only a subset of all the incids in the HLU database.
+	* It is now possible to use a HLU GIS layer containing only a subset of all the INCIDs in the HLU database.
 	* It is also possible to switch between different HLU GIS layers present in the open document or workspace using the *Switch GIS layer* function.
 
 
@@ -48,7 +48,7 @@ What Happened?
 
 * ArcGIS generates a 'hard error' when the HLU GIS Tool is used.
 
-	* Solution 1:	The HLU ArcMap extension has not been enabled. Close and relaunch the tool, then enable the extension in ArcMap before using the toolkit.
+	* Solution 1:	The HLU ArcMap extension has not been enabled. Close and relaunch the tool, then enable the extension in ArcMap before using the tool.
 	* Solution 2: 	ArcGIS has been closed while the tool was running. Close and relaunch the tool.
 
 * The HLU GIS Tool stops responding to GIS requests.

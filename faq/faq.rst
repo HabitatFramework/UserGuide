@@ -9,6 +9,7 @@ Frequently Asked Questions
 This is a list of Frequently Asked Questions about the HLU Tool. Feel free to
 suggest new entries!
 
+
 **How do I get a copy of the tool?**
 
 	The source code can be downloaded from `HabitatFramework/HLUTool <https://github.com/HabitatFramework/HLUTool>`_ and the latest installer setups for ArcGIS/MapInfo and MapInfo only can be downloaded from `HabitatFramework/HLUTool/Releases <https://github.com/HabitatFramework/HLUTool/releases>`_.
@@ -23,7 +24,7 @@ suggest new entries!
 
 **Can I use data that isn't snapped to OS MasterMap?**
 
-	Technically you could but only by providing dummy, unique TOID values to every feature in your data. This is because the tool is designed to use the TOID to determine when a physical split or merge is to be performed and to manage the TOID_Fragment_IDs. Without dummy, unique TOIDs the tool would assume all the features in you data are fragments of the same 'blank' TOID which would heavily impact on performance. However, intergrating habitat data with OS MasterMap also brings other benefits such as providing spatial accuracy to your data and providing a framework within which more recent or comprehensive habitat and land use data can be applied. See :ref:`habitat_framework` for more details.
+	Technically you could but only by providing dummy, unique TOID values to every feature in your data. This is because the tool is designed to use the TOID to determine when a physical split or merge is to be performed and to manage the TOID_Fragment_IDs. Without dummy, unique TOIDs the tool would assume all the features in you data are fragments of the same 'blank' TOID which would heavily impact on performance. However, integrating habitat data with OS MasterMap also brings other benefits such as providing spatial accuracy to your data and providing a framework within which more recent or comprehensive habitat and land use data can be applied. See :ref:`habitat_framework` for more details.
 
 **How do I convert my existing data into the required format?**
 

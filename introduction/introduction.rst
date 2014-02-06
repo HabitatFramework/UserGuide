@@ -30,53 +30,50 @@ Data structure
 Spatial data
 ------------
 
-The Habitat and Land Use (HLU) spatial data consists of one or more GIS layers containing features (points, lines or polygons). These features are combined with Ordnance Survey (OS) Mastermap features so that each HLU feature is aligned with the points, lines and boundaries of OS Mastermap. Features may not extend across or beyond OS Mastermap lines or boundaries but they can sub-divide features by splitting them into smaller fragments. A unique reference to the original OS Mastermap feature, known as a TOID (see :ref:`habitat_framework`) is assigned to every HLU feature so that the original lines or boundaries of the OS Mastermap features can be re-established by merging features with the same TOID.
+The Habitat and Land Use (HLU) spatial data consists of one or more GIS layers containing features (points, lines or polygons). These features are combined with Ordnance Survey (OS) MasterMap features so that each HLU feature is aligned with the points, lines and boundaries of OS MasterMap. Features may not extend across or beyond OS MasterMap lines or boundaries but they can sub-divide features by splitting them into smaller fragments. A unique reference to the original OS MasterMap feature, known as a TOID (see :ref:`habitat_framework`) is assigned to every HLU feature so that the original lines or boundaries of the OS MasterMap features can be re-established by merging features with the same TOID.
 
-Whilst there are benefits to splitting the HLU features by OS Mastermap, such as ensuring polygon boundaries are accurate and do not overlap, the splitting process significantly increases the volume of data. For example, the table below indicates the effect of splitting on a 500 feature GIS layer.
+Whilst there are benefits to splitting the HLU features by OS MasterMap, such as ensuring polygon boundaries are accurate and do not overlap, the splitting process significantly increases the volume of data. The example in the table below indicates the effect of splitting on a 500 feature GIS layer [1]_
 
 .. tabularcolumns:: |L|R|R|
 
-.. table:: Effect of OS Mastermap Split (Single Dataset)
+.. table:: Effect of OS MasterMap Split (Single Dataset)
 
 	+------------+------------------------+------------------------------+
-	|            | Original habitat layer | HLU layer split by Mastermap |
+	|            | Original habitat layer | HLU layer split by MasterMap |
 	+============+========================+==============================+
 	| Features   | 500                    | 16,750                       |
 	+------------+------------------------+------------------------------+
-	| Attributes | 40,000                 | 1,340,000                    |
+	| Attributes | 25,000                 | 837,500                      |
 	+------------+------------------------+------------------------------+
-	| **Total**  | **40,500**             | **1,356,750**                |
+	| **Total**  | **40,500**             | **854,250**                  |
 	+------------+------------------------+------------------------------+
 
-So, in this example, there are 33.5 Mastermap-derived features in the new HLU dataset for each original habitat feature.
+.. [1] Assuming 50 attributes per feature and an average of 33.5 MasterMap-derived HLU features per original habitat feature.
 
 Attribute data
 --------------
 
-Due to the complexity of the attribute data required whilst simultaneously wishing to minimise data duplication and reduce dataset volume, the habitat attribute and spatial data were separated into a relational database with an associated GIS layer. Separating the attribute and spatial data reduced the number of attributes required for the spatial layer to only 6 (instead of the original 50+). This offers a significant reduction in the total number of attributes held in the GIS layer (as shown in the table below).
+Due to the complexity of the attribute data and the wish to minimise data duplication and reduce data volumes, the habitat spatial and attribute data were separated into a GIS layer and an associated relational database. Separating the spatial and attribute data reduces the number of attributes required for the spatial layer to only 6 (instead of the original 50+) and hence offers a significant reduction in the total number of attributes held in the GIS layer.
+
+The example in the table below shows the effect of separating the spatial and attribute data for the same original 500 features [1]_.
 
 .. tabularcolumns:: |L|R|R|
 
-.. table:: Effect of OS Mastermap Split (Attribute and Spatial Datasets)
+.. table:: Effect of OS MasterMap Split (Attribute and Spatial Datasets)
 
-	+-----------------------+------------------------+--------------------------------------------------+
-	|                       | Original habitat layer | HLU attribute database and  associated GIS Layer |
-	+=======================+========================+==================================================+
-	| HLU Records           | 500                    | 500                                              |
-	+-----------------------+------------------------+--------------------------------------------------+
-	| HLU Attributes [1]_   | 25,000                 | 25,000                                           |
-	+-----------------------+------------------------+--------------------------------------------------+
-	| Spatial Features [2]_ |                        | 16,750                                           |
-	+-----------------------+------------------------+--------------------------------------------------+
-	| Spatial Attributes    |                        | 100,500                                          |
-	+-----------------------+------------------------+--------------------------------------------------+
-	| **Total**             | **25,500**             | **142,750**                                      |
-	+-----------------------+------------------------+--------------------------------------------------+
+	+---------------------+------------------------------+-----------------------------------------------+
+	|                     | HLU layer split by MasterMap | HLU GIS Layer and separate attribute database |
+	+=====================+==============================+===============================================+
+	| Spatial Features    | 16,750                       | 16,750                                        |
+	+---------------------+------------------------------+-----------------------------------------------+
+	| Spatial Attributes  | 837,500                      | 100,500                                       |
+	+---------------------+------------------------------+-----------------------------------------------+
+	| Database Attributes | -                            | 25,000                                        |
+	+---------------------+------------------------------+-----------------------------------------------+
+	| **Total**           | **854,250**                  | **142,750**                                   |
+	+---------------------+------------------------------+-----------------------------------------------+
 
 The attribute data is stored in a 'normalised' relational structure which enables the attributes to be retrieved and maintained in a very logical way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
-
-.. [1] Assuming 50 attributes per feature.
-.. [2] Assuming an average of 33.5 Mastermap-derived HLU features per original habitat feature.
 
 .. raw:: latex
 
