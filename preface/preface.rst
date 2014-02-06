@@ -35,7 +35,7 @@ Reading Guide
 
 This Preface explains a little about the HLU Tool, the community of people who develop and use it, and the licensing conditions for using and distributing it.
 
-:doc:`../introduction/introduction`  explains why the HLU Tool is needed, what it does and where it comes from.
+**:doc:`../introduction/introduction`**  explains why the HLU Tool is needed, what it does and where it comes from.
 
 :doc:`../concepts/concepts`  is a brief outline of the key concepts of the HLU Tool.
 
@@ -83,6 +83,10 @@ Acknowledgements
 
 Many thanks are due to all the LRCs in the south-east of England and their staff who have, and continue to, fund and contribute to the HLU Tool.  It takes a small army of developers, testers and users to build a truly useful tool (especially users who care enough to test new releases, report bugs and discuss feature requests).
 
+
+.. raw:: latex
+
+	\newpage
 
 Conventions used in this manual
 ===============================

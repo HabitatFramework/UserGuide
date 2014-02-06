@@ -9,18 +9,16 @@ Since the introduction of the Integrated Habitat System (IHS) and the adoption o
 
 The subsequent incorporation of the Ordnance Survey MasterMap boundaries and TOIDs into existing habitat datasets brought improved positional accuracy to the data, and in many cases also provided additional habitat and land-use source information. However, new datasets have significantly increased in volume with some county-wide datasets now containing over 2 million habitat features, with each feature having over 50 attributes. As a result the attributes and evidence-base required for habitat and land use information has grown so much in recent years that it is no longer practical to store or maintain the data in a standard GIS layer.
 
-.. raw:: latex
+Solution
+========
 
-	\newpage
+In 2009 exeGesIS Ltd was engaged to develop a new GIS-based tool to manage habitat and land use data based upon an OS MasterMap framework. Funding was provided by the Local Record Centres (LRCs) in the South East of England in partnership with Natural England.
 
-Proposed solution
-=================
+The tool needed to provide a user interface between the spatial data data held in GIS and the attribute data held in a relational database, maintaining changes to both the attributes and the spatial data. It also had to provide an audit trail to indicate when data was last edited, why and by whom.
 
-In 2009 exeGesIS Ltd was engaged to develop a new GIS-based application to manage habitat and land use data based upon an OS MasterMap framework. It was funded by the Local Record Centres (LRCs) in the South East of England in partnership with Natural England.
+One of the key requirements for the tool was the ability to use multiple GIS and database environments, so it was designed to be compatible with both ArcGIS and MapInfo and multiple relational databases including SQLServer and MS Access. In principle other database systems such as PostgreSQL and Oracle can be supported but these have not been tested.
 
-One of the key requirements for the tool was the ability to use multiple GIS and database environments, so it was designed to be compatible with both ArcGIS and MapInfo and multiple databases including SQLServer or MS Access. In principle other database systems such as PostgreSQL and Oracle can be supported but these have not been tested.
-
-The application needed to provide a user interface between the spatial data data held in GIS and the attribute data held in a relational database, maintaining changes to both the attributes and the spatial data. It also had to provide an audit trail to indicate when data was last edited, why and by whom.
+The first version of the tool (v1.0.0) was released in March 2011.
 
 .. raw:: latex
 
@@ -32,7 +30,7 @@ Data structure
 Spatial data
 ------------
 
-The Habitat and Land Use (HLU) spatial data consists of one or more GIS layers containing features (points, lines or polygons). These features are combined with Ordnance Survey (OS) Mastermap features so that each HLU feature is aligned with the points, lines and boundaries of OS Mastermap. Features may not extend across or beyond OS Mastermap lines or boundaries but they can sub-divide features by splitting them into smaller fragments. A unique reference to the original OS Mastermap feature, known as a TOID (see :ref:`mastermap_framework`) is assigned to every HLU feature so that the original lines or boundaries of the OS Mastermap features can be re-established by merging features with the same TOID.
+The Habitat and Land Use (HLU) spatial data consists of one or more GIS layers containing features (points, lines or polygons). These features are combined with Ordnance Survey (OS) Mastermap features so that each HLU feature is aligned with the points, lines and boundaries of OS Mastermap. Features may not extend across or beyond OS Mastermap lines or boundaries but they can sub-divide features by splitting them into smaller fragments. A unique reference to the original OS Mastermap feature, known as a TOID (see :ref:`habitat_framework`) is assigned to every HLU feature so that the original lines or boundaries of the OS Mastermap features can be re-established by merging features with the same TOID.
 
 Whilst there are benefits to splitting the HLU features by OS Mastermap, such as ensuring polygon boundaries are accurate and do not overlap, the splitting process significantly increases the volume of data. For example, the table below indicates the effect of splitting on a 500 feature GIS layer.
 
@@ -47,7 +45,7 @@ Whilst there are benefits to splitting the HLU features by OS Mastermap, such as
 	+------------+------------------------+------------------------------+
 	| Attributes | 40,000                 | 1,340,000                    |
 	+------------+------------------------+------------------------------+
-	| Total      | 40,500                 | 1,356,750                    |
+	| **Total**  | **40,500**             | **1,356,750**                |
 	+------------+------------------------+------------------------------+
 
 So, in this example, there are 33.5 Mastermap-derived features in the new HLU dataset for each original habitat feature.
@@ -63,7 +61,7 @@ Due to the complexity of the attribute data required whilst simultaneously wishi
 
 	+-----------------------+------------------------+----------------------------+
 	|                       | Original habitat layer | HLU attribute database and |
-	|                       |                        | | associated GIS Layer     |
+	|                       |                        |    associated GIS Layer    |
 	+=======================+========================+============================+
 	| HLU Records           | 500                    | 500                        |
 	+-----------------------+------------------------+----------------------------+
@@ -73,7 +71,7 @@ Due to the complexity of the attribute data required whilst simultaneously wishi
 	+-----------------------+------------------------+----------------------------+
 	| Spatial Attributes    |                        | 100,500                    |
 	+-----------------------+------------------------+----------------------------+
-	| Total                 | 25,500                 | 142,750                    |
+	| **Total**             | **25,500**             | **142,750**                |
 	+-----------------------+------------------------+----------------------------+
 
 The attribute data is stored in a ‘normalised’ relational structure which enables the attributes to be retrieved and maintained in a very logical way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.

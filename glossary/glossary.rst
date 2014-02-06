@@ -23,7 +23,7 @@ Glossary
 		Combines spatial data for the selected features from GIS with the associated attribute data from the database into a single new GIS layer based upon a pre-defined export format. See :ref:`export_window` for more details.
 
 	Fragment ID
-		An incremental number used as a unique reference to individual features (fragments) of a single TOID. See :ref:`mastermap_framework` for more details.
+		An incremental number used as a unique reference to individual features (fragments) of a single TOID. See :ref:`habitat_framework` for more details.
 
 	Habitat Class
 		One of the habitat classification systems used in the UK to record or describe an area of habitat (e.g. 'Phase 1', 'NVC', 'BAP Priority').
@@ -74,7 +74,7 @@ Glossary
 		The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current INCID. It may relate to a specific project, an ongoing process or an adhoc update.
 
 	Reason
-		The underlying explanation for the change in habitat or land use. It may be as a result of known changes in the habitat (such as habitat loss or habitat restoration) or it may be that new information indicates the existing data is wrong or that there has been a change but the underlying the cause is unknown.
+		The underlying explanation for the change in habitat or land use. It may be as a result of known changes in the habitat (such as habitat restoration), because new information indicates the existing data is wrong or because there has been a change but the underlying the cause is unknown.
 
 	Source
 		A dataset, document or reference used as the source of habitat or land use information. Up to three sources can be defined for each INCID.
@@ -83,7 +83,7 @@ Glossary
 		The tool can perform two types of split, Logical Split or Physical Split, depending upon the filter active in the tool. See :ref:`split` for more details.
 
 	TOID
-		A unique *topographical identifier* applied to features in Ordnance Survey's MasterMap product. See :ref:`mastermap_framework` for more details.
+		A unique *topographical identifier* applied to features in Ordnance Survey's MasterMap product. See :ref:`habitat_framework` for more details.
 
 	Vague Date
 		A specific date, range of dates or imprecise date that can be specified in a variety of formats (e.g. '23 Mar 1987', 'Mar 1987 - Jun 1987', 'Spring 1987').

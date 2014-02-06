@@ -12,28 +12,26 @@ Concepts
 
 .. _data_structure:
 
-Data Structure
-==============
+Data Components
+===============
 
-Due to the number and complexity of data attributes and the need to minimise data duplication and reduce data volume the spatial data and attribute data are separated into separate components:
+Due to the number and complexity of data attributes and the need to minimise data duplication and reduce data volume the spatial data and attribute data are separated into separate components. The HLU Tool provides an interface that links the spatial and attribute data and presents them to the user as a single entity.
 
 Spatial Data
-	The spatial data is stored in one or more GIS layers together with a minimal set of attributes that uniquely identifies and summarises each spatial feature. Separating the spatial data from the attribute data reduces the number of attributes required for the spatial layer which improves performance in the GIS application.
+------------
+
+The spatial data is stored in one or more GIS layers together with a minimal set of attributes that uniquely identifies and summarises each spatial feature. Separating the spatial data from the attribute data reduces the number of attributes required for the spatial layer which improves performance in the GIS application.
 
 Attribute Data
-	The attribute data is stored in a relational database in a ‘normalised’ relational structure (i.e. groups of related attributes are divided into smaller, separate tables and relationships are defined between the tables). A normalised relational database enables the attributes to be retrieved and maintained in a very logical, and universal, way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
-   
-The HLU Tool provides an interface that links the spatial and attribute data and presents them to the user as a single entity.
+--------------
+
+The attribute data is stored in a relational database in a ‘normalised’ relational structure (i.e. groups of related attributes are divided into smaller, separate tables and relationships are defined between the tables). A normalised relational database enables the attributes to be retrieved and maintained in a very logical, and universal, way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
 
-.. raw:: latex
+.. _habitat_framework:
 
-	\newpage
-
-.. _mastermap_framework:
-
-OS MasterMap Framework
-======================
+Habitat Framework
+=================
 
 Although most habitat surveys performed in the last 20 years are typically available as GIS layers, the spatial accuracy of the feature boundaries can be very variable. The quality will typically depend upon a range of factors, such as:
 
@@ -42,9 +40,9 @@ Although most habitat surveys performed in the last 20 years are typically avail
 	* The quality and age of aerial photography layers.
 	* The skill and patience of the GIS user digitising the data.
 
-This variability can make it very difficult to combine habitat layers and to compare changes between surveys from different years. Moreover, unless the GIS user was very skilled or geospatial topology [5]_ was employed there will be overlaps and gaps between features which can bring problems when using the data in spatial or statistical queries.
+This variability can make it very difficult to combine habitat layers and to compare changes between surveys from different years. Moreover, unless the GIS user was very skilled or geospatial topology [3]_ was employed there will be overlaps and gaps between features which can bring problems when using the data in spatial or statistical queries.
 
-.. [5] Geospatial topology is the arrangement for how point, line, and polygon features share geometry and is often used to define and enforce data integrity rules (e.g. no gaps should exist between polygons, there should be no overlapping features, etc).
+.. [3] Geospatial topology is the arrangement for how point, line, and polygon features share geometry and is often used to define and enforce data integrity rules (e.g. no gaps should exist between polygons, there should be no overlapping features, etc).
 
 One solution to these problems is to integrate all the habitat layers into a single framework based on Ordnance Survey's MasterMap dataset. MasterMap is the largest scale national mapping produced by the Ordnance Survey and provides highly detailed and seemless coverage.
 
@@ -53,22 +51,18 @@ All OS MasterMap features have a Topographic Identity or 'TOID' that uniquely id
 Apart from the spatial representation of the features, the habitat framework only retains the TOID from OS MasterMap because all other attributes can be retrieved using this if necessary. Where OS MasterMap features need to be sub-divided into smaller units in order to represent habitat survey details that are not already shown these still retain the original TOID but are also assigned a fragment identifier so that each fragment can be uniquely identified.
 
 
-.. raw:: latex
-
-	\newpage
-
 .. _incid:
 
 Incremental Identifier
 ======================
 
-Every feature in the GIS layer, and associated attributes in the relational database, is assigned to an INCID (\ **Inc**\ remental **id**\ entifier). An INCID can be thought of as a logical grouping of features that share a common set of attributes and are spatially related (i.e. neighbouring or proximate) [3]_. Each INCID can relate to one or more features. Grouping features with common attributes in this way reduces the number of database records required and allows the features and their attributes to all be maintained together.
+Every feature in the GIS layer, and associated attributes in the relational database, is assigned to an INCID (\ **Inc**\ remental **id**\ entifier). An INCID can be thought of as a logical grouping of features that share a common set of attributes and are spatially related (i.e. neighbouring or proximate) [4]_. Each INCID can relate to one or more features. Grouping features with common attributes in this way reduces the number of database records required and allows the features and their attributes to all be maintained together.
 
 In order to amend the attributes for one or more features in a larger group of features (i.e. in the same INCID as other features) without updating the remaining features, the features must first be split into their own logical grouping - i.e. they must be assigned to a new INCID (see :ref:`logical_split` for more details.)
 
 Similarly, features from different INCIDs that are actually related and should share the same common set of attributes can be merged into the same INCID (see :ref:`logical_merge` for more details.)
 
-.. [3] Features in the same INCID do not have to be adjacent but it is recommended that they are at least associated with one-another (e.g. they are within the same site or either side of the same road/railway).
+.. [4] Features in the same INCID do not have to be adjacent but it is recommended that they are at least associated with one-another (e.g. they are within the same site or either side of the same road/railway).
 
 
 .. raw:: latex
@@ -80,14 +74,14 @@ Similarly, features from different INCIDs that are actually related and should s
 Priority Habitats
 =================
 
-Some IHS Habitat and some multiplex codes (Formation, Management and Complex codes) are equivalent to, or more distinct than, priority habitats [4]_. When any such codes are selected in the main window :ref:`ihs_tab` the tool automatically adds the associated priority habitats to the 'Priority Habitats' section of the :ref:`details_tab`.
+Some IHS Habitat and some multiplex codes (Formation, Management and Complex codes) are equivalent to, or more distinct than, priority habitats [5]_. When any such codes are selected in the main window :ref:`ihs_tab` the tool automatically adds the associated priority habitats to the 'Priority Habitats' section of the :ref:`details_tab`.
 
-If priority habitat associated codes are changed or removed in the :ref:`ihs_tab` the tool does **not** automatically remove existing priority habitats from the 'Priority Habitats' section of the :ref:`details_tab` - instead they are moved to the 'Potential Priority Habitats' section and the :ref:`determination_quality` is cleared.
+However, if priority habitat associated codes are changed or removed in the :ref:`ihs_tab` the tool does **not** automatically remove existing priority habitats from the 'Priority Habitats' section of the :ref:`details_tab`. Instead they are moved to the 'Potential Priority Habitats' section and the :ref:`determination_quality` is cleared.
 
 .. note::
 	Existing priority habitats that have been automatically moved to the 'Potential Priority Habitats' section but are no longer required must be deleted by the user (see :ref:`details_tab`.)
 
-.. [4] Habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UHS Post-2010 Biodiversity Framework.
+.. [5] Habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UHS Post-2010 Biodiversity Framework.
 
 
 .. _potential_priority_habitats:
@@ -120,10 +114,10 @@ Every priority habitat and potential priority habitat must be assigned a determi
 	+----------------------------------------------------------+
 	| Probably is, but some uncertainty                        |
 	+----------------------------------------------------------+
-	| Not present but close to definition [5]_                 |
+	| Not present but close to definition [6]_                 |
 	+----------------------------------------------------------+
 
-.. [5] This Determination Quality is only applicable for 'Potential Priority Habitats' and is the only Determination Quality suitable for 'Potential Priority Habitats'.
+.. [6] This Determination Quality is only applicable for 'Potential Priority Habitats' and is the only Determination Quality suitable for 'Potential Priority Habitats'.
 
 
 .. _interpretation_quality:
@@ -162,13 +156,10 @@ Every priority habitat and potential priority habitat must be assigned a determi
 
 	\newpage
 
-Splits and Merges
-=================
-
 .. _split:
 
 Split Features
---------------
+==============
 
 Split features will performs two types of split depending upon the filter active in the tool. If one or more features from a single INCID are present in the current filter then the tool will perform a logical split. If two or more fragments from the same TOID and with the same TOID_Fragment_Id are present in the current filter then the tool will perform a physical split.
 
@@ -181,7 +172,7 @@ Split features will performs two types of split depending upon the filter active
 .. _logical_split:
 
 Logical Split
-^^^^^^^^^^^^^
+-------------
 
 Logical split is used to create a new INCID in the database based upon the subset of features selected from a single INCID in the GIS layer. The habitat details for the new INCID can then be updated independently of the other features in the original INCID.
 
@@ -201,7 +192,7 @@ To perform a logical split:
 .. _physical_split:
 
 Physical Split
-^^^^^^^^^^^^^^
+--------------
 
 Physical split creates one or more new TOID fragments in the database based upon a single TOID which has been split in the GIS layer.
 
@@ -212,7 +203,7 @@ Physical split creates one or more new TOID fragments in the database based upon
 	* Ensure that the physical split is completed in the database prior to commencing any other operations such as ‘Select by attributes…’ to avoid database synchronisation issues.
 
 ArcGIS
-""""""
+^^^^^^
 
 To perform a physical split:
 
@@ -242,7 +233,7 @@ To perform a physical split:
 * Click on ‘Split Features’. The record will be updated and details added to the History tab for the INCID.
 
 MapInfo
-"""""""
+^^^^^^^
 
 To perform a physical split:
 
@@ -279,7 +270,7 @@ To perform a physical split:
 .. _merge:
 
 Merge Features
---------------
+==============
 
 Merge features will performs two types of merge depending upon the filter active in the tool. If two or more features from multiple INCIDs are present in the current filter then the tool will perform a logical merge. If two or more fragments from the same TOID and with different TOID_Fragment_Ids are present in the current filter then the tool will perform a physical merge.
 
@@ -289,7 +280,7 @@ Merge features will performs two types of merge depending upon the filter active
 .. _logical_merge:
 
 Logical Merge
-^^^^^^^^^^^^^
+-------------
 
 Logical merge combines all the features selected in the GIS into a single INCID chosen from from the selected features. This assigns the attributes from the chosen INCID to all the other selected features and logically groups the features into a single INCID so that they can be updated together in the future.
 
@@ -317,7 +308,7 @@ To perform a logical merge:
 .. _physical_merge:
 
 Physical Merge
-^^^^^^^^^^^^^^
+--------------
 
 Physical merge combines fragments of a single TOID into a single, larger, feature in the GIS layer. As the fragments must already belong to the same INCID there are no attribute updates but the boundaries between adjacent features will be removed.
 
@@ -338,3 +329,4 @@ To perform a physical merge:
 
 .. note::
 	Only fragments belonging to the same TOID can be merged in a single operation. If fragments for several TOIDs need to be merged, the operation must be repeated for each TOID.
+
