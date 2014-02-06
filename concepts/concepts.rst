@@ -18,11 +18,9 @@ Data Components
 Due to the number and complexity of data attributes and the need to minimise data duplication and reduce data volumes the spatial data and attribute data are separated into separate components. The HLU Tool provides an interface that links the spatial and attribute data and presents them to the user as a single entity.
 
 **Spatial Data**
-
 The spatial data is stored in one or more GIS layers together with a minimal set of attributes that uniquely identifies and summarises each spatial feature. Separating the spatial data from the attribute data reduces the number of attributes required for the spatial layer which improves performance in the GIS application.
 
 **Attribute Data**
-
 The attribute data is stored in a relational database in a 'normalised' relational structure (i.e. groups of related attributes are divided into smaller, separate tables and relationships are defined between the tables). A normalised relational database enables the attributes to be retrieved and maintained in a very logical, and universal, way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
 
@@ -201,7 +199,6 @@ Physical split creates one or more new TOID fragments in the database based upon
 	* Ensure that the physical split is completed in the database prior to commencing any other operations such as 'Select by attributes …' to avoid database synchronisation issues.
 
 **ArcGIS**
-
 To perform a physical split:
 
 * On the 'Editor' toolbar, click **Editor** and select **Start Editing**.
@@ -230,7 +227,6 @@ To perform a physical split:
 * Click **Split Features**. The record will be updated and details added to the History tab for the INCID.
 
 **MapInfo**
-
 To perform a physical split:
 
 * Set the Cosmetic layer as 'Editable' and draw the feature to split by.
