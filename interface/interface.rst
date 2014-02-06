@@ -62,11 +62,11 @@ Reason/Process Section
 	Main window - Reason/Process Section
 
 
-.. _ihs_tab:
-
 .. raw:: latex
 
 	\newpage
+
+.. _ihs_tab:
 
 IHS Tab
 -------
@@ -100,11 +100,11 @@ IHS Summary
 Legacy Habitat
 	[Read only]. Displays the primary 'pre-IHS' habitat code (if present).
 
-.. _details_tab:
-
 .. raw:: latex
 
 	\newpage
+
+.. _details_tab:
 
 Details Tab
 -----------
@@ -140,11 +140,11 @@ Biosite Name
 .. note::
 	To delete a potential priority habitat click on the grey box to the left of the potential priority habitat to select the row, then press the keyboard :kbd:`Delete` key to remove it.
 
-.. _source_tab:
-
 .. raw:: latex
 
 	\newpage
+
+.. _source_tab:
 
 Sources Tab
 -----------
@@ -183,11 +183,11 @@ Habitat Imp.
 	* If the default date for the selected data source has been configured, the 'Vague Date' field will be updated to the default date. If the default date has not been defined, then the 'Vague Date' field must be updated manually. See 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to define default source dates.
 	* For boundary importance and habitat importance there can only be one source set as 'Primary' or 'Secondary' for each field.
 
-.. _history_tab:
-
 .. raw:: latex
 
 	\newpage
+
+.. _history_tab:
 
 History Tab
 -----------
