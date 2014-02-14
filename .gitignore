@@ -1,0 +1,10 @@
+.tox/
+build/
+dist/
+docs/_build
+*.orig
+*.egg-info
+*.pyc
+MANIFEST
+.noseids
+.*.swp
