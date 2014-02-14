@@ -1,6 +1,7 @@
 .tox/
 build/
 dist/
+_build
 docs/_build
 *.orig
 *.egg-info
