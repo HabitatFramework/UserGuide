@@ -55,7 +55,7 @@ Attribute data
 
 Due to the complexity of the attribute data and the wish to minimise data duplication and reduce data volumes, the habitat spatial and attribute data were separated into a GIS layer and an associated relational database. Separating the spatial and attribute data reduces the number of attributes required for the spatial layer to only 6 (instead of the original 50+) and hence offers a significant reduction in the total number of attributes held in the GIS layer.
 
-The example in the table below shows the effect of separating the spatial and attribute data for the same original 500 features. [1]_
+The example in the table below shows the effect of separating the spatial and attribute data for the same original 500 features.
 
 .. tabularcolumns:: |L|R|R|
 

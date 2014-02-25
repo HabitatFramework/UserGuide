@@ -113,6 +113,7 @@ Every priority habitat and potential priority habitat must be assigned a determi
 	| Not present but close to definition                      |
 	+----------------------------------------------------------+
 
+
 .. note::
 	The Determination Quality 'Not present but close to definition' is only applicable for 'Potential Priority Habitats' and is the only Determination Quality available for 'Potential Priority Habitats'.
 
@@ -161,7 +162,7 @@ Split Features
 Split features will perform two types of split depending upon the filter active in the tool. If one or more features from a single INCID are present in the current filter then the tool will perform a logical split. If two or more fragments from the same TOID and with the same TOID_Fragment_Id are present in the current filter then the tool will perform a physical split.
 
 .. note::
-	If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and :guilabel:`Get Map Selection` is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will **automatically** perform a physical split before displaying the attributes.
+	If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and **Get Map Selection** is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will **automatically** perform a physical split before displaying the attributes.
 
 .. index::
 	single: Split; Logical
@@ -178,15 +179,12 @@ For example, a group of adjacent permanent pasture fields, each represented by a
 To display all the features in the INCID of a given feature:
 
 * Select the feature of interest in the GIS layer.
+
+	.. note::
+		The selected features must all belong to the same INCID.
+
 * Return to the HLU main window and click **Get Map Selection**.
 * Click **Select Current INCID on Map**. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figLSFD`.
-
-To perform a logical split:
-
-* Select the subset of features to be split in the GIS layer as shown in the **right** part of the figure :ref:`figLSFD`.
-* Return to the HLU main window and click **Get Map Selection**.
-* Select one of the options in the 'Process' list.
-* Click **Split Features**. A new INCID will be created and displayed as the current record.
 
 .. _figLSFD:
 
@@ -196,8 +194,17 @@ To perform a logical split:
 	Logical Split – Before (left) and After (right)
 
 
-.. note::
-	The selected features must all belong to the same INCID.
+To perform a logical split:
+
+* Select the subset of features to be split in the GIS layer as shown in the **right** part of the figure :ref:`figLSFD`.
+* Return to the HLU main window and click **Get Map Selection**.
+* Select one of the options in the 'Process' list.
+* Click **Split Features**. A new INCID will be created and displayed as the current record.
+
+
+.. raw:: latex
+
+	\newpage
 
 .. index::
 	single: Split; Physical
@@ -217,7 +224,9 @@ For example, a woodland may appear in OS MasterMap as a single feature, but comp
 	* If several features have been split, select the fragments for one original feature and split using the tool. Repeat this operation for the remaining features.
 	* Ensure that the physical split is completed in the database prior to commencing any other operations such as 'Select by attributes …' to avoid database synchronisation issues.
 
-**ArcGIS**
+ArcGIS
+^^^^^^
+
 To perform a physical split:
 
 * On the 'Editor' toolbar (shown in the figure :ref:`figArcEMB`), click **Editor** and select **Start Editing**.
@@ -248,7 +257,9 @@ To perform a physical split:
 * Click **Split Features**. The record will be updated and details added to the History tab for the INCID.
 
 
-**MapInfo**
+MapInfo
+^^^^^^^
+
 To perform a physical split:
 
 * Set the Cosmetic layer as 'Editable' and draw the feature to split by.
@@ -268,7 +279,7 @@ To perform a physical split:
 
 	Data Disaggregation Dialog (MapInfo)
 
-* The feature will be split but still selected as shown in :ref:`figMISF`. Return to the HLU GIS Tool and click **Get Map Selection**.
+* The feature will be split but still selected as shown in the figure :ref:`figMISF`. Return to the HLU GIS Tool and click **Get Map Selection**.
 
 .. _figMISF:
 
