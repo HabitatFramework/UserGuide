@@ -121,7 +121,7 @@ Every priority habitat and potential priority habitat must be assigned a determi
 Interpretation Quality
 ----------------------
 
-Every priority habitat and potential priority habitat must be assigned a determination quality. This is selected based on an assessment of the quality of the original habitat type and it's relationship between it and the priority habitat type and also the age of the original habitat source.
+Every priority habitat and potential priority habitat must be assigned an interpretation quality. This is selected based on an assessment of the quality of the original habitat type and it's relationship between it and the priority habitat type and also the age of the original habitat source.
 
 .. tabularcolumns:: |L|C|C|C|
 
@@ -157,7 +157,7 @@ Every priority habitat and potential priority habitat must be assigned a determi
 Split Features
 ==============
 
-Split features will performs two types of split depending upon the filter active in the tool. If one or more features from a single INCID are present in the current filter then the tool will perform a logical split. If two or more fragments from the same TOID and with the same TOID_Fragment_Id are present in the current filter then the tool will perform a physical split.
+Split features will perform two types of split depending upon the filter active in the tool. If one or more features from a single INCID are present in the current filter then the tool will perform a logical split. If two or more fragments from the same TOID and with the same TOID_Fragment_Id are present in the current filter then the tool will perform a physical split.
 
 .. note::
 	If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and :guilabel:`Get Map Selection` is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will **automatically** perform a physical split before displaying the attributes.
@@ -176,13 +176,13 @@ For example, a group of adjacent permanent pasture fields, each represented by a
 
 To display all the features in the INCID of a given feature:
 
-* Click **Switch to GIS Window** and select the feature of interest in the GIS layer.
+* Select the feature of interest in the GIS layer.
 * Return to the HLU main window and click **Get Map Selection**.
 * Click **Select Current INCID on Map**. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figLSFD`.
 
 To perform a logical split:
 
-* Click **Switch to GIS Window** and select the subset of features to be split in the GIS layer as shown in the **right** part of the figure :ref:`figLSFD`.
+* Select the subset of features to be split in the GIS layer as shown in the **right** part of the figure :ref:`figLSFD`.
 * Return to the HLU main window and click **Get Map Selection**.
 * Select one of the options in the 'Process' list.
 * Click **Split Features**. A new INCID will be created and displayed as the current record.
@@ -219,9 +219,7 @@ For example, a woodland may appear in OS MasterMap as a single feature, but comp
 **ArcGIS**
 To perform a physical split:
 
-* On the 'Editor' toolbar, click **Editor** and select **Start Editing**.
-* Select the feature to be split.
-* On the 'Editor' toolbar, select **Cut Polygons Tool** (for polygon features) or **Split Tool** (for lines) button as shown in the figure :ref:`figArcEMB`.
+* On the 'Editor' toolbar (shown in the figure :ref:`figArcEMB`), click **Editor** and select **Start Editing**.
 
 .. _figArcEMB:
 
@@ -230,8 +228,12 @@ To perform a physical split:
 
 	Edit Settings for Physical Split (ArcGIS)
 
-* Using the Sketch tool on 'Editor' toolbar, draw a polyline.
-* On the 'Editor' toolbar, click **Editor** and select **Save Edits**.
+* Select the feature to be split.
+* On the 'Editor' toolbar, click **Cut Polygons Tool** draw a polyline through the feature to be split.
+
+	.. tip::
+		It is not necessary to **Save Edits** after splitting the feature in GIS because the changes will be saved automatically once the split has been completed with the tool.
+
 * The feature will be split but still selected as shown in the figure :ref:`figArcSFD`. Return to the HLU GIS Tool and click **Get Map Selection**.
 
 .. _figArcSFD:
@@ -244,12 +246,13 @@ To perform a physical split:
 * Select one of the options in the 'Process' list.
 * Click **Split Features**. The record will be updated and details added to the History tab for the INCID.
 
+
 **MapInfo**
 To perform a physical split:
 
 * Set the Cosmetic layer as 'Editable' and draw the feature to split by.
 
-.. Tip::
+.. tip::
 	The Cosmetic layer should be used due to the time required for MapInfo to add a new feature to the full HLU layer.
 
 * Set the HLU layer as 'Editable'.
@@ -296,8 +299,8 @@ Logical merge combines all the features selected in the GIS into a single INCID 
 
 To perform a logical merge:
 
-* Click **Switch to GIS Window** and select the features to be merged and a feature from the INCID they are to be merged with in the GIS layer.
-* Return to the HLU main window and click 'Get Map Selection'.
+* Select the features to be merged and a feature from the INCID they are to be merged with in the GIS layer.
+* Return to the HLU main window and click **Get Map Selection**.
 * Select one of the options in the 'Process' list.
 * Click **Merge Features**. A list of INCIDs will be displayed as shown in the figure :ref:`figLMD`.
 

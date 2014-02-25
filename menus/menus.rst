@@ -93,7 +93,7 @@ For example, the fields copied in the figure above would be pasted into 'Source 
 Bulk Update
 -----------
 
-Allows users to update the attributes for multiple selected database records simultaneously.
+Allows users to update the attributes for multiple selected database records (INCIDs) simultaneously.
 
 
 .. raw:: latex

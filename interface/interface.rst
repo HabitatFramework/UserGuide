@@ -89,7 +89,10 @@ NVC
 	Drop-down list of National Vegetation Classification (NVC) types used to filter the 'Habitat' drop-down list to relevant IHS codes. The entries in this field are not saved to the database.
 
 Habitat
-	Drop-down list of the IHS habitat codes relating to the selected Category or NVC.
+	Drop-down list allowing users to select the desired IHS Habitat code. The contents of the list will vary and relate directly to the selected Category or NVC (above). [6]_
+
+NVC Codes
+	[Read only]. Displays any known NVC codes relating to the selected IHS Habitat to assist users more familiar with the NVC to determine whether the selected IHS Habitat is appropriate.
 
 IHS Matrix / Formation / Management / Complex
 	Drop-down lists allowing users to refine the habitat definition by adding 'multiplex' codes according to the guidelines of IHS.
@@ -99,6 +102,8 @@ IHS Summary
 
 Legacy Habitat
 	[Read only]. Displays the primary 'pre-IHS' habitat code (if present).
+
+.. [6] The Category and NVC lists operate as either/or lists. The Habitat list contents will relate to whichever of the two lists was selected last.
 
 .. raw:: latex
 
@@ -285,7 +290,7 @@ Display History Rows
 	Sets the number of entries displayed in the 'History' tab of the main window. For more details on the 'History' tab see :ref:`history_tab`.
 
 Delete Empty Bulk Update Rows
-	Removes the details of child records if they are these fields are not completed in the bulk update form if this checkbox is ticked. By default this box is unticked.
+	If this checkbox is ticked the details of child records are removed if the corresponding fields in the bulk update form are not completed. By default this box is unticked.
 
 	This option affects the following sections of the main window when performing bulk updates:
 
@@ -448,7 +453,7 @@ Once users have entered the values for the current row, click on another row in 
 If a mistake has been made when entering the selection criteria, click on the grey box to the left of 'Boolean Operator' to select the row, then press the keyboard :kbd:`Delete` key to remove it.
 
 
-.. Tip::
+.. tip::
 	If features are likely to be selected from multiple INCIDs it will typically be much quicker to select features in the GIS (if the available attributes are sufficient for the selection) then use 'Get Map Selection'.
 
 
