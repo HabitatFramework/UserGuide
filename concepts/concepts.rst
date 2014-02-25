@@ -58,7 +58,7 @@ In order to amend the attributes for one or more features in a larger group of f
 
 Similarly, features from different INCIDs that are actually related and should share the same common set of attributes can be merged into the same INCID (see :ref:`logical_merge` for more details.)
 
-.. [3] Features in the same INCID do not have to be adjacent but it is recommended that they are at least associated with one-another (e.g. they are within the same site or either side of the same road/railway).
+.. [3] Features in the same INCID do not have to be adjacent but it is recommended that they are at least spatially associated with one-another (e.g. they are within the same site or either side of the same road/railway).
 
 
 .. raw:: latex
@@ -77,7 +77,7 @@ However, if priority habitat associated codes are changed or removed in the :ref
 .. note::
 	Existing priority habitats that have been automatically moved to the 'Potential Priority Habitats' section but are no longer required must be deleted by the user (see :ref:`details_tab`.)
 
-.. [4] Habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UHS Post-2010 Biodiversity Framework.
+.. [4] Priority habitats are habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UHS Post-2010 Biodiversity Framework.
 
 
 .. _potential_priority_habitats:
@@ -110,10 +110,11 @@ Every priority habitat and potential priority habitat must be assigned a determi
 	+----------------------------------------------------------+
 	| Probably is, but some uncertainty                        |
 	+----------------------------------------------------------+
-	| Not present but close to definition [5]_                 |
+	| Not present but close to definition                      |
 	+----------------------------------------------------------+
 
-.. [5] This Determination Quality is only applicable for 'Potential Priority Habitats' and is the only Determination Quality suitable for 'Potential Priority Habitats'.
+.. note::
+	The Determination Quality 'Not present but close to definition' is only applicable for 'Potential Priority Habitats' and is the only Determination Quality available for 'Potential Priority Habitats'.
 
 
 .. _interpretation_quality:

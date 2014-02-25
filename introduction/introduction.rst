@@ -32,7 +32,7 @@ Spatial data
 
 The Habitat and Land Use (HLU) spatial data consists of one or more GIS layers containing features (points, lines or polygons). These features are combined with Ordnance Survey (OS) MasterMap features so that each HLU feature is aligned with the points, lines and boundaries of OS MasterMap. Features may not extend across or beyond OS MasterMap lines or boundaries but they can sub-divide features by splitting them into smaller fragments. A unique reference to the original OS MasterMap feature, known as a TOID (see :ref:`habitat_framework`) is assigned to every HLU feature so that the original lines or boundaries of the OS MasterMap features can be re-established by merging features with the same TOID.
 
-Whilst there are benefits to splitting the HLU features by OS MasterMap, such as ensuring polygon boundaries are accurate and do not overlap, the splitting process significantly increases the volume of data. The example in the table below indicates the effect of splitting on a 500 feature GIS layer [1]_
+Whilst there are benefits to splitting the HLU features by OS MasterMap, such as ensuring polygon boundaries are accurate and do not overlap, the splitting process significantly increases the volume of data. The example in the table below indicates the effect of splitting on a 500 feature GIS layer. [1]_
 
 .. tabularcolumns:: |L|R|R|
 
@@ -55,7 +55,7 @@ Attribute data
 
 Due to the complexity of the attribute data and the wish to minimise data duplication and reduce data volumes, the habitat spatial and attribute data were separated into a GIS layer and an associated relational database. Separating the spatial and attribute data reduces the number of attributes required for the spatial layer to only 6 (instead of the original 50+) and hence offers a significant reduction in the total number of attributes held in the GIS layer.
 
-The example in the table below shows the effect of separating the spatial and attribute data for the same original 500 features [1]_.
+The example in the table below shows the effect of separating the spatial and attribute data for the same original 500 features. [1]_
 
 .. tabularcolumns:: |L|R|R|
 
