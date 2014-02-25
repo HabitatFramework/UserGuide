@@ -36,9 +36,9 @@ Although most habitat surveys performed in the last 20 years are typically avail
 	* The quality and age of any aerial photography layers.
 	* The skill and patience of the GIS user digitising the data.
 
-This variability can make it very difficult to combine habitat layers and to compare changes between surveys from different years. Moreover, unless the GIS user was very skilled or geospatial topology [3]_ was employed there will be overlaps and gaps between features which can bring problems when using the data in spatial or statistical queries.
+This variability can make it very difficult to combine habitat layers and to compare changes between surveys from different years. Moreover, unless the GIS user was very skilled or geospatial topology [2]_ was employed there will be overlaps and gaps between features which can bring problems when using the data in spatial or statistical queries.
 
-.. [3] Geospatial topology is the arrangement for how point, line, and polygon features share geometry and is often used to define and enforce data integrity rules (e.g. no gaps should exist between polygons, there should be no overlapping features, etc).
+.. [2] Geospatial topology is the arrangement for how point, line, and polygon features share geometry and is often used to define and enforce data integrity rules (e.g. no gaps should exist between polygons, there should be no overlapping features, etc).
 
 One solution to these problems is to integrate all the habitat layers into a single framework based on Ordnance Survey's MasterMap dataset. MasterMap is the largest scale national mapping produced by the Ordnance Survey and provides highly detailed and seamless coverage.
 
@@ -52,13 +52,13 @@ Apart from the spatial representation of the features, the habitat framework onl
 Incremental Identifier
 ======================
 
-Every feature in the GIS layer, and associated attributes in the relational database, is assigned to an INCID (\ **Inc**\ remental **id**\ entifier). An INCID can be thought of as a logical grouping of features that share a common set of attributes and are spatially related (i.e. neighbouring or proximate) [4]_. Each INCID can relate to one or more features. Grouping features with common attributes in this way reduces the number of database records required and allows the features and their attributes to all be maintained together.
+Every feature in the GIS layer, and associated attributes in the relational database, is assigned to an INCID (\ **Inc**\ remental **id**\ entifier). An INCID can be thought of as a logical grouping of features that share a common set of attributes and are spatially related (i.e. neighbouring or proximate) [3]_. Each INCID can relate to one or more features. Grouping features with common attributes in this way reduces the number of database records required and allows the features and their attributes to all be maintained together.
 
 In order to amend the attributes for one or more features in a larger group of features (i.e. in the same INCID as other features) without updating the remaining features, the features must first be split into their own logical grouping - i.e. they must be assigned to a new INCID (see :ref:`logical_split` for more details.)
 
 Similarly, features from different INCIDs that are actually related and should share the same common set of attributes can be merged into the same INCID (see :ref:`logical_merge` for more details.)
 
-.. [4] Features in the same INCID do not have to be adjacent but it is recommended that they are at least associated with one-another (e.g. they are within the same site or either side of the same road/railway).
+.. [3] Features in the same INCID do not have to be adjacent but it is recommended that they are at least associated with one-another (e.g. they are within the same site or either side of the same road/railway).
 
 
 .. raw:: latex
@@ -70,14 +70,14 @@ Similarly, features from different INCIDs that are actually related and should s
 Priority Habitats
 =================
 
-Some IHS Habitat and some multiplex codes (Formation, Management and Complex codes) are equivalent to, or more distinct than, priority habitats [5]_. When any such codes are selected in the main window :ref:`ihs_tab` the tool automatically adds the associated priority habitats to the 'Priority Habitats' section of the :ref:`details_tab`.
+Some IHS Habitat and some multiplex codes (Formation, Management and Complex codes) are equivalent to, or more distinct than, priority habitats [4]_. When any such codes are selected in the main window :ref:`ihs_tab` the tool automatically adds the associated priority habitats to the 'Priority Habitats' section of the :ref:`details_tab`.
 
 However, if priority habitat associated codes are changed or removed in the :ref:`ihs_tab` the tool does **not** automatically remove existing priority habitats from the 'Priority Habitats' section of the :ref:`details_tab`. Instead they are moved to the 'Potential Priority Habitats' section and the :ref:`determination_quality` is cleared.
 
 .. note::
 	Existing priority habitats that have been automatically moved to the 'Potential Priority Habitats' section but are no longer required must be deleted by the user (see :ref:`details_tab`.)
 
-.. [5] Habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UHS Post-2010 Biodiversity Framework.
+.. [4] Habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UHS Post-2010 Biodiversity Framework.
 
 
 .. _potential_priority_habitats:
@@ -110,10 +110,10 @@ Every priority habitat and potential priority habitat must be assigned a determi
 	+----------------------------------------------------------+
 	| Probably is, but some uncertainty                        |
 	+----------------------------------------------------------+
-	| Not present but close to definition [6]_                 |
+	| Not present but close to definition [5]_                 |
 	+----------------------------------------------------------+
 
-.. [6] This Determination Quality is only applicable for 'Potential Priority Habitats' and is the only Determination Quality suitable for 'Potential Priority Habitats'.
+.. [5] This Determination Quality is only applicable for 'Potential Priority Habitats' and is the only Determination Quality suitable for 'Potential Priority Habitats'.
 
 
 .. _interpretation_quality:
@@ -160,7 +160,7 @@ Split Features
 Split features will performs two types of split depending upon the filter active in the tool. If one or more features from a single INCID are present in the current filter then the tool will perform a logical split. If two or more fragments from the same TOID and with the same TOID_Fragment_Id are present in the current filter then the tool will perform a physical split.
 
 .. note::
-	If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and :guilabel:`Get Map Selection` is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will automatically perform a physical split before displaying the attributes.
+	If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and :guilabel:`Get Map Selection` is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will **automatically** perform a physical split before displaying the attributes.
 
 .. index::
 	single: Split; Logical
@@ -170,14 +170,30 @@ Split features will performs two types of split depending upon the filter active
 Logical Split
 -------------
 
-Logical split is used to create a new INCID in the database based upon the subset of features selected from a single INCID in the GIS layer. The habitat details for the new INCID can then be updated independently of the other features in the original INCID.
+Logical split is used to create a new INCID in the database based upon a subset of features selected from a single INCID in the GIS layer. Logically splitting one or more features assigns them to a different INCID than the other features in the current INCID which then allows them to be updated independently of the remaining features in the original INCID.
+
+For example, a group of adjacent permanent pasture fields, each represented by a separate OS MasterMap feature, may initially be 'logically' grouped by being assigned to the same INCID because they share a common set of IHS codes, sources and other attributes. However, if may be discovered that one or more of the fields in that INCID are actually being managed differently to the remaining fields. By logically splitting those fields/features from the original INCID to form a new, smaller logical grouping of features that INCID can then be assigned a different IHS management code.
+
+To display all the features in the INCID of a given feature:
+
+* Click **Switch to GIS Window** and select the feature of interest in the GIS layer.
+* Return to the HLU main window and click **Get Map Selection**.
+* Click **Select Current INCID on Map**. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figLSFD`.
 
 To perform a logical split:
 
-* Click **Switch to GIS Window** and select the required features in the GIS layer.
-* Return to the HLU main window and click 'Get Map Selection'.
+* Click **Switch to GIS Window** and select the subset of features to be split in the GIS layer as shown in the **right** part of the figure :ref:`figLSFD`.
+* Return to the HLU main window and click **Get Map Selection**.
 * Select one of the options in the 'Process' list.
-* Click **Split Features**. The new INCID will be created and set as the current record.
+* Click **Split Features**. A new INCID will be created and displayed as the current record.
+
+.. _figLSFD:
+
+.. figure:: ../images/figures/LogicalSplitDiagram.png
+	:align: center
+
+	Logical Split – Before (left) and After (right)
+
 
 .. note::
 	The selected features must all belong to the same INCID.
@@ -190,7 +206,9 @@ To perform a logical split:
 Physical Split
 --------------
 
-Physical split creates one or more new TOID fragments in the database based upon a single TOID which has been split in the GIS layer.
+Physical split is use to create one or more new TOID fragments in the database based upon a single TOID that has already been split in the GIS layer. Physically splitting a feature into fragments allows the fragments to be updated independently of each other (once they have also been assigned to different INCIDs - see :ref:`logical_split'.)
+
+For example, a woodland may appear in OS MasterMap as a single feature, but compartments within the woodland may be managed differently and/or may have different characteristics. By physically splitting the woodland feature along the compartment boundaries each compartment can then be assigned to it's own INCID (by performing a logical_split) so that they can be assigned different matrix, formation and management codes.
 
 .. note::
 
@@ -306,10 +324,10 @@ Physical merge combines fragments of a single TOID into a single, larger, featur
 
 To perform a physical merge:
 
-* Select two or more fragments from one TOID in the GIS layer as shown in the figure :ref:`figPMD` (left).
+* Select two or more fragments from one TOID in the GIS layer as shown in the **left** part of the figure :ref:`figPMD`.
 * Return to the HLU main window and click **Get Map Selection**.
 * Select one of the options in the 'Process' list.
-* Click **Merge Features**. The features will be combined in the GIS layer as shown in figure :ref:`figPMD` (right).
+* Click **Merge Features**. The features will be combined in the GIS layer as shown in the **right** part of the figure :ref:`figPMD`.
 
 .. _figPMD:
 

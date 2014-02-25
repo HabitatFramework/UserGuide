@@ -39,11 +39,11 @@ suggest new entries!
 
 **Can I hide IHS habitats that don't occur in my region from the drop-down lists?**
 
-	You can currently currently hide IHS habitats from the `Habitat` list on the IHS tab in the main window (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details). There is also a planned change request to enable non-local IHS Habitats to be hidden from the `Habitat Type` list on the `Sources` tab in the main window.	
+	You can currently hide IHS habitats from the `Habitat` list on the IHS tab in the main window (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details). There is also a planned change request to enable non-local IHS Habitats to be hidden from the `Habitat Type` list on the `Sources` tab in the main window.	
 
-**Can more several people use the tool at the same time?**
+**Can several people use the tool at the same time?**
 
-	Any number of users can use the tool for read-only access if they have a copy of the tool installed on their PC. Multiple users can also use the tool in edit more but only within the limits of the database system and GIS application used by the tool. So the GIS layer and database would also have to be configured to support multiple users.
+	Any number of users can use the tool for read-only access if they have a copy of the tool installed on their PC. Multiple users can also use the tool in edit mode but only within the limits of the database system and GIS application used by the tool. So the GIS layer and database would also have to be configured to support multiple users.
 
 **Does the tool work with QGIS?**
 
