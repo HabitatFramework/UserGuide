@@ -21,7 +21,7 @@ Administrators
 --------------
 It is recommend that a person within each organisation is designated as the tool and database administrator. This person should:
 
-* Have and understanding and experience of IT systems management.
+* Have an understanding and experience of IT systems management.
 * Understand relational database structures.
 * Be an expert user of the chosen database system.
 * Have qualifications, certified training or equivalent experience in managing databases using that system.
