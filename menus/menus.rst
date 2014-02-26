@@ -183,7 +183,7 @@ Allows users to filter the database records based upon non-spatial or complex cr
 |selectonmap| Select Current INCID on Map
 -----------------------------------------
 
-Selects all MasterMap polygons associated with the INCID on the current database record in the GIS layer.
+Selects all MasterMap features associated with the INCID on the current database record in the GIS layer.
 
 .. |clearfilter| image:: ../images/icons/ClearFilter.png
 	:height: 16px
@@ -201,7 +201,7 @@ Removes the current filter so that all database records are visible.
 |getmapsel| Get Map Selection
 -----------------------------
 
-Filters the database records to retrieve the attributes associated with the selected polygons in the GIS layer.
+Filters the database records to retrieve the attributes associated with the selected features in the GIS layer.
 
 .. |selectbyincid| image:: ../images/icons/SelectByIncid.png
 	:height: 16px
@@ -210,9 +210,9 @@ Filters the database records to retrieve the attributes associated with the sele
 |selectbyincid| Select by INCID
 -------------------------------
 
-Select a polygon on the map and go to 'Get Map Selection' to select the database records.
+Selects all the features for the current INCID in the GIS layer.
 
-Once the records are filtered in the database, if all the polygons are part of the same INCID, 'Select by INCID' allows users to expand the map selection to include all polygons belonging to that INCID.
+Select a feature on the map and go to **Get Map Selection** to select the database records. Once the records are filtered in the database, if all the features are part of the same INCID, **Select by INCID** allows users to expand the map selection to include all features belonging to that INCID.
 
 .. raw:: latex
 
@@ -241,6 +241,9 @@ Split features performs two types of split:
 * Logical splits are used to isolate one or more features from one INCID into a new INCID so that they can be updated independently.
 * Physical splits can be used to sub-divide a single feature, that has been split in the GIS layer, into one or more new TOID fragments in the database so that they can then be assigned different attributes.
 
+.. seealso::
+	See :ref:`logical_split`  and :ref:`physical_split`  for more information on these actions.
+
 .. |merge| image:: ../images/icons/MergeFeatures.png
 	:height: 16px
 	:width: 16px
@@ -252,6 +255,9 @@ Merge features performs two types of merge:
 
 * Logical merges are used to combine two or more fragments selected in GIS into the INCID of one of the selected fragments by selecting it from a list.
 * Physical merges will combine fragments of a single TOID into a single feature in the GIS layer.
+
+.. seealso::
+	See :ref:`logical_merge`  and :ref:`physical_merge`  for more information on these actions.
 
 
 .. raw:: latex
@@ -292,5 +298,5 @@ Allows users to switch between valid HLU layers in the GIS application.
 About
 -----
 
-Displays the current version of the HLU Tool and the user's id and name.
+Displays the current version of the HLU Tool and the current user's id and name.
 
