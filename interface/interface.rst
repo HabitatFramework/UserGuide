@@ -71,7 +71,7 @@ Reason/Process Section
 IHS Tab
 -------
 
-The IHS tab displays the IHS details for the current database record as shown in the figure :ref:`figUIIT`.
+The IHS tab displays the Integrated Habitat System (IHS) details for the current database record as shown in the figure :ref:`figUIIT`.
 
 .. _figUIIT:
 
@@ -170,6 +170,10 @@ Name
 Vague Date
 	Allows users to enter the date of the dataset. This can be either a precise date e.g. 01/04/2010 or a vague date e.g. Spring 2010-Summer 2010, 1980-2010 or 'Unknown'. For details on configuring vague dates see :ref:`vague_date_options`.
 
+	.. note::
+
+		* If a default date for the selected data source has been defined in the lut_sources table, the 'Vague Date' field will be set to the default date. If a default date has not been defined, then the 'Vague Date' field must be updated manually. See 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to define default source dates.
+
 Habitat Class
 	Drop-down list defining the habitat classification used for this data source. If no habitat classification is used, select 'Not Applicable'.
 
@@ -177,16 +181,18 @@ Habitat Type
 	Drop-down list defining the type of habitat. This list is filtered based upon the habitat class.
 
 Boundary Imp
-	Drop-down list defining the importance of the source data in determining the habitat boundary.
+	Drop-down list defining the importance of the source data in determining the habitat boundary (in relation to the other sources).
 
 Habitat Imp.
-	Drop-down list defining the importance of the source data in determining the habitat type.
+	Drop-down list defining the importance of the source data in determining the habitat type (in relation to the other sources).
 
+	.. note::
 
-.. note::
+		* For boundary importance and habitat importance there can only be one source set as 'Primary', 'Secondary' or 'Confirmatory' for each field. The importances must also be applied in order, i.e.:
 
-	* If the default date for the selected data source has been configured, the 'Vague Date' field will be updated to the default date. If the default date has not been defined, then the 'Vague Date' field must be updated manually. See 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to define default source dates.
-	* For boundary importance and habitat importance there can only be one source set as 'Primary' or 'Secondary' for each field.
+			* If there is only one source it must be set to 'Primary' (or 'None' if it played no part in defining the habitat or boundary)
+			* If there is a second source it must be set to 'Secondary' (or 'None' if it played no part in defining the habitat or boundary)
+			* If there is a third source it must be set to 'Confirmatory' (or 'None' if it played no part in defining the habitat or boundary)
 
 .. raw:: latex
 
@@ -427,7 +433,11 @@ Boolean Operator
 		The value of the 'Boolean Operator' field on the first row is not used.
 
 '(' and ')'
-	Allow users to add additional brackets as shown in the example in the figure :ref:`figQB` to define how the query is executed.
+	Allow users to add additional brackets to **nest** criteria and boolean operators to meet specific selection requirements
+
+	For example, the query in the figure :ref:`figQB` will select records `where the ihs_habitat equals 'GC0' **AND** the bap_habitat equals **EITHER** 'PHAP-LCG' **OR** 'PHAP-UCG'`. In other words records **must** match the specified ihs_habitat value and **must also** match **either** of the specified bap_habitat values.
+
+	Without the additional set of brackets around the last two lines the query would select records that **either** match the ihs_habitat specified value **and** the first specified bap_habitat value, **or** they match the second specified bap_habitat value (regardless of the ihs_habitat value).
 
 Table
 	Identifies the table to be searched.
