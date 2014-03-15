@@ -181,18 +181,18 @@ Habitat Type
 	Drop-down list defining the type of habitat. This list is filtered based upon the habitat class.
 
 Boundary Imp
-	Drop-down list defining the importance of the source data in determining the habitat boundary (in relation to the other sources).
+	Drop-down list defining the importance of the source data in determining the INCID boundary (in relation to the other sources). Select 'None' if the data source played no part in determining the boundary.
 
 Habitat Imp.
-	Drop-down list defining the importance of the source data in determining the habitat type (in relation to the other sources).
+	Drop-down list defining the importance of the source data in determining the INCID habitat type (in relation to the other sources). Select 'None' if the data source played no part in determining the habitat type.
 
-	.. note::
+	.. important::
 
-		* For boundary importance and habitat importance there can only be one source set as 'Primary', 'Secondary' or 'Confirmatory' for each field. The importances must also be applied in order, i.e.:
+		* For Boundary Importance and Habitat Importance there can only be one source set as 'Primary', 'Secondary' or 'Confirmatory' for each field. The importances must also be applied in order, i.e.:
 
-			* If there is only one source it must be set to 'Primary' (or 'None' if it played no part in defining the habitat or boundary)
-			* If there is a second source it must be set to 'Secondary' (or 'None' if it played no part in defining the habitat or boundary)
-			* If there is a third source it must be set to 'Confirmatory' (or 'None' if it played no part in defining the habitat or boundary)
+			* If there is only one source - it must be set to 'Primary' (or 'None' if it played no part in determining the habitat or boundary).
+			* If there are two sources - one must be set to 'Primary' and one to 'Secondary' (or 'None' if either played no part in determining the habitat or boundary).
+			* If there are three sources - one must be set to 'Primary', one to 'Secondary' and one to 'Confirmatory' (or 'None' if any played no part in determining the habitat or boundary).
 
 .. raw:: latex
 
@@ -435,9 +435,18 @@ Boolean Operator
 '(' and ')'
 	Allow users to add additional brackets to **nest** criteria and boolean operators to meet specific selection requirements
 
-	For example, the query in the figure :ref:`figQB` will select records `where the ihs_habitat equals 'GC0' **AND** the bap_habitat equals **EITHER** 'PHAP-LCG' **OR** 'PHAP-UCG'`. In other words records **must** match the specified ihs_habitat value and **must also** match **either** of the specified bap_habitat values.
+	For example, the query in the figure :ref:`figQB` will select records where:
 
-	Without the additional set of brackets around the last two lines the query would select records that **either** match the ihs_habitat specified value **and** the first specified bap_habitat value, **or** they match the second specified bap_habitat value (regardless of the ihs_habitat value).
+		* ihs_habitat equals 'GC0' **AND** bap_habitat equals **EITHER** 'PHAP-LCG' **OR** 'PHAP-UCG'
+		
+	In other words records **must** match the specified ihs_habitat value and **must also** match **either** of the specified bap_habitat values.
+
+	.. note::
+
+		Without the additional set of brackets around the last two lines in the above example the query would select records that either:
+
+			* match the ihs_habitat specified value **AND** the first specified bap_habitat value, **OR**
+			* match the second specified bap_habitat value (regardless of the ihs_habitat value)
 
 Table
 	Identifies the table to be searched.
