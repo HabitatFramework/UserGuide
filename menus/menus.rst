@@ -245,7 +245,7 @@ Split/Merge Menu
 .. note::
 	All options in this menu are disabled until the database records have been filtered and a process and reason has been selected from the 'Process' and 'Reason' drop-down lists in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
 
-.. |logicalsplit| image:: ../icons/LogicalSplitFeatures.png
+.. |logicalsplit| image:: ../icons/LogicalSplit.png
 	:height: 16px
 	:width: 16px
 
@@ -257,7 +257,7 @@ Splits features from the same current INCID into a new INCID. Logical splits are
 .. seealso::
 	See :ref:`logical_split`  for more information on this action.
 
-.. |logicalmerge| image:: ../icons/LogicalMergeFeatures.png
+.. |logicalmerge| image:: ../icons/LogicalMerge.png
 	:height: 16px
 	:width: 16px
 
@@ -269,7 +269,7 @@ Combines two or more features selected in GIS into the INCID of one of the selec
 .. seealso::
 	See :ref:`logical_merge`  for more information on this action.
 
-.. |physicalsplit| image:: ../icons/PhysicalSplitFeatures.png
+.. |physicalsplit| image:: ../icons/PhysicalSplit.png
 	:height: 16px
 	:width: 16px
 
@@ -281,7 +281,7 @@ Sub-divides a single feature, that has already been split in the GIS layer, into
 .. seealso::
 	See :ref:`physical_split`  for more information on this action.
 
-.. |physicalmerge| image:: ../icons/PhysicalMergeFeatures.png
+.. |physicalmerge| image:: ../icons/PhysicalMerge.png
 	:height: 16px
 	:width: 16px
 

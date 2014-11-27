@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'HLUGISTool'
-copyright = u'2013-2014, Andy Foy'
+copyright = u'2011 HBIC, 2013-14 TVERC, 2014 SxBRC'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

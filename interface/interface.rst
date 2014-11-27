@@ -447,7 +447,7 @@ Warn Before Applying GIS Selection
 
 	.. _figGSWD2:
 
-	.. figure:: figures/GISSelectionWarningDialog2.png
+	.. figure:: figures/GISSelectionJoinWarningDialog.png
 		:align: center
 
 		GIS Selection with Join Warning Dialog
@@ -599,10 +599,6 @@ Advanced Query Builder Window
 
 Allows users to filter the database records using the advanced query builder shown in the figure :ref:`figAQB`.
 
-.. |filterbyattr| image:: ../icons/FilterByAttributes.png
-	:height: 16px
-	:width: 16px
-
 Click |filterbyattr| or **Select... --> Filter by Attributes** to open the window.
 
 .. _figAQB:
@@ -676,7 +672,7 @@ Cancel
 Export Window
 =============
 
-Click **File... --> Export** to open the Export window. This function allows users to combine both GIS features and associated attribute data from the HLU database and export the results to a new GIS layer using a pre-defined export format. If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :fig:`figED`). Only the records related to the selected INCIDs and the GIS features will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`filter_by_attributes`.
+Click **File... --> Export** to open the Export window. This function allows users to combine both GIS features and associated attribute data from the HLU database and export the results to a new GIS layer using a pre-defined export format. If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the records related to the selected INCIDs and the GIS features will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`filter_by_attributes`.
 
 .. _figED:
 
@@ -721,10 +717,6 @@ During the export process checks and validation are performed to avoid potential
 	single: Windows; Switch GIS Layer Window
 
 .. _switch_layer_window:
-
-.. raw:: latex
-
-	\newpage
 
 Switch GIS Layer Window
 =======================
