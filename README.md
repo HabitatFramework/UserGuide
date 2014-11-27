@@ -1,4 +1,4 @@
 UserGuide
 =========
 
-User Guide for the HLU GIS Tool
+User Guide for the HLU GIS Tool.

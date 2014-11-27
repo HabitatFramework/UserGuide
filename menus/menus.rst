@@ -9,7 +9,7 @@ The following sections summarise the menu functionality and provide some guideli
 
 .. _figUITB:
 
-.. figure:: ../images/figures/UserInterfaceToolbars.png
+.. figure:: figures/UserInterfaceToolbars.png
 	:align: center
 
 	Main window - Toolbars
@@ -22,16 +22,7 @@ The following sections summarise the menu functionality and provide some guideli
 File Menu
 =========
 
-.. |exit| image:: ../images/icons/FileExit.png
-	:height: 16px
-	:width: 16px
-
-|exit| Exit
------------
-
-Exits the HLU GIS tool and allows users to decide whether or not to close the GIS window.
-
-.. |export| image:: ../images/icons/FileExport.png
+.. |export| image:: ../icons/FileExport.png
 	:height: 16px
 	:width: 16px
 
@@ -40,8 +31,18 @@ Exits the HLU GIS tool and allows users to decide whether or not to close the GI
 
 Allows users to export data from the HLU database to a GIS layer using a pre-defined export format.
 
+
 .. seealso::
 	See :ref:`export_window` for more information.
+
+.. |exit| image:: ../icons/FileExit.png
+	:height: 16px
+	:width: 16px
+
+|exit| Exit
+-----------
+
+Exits the HLU GIS tool and allows users to decide whether or not to close the associated GIS window.
 
 .. raw:: latex
 
@@ -57,7 +58,7 @@ Edit Menu
 
 When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details) and the spatial data must be editable in the GIS application.
 
-.. |copy| image:: ../images/icons/EditCopy.png
+.. |copy| image:: ../icons/EditCopy.png
 	:height: 16px
 	:width: 16px
 
@@ -68,7 +69,7 @@ Copies selected attributes so they can be applied to these fields in another rec
 
 .. _figCC:
 
-.. figure:: ../images/figures/CopyCheckboxes.png
+.. figure:: figures/CopyCheckboxes.png
 	:align: center
 	:scale: 90
 
@@ -76,7 +77,7 @@ Copies selected attributes so they can be applied to these fields in another rec
 
 Tick the checkboxes next to the fields to be copied, as shown in the figure :ref:`figCC`, then click **Copy**.
 
-.. |paste| image:: ../images/icons/EditPaste.png
+.. |paste| image:: ../icons/EditPaste.png
 	:height: 16px
 	:width: 16px
 
@@ -96,6 +97,11 @@ Bulk Update
 Allows users to update the attributes for multiple selected database records (INCIDs) simultaneously.
 
 
+.. seealso::
+	See :ref:`bulk_update_window` for more information.
+
+
+
 .. raw:: latex
 
 	\newpage
@@ -106,7 +112,7 @@ Allows users to update the attributes for multiple selected database records (IN
 View Menu
 =========
 
-.. |winmaximise| image:: ../images/icons/GisWinMaximise.png
+.. |winmaximise| image:: ../icons/GisWinMaximise.png
 	:height: 16px
 	:width: 16px
 
@@ -115,7 +121,7 @@ View Menu
 
 Maximises the ArcGIS or MapInfo window and sets it as the active window.
 
-.. |winsidebyside| image:: ../images/icons/GisWinSideBySide.png
+.. |winsidebyside| image:: ../icons/GisWinSideBySide.png
 	:height: 16px
 	:width: 16px
 
@@ -126,7 +132,7 @@ Aligns the HLU window to the top left of the screen and expands the GIS window t
 
 .. _figWSBS:
 
-.. figure:: ../images/figures/WindowsSideBySide.png
+.. figure:: figures/WindowsSideBySide.png
 	:align: center
 	:scale: 80
 
@@ -142,18 +148,18 @@ Switch to GIS window
 
 Sets ArcGIS or MapInfo as the active window but does not alter its size.
 
-.. |zoom| image:: ../images/icons/ZoomSelection.png
+.. |zoom| image:: ../icons/ZoomSelection.png
 	:height: 16px
 	:width: 16px
 
 |zoom| Zoom to selection
 ---------------------------
 
-Zooms to the current database selection in the GIS window.
+Zooms to the currently selected features in the active GIS layer.
 
 
 .. caution::
-	This process may take a long time depending upon the layer size, the number of selected records and their geographical distribution.
+	This process may take a long time depending upon the number of currently selected features, the GIS layer size and their geographical distribution.
 
 .. raw:: latex
 
@@ -167,52 +173,62 @@ Zooms to the current database selection in the GIS window.
 Select Menu
 ===========
 
-.. |selectbyattr| image:: ../images/icons/SelectByAttributes.png
+.. |filterbyattr| image:: ../icons/FilterByAttributes.png
 	:height: 16px
 	:width: 16px
 
-|selectbyattr| Select by Attributes
+|filterbyattr| Filter by Attributes
 -----------------------------------
 
-Allows users to filter the database records based upon non-spatial or complex criteria using the query builder.
+Allows users to filter the database records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
 
-.. |selectonmap| image:: ../images/icons/SelectOnMap.png
+
+.. seealso::
+	See :ref:`query_builder_window` and `advanced_query_builder_window` for more information.
+
+.. |selectonmap| image:: ../icons/SelectOnMap.png
 	:height: 16px
 	:width: 16px
 
 |selectonmap| Select Current INCID on Map
 -----------------------------------------
 
-Selects all MasterMap features associated with the INCID on the current database record in the GIS layer.
+Selects **all** the GIS features associated only with the **current** INCID record in the GIS layer.
 
-.. |clearfilter| image:: ../images/icons/ClearFilter.png
+.. |selectallonmap| image:: ../icons/SelectAllOnMap.png
+	:height: 16px
+	:width: 16px
+
+|selectallonmap| Select All Filtered INCIDs on Map
+--------------------------------------------------
+
+Selects **all** the GIS features associated with **all** the currently filtered INCID records in the GIS layer.
+
+
+.. caution::
+	This process may take a long time depending upon the number of currently filtered INCID records, the GIS layer size and their geographical distribution.
+
+.. |clearfilter| image:: ../icons/ClearFilter.png
 	:height: 16px
 	:width: 16px
 
 |clearfilter| Clear Filter
 --------------------------
 
-Removes the current filter so that all database records are visible.
+Removes the current filter so that all database records can be viewed using the record selectors.
 
-.. |getmapsel| image:: ../images/icons/ReadMapSelection.png
+.. |getmapselection| image:: ../icons/GetMapSelection.png
 	:height: 16px
 	:width: 16px
 
-|getmapsel| Get Map Selection
------------------------------
+|getmapselection| Get Map Selection
+-----------------------------------
 
 Filters the database records to retrieve the attributes associated with the selected features in the GIS layer.
 
-.. |selectbyincid| image:: ../images/icons/SelectByIncid.png
-	:height: 16px
-	:width: 16px
+.. tip::
+	Selecting one or more features on the map and clicking **Get Map Selection** will select only the database records associated with the selected features. The INCID records can then be viewed using the record selectors and the number of selected features associated with the current INCID record will be displayed in the INCID status area to the right (together with the total number of features associated with the current INCID). Clicking **Select Current INCID on Map** allows users to expand the map selection to include all features belonging to the current INCID.
 
-|selectbyincid| Select by INCID
--------------------------------
-
-Selects all the features for the current INCID in the GIS layer.
-
-Select a feature on the map and go to **Get Map Selection** to select the database records. Once the records are filtered in the database, if all the features are part of the same INCID, **Select by INCID** allows users to expand the map selection to include all features belonging to that INCID.
 
 .. raw:: latex
 
@@ -227,37 +243,55 @@ Split/Merge Menu
 ================
 
 .. note::
-	Both options in this menu are disabled until the database records have been filtered and a process has been selected from the 'Process' drop-down list in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
+	All options in this menu are disabled until the database records have been filtered and a process and reason has been selected from the 'Process' and 'Reason' drop-down lists in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
 
-.. |split| image:: ../images/icons/SplitFeatures.png
+.. |logicalsplit| image:: ../icons/LogicalSplitFeatures.png
 	:height: 16px
 	:width: 16px
 
-|split| Split Features
-----------------------
+|logicalsplit| Logical Split
+----------------------------
 
-Split features performs two types of split:
-
-* Logical splits are used to isolate one or more features from one INCID into a new INCID so that they can be updated independently.
-* Physical splits can be used to sub-divide a single feature, that has been split in the GIS layer, into one or more new TOID fragments in the database so that they can then be assigned different attributes.
+Splits features from the same current INCID into a new INCID. Logical splits are used to isolate one or more features from one INCID into a new INCID so that they can be updated independently.
 
 .. seealso::
-	See :ref:`logical_split`  and :ref:`physical_split`  for more information on these actions.
+	See :ref:`logical_split`  for more information on this action.
 
-.. |merge| image:: ../images/icons/MergeFeatures.png
+.. |logicalmerge| image:: ../icons/LogicalMergeFeatures.png
 	:height: 16px
 	:width: 16px
 
-|merge| Merge Features
-----------------------
+|logicalmerge| Logical Merge
+----------------------------
 
-Merge features performs two types of merge:
-
-* Logical merges are used to combine two or more fragments selected in GIS into the INCID of one of the selected fragments by selecting it from a list.
-* Physical merges will combine fragments of a single TOID into a single feature in the GIS layer.
+Combines two or more features selected in GIS into the INCID of one of the selected features (which must be selected from the list of INCIDs displayed during the logical merge process).
 
 .. seealso::
-	See :ref:`logical_merge`  and :ref:`physical_merge`  for more information on these actions.
+	See :ref:`logical_merge`  for more information on this action.
+
+.. |physicalsplit| image:: ../icons/PhysicalSplitFeatures.png
+	:height: 16px
+	:width: 16px
+
+|physicalsplit| Physical Split
+------------------------------
+
+Sub-divides a single feature, that has already been split in the GIS layer, into one or more new TOID fragments in the database by assigning new TOID fragment identifiers. The fragments can then be assigned different attributes (once they have been logically split from one another).
+
+.. seealso::
+	See :ref:`physical_split`  for more information on this action.
+
+.. |physicalmerge| image:: ../icons/PhysicalMergeFeatures.png
+	:height: 16px
+	:width: 16px
+
+|physicalmerge| Physical Merge
+------------------------------
+
+Combines two or more fragments of a single TOID, that are also associated with the same INCID, into a new single merged feature in the GIS layer and assigns them to the same TOID fragment identifier.
+
+.. seealso::
+	See :ref:`physical_merge`  for more information on this action.
 
 
 .. raw:: latex
@@ -272,21 +306,21 @@ Merge features performs two types of merge:
 Tools Menu
 ==========
 
-.. |options| image:: ../images/icons/Options.png
+.. |options| image:: ../icons/Options.png
 	:height: 16px
 	:width: 16px
 
 |options| Options
 -----------------
 
-Allows users to alter some aspects of the HLU Tool configuration.
+Allows users to alter some aspects of the HLU Tool configuration specific to their own requirements.
 
 
 .. seealso::
 	See :ref:`options_window`  for more information.
 
 
-.. |switch| image:: ../images/icons/SwitchGISLayer.png
+.. |switch| image:: ../icons/SwitchGISLayer.png
 	:height: 16px
 	:width: 16px
 
@@ -295,8 +329,21 @@ Allows users to alter some aspects of the HLU Tool configuration.
 
 Allows users to switch between valid HLU layers in the GIS application.
 
+
+.. seealso::
+	See :ref:`switch_layer_window`  for more information.
+
+Styles
+------
+
+Allows the user to select one of three user interface styles for all interfaces and windows:
+
+* Original
+* Light Grey
+* Dark Grey
+
 About
 -----
 
-Displays the current version of the HLU Tool and the current user's id and name.
+Displays the current application and database versions of the HLU Tool, the current user's id and name, and the HLU Tool's copyright statements.
 

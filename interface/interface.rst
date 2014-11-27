@@ -10,23 +10,23 @@ Interface
 
 .. _main_window:
 
-HLU Tool Window
-===============
+Main Window
+===========
 
 Once the HLU GIS Tool has been configured, the tool will start the associated GIS, then the main window will appear as shown in the figure :ref:`figUIMW`.
 
 .. _figUIMW:
 
-.. figure:: ../images/figures/UserInterfaceMainWindow.png
+.. figure:: figures/UserInterfaceMainWindow.png
 	:align: center
 	:scale: 60
 
-	HLU GIS Tool - Main Window
+	HLU Tool Main Window
 
 
-Records can be viewed or updated through the main window of the HLU GIS Tool. The following sections summarise the details available for each record. 
+Records can be viewed or updated through the main window of the HLU GIS Tool. Missing or invalid fields are highlighted in red and the relevant tab is also highlighted. The 'Apply' button will be active when all required fields have been completed and are valid on all tabs.
 
-Required fields are highlighted in red on each tab. The 'Apply' button will be active when the required fields have been completed on all tabs.
+The following sections summarise the details available for each record.
 
 .. _incid_section:
 
@@ -35,12 +35,15 @@ INCID Section
 
 The 'INCID' section displays summary information for each INCID in the database, including area, perimeter, date created and date last modified as shown in the figure :ref:`figUIIS`.
 
+.. tip::
+	The displayed INCID value can be copied to the clipboard by selecting the value and then either right-clicking in the field and selecting **Copy** or pressing :kbd:`Ctrl-C`.
+
 .. note::
-	If the user is not configured, the 'By' fields will display their Windows login. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+	If the created or modified users are not configured, the 'By' fields will display their Windows login instead of their user name. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 .. _figUIIS:
 
-.. figure:: ../images/figures/UserInterfaceIncidSection.png
+.. figure:: figures/UserInterfaceIncidSection.png
 	:align: center
 	:scale: 85
 
@@ -51,15 +54,51 @@ The 'INCID' section displays summary information for each INCID in the database,
 Reason/Process Section
 ----------------------
 
-'Reason' and 'Process' (as shown in the figure :ref:`figUIRPS`) are required fields for all updates and are used on the History tab to indicate why the record was last updated. These fields are sticky i.e. the selected reason and process will be used for all updates in the current session unless they are altered manually.
+The 'Reason/Process' section contains the 'Reason' and 'Process' fields as shown in the figure :ref:`figUIRPS`. These fields are required values for all update actions (splits, merges and attribute updates) and are recorded in the History table (and displayed on the History tab) to indicate **why** the record was updated. These fields are **sticky**, i.e. the selected reason and process will be retained and used for all subsequent update actions in the current session unless/until they are altered by the user.
 
 .. _figUIRPS:
 
-.. figure:: ../images/figures/UserInterfaceReasonProcessSection.png
+.. figure:: figures/UserInterfaceReasonProcessSection.png
 	:align: center
 	:scale: 85
 
 	Main window - Reason/Process Section
+
+..note::
+	If the tool is in **read-only** mode the 'Reason/Process Section' will not be displayed.
+
+	..seealso::
+		See 'Why does the tool title bar show [READ ONLY]?' in :doc:`FAQ <../faq/faq>` for more information.
+
+
+.. _incid_status_section:
+
+INCID Status Section
+--------------------
+
+The 'INCID Status' section contains record selectors to enable users to move back and forward between INCID records and displays the record position and the total number of records in the active filter (or the total number of INCID records in the database if there is no active filter). It also displays the number of TOIDs and TOID fragments selected in GIS for the current INCID when the filter was applied as well as the total number of TOIDs and TOID fragments related to the current INCID in the database.
+
+For example, figure :ref:`figUIISS` indicates that the interface is currently displaying record 4 of the 6 records in the active filter, and also shows that 2 TOIDs and 2 fragments from those TOIDs were selected out of a total of 3 TOIDs with 3 fragments associated with the current INCID. Hence, only a **subset** of the TOIDs or fragments associated with the current INCID are selected in GIS.
+
+.. note::
+	All INCIDs in the active filter will always be retrieved in INCID order, so moving backwards or forwards through the records using the record selector will always select the previous or next available INCID from those in the filter.
+
+.. _figUIISS:
+
+.. figure:: figures/UserInterfaceIncidStatusSection.png
+	:align: center
+	:scale: 85
+
+	Main window - Incid Status Section
+
+This section also contains the **Apply** button which is used to apply any attribute changes to the current INCID. See :ref:`attribute_updates` for more details.
+
+..note::
+	The **Apply** button will only be displayed if:
+		* The user is listed in the lut_user table.
+		* The active GIS layer is in edit mode.
+		* The user has made one or more changes to the current INCID.
+		* There are no fields in error.
 
 
 .. raw:: latex
@@ -75,24 +114,27 @@ The IHS tab displays the Integrated Habitat System (IHS) details for the current
 
 .. _figUIIT:
 
-.. figure:: ../images/figures/UserInterfaceIHSTab.png
+.. figure:: figures/UserInterfaceIHSTab.png
 	:align: center
 	:scale: 85
 
 	Main window - IHS Tab
 
 
-Category
-	Drop-down list of broad habitats used to filter the 'Habitat' drop-down list to relevant IHS codes. The entries in this field correspond to the first 2 characters of the IHS Habitat code.
+Class
+	Drop-down list of habitat classifications used to filter the 'Type' drop-down list to a specific habitat class. The contents in the list are based on entries in the lut_habitat_class table. [6]_
 
-NVC
-	Drop-down list of National Vegetation Classification (NVC) types used to filter the 'Habitat' drop-down list to relevant IHS codes. The entries in this field are not saved to the database.
+	..note::
+		The entries in this field are only used to assist the user to select the most suitable Habitat value and are not saved to the database. Use Sources if you wish to record the source habitat classification and type in the database (see :ref:`source_tab` for more details).
+
+Type
+	Drop-down list of habitat classification types used to filter the 'Habitat' drop-down list to relevant IHS codes. The contents in the list are based on entries in the lut_habitat_type table that relate to the selected Class (above). [6]_
+ 
+	..note::
+		The entries in this field are only used to assist the user to select the most suitable Habitat value and are not saved to the database. Use Sources if you wish to record the source habitat classification and type in the database (see :ref:`source_tab` for more details).
 
 Habitat
-	Drop-down list allowing users to select the desired IHS Habitat code. The contents of the list will vary and relate directly to the selected Category or NVC (above). [6]_
-
-NVC Codes
-	[Read only]. Displays any known NVC codes relating to the selected IHS Habitat to assist users more familiar with the NVC to determine whether the selected IHS Habitat is appropriate.
+	Drop-down list allowing users to select the desired IHS Habitat code. The contents of the list will vary and relate directly to the selected Class and Type (above) and entries in the lut_habitat_type_ihs_habitat table.
 
 IHS Matrix / Formation / Management / Complex
 	Drop-down lists allowing users to refine the habitat definition by adding 'multiplex' codes according to the guidelines of IHS.
@@ -103,7 +145,7 @@ IHS Summary
 Legacy Habitat
 	[Read only]. Displays the primary 'pre-IHS' habitat code (if present).
 
-.. [6] The Category and NVC lists operate as either/or lists. The Habitat list contents will relate to whichever of the two lists was selected last.
+.. [6] The habitat 'Class' and 'Type' list contents are based only on entries in the relevant lookup tables where the 'is_local' flag is set to True (-1). See 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to update lookup table entries.
 
 .. raw:: latex
 
@@ -118,7 +160,7 @@ Click on **Details** to display the Details tab as shown in the figure :ref:`fig
 
 .. _figUIDT:
 
-.. figure:: ../images/figures/UserInterfaceDetailsTab.png
+.. figure:: figures/UserInterfaceDetailsTab.png
 	:align: center
 	:scale: 85
 
@@ -139,8 +181,11 @@ Boundary Map
 Digitisation Map
 	Drop-down lists defining the map used to digitise the boundary.
 
-Biosite Name
-	A free-text field which allows users to enter the name or reference of the site.
+Site Ref
+	A free-text field which allows users to enter the reference code or key of the site containing the INCID features.
+
+Site Name
+	A free-text field which allows users to enter the name of the site containing the INCID features.
 
 .. note::
 	To delete a potential priority habitat click on the grey box to the left of the potential priority habitat to select the row, then press the keyboard :kbd:`Delete` key to remove it.
@@ -158,7 +203,7 @@ Click on **Sources** to display the Sources tab as shown in the figure :ref:`fig
 
 .. _figUIST:
 
-.. figure:: ../images/figures/UserInterfaceSourcesTab.png
+.. figure:: figures/UserInterfaceSourcesTab.png
 	:align: center
 	:scale: 85
 
@@ -167,12 +212,14 @@ Click on **Sources** to display the Sources tab as shown in the figure :ref:`fig
 Name
 	Drop-down list containing a list of data sources. For details on adding new sources see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
+	.. note::
+		The following source fields will not be unlocked until a source name has been selected.
+
 Vague Date
 	Allows users to enter the date of the dataset. This can be either a precise date e.g. 01/04/2010 or a vague date e.g. Spring 2010-Summer 2010, 1980-2010 or 'Unknown'. For details on configuring vague dates see :ref:`vague_date_options`.
 
 	.. note::
-
-		* If a default date for the selected data source has been defined in the lut_sources table, the 'Vague Date' field will be set to the default date. If a default date has not been defined, then the 'Vague Date' field must be updated manually. See 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to define default source dates.
+		If a default date for the selected data source has been defined in the lut_sources table, the 'Vague Date' field will be set to the default date. If a default date has not been defined, then the 'Vague Date' field must be updated manually. See 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to define default source dates.
 
 Habitat Class
 	Drop-down list defining the habitat classification used for this data source. If no habitat classification is used, select 'Not Applicable'.
@@ -187,8 +234,7 @@ Habitat Imp.
 	Drop-down list defining the importance of the source data in determining the INCID habitat type (in relation to the other sources). Select 'None' if the data source played no part in determining the habitat type.
 
 	.. important::
-
-		* For Boundary Importance and Habitat Importance there can only be one source set as 'Primary', 'Secondary' or 'Confirmatory' for each field. The importances must also be applied in order, i.e.:
+		For Boundary Importance and Habitat Importance there can only be one source set as 'Primary', 'Secondary' or 'Confirmatory' for each field. The importances must also be applied in order, i.e.:
 
 			* If there is only one source - it must be set to 'Primary' (or 'None' if it played no part in determining the habitat or boundary).
 			* If there are two sources - one must be set to 'Primary' and one to 'Secondary' (or 'None' if either played no part in determining the habitat or boundary).
@@ -203,15 +249,34 @@ Habitat Imp.
 History Tab
 -----------
 
-The History tab displays a list of modifications made to the current INCID and the associated TOIDs. Each entry details what modification was made, when and by whom as shown in Figure 20. Entries are shown in descending date order. The number of entries can be configured in the Options (see :ref:`gis_options` for more details).
+The History tab displays a list of modifications made to the current INCID and the associated TOIDs. Each entry details what modification was made, when and by whom as shown in Figure 20. Entries are shown in **descending** date and time order with the most recent changes at the top. The maximum number of entries to appear in the history tab can be configured in the Options (see :ref:`gis_options` for more details).
 
 .. _figUIHT:
 
-.. figure:: ../images/figures/UserInterfaceHistoryTab.png
+.. figure:: figures/UserInterfaceHistoryTab.png
 	:align: center
 	:scale: 85
 
 	Main window - History Tab
+
+
+.. _error_messages:
+
+Error Messages
+--------------
+
+Any fields that are in error, either as a result of invalid values in the current database records for the current INCID or as a result of changes made by the user to the field values, will be highlighted with a red border and exclamation mark (as seen in the figure :ref:`figUIEM`). The appropriate tab header for any invalid fields will also be highlighted to help users locate any errors in fields currently hidden on an inactive tab. Hovering over a field in error will display a *tooltip* message indicating the nature of the error.
+
+.. note::
+	Whilst **any** fields are in error the **Apply** button will not appear.
+
+.. _figUIEM:
+
+.. figure:: figures/UserInterfaceErrorMessages.png
+	:align: center
+	:scale: 85
+
+	Error Messages
 
 
 .. raw:: latex
@@ -233,7 +298,7 @@ Allows users to update the attributes for multiple selected database records sim
 
 .. _figUIBU:
 
-.. figure:: ../images/figures/UserInterfaceBulkUpdate.png
+.. figure:: figures/UserInterfaceBulkUpdate.png
 	:align: center
 	:scale: 70
 
@@ -265,17 +330,17 @@ To perform a bulk update:
 Options Window
 ==============
 
-.. |options| image:: ../images/icons/Options.png
+Allows users to alter the HLU Tool configuration features specific to their user id. There are five categories of options as shown in the figure :ref:`figOD`.
+
+.. |options| image:: ../icons/Options.png
 	:height: 16px
 	:width: 16px
 
 Click |options| or **Tools... --> Options** to open the window.
 
-Allows users to alter the HLU configuration. There are three categories of options as shown in the figure :ref:`figOD`.
-
 .. _figOD:
 
-.. figure:: ../images/figures/OptionsDialog.png
+.. figure:: figures/OptionsDialog.png
 	:align: center
 	:scale: 90
 
@@ -332,15 +397,83 @@ Map Document/Workspace
 	.. note::
 		If the 'Preferred GIS' option is altered, this field must also be updated.
 
+Export Default Directory
+	Enables MapInfo users to set a default destination folder path for new GIS layers when performing an export (see :ref:`export_window` for more details). A different path to the default can also be selected during the export process.
+
+		.. note::
+			This option is only available if MapInfo is selected as the 'Preferred GIS Application'.
+
+		.. note::
+			The default export folder path for ArcGIS users is controlled by ArcGIS and cannot be altered by the HLU Tool.
+
+.. _interface_options:
+
+Interface Options
+-----------------
+
+Action to Take When Updating Subset
+	Allows users to select what action to take if they attempt to apply attribute changes to only a subset of features for an INCID (see :Ref:`attribute_updates` for more details). The available actions are:
+
+		* Prompt - Always **prompt** the user when attempting to update a subset of INCID features (see :Ref:`attribute_updates` for an example of the prompt dialog).
+		* Split - Always perform a **logical split** before applying the attribute updates.
+		* All - Always apply the attribute update to **all** features belonging to the INCID regardless of which features of the INCID are currently selected.
+
+Preferred Habitat Class
+	Allows the user to choose which Habitat Class in the INCID tab (see :ref:`ihs_tab` for more details) is automatically selected each time the HLU Tool is started.
+
+Notify After Completing Split/Merge?
+	Enable users to specify if a pop-up message should be displayed following the completion of any of the split or merge operations.
+
+
+.. _sql_query_options:
+
+SQL Query Options
+-----------------
+
 Warn Before Applying GIS Selection
-	Allows users to enable or disable the warning message indicating the number of polygons which will be selected by the current query as shown in the figure :ref:`figGSWD`.
+	Allows users to determine if/when a pop-up warning/information message should be displayed prior to selecting features in GIS (e.g. whilst performing a SQL query or in order to select the features for all INCIDs in the active filter).
 
-.. _figGSWD:
+	The message will indicate the expected number of features that will be selected (as shown in the figure :ref:`figGSWD`).
 
-.. figure:: ../images/figures/GISSelectionWarningDialog.png
-	:align: center
+	.. _figGSWD:
 
-	GIS Selection Warning Dialog
+	.. figure:: figures/GISSelectionWarningDialog.png
+		:align: center
+
+		GIS Selection Warning Dialog
+
+
+	In the event that the SQL query that would be required to select the features in GIS would be too long or complex the message will also warn the user that a temporary join (which may take some time) will need to be performed in GIS (as shown in the figure :ref:`figGSWD2`).
+
+	.. _figGSWD2:
+
+	.. figure:: figures/GISSelectionWarningDialog2.png
+		:align: center
+
+		GIS Selection with Join Warning Dialog
+
+	The available options are:
+
+		* Always - Warn/inform the user before **every** GIS select, regardless of the expected number of features to be select or the method of selection to be used. 
+		* Joins - Only warn/inform the user when a temporary **join** will be performed in GIS in order to select the features.
+		* Never - Do not warn/inform the user regardless of the expected number of features to be select or the method of selection to be used.
+
+Use Advanced Query Builder?
+	
+
+
+Get Values Count
+	Allows the user to select the maximum number of unique field values that will be retrieved each time the **Get Values** button is pressed when using the 'Advanced Query Builder' (see :ref:`advanced_query_builder_window` for details). The maximum number of rows that can be retrieved at any time cannot exceed 100,000. This number should be reduced if performance issues are experienced when the **Get Values** button is pressed or when the drop-down list is used on the 'Advanced Query Builder'.
+
+	.. note::
+		This option is only available if 'Use Advanced Query Builder?' is selected.
+
+Sql Query Default Directory
+	Enables users to set a default folder path that will be used when saving or loading queries with the 'Advanced Query Builder' (see :ref:`advanced_query_builder_window` for details). A different path to the default can also be selected during the save and load process.
+
+	.. note::
+		This option is only available if 'Use Advanced Query Builder?' is selected.
+
 
 .. _vague_date_options:
 
@@ -362,60 +495,35 @@ Vague Date Delimiter
 	\newpage
 
 .. index::
-	single: Windows; Export Window
+	single: Windows; Filter by Attributes
 
-.. _export_window:
+.. _filter_by_attributes:
 
-Export Window
-=============
+Filter by Attributes
+====================
 
-.. |export| image:: ../images/icons/FileExport.png
-	:height: 16px
-	:width: 16px
-
-Click |export| or **File... --> Export** to open the window.
-
-Allows users to export data from the HLU database to a GIS layer using a pre-defined export format (see the figure :ref:`figED`).
-
-For details on defining export formats see 'Configuring Exports' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
-
-.. _figED:
-
-.. figure:: ../images/figures/ExportDialog.png
-	:align: center
-
-	Export Dialog
-
-* Select one of the export formats from the drop-down list.
-
-* If the database records have been filtered, the 'Selected only' checkbox is automatically ticked as shown in Figure 2 and only the records related to the selected INCIDs will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`query_builder_window`.
-
-* The 'Export Descriptions' checkbox replaces habitat codes with textual descriptions. This feature is only available for ArcGIS users due to record length restrictions in MapInfo.
-
-
-.. raw:: latex
-
-	\newpage
+Allows users to filter the INCID records that appear in the user interface and correspondingly which features are selected in the active GIS layer. The filter is performed by building a SQL query that will select one or more INCIDs based on a chosen set of criteria. There are two interfaces available for building the query - the **HLU Query Builder** originally supplied with the HLU Tool and a new **HLU Advanced Query Builder** which provides a more user-friendly and flexible interface.
 
 .. index::
 	single: Windows; Query Builder Window
+	single: Filter by Attributes; Query Builder
 
 .. _query_builder_window:
 
 Query Builder Window
-====================
-
-.. |selectbyattr| image:: ../images/icons/SelectByAttributes.png
-	:height: 16px
-	:width: 16px
-
-Click |selectbyattr| or **Select... --> Select by Attributes** to open the window.
+--------------------
 
 Allows users to filter the database records using the query builder shown in the figure :ref:`figQB`.
 
+.. |filterbyattr| image:: ../icons/FilterByAttributes.png
+	:height: 16px
+	:width: 16px
+
+Click |filterbyattr| or **Select... --> Filter by Attributes** to open the window.
+
 .. _figQB:
 
-.. figure:: ../images/figures/QueryBuilder.png
+.. figure:: figures/QueryBuilder.png
 	:align: center
 
 	HLU Query Builder
@@ -462,7 +570,7 @@ Value
 
 .. _figSOL:
 
-.. figure:: ../images/figures/SQLOperatorList.png
+.. figure:: figures/SQLOperatorList.png
 	:align: center
 
 	List of Operators
@@ -481,6 +589,135 @@ If a mistake has been made when entering the selection criteria, click on the gr
 	\newpage
 
 .. index::
+	single: Windows; Advanced Query Builder Window
+	single: Filter by Attributes; Advanced Query Builder
+
+.. _advanced_query_builder_window:
+
+Advanced Query Builder Window
+-----------------------------
+
+Allows users to filter the database records using the advanced query builder shown in the figure :ref:`figAQB`.
+
+.. |filterbyattr| image:: ../icons/FilterByAttributes.png
+	:height: 16px
+	:width: 16px
+
+Click |filterbyattr| or **Select... --> Filter by Attributes** to open the window.
+
+.. _figAQB:
+
+.. figure:: figures/AdvancedQueryBuilder.png
+	:align: center
+
+	HLU Advanced Query Builder
+
+
+Tables
+	Identifies the table to be queried.
+
+Columns
+	Identifies the field in the selected table to be searched.
+
+Operators
+	Drop-down list of the available operators as shown in the figure :ref:`figASOL`.
+
+Values
+	The value to search for.  Values may automatically be loaded in the drop-down list, if the selected Table and Column refer to one of the lookup tables, or can be manually loaded using the **Get Values** button.
+
+Add Buttons
+	The **Add** buttons will paste the selected item from the relevant Tables, Columns, Operators or Values field into the **SELECT DISTINCT incid FROM:** text box or the **WHERE:** text box (as appropriate).
+
+.. _figASOL:
+
+.. figure:: figures/AdvancedSQLOperatorList.png
+	:align: center
+
+	List of Operators
+
+SELECT DISTINCT incid FROM:
+	A text box that should contain a comma-separated list of the tables that are referenced in the **WHERE** text box.
+
+WHERE:
+	A text box that should contain the SQL clause which will select the required INCID values from the HLU Tool database.
+
+Clear
+	Click the **Clear** button to remove any existing text from the **SELECT DISTINCT incid FROM:** and **WHERE:** text boxes.
+
+Verify
+	Click **Verify** to determine if the query is valid by checking the syntax of the text boxes and hence will execute successfully on the HLU Tool database. If the syntax is valid it will also determine if any records will be returned by the query.
+
+Load
+	Click **Load** to copy an existing query file into the text boxes. Users will be prompted for the source path and file name of an existing **.hsq** file. The default folder path can be set in the Options (see :ref:`sql_query_options` for more details).
+
+Save
+	Click **Save** to copy the text boxes to a query file. Users will be prompted for the destination path and file name of the **.hsq** file to save the query to. The default folder path can be set in the Options (see :ref:`sql_query_options` for more details).
+
+OK
+	Click **OK** to execute the query. If the user has requested to be warned before applying the GIS selection then a pop-up message will appear advising how many expected INCIDs and features will be selected and if a 'Join' will be used to select the features in GIS (see :ref:`sql_query_options` for more details).
+
+Cancel
+	Click **Cancel** to close the 'HLU Advanced Query Builder' window without executing a query.
+
+
+.. tip::
+	Whilst the Tables and Where Clause can be entered as free-text by the user, it is recommended that users use the drop-down lists and **Add** buttons to reduce the likelihood of syntax errors.
+
+
+.. raw:: latex
+
+	\newpage
+
+.. index::
+	single: Windows; Export Window
+
+.. _export_window:
+
+Export Window
+=============
+
+Click **File... --> Export** to open the Export window. This function allows users to combine both GIS features and associated attribute data from the HLU database and export the results to a new GIS layer using a pre-defined export format. If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :fig:`figED`). Only the records related to the selected INCIDs and the GIS features will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`filter_by_attributes`.
+
+.. _figED:
+
+.. figure:: figures/ExportDialog.png
+	:align: center
+
+	Export Dialog
+
+
+To perform an export:
+
+	* Select the required INCID and GIS features to be exported (either by selecting the features in GIS and clicking **Get Map Selection** or performing a **Filter by Attributes**).
+	* Click **File... --> Export** to open the Export window.
+	* Select one of the pre-defined export formats from the 'Export Format' drop-down list.
+	* Tick the 'Selected only' checkbox to export **only** the selected features or clear the checkbox to export **all** of the features in the active GIS layer as required.
+	* Click **Ok** to perform the export.
+	* You will be prompted to select a destination folder and file name for the new GIS layer.
+	* A pop-up message will appear informing when the export has completed and prompting if the new GIS layer should be loaded into the active GIS document/workspace.
+
+	.. note::
+		The default export folder destination can be set by MapInfo users (see :ref:`gis_options` for more details).
+
+	.. warning::
+		Exporting all features or a large number of features can take a long time depending upon the number of features and the configuration of the HLU Tool and the associated GIS application and attribute database system.
+
+During the export process checks and validation are performed to avoid potential errors and frustrations. As a result warnings may appear under the following circumstances:
+
+	* If the export contains more than 5,000 INCIDs and hence may take some time to complete (the count of 5,000 is only an arbitrary value and does not represent any processing limit).
+	* If ArcGIS users have chosen to export to a shapefile (as opposed to a file or personal geodatabase feature class) and have selected an export format that contains field names that exceed 10 characters as this will result in the field names being automatically truncated or renamed by ArcGIS.
+	* If MapInfo users have selected an export format where the total length of the output fields (including the fields included from the GIS layer) exceeds 4,000 bytes as this is the maximum record length supported by MapInfo.
+	* If MapInfo users have initiated an export where the total size of the output .dbf attribute file is likely to exceed 2 GBs as this is the maximum file size supported by MapInfo.
+
+	.. seealso::
+		For details on defining export formats see 'Configuring Exports' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+
+
+.. raw:: latex
+
+	\newpage
+
+.. index::
 	single: Windows; Switch GIS Layer Window
 
 .. _switch_layer_window:
@@ -492,17 +729,17 @@ If a mistake has been made when entering the selection criteria, click on the gr
 Switch GIS Layer Window
 =======================
 
-.. |switch| image:: ../images/icons/SwitchGISLayer.png
+.. |switch| image:: ../icons/SwitchGISLayer.png
 	:height: 16px
 	:width: 16px
 
 Click |switch| or **Tools... --> Switch GIS Layer** to open the window.
 
-Allows users to switch between GIS layers by selecting a different layer in the drop-down list (see the figure :ref:`figSGLD`). Only layers from the current workspace/document that are valid HLU layers (i.e. have the correct attribute names and formats) will appear in the drop-down list.
+Allows users to switch between GIS layers by selecting a different layer in the drop-down list (see the figure :ref:`figSGLD`). Only layers from the current workspace/document that are valid HLU layers (i.e. have the correct attribute names and formats) will appear in the drop-down list. The name of the layer will be followed by a number (e.g. 'HLU Non-urban Features [1]') indicating which map/document each layer is part of.
 
 .. _figSGLD:
 
-.. figure:: ../images/figures/SwitchGISLayerDialog.png
+.. figure:: figures/SwitchGISLayerDialog.png
 	:align: center
 
 	Switch GIS Layer Dialog

@@ -188,7 +188,7 @@ To display all the features in the INCID of a given feature:
 
 .. _figLSFD:
 
-.. figure:: ../images/figures/LogicalSplitDiagram.png
+.. figure:: figures/LogicalSplitDiagram.png
 	:align: center
 
 	Logical Split – Before (left) and After (right)
@@ -227,13 +227,13 @@ For example, a woodland may appear in OS MasterMap as a single feature, but comp
 ArcGIS
 ^^^^^^
 
-To perform a physical split:
+To perform a physical split in ArGIS:
 
 * On the 'Editor' toolbar (shown in the figure :ref:`figArcEMB`), click **Editor** and select **Start Editing**.
 
 .. _figArcEMB:
 
-.. figure:: ../images/figures/ArcGISEditMenuBar.png
+.. figure:: figures/ArcGISEditMenuBar.png
 	:align: center
 
 	Edit Settings for Physical Split (ArcGIS)
@@ -248,7 +248,7 @@ To perform a physical split:
 
 .. _figArcSFD:
 
-.. figure:: ../images/figures/ArcGISSplitFeaturesDiagram.png
+.. figure:: figures/ArcGISSplitFeaturesDiagram.png
 	:align: center
 
 	Split Features (ArcGIS)
@@ -260,7 +260,7 @@ To perform a physical split:
 MapInfo
 ^^^^^^^
 
-To perform a physical split:
+To perform a physical split in MapInfo:
 
 * Set the Cosmetic layer as 'Editable' and draw the feature to split by.
 
@@ -274,7 +274,7 @@ To perform a physical split:
 
 .. _figMIDD:
 
-.. figure:: ../images/figures/MapInfoDataDisaggregationDialog.png
+.. figure:: figures/MapInfoDataDisaggregationDialog.png
 	:align: center
 
 	Data Disaggregation Dialog (MapInfo)
@@ -283,7 +283,7 @@ To perform a physical split:
 
 .. _figMISF:
 
-.. figure:: ../images/figures/MapInfoSplitFeaturesDiagram.png
+.. figure:: figures/MapInfoSplitFeaturesDiagram.png
 	:align: center
 
 	Split Features (MapInfo)
@@ -318,7 +318,7 @@ To perform a logical merge:
 
 .. _figLMD:
 
-.. figure:: ../images/figures/LogicalMergeDialog.png
+.. figure:: figures/LogicalMergeDialog.png
 	:align: center
 
 	Select INCID to Keep Dialog
@@ -346,7 +346,7 @@ To perform a physical merge:
 
 .. _figPMD:
 
-.. figure:: ../images/figures/PhysicalMergeDiagram.png
+.. figure:: figures/PhysicalMergeDiagram.png
 	:align: center
 
 	Physical Merge – Before (left) and After (right)
@@ -354,4 +354,46 @@ To perform a physical merge:
 
 .. note::
 	Only fragments belonging to the same TOID can be merged in a single operation. If fragments for several TOIDs need to be merged, the operation must be repeated for each TOID.
+
+
+
+.. raw:: latex
+
+	\newpage
+
+.. index::
+	single: Attribute Updates
+
+.. _attribute_updates:
+
+Attribute Updates
+=================
+
+Attribute Updates are the main mechanism for updating existing INCID details.
+
+To update the attributes of an INCID:
+
+* Ensure that the active HLU GIS layer is editable (for ArcGIS users click **Editor** on the Editor toolbar, select **Start Editing** and choose the active HLU layer, for MapInfo users set the active HLU layer as 'Editable').
+* Select the feature or features to be updated.
+* Click **Get Map Selection**.
+* Make the required changes to the INCID attributes, ensuring that any fields highlighted as missing or in error are addressed.
+* Click **Apply**. The INCID will be updated and details will be added to the History tab.
+
+
+..note::
+	The **Apply** button will only be displayed if:
+		* The user is listed in the lut_user table.
+		* The active GIS layer is in edit mode.
+		* The user has made one or more changes to the current INCID.
+		* There are no fields in error.
+
+.. caution::
+	If changes are made to an INCID and applied when only a subset of the TOIDs or fragments for that INCID are selected in GIS the user may be notified (depending upon their user Options) as shown in the figure :ref:`figAUSWD`. See :ref:`interface_options` for more details.
+
+	.. _figAUSWD:
+
+	.. figure:: figures/AttributeUpdateSubsetWarningDialog.png
+		:align: center
+
+		Attribute Update Subset Warning Dialog
 
