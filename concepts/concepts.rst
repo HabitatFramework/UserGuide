@@ -390,10 +390,10 @@ To update the attributes of an INCID:
 .. caution::
 	If changes are made to an INCID and applied when only a subset of the TOIDs or fragments for that INCID are selected in GIS the user may be notified (depending upon their user Options) as shown in the figure :ref:`figAUWD`. See :ref:`interface_options` for more details.
 
-	.. _figAUWD:
+.. _figAUWD:
 
-	.. figure:: figures/AttributeUpdateWarningDialog.png
-		:align: center
+.. figure:: figures/AttributeUpdateWarningDialog.png
+	:align: center
 
-		Attribute Update Warning Dialog
+	Attribute Update Warning Dialog
 
