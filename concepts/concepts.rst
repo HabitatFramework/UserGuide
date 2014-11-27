@@ -183,8 +183,8 @@ To display all the features in the INCID of a given feature:
 	.. note::
 		The selected features must all belong to the same INCID.
 
-* Return to the HLU main window and click **Get Map Selection**.
-* Click **Select Current INCID on Map**. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figLSFD`.
+* Return to the HLU main window and click :guilabel:`Get Map Selection`.
+* Click :guilabel:`Select Current INCID on Map`. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figLSFD`.
 
 .. _figLSFD:
 
@@ -197,9 +197,9 @@ To display all the features in the INCID of a given feature:
 To perform a logical split:
 
 * Select the subset of features to be split in the GIS layer as shown in the **right** part of the figure :ref:`figLSFD`.
-* Return to the HLU main window and click **Get Map Selection**.
+* Return to the HLU main window and click :guilabel:`Get Map Selection`.
 * Select one of the options in the 'Process' list.
-* Click **Split Features**. A new INCID will be created and displayed as the current record.
+* Click :guilabel:`Split Features`. A new INCID will be created and displayed as the current record.
 
 
 .. raw:: latex
@@ -229,7 +229,7 @@ ArcGIS
 
 To perform a physical split in ArGIS:
 
-* On the 'Editor' toolbar (shown in the figure :ref:`figArcEMB`), click **Editor** and select **Start Editing**.
+* On the 'Editor' toolbar (shown in the figure :ref:`figArcEMB`), click :guilabel:`Editor` and select :guilabel:`Start Editing`.
 
 .. _figArcEMB:
 
@@ -239,12 +239,12 @@ To perform a physical split in ArGIS:
 	Edit Settings for Physical Split (ArcGIS)
 
 * Select the feature to be split.
-* On the 'Editor' toolbar, click **Cut Polygons Tool** draw a polyline through the feature to be split.
+* On the 'Editor' toolbar, click :guilabel:`Cut Polygons Tool` draw a polyline through the feature to be split.
 
 	.. tip::
 		It is not necessary to **Save Edits** after splitting the feature in GIS because the changes will be saved automatically once the split has been completed with the tool.
 
-* The feature will be split but still selected as shown in the figure :ref:`figArcSFD`. Return to the HLU GIS Tool and click **Get Map Selection**.
+* The feature will be split but still selected as shown in the figure :ref:`figArcSFD`. Return to the HLU GIS Tool and click :guilabel:`Get Map Selection`.
 
 .. _figArcSFD:
 
@@ -254,7 +254,7 @@ To perform a physical split in ArGIS:
 	Split Features (ArcGIS)
 
 * Select one of the options in the 'Process' list.
-* Click **Split Features**. The record will be updated and details added to the History tab for the INCID.
+* Click :guilabel:`Split Features`. The record will be updated and details added to the History tab for the INCID.
 
 
 MapInfo
@@ -270,7 +270,7 @@ To perform a physical split in MapInfo:
 * Set the HLU layer as 'Editable'.
 * Select the feature to be split and go to Objects > Set Target.
 * Select the polygon in the Cosmetic layer and go to Objects > Split.
-* In the Data Disaggregation dialog ensure that 'Method' for all fields is set to 'Value' as shown in the figure :ref:`figMIDD`, then click **OK**.
+* In the Data Disaggregation dialog ensure that 'Method' for all fields is set to 'Value' as shown in the figure :ref:`figMIDD`, then click :guilabel:`OK`.
 
 .. _figMIDD:
 
@@ -279,7 +279,7 @@ To perform a physical split in MapInfo:
 
 	Data Disaggregation Dialog (MapInfo)
 
-* The feature will be split but still selected as shown in the figure :ref:`figMISF`. Return to the HLU GIS Tool and click **Get Map Selection**.
+* The feature will be split but still selected as shown in the figure :ref:`figMISF`. Return to the HLU GIS Tool and click :guilabel:`Get Map Selection`.
 
 .. _figMISF:
 
@@ -289,7 +289,7 @@ To perform a physical split in MapInfo:
 	Split Features (MapInfo)
 
 * Select one of the options in the 'Process' list.
-* Click **Split Features**. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
+* Click :guilabel:`Split Features`. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
 
 
 .. _merge:
@@ -312,9 +312,9 @@ Logical merge combines all the features selected in the GIS into a single INCID 
 To perform a logical merge:
 
 * Select the features to be merged and a feature from the INCID they are to be merged with in the GIS layer.
-* Return to the HLU main window and click **Get Map Selection**.
+* Return to the HLU main window and click :guilabel:`Get Map Selection`.
 * Select one of the options in the 'Process' list.
-* Click **Merge Features**. A list of INCIDs will be displayed as shown in the figure :ref:`figLMD`.
+* Click :guilabel:`Merge Features`. A list of INCIDs will be displayed as shown in the figure :ref:`figLMD`.
 
 .. _figLMD:
 
@@ -323,7 +323,7 @@ To perform a logical merge:
 
 	Select INCID to Keep Dialog
 
-* Click on the grey box to the left of the row to select an INCID. The associated feature will blink in the GIS window. Click **OK**.
+* Click on the grey box to the left of the row to select an INCID. The associated feature will blink in the GIS window. Click :guilabel:`OK`.
 * The selected features will be assigned to the selected INCID and details added to the History tab.
 * If the merged features are fragments of the same TOID the user will be given the option to then perform a physical merge.
 
@@ -340,9 +340,9 @@ Physical merge combines fragments of a single TOID into a single, larger, featur
 To perform a physical merge:
 
 * Select two or more fragments from one TOID in the GIS layer as shown in the **left** part of the figure :ref:`figPMD`.
-* Return to the HLU main window and click **Get Map Selection**.
+* Return to the HLU main window and click :guilabel:`Get Map Selection`.
 * Select one of the options in the 'Process' list.
-* Click **Merge Features**. The features will be combined in the GIS layer as shown in the **right** part of the figure :ref:`figPMD`.
+* Click :guilabel:`Merge Features`. The features will be combined in the GIS layer as shown in the **right** part of the figure :ref:`figPMD`.
 
 .. _figPMD:
 
@@ -373,15 +373,15 @@ Attribute Updates are the main mechanism for updating existing INCID details.
 
 To update the attributes of an INCID:
 
-* Ensure that the active HLU GIS layer is editable (for ArcGIS users click **Editor** on the Editor toolbar, select **Start Editing** and choose the active HLU layer, for MapInfo users set the active HLU layer as 'Editable').
+* Ensure that the active HLU GIS layer is editable (for ArcGIS users click :guilabel:`Editor` on the Editor toolbar, select :guilabel:`Start Editing` and choose the active HLU layer, for MapInfo users set the active HLU layer as 'Editable').
 * Select the feature or features to be updated.
-* Click **Get Map Selection**.
+* Click :guilabel:`Get Map Selection`.
 * Make the required changes to the INCID attributes, ensuring that any fields highlighted as missing or in error are addressed.
-* Click **Apply**. The INCID will be updated and details will be added to the History tab.
+* Click :guilabel:`Apply`. The INCID will be updated and details will be added to the History tab.
 
 
 ..note::
-	The **Apply** button will only be displayed if:
+	The :guilabel:`Apply` button will only be displayed if:
 		* The user is listed in the lut_user table.
 		* The active GIS layer is in edit mode.
 		* The user has made one or more changes to the current INCID.

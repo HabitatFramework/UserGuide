@@ -75,7 +75,7 @@ Copies selected attributes so they can be applied to these fields in another rec
 
 	Checkboxes ticked to copy data
 
-Tick the checkboxes next to the fields to be copied, as shown in the figure :ref:`figCC`, then click **Copy**.
+Tick the checkboxes next to the fields to be copied, as shown in the figure :ref:`figCC`, then click :guilabel:`Copy`.
 
 .. |paste| image:: ../icons/EditPaste.png
 	:height: 16px

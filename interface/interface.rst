@@ -91,10 +91,10 @@ For example, figure :ref:`figUIISS` indicates that the interface is currently di
 
 	Main window - Incid Status Section
 
-This section also contains the **Apply** button which is used to apply any attribute changes to the current INCID. See :ref:`attribute_updates` for more details.
+This section also contains the :guilabel:`Apply` button which is used to apply any attribute changes to the current INCID. See :ref:`attribute_updates` for more details.
 
 ..note::
-	The **Apply** button will only be displayed if:
+	The :guilabel:`Apply` button will only be displayed if:
 		* The user is listed in the lut_user table.
 		* The active GIS layer is in edit mode.
 		* The user has made one or more changes to the current INCID.
@@ -156,7 +156,7 @@ Legacy Habitat
 Details Tab
 -----------
 
-Click on **Details** to display the Details tab as shown in the figure :ref:`figUIDT`.
+Click on :guilabel:`Details` to display the Details tab as shown in the figure :ref:`figUIDT`.
 
 .. _figUIDT:
 
@@ -199,7 +199,7 @@ Site Name
 Sources Tab
 -----------
 
-Click on **Sources** to display the Sources tab as shown in the figure :ref:`figUIST`. Up to three sources can be defined for each INCID.
+Click on :guilabel:`Sources` to display the Sources tab as shown in the figure :ref:`figUIST`. Up to three sources can be defined for each INCID.
 
 .. _figUIST:
 
@@ -268,7 +268,7 @@ Error Messages
 Any fields that are in error, either as a result of invalid values in the current database records for the current INCID or as a result of changes made by the user to the field values, will be highlighted with a red border and exclamation mark (as seen in the figure :ref:`figUIEM`). The appropriate tab header for any invalid fields will also be highlighted to help users locate any errors in fields currently hidden on an inactive tab. Hovering over a field in error will display a *tooltip* message indicating the nature of the error.
 
 .. note::
-	Whilst **any** fields are in error the **Apply** button will not appear.
+	Whilst **any** fields are in error the :guilabel:`Apply` button will not appear.
 
 .. _figUIEM:
 
@@ -306,13 +306,13 @@ Allows users to update the attributes for multiple selected database records sim
 
 To perform a bulk update:
 
-* Filter the database records using 'Select by attributes' or select polygons in the GIS layer and click **Get Map Selection**. For details on filtering records see :ref:`query_builder_window`.
+* Filter the database records using 'Select by attributes' or select polygons in the GIS layer and click :guilabel:`Get Map Selection`. For details on filtering records see :ref:`query_builder_window`.
 
-* Click **Edit... --> Bulk Update** to enter bulk update mode. An empty form is displayed as shown in the figure :ref:`figUIBU`.
+* Click *:guilabel:`Edit... --> Bulk Update` to enter bulk update mode. An empty form is displayed as shown in the figure :ref:`figUIBU`.
 
 * The 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments affected by the update and allows users to select whether to create a History record for this process.
 
-* Enter the updated details in the IHS, Details, and Sources tabs, then click **Apply**. These fields will be updated for all the selected INCIDs.
+* Enter the updated details in the IHS, Details, and Sources tabs, then click :guilabel:`Apply`. These fields will be updated for all the selected INCIDs.
 
 .. caution::
 	If 'Delete Empty Bulk Update Rows' is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. See :ref:`database_options` for more details.
@@ -336,7 +336,7 @@ Allows users to alter the HLU Tool configuration features specific to their user
 	:height: 16px
 	:width: 16px
 
-Click |options| or **Tools... --> Options** to open the window.
+Click |options| or :guilabel:`Tools... --> Options` to open the window.
 
 .. _figOD:
 
@@ -392,7 +392,7 @@ Preferred GIS Application
 		The tool must be closed and restarted for this change to take effect.
 
 Map Document/Workspace
-	Sets the default map document or workspace opened by the HLU GIS Tool. As this field cannot be edited directly, users must click on the **…** button and browse to the new map document or workspace. 
+	Sets the default map document or workspace opened by the HLU GIS Tool. As this field cannot be edited directly, users must click on the :guilabel:`…` button and browse to the new map document or workspace. 
 
 	.. note::
 		If the 'Preferred GIS' option is altered, this field must also be updated.
@@ -463,7 +463,7 @@ Use Advanced Query Builder?
 
 
 Get Values Count
-	Allows the user to select the maximum number of unique field values that will be retrieved each time the **Get Values** button is pressed when using the 'Advanced Query Builder' (see :ref:`advanced_query_builder_window` for details). The maximum number of rows that can be retrieved at any time cannot exceed 100,000. This number should be reduced if performance issues are experienced when the **Get Values** button is pressed or when the drop-down list is used on the 'Advanced Query Builder'.
+	Allows the user to select the maximum number of unique field values that will be retrieved each time the :guilabel:`Get Values` button is pressed when using the 'Advanced Query Builder' (see :ref:`advanced_query_builder_window` for details). The maximum number of rows that can be retrieved at any time cannot exceed 100,000. This number should be reduced if performance issues are experienced when the :guilabel:`Get Values` button is pressed or when the drop-down list is used on the 'Advanced Query Builder'.
 
 	.. note::
 		This option is only available if 'Use Advanced Query Builder?' is selected.
@@ -519,7 +519,7 @@ Allows users to filter the database records using the query builder shown in the
 	:height: 16px
 	:width: 16px
 
-Click |filterbyattr| or **Select... --> Filter by Attributes** to open the window.
+Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes` to open the window.
 
 .. _figQB:
 
@@ -599,7 +599,7 @@ Advanced Query Builder Window
 
 Allows users to filter the database records using the advanced query builder shown in the figure :ref:`figAQB`.
 
-Click |filterbyattr| or **Select... --> Filter by Attributes** to open the window.
+Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes` to open the window.
 
 .. _figAQB:
 
@@ -619,10 +619,10 @@ Operators
 	Drop-down list of the available operators as shown in the figure :ref:`figASOL`.
 
 Values
-	The value to search for.  Values may automatically be loaded in the drop-down list, if the selected Table and Column refer to one of the lookup tables, or can be manually loaded using the **Get Values** button.
+	The value to search for.  Values may automatically be loaded in the drop-down list, if the selected Table and Column refer to one of the lookup tables, or can be manually loaded using the :guilabel:`Get Values` button.
 
 Add Buttons
-	The **Add** buttons will paste the selected item from the relevant Tables, Columns, Operators or Values field into the **SELECT DISTINCT incid FROM:** text box or the **WHERE:** text box (as appropriate).
+	The :guilabel:`Add` buttons will paste the selected item from the relevant Tables, Columns, Operators or Values field into the **SELECT DISTINCT incid FROM:** text box or the **WHERE:** text box (as appropriate).
 
 .. _figASOL:
 
@@ -638,26 +638,26 @@ WHERE:
 	A text box that should contain the SQL clause which will select the required INCID values from the HLU Tool database.
 
 Clear
-	Click the **Clear** button to remove any existing text from the **SELECT DISTINCT incid FROM:** and **WHERE:** text boxes.
+	Click the :guilabel:`Clear` button to remove any existing text from the **SELECT DISTINCT incid FROM:** and **WHERE:** text boxes.
 
 Verify
-	Click **Verify** to determine if the query is valid by checking the syntax of the text boxes and hence will execute successfully on the HLU Tool database. If the syntax is valid it will also determine if any records will be returned by the query.
+	Click :guilabel:`Verify` to determine if the query is valid by checking the syntax of the text boxes and hence will execute successfully on the HLU Tool database. If the syntax is valid it will also determine if any records will be returned by the query.
 
 Load
-	Click **Load** to copy an existing query file into the text boxes. Users will be prompted for the source path and file name of an existing **.hsq** file. The default folder path can be set in the Options (see :ref:`sql_query_options` for more details).
+	Click :guilabel:`Load` to copy an existing query file into the text boxes. Users will be prompted for the source path and file name of an existing **.hsq** file. The default folder path can be set in the Options (see :ref:`sql_query_options` for more details).
 
 Save
-	Click **Save** to copy the text boxes to a query file. Users will be prompted for the destination path and file name of the **.hsq** file to save the query to. The default folder path can be set in the Options (see :ref:`sql_query_options` for more details).
+	Click :guilabel:`Save` to copy the text boxes to a query file. Users will be prompted for the destination path and file name of the **.hsq** file to save the query to. The default folder path can be set in the Options (see :ref:`sql_query_options` for more details).
 
 OK
-	Click **OK** to execute the query. If the user has requested to be warned before applying the GIS selection then a pop-up message will appear advising how many expected INCIDs and features will be selected and if a 'Join' will be used to select the features in GIS (see :ref:`sql_query_options` for more details).
+	Click :guilabel:`OK` to execute the query. If the user has requested to be warned before applying the GIS selection then a pop-up message will appear advising how many expected INCIDs and features will be selected and if a 'Join' will be used to select the features in GIS (see :ref:`sql_query_options` for more details).
 
 Cancel
-	Click **Cancel** to close the 'HLU Advanced Query Builder' window without executing a query.
+	Click :guilabel:`Cancel` to close the 'HLU Advanced Query Builder' window without executing a query.
 
 
 .. tip::
-	Whilst the Tables and Where Clause can be entered as free-text by the user, it is recommended that users use the drop-down lists and **Add** buttons to reduce the likelihood of syntax errors.
+	Whilst the Tables and Where Clause can be entered as free-text by the user, it is recommended that users use the drop-down lists and :guilabel:`Add` buttons to reduce the likelihood of syntax errors.
 
 
 .. raw:: latex
@@ -672,7 +672,7 @@ Cancel
 Export Window
 =============
 
-Click **File... --> Export** to open the Export window. This function allows users to combine both GIS features and associated attribute data from the HLU database and export the results to a new GIS layer using a pre-defined export format. If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the records related to the selected INCIDs and the GIS features will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`filter_by_attributes`.
+Click :guilabel:`File... --> Export` to open the Export window. This function allows users to combine both GIS features and associated attribute data from the HLU database and export the results to a new GIS layer using a pre-defined export format. If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the records related to the selected INCIDs and the GIS features will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`filter_by_attributes`.
 
 .. _figED:
 
@@ -684,11 +684,11 @@ Click **File... --> Export** to open the Export window. This function allows use
 
 To perform an export:
 
-	* Select the required INCID and GIS features to be exported (either by selecting the features in GIS and clicking **Get Map Selection** or performing a **Filter by Attributes**).
-	* Click **File... --> Export** to open the Export window.
+	* Select the required INCID and GIS features to be exported (either by selecting the features in GIS and clicking :guilabel:`Get Map Selection` or performing a **Filter by Attributes**).
+	* Click :guilabel:`File... --> Export` to open the Export window.
 	* Select one of the pre-defined export formats from the 'Export Format' drop-down list.
 	* Tick the 'Selected only' checkbox to export **only** the selected features or clear the checkbox to export **all** of the features in the active GIS layer as required.
-	* Click **Ok** to perform the export.
+	* Click :guilabel:`Ok` to perform the export.
 	* You will be prompted to select a destination folder and file name for the new GIS layer.
 	* A pop-up message will appear informing when the export has completed and prompting if the new GIS layer should be loaded into the active GIS document/workspace.
 
@@ -725,7 +725,7 @@ Switch GIS Layer Window
 	:height: 16px
 	:width: 16px
 
-Click |switch| or **Tools... --> Switch GIS Layer** to open the window.
+Click |switch| or :guilabel:`Tools... --> Switch GIS Layer` to open the window.
 
 Allows users to switch between GIS layers by selecting a different layer in the drop-down list (see the figure :ref:`figSGLD`). Only layers from the current workspace/document that are valid HLU layers (i.e. have the correct attribute names and formats) will appear in the drop-down list. The name of the layer will be followed by a number (e.g. 'HLU Non-urban Features [1]') indicating which map/document each layer is part of.
 
