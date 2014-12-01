@@ -503,8 +503,8 @@ Filter by Attributes
 
 Allows users to filter the INCID records that appear in the user interface and correspondingly which features are selected in the active GIS layer. The filter is performed by building a SQL query that will select one or more INCIDs based on a chosen set of criteria. There are two interfaces available for building a SQL query:
 
-	* The **HLU Query Builder** originally supplied with the HLU Tool
-	* The new **HLU Advanced Query Builder** which provides a more user-friendly and flexible interface.
+	* **HLU Query Builder** - the original interface supplied with the HLU Tool
+	* **HLU Advanced Query Builder** - a new interface that provides more user-friendly and flexible functionality.
 		  
 Users can choose their preferred interface in the user Options (see :ref:`sql_query_options` for details).
 
