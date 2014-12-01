@@ -459,8 +459,7 @@ Warn Before Applying GIS Selection
 		* Never - Do not warn/inform the user regardless of the expected number of features to be select or the method of selection to be used.
 
 Use Advanced Query Builder?
-	
-
+	Allows the user to choose their preferred SQL query builder interface (see :ref:`query_builder_window` and :ref:`advanced_query_builder_window` for details).
 
 Get Values Count
 	Allows the user to select the maximum number of unique field values that will be retrieved each time the :guilabel:`Get Values` button is pressed when using the 'Advanced Query Builder' (see :ref:`advanced_query_builder_window` for details). The maximum number of rows that can be retrieved at any time cannot exceed 100,000. This number should be reduced if performance issues are experienced when the :guilabel:`Get Values` button is pressed or when the drop-down list is used on the 'Advanced Query Builder'.
@@ -502,7 +501,15 @@ Vague Date Delimiter
 Filter by Attributes
 ====================
 
-Allows users to filter the INCID records that appear in the user interface and correspondingly which features are selected in the active GIS layer. The filter is performed by building a SQL query that will select one or more INCIDs based on a chosen set of criteria. There are two interfaces available for building the query - the **HLU Query Builder** originally supplied with the HLU Tool and a new **HLU Advanced Query Builder** which provides a more user-friendly and flexible interface.
+Allows users to filter the INCID records that appear in the user interface and correspondingly which features are selected in the active GIS layer. The filter is performed by building a SQL query that will select one or more INCIDs based on a chosen set of criteria.
+
+.. sidebar::
+	There are two interfaces available for building a SQL query:
+
+		* The **HLU Query Builder** originally supplied with the HLU Tool
+		* The new **HLU Advanced Query Builder** which provides a more user-friendly and flexible interface.
+		  
+	The user can choose their preferred interface in the user Options (see :ref:`sql_query_options` for details).
 
 .. index::
 	single: Windows; Query Builder Window
