@@ -86,7 +86,7 @@ Tick the checkboxes next to the fields to be copied, as shown in the figure :ref
 
 Pastes the data copied by the 'Copy' tool into the same fields in another record.
 
-For example, the fields copied in the figure above would be pasted into 'Source 3' on the new record.
+For example, the fields copied in the figure above would be pasted into 'Source 2' on the new record.
 
 .. note::
 	It is not possible to copy data from one field in one record and paste it into a different field in another record.

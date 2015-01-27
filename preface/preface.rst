@@ -19,7 +19,7 @@ This user guide assumes that users of the HLU GIS Tool have:
 
 Administrators
 --------------
-It is recommend that a person within each organisation is designated as the tool and database administrator. This person should:
+It is recommended that a person within each organisation is designated as the tool and database administrator. This person should:
 
 * Have an understanding and experience of IT systems management.
 * Understand relational database structures.
@@ -56,7 +56,9 @@ This Preface explains a little about the HLU Tool, the community of people who d
 Licensing
 =========
 
-The code for the HLU GIS Tool is 'open source' and is released under `GPLv3 <http://www.gnu.org/licenses/gpl.html>`_. Users are free to install it on as many computers as they like, and to redistribute it according to the GPLv3 license.
+The code for the HLU Tool is 'open source' and is released under `GNU General Public License (GPL) v3 <http://www.gnu.org/licenses/gpl.html>`_. Users are free to install it on as many computers as they like, and to redistribute it according to the GPLv3 license.
+
+This guide is released under `GNU Free Documentation License (FDL) v1.3 <http://www.gnu.org/licenses/fdl.html>`_. Permission is granted to copy, distribute and/or modify this document under the terms of the license.
 
 Please remember, however, that the tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefully received. Enquiries can be made via the `ALERC forum <http://forum.lrcs.org.uk/viewforum.php?id=24>`_.
 

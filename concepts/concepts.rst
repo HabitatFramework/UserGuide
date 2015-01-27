@@ -174,7 +174,7 @@ Logical Split
 
 Logical split is used to create a new INCID in the database based upon a subset of features selected from a single INCID in the GIS layer. Logically splitting one or more features assigns them to a different INCID than the other features in the current INCID which then allows them to be updated independently of the remaining features in the original INCID.
 
-For example, a group of adjacent permanent pasture fields, each represented by a separate OS MasterMap feature, may initially be 'logically' grouped by being assigned to the same INCID because they share a common set of IHS codes, sources and other attributes. However, if may be discovered that one or more of the fields in that INCID are actually being managed differently to the remaining fields. By logically splitting those fields/features from the original INCID to form a new, smaller logical grouping of features that INCID can then be assigned a different IHS management code.
+For example, a group of adjacent permanent pasture features, each represented by a separate OS MasterMap feature, may be 'logically' grouped by being assigned to the same INCID because they share a common set of IHS codes, sources and other attributes. However, it may be discovered that one or more of the features are actually being managed differently to the remaining features. By logically splitting those features from the original INCID to form a new INCID those features can then be assigned a different IHS management code.
 
 To display all the features in the INCID of a given feature:
 
