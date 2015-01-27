@@ -47,7 +47,7 @@ This Preface explains a little about the HLU Tool, the community of people who d
 
 :doc:`../glossary/glossary` \ contains a brief glossary and description of commonly used terms.
 
-:doc:`../appendix/appendix` \ introduces tips for optimising performance and known issues with the tool.
+:doc:`../appendix/appendix` \ introduces tips for optimising performance, lists known issues with the tool and contains a copy of the GNU Free Documentation License v1.3 covering this guide.
 
 
 .. index::
