@@ -105,20 +105,20 @@ This section also contains the :guilabel:`Apply` button which is used to apply a
 
 	\newpage
 
-.. _ihs_tab:
+.. _habitats_tab:
 
-IHS Tab
--------
+Habitats Tab
+------------
 
-The IHS tab displays the Integrated Habitat System (IHS) details for the current database record as shown in the figure :ref:`figUIIT`.
+The Habitats tab displays the Integrated Habitat System (IHS) and legacy habitat details for the current database record as shown in the figure :ref:`figUIHT`.
 
-.. _figUIIT:
+.. _figUHIT:
 
-.. figure:: figures/UserInterfaceIHSTab.png
+.. figure:: figures/UserInterfaceHabitatTab.png
 	:align: center
 	:scale: 85
 
-	Main window - IHS Tab
+	Main window - Habitats Tab
 
 
 Class
@@ -136,6 +136,9 @@ Type
 Habitat
 	Drop-down list allowing users to select the desired IHS Habitat code. The contents of the list will vary and relate directly to the selected Class and Type (above) and entries in the lut_habitat_type_ihs_habitat table.
 
+NVC Codes
+	[Read only]. Automatically displays a list of any potential NVC Codes related to the IHS habitat codes selected in the preceding drop-down list.
+
 IHS Matrix / Formation / Management / Complex
 	Drop-down lists allowing users to refine the habitat definition by adding 'multiplex' codes according to the guidelines of IHS.
 
@@ -143,7 +146,7 @@ IHS Summary
 	[Read only]. Automatically generated concatenation of the IHS habitat and multiplex codes selected from the preceding drop-down lists.
 
 Legacy Habitat
-	[Read only]. Displays the primary 'pre-IHS' habitat code (if present).
+	Drop-down list allowing users to view and maintain a legacy habitat definition (if required). The contents of the list are based on entries in the lut_legacy_habitat table.
 
 .. [6] The habitat 'Class' and 'Type' list contents are based only on entries in the relevant lookup tables where the 'is_local' flag is set to True (-1). See 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to update lookup table entries.
 
@@ -167,7 +170,7 @@ Click on :guilabel:`Details` to display the Details tab as shown in the figure :
 	Main window - Details Tab
 
 Priority Habitats
-	Automatically added based upon the Habitat and multiplex codes selected on the :ref:`ihs_tab`. For new priority habitats, 'Determination Quality' and 'Interpretation Quality' must be entered.
+	Automatically added based upon the Habitat and multiplex codes selected on the :ref:`habitats_tab`. For new priority habitats, 'Determination Quality' and 'Interpretation Quality' must be entered.
 
 Potential Priority Habitats
 	Allows users to define other priority habitats that may also be present in the future given appropriate management or restoration. An INCID may have a potential priority habitat even if no priority habitats are present.
@@ -312,7 +315,7 @@ To perform a bulk update:
 
 * The 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments affected by the update and allows users to select whether to create a History record for this process.
 
-* Enter the updated details in the IHS, Details, and Sources tabs, then click :guilabel:`Apply`. These fields will be updated for all the selected INCIDs.
+* Enter the updated details in the Habitats, Details, and Sources tabs, then click :guilabel:`Apply`. These fields will be updated for all the selected INCIDs.
 
 .. caution::
 	If 'Delete Empty Bulk Update Rows' is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. See :ref:`database_options` for more details.
@@ -419,7 +422,10 @@ Action to Take When Updating Subset
 		* All - Always apply the attribute update to **all** features belonging to the INCID regardless of which features of the INCID are currently selected.
 
 Preferred Habitat Class
-	Allows the user to choose which Habitat Class in the INCID tab (see :ref:`ihs_tab` for more details) is automatically selected each time the HLU Tool is started.
+	Allows the user to choose which Habitat Class in the INCID tab (see :ref:`Habitats_tab` for more details) is automatically selected each time the HLU Tool is started.
+
+Show NVC Codes
+	Allows the user to choose if a list of any potential NVC Codes related to the selected IHS habitat code will be shown.
 
 Notify After Completing Split/Merge?
 	Enable users to specify if a pop-up message should be displayed following the completion of any of the split or merge operations.

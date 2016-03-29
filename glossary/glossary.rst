@@ -46,6 +46,9 @@ Glossary
 	Interpretation Quality
 		A combination of the assessment of the quality and age of the original source habitat identification and the relationship between the original habitat type and the priority habitat type. See :ref:`interpretation_quality` for more details.
 
+	Legacy Habitat
+		A code and/or descriptive term that best represents an area of habitat using an alternative (legacy) habitat classification system (e.g. 'B312', 'CG2', 'Lowland Calcareous Grassland').
+
 	Logical Merge
 		Combines all the attributes for the features selected in the GIS into a single INCID record of one of the selected features. See :ref:`logical_merge` for more details.
 

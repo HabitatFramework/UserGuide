@@ -336,14 +336,15 @@ Allows users to switch between valid HLU layers in the GIS application.
 Styles
 ------
 
-Allows the user to select one of three user interface styles for all interfaces and windows:
+Allows the user to select one of the user interface styles for all interfaces and windows:
 
 * Original
 * Light Grey
 * Dark Grey
+* Shiny Blue
 
 About
 -----
 
-Displays the current application and database versions of the HLU Tool, the current user's id and name, and the HLU Tool's copyright statements.
+Displays the current application and database versions of the HLU Tool, the current database connection, the current user's id and name, and the HLU Tool's copyright statements.
 
