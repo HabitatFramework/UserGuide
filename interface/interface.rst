@@ -114,7 +114,7 @@ The Habitats tab displays the Integrated Habitat System (IHS) and legacy habitat
 
 .. _figUHIT:
 
-.. figure:: figures/UserInterfaceHabitatTab.png
+.. figure:: figures/UserInterfaceHabitatsTab.png
 	:align: center
 	:scale: 85
 
