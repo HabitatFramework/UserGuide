@@ -2,7 +2,7 @@
 Preface
 *******
 
-The most up to date version of this documentation can be found in **HTML** and **PDF** form on `ReadTheDocs <https://readthedocs.org/projects/hlugistool-userguide/>`_.
+The most up to date version of this documentation can be found in **HTML** and **PDF** form on ReadTheDocs at `readthedocs.org/projects/hlutool-userguide/ <https://readthedocs.org/projects/hlutool-userguide/>`_.
 
 Recommended User Knowledge
 ==========================
@@ -27,7 +27,7 @@ It is recommended that a person within each organisation is designated as the to
 * Have qualifications, certified training or equivalent experience in managing databases using that system.
 * Have certified training or equivalent experience in advanced features of the relevant GIS software, including defining, joining and exporting layers and creating spatial and attribute indexes.
 
-A technical guide is also available at `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for those of a more 'techie' nature with details on how to install, configure, maintain and upgrade the HLU Tool and associated relational database.
+A technical guide is also available on ReadTheDocs at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for those of a more 'techie' nature with details on how to install, configure, maintain and upgrade the HLU Tool and associated relational database.
 
 
 Reading Guide
@@ -60,7 +60,7 @@ The code for the HLU Tool is 'open source' and is released under `GNU General Pu
 
 This guide is released under `GNU Free Documentation License (FDL) v1.3 <http://www.gnu.org/licenses/fdl.html>`_. Permission is granted to copy, distribute and/or modify this document under the terms of the license.
 
-Please remember, however, that the tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefully received. Enquiries can be made via the `ALERC forum <http://forum.lrcs.org.uk/viewforum.php?id=24>`_.
+Please remember, however, that the tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefully received. Enquiries can be made via the Knowledge Hub at `khub.net/group/association-of-local-environmental-records-centres <https://khub.net/group/association-of-local-environmental-records-centres>`_.
 
 
 .. index::
@@ -71,10 +71,10 @@ Useful links
 
 Related community links:
 
-* `Users <http://forum.lrcs.org.uk/viewforum.php?id=24>`_ - Announcements, bug reports, user Q&A and feature discussions.
-* `Administrators <https://github.com/HabitatFramework/HLUTool/releases>`_ - Release notes and installers for ArcGIS and MapInfo systems.
-* `Developers <https://github.com/HabitatFramework/HLUTool>`_ - Source code for the HLU Tool.
-* `Issues <https://github.com/HabitatFramework/HLUTool/issues>`_ - Details of known issues and existing change requests.
+* Users : `khub.net/group/association-of-local-environmental-records-centres <http://forum.lrcs.org.uk/viewforum.php?id=24>`_ - Announcements, bug reports, user Q&A and feature discussions.
+* Administrators : `github.com/HabitatFramework/HLUTool/releases <https://github.com/HabitatFramework/HLUTool/releases>`_ - Release notes and installers for ArcGIS and MapInfo systems.
+* Developers : `github.com/HabitatFramework/HLUTool <https://github.com/HabitatFramework/HLUTool>`_ - Source code for the HLU Tool.
+* Issues : `<github.com/HabitatFramework/HLUTool/issues https://github.com/HabitatFramework/HLUTool/issues>`_ - Details of known issues and existing change requests.
 
 
 .. index::
@@ -83,7 +83,7 @@ Related community links:
 Acknowledgements
 ================
 
-Many thanks are due to all the LRCs in the south-east of England and their staff who have, and continue to, fund and contribute to the HLU Tool.  It takes a small army of developers, testers and users to build a truly useful tool (especially users who care enough to test new releases, report bugs and discuss feature requests).
+Many thanks are due to all the LERCs in the south-east of England and their staff who have, and continue to, fund and contribute to the HLU Tool.  It takes a small army of developers, testers and users to build a truly useful tool.
 
 
 .. raw:: latex

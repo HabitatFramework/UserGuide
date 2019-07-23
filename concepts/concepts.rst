@@ -49,10 +49,10 @@ Apart from the spatial representation of the features, the habitat framework onl
 
 .. _incid:
 
-Incremental Identifier
-======================
+INCremental IDentifier (INCID)
+==============================
 
-Every feature in the GIS layer, and associated attributes in the relational database, is assigned to an INCID (\ **Inc**\ remental **id**\ entifier). An INCID can be thought of as a logical grouping of features that share a common set of attributes and are spatially related (i.e. neighbouring or proximate) [3]_. Each INCID can relate to one or more features. Grouping features with common attributes in this way reduces the number of database records required and allows the features and their attributes to all be maintained together.
+Every feature in the GIS layer, and associated attributes in the relational database, is assigned to an INCID (\ **INC**\ remental **ID**\ entifier). An INCID can be thought of as a logical grouping of features that share a common set of attributes and are spatially related (i.e. neighbouring or proximate) [3]_. Each INCID can relate to one or more features. Grouping features with common attributes in this way reduces the number of database records required and allows the features and their attributes to all be maintained together.
 
 In order to amend the attributes for one or more features in a larger group of features (i.e. in the same INCID as other features) without updating the remaining features, the features must first be split into their own logical grouping - i.e. they must be assigned to a new INCID (see :ref:`logical_split` for more details.)
 
@@ -70,9 +70,9 @@ Similarly, features from different INCIDs that are actually related and should s
 Priority Habitats
 =================
 
-Some IHS Habitat and some multiplex codes (Formation, Management and Complex codes) are equivalent to, or more distinct than, priority habitats [4]_. When any such codes are selected in the main window :ref:`ihs_tab` the tool automatically adds the associated priority habitats to the 'Priority Habitats' section of the :ref:`details_tab`.
+Some IHS Habitat and some multiplex codes (Formation, Management and Complex codes) are equivalent to, or more distinct than, priority habitats [4]_. When any such codes are selected in the main window :ref:`habitats_tab` the tool automatically adds the associated priority habitats to the 'Priority Habitats' section of the :ref:`details_tab`.
 
-However, if priority habitat associated codes are changed or removed in the :ref:`ihs_tab` the tool does **not** automatically remove existing priority habitats from the 'Priority Habitats' section of the :ref:`details_tab`. Instead they are moved to the 'Potential Priority Habitats' section and the :ref:`determination_quality` is cleared.
+However, if priority habitat associated codes are changed or removed in the :ref:`habitats_tab` the tool does **not** automatically remove existing priority habitats from the 'Priority Habitats' section of the :ref:`details_tab`. Instead they are moved to the 'Potential Priority Habitats' section and the :ref:`determination_quality` is set to 'Previously present, but may no longer exist'.
 
 .. note::
 	Existing priority habitats that have been automatically moved to the 'Potential Priority Habitats' section but are no longer required must be deleted by the user (see :ref:`details_tab`.)
@@ -85,7 +85,9 @@ However, if priority habitat associated codes are changed or removed in the :ref
 Potential Priority Habitats
 ---------------------------
 
-If a habitat area is close to, but does not currently meet, the definition of a priority habitat (but may do so with appropriate management or following habitat restoration work) then the appropriate priority habitat can be added to the 'Potential Priority Habitats' section of the :ref:`details_tab`.
+If a habitat area is close to, but does not currently meet, the definition of a priority habitat (but may do so with appropriate management or following habitat restoration work) then the appropriate priority habitat can be added to the 'Potential Priority Habitats' section of the :ref:`details_tab` with the :ref:`determination_quality` set to 'Not present but close to definition'.
+
+If a priority habitat was known to have been present but it may no longer exist then it can be added to the 'Potential Priority Habitats' section of the :ref:`details_tab` with the :ref:`determination_quality` set to 'Previously present, but may no longer exist'.
 
 
 .. _determination_quality:
@@ -99,23 +101,22 @@ Every priority habitat and potential priority habitat must be assigned a determi
 
 .. table:: Determination Quality values
 
-	+----------------------------------------------------------+
-	|                  Determination Quality                   |
-	+==========================================================+
-	| Definitely is this habitat                               |
-	+----------------------------------------------------------+
-	| Habitat is in polygon, but not accurately mappable       |
-	+----------------------------------------------------------+
-	| Habitat probably in polygon, but not accurately mappable |
-	+----------------------------------------------------------+
-	| Probably is, but some uncertainty                        |
-	+----------------------------------------------------------+
-	| Not present but close to definition                      |
-	+----------------------------------------------------------+
+	+----------------------------------------------------------+----------------------------+
+	|                  Determination Quality                   |         Usage              |
+	+==========================================================+============================+
+	| Definitely is this habitat                               | Priority Habitat           |
+	+----------------------------------------------------------+----------------------------+
+	| Habitat is in polygon, but not accurately mappable       | Priority Habitat           |
+	+----------------------------------------------------------+----------------------------+
+	| Habitat probably in polygon, but not accurately mappable | Priority Habitat           |
+	+----------------------------------------------------------+----------------------------+
+	| Probably is, but some uncertainty                        | Priority Habitat           |
+	+----------------------------------------------------------+----------------------------+
+	| Not present but close to definition                      | Potential Priority Habitat |
+	+----------------------------------------------------------+----------------------------+
+	| Previously present, but may no longer exist              | Potential Priority Habitat |
+	+----------------------------------------------------------+----------------------------+
 
-
-.. note::
-	The Determination Quality 'Not present but close to definition' is only applicable for 'Potential Priority Habitats' and is the only Determination Quality available for 'Potential Priority Habitats'.
 
 
 .. _interpretation_quality:
@@ -164,6 +165,10 @@ Split features will perform two types of split depending upon the filter active 
 .. note::
 	If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and **Get Map Selection** is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will **automatically** perform a physical split before displaying the attributes.
 
+.. |selectonmap| image:: ../icons/SelectOnMap.png
+	:height: 16px
+	:width: 16px
+
 .. index::
 	single: Split; Logical
 
@@ -184,7 +189,7 @@ To display all the features in the INCID of a given feature:
 		The selected features must all belong to the same INCID.
 
 * Return to the HLU main window and click :guilabel:`Get Map Selection`.
-* Click :guilabel:`Select Current INCID on Map`. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figLSFD`.
+* Click |selectonmap| :guilabel:`Select Current INCID on Map`. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figLSFD`.
 
 .. _figLSFD:
 
