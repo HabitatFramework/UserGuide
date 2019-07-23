@@ -182,7 +182,7 @@ html_last_updated_fmt = '%d %b %Y'
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'HLUTool-UserGuidedoc'
+htmlhelp_basename = 'HLUGISTool-UserGuidedoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -202,7 +202,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'HLUTool-UserGuide.tex', u'HLU Tool - User Guide',
+  ('index', 'HLUGISTool-UserGuide.tex', u'HLU Tool - User Guide',
    u'Andy Foy', 'manual'),
 ]
 
@@ -232,7 +232,7 @@ latex_show_urls = False
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'HLUTool-UserGuide', u'HLU Tool - User Guide',
+    ('index', 'HLUGISTool-UserGuide', u'HLU Tool - User Guide',
      [u'Andy Foy'], 1)
 ]
 
