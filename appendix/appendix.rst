@@ -46,18 +46,18 @@ It is essential that the following guidelines are followed to ensure that the to
 What Happened?
 ==============
 
-* ArcGIS generates a 'hard error' when the HLU GIS Tool is used.
+* ArcGIS generates a 'hard error' when the HLU Tool is used.
 
 	* Solution 1:	The HLU ArcMap extension has not been enabled. Close and relaunch the tool, then enable the extension in ArcMap before using the tool.
 	* Solution 2: 	ArcGIS has been closed while the tool was running. Close and relaunch the tool.
 
-* The HLU GIS Tool stops responding to GIS requests.
+* The HLU Tool stops responding to GIS requests.
 
 	* Solution 1: The HLU GIS layer is no longer active in the map or MapInfo has been closed while the tool was running. Close and relaunch the tool.
 
-* The HLU GIS Tool communicates with the wrong instance of the GIS software.
+* The HLU Tool communicates with the wrong instance of the GIS software.
 
-	* Close all GIS instances except the one associated with the HLU GIS tool. To avoid this issue, ensure all instances of ArcGIS or MapInfo are closed before launching the tool and do not open any additional instances whilst the tool is running. 
+	* Close all GIS instances except the one associated with the HLU Tool. To avoid this issue, ensure all instances of ArcGIS or MapInfo are closed before launching the tool and do not open any additional instances whilst the tool is running. 
 
 * The Bulk Update tool errors and fails to create history if the bulk update is applied to database records which do not have corresponding polygons in the HLU layer. 
 
@@ -71,7 +71,11 @@ What Happened?
 GNU Free Documentation License
 ==============================
 
-::
+.. raw:: latex
+
+    `www.gnu.org/licenses/fdl-1.3.en.html <https://www.gnu.org/licenses/fdl-1.3.en.html>_
+
+.. only:: html
 
                     GNU Free Documentation License
                      Version 1.3, 3 November 2008

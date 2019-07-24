@@ -1,3 +1,77 @@
+.. |copy| image:: ../icons/EditCopy.png
+	:height: 16px
+	:width: 16px
+
+.. |export| image:: ../icons/FileExport.png
+	:height: 16px
+	:width: 16px
+
+.. |exit| image:: ../icons/FileExit.png
+	:height: 16px
+	:width: 16px
+
+.. |paste| image:: ../icons/EditPaste.png
+	:height: 16px
+	:width: 16px
+
+.. |winmaximise| image:: ../icons/GisWinMaximise.png
+	:height: 16px
+	:width: 16px
+
+.. |winsidebyside| image:: ../icons/GisWinSideBySide.png
+	:height: 16px
+	:width: 16px
+
+.. |zoom| image:: ../icons/ZoomSelection.png
+	:height: 16px
+	:width: 16px
+
+.. |filterbyattr| image:: ../icons/FilterByAttributes.png
+	:height: 16px
+	:width: 16px
+
+.. |selectonmap| image:: ../icons/SelectOnMap.png
+	:height: 16px
+	:width: 16px
+
+.. |selectallonmap| image:: ../icons/SelectAllOnMap.png
+	:height: 16px
+	:width: 16px
+
+.. |clearfilter| image:: ../icons/ClearFilter.png
+	:height: 16px
+	:width: 16px
+
+.. |getmapselection| image:: ../icons/GetMapSelection.png
+	:height: 16px
+	:width: 16px
+
+.. |logicalsplit| image:: ../icons/LogicalSplit.png
+	:height: 16px
+	:width: 16px
+
+.. |logicalmerge| image:: ../icons/LogicalMerge.png
+	:height: 16px
+	:width: 16px
+
+.. |physicalsplit| image:: ../icons/PhysicalSplit.png
+	:height: 16px
+	:width: 16px
+
+.. |physicalmerge| image:: ../icons/PhysicalMerge.png
+	:height: 16px
+	:width: 16px
+
+.. |options| image:: ../icons/Options.png
+	:height: 16px
+	:width: 16px
+
+.. |switch| image:: ../icons/SwitchGISLayer.png
+	:height: 16px
+	:width: 16px
+
+
+
 .. index::
 	single: Menus
 
@@ -22,10 +96,6 @@ The following sections summarise the menu functionality and provide some guideli
 File Menu
 =========
 
-.. |export| image:: ../icons/FileExport.png
-	:height: 16px
-	:width: 16px
-
 |export| Export
 ---------------
 
@@ -35,14 +105,10 @@ Allows users to export data from the HLU database to a GIS layer using a pre-def
 .. seealso::
 	See :ref:`export_window` for more information.
 
-.. |exit| image:: ../icons/FileExit.png
-	:height: 16px
-	:width: 16px
-
 |exit| Exit
 -----------
 
-Exits the HLU GIS tool and allows users to decide whether or not to close the associated GIS window.
+Exits the HLU Tool and allows users to decide whether or not to close the associated GIS window.
 
 .. raw:: latex
 
@@ -58,10 +124,6 @@ Edit Menu
 
 When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details) and the spatial data must be editable in the GIS application.
 
-.. |copy| image:: ../icons/EditCopy.png
-	:height: 16px
-	:width: 16px
-
 |copy| Copy
 -----------
 
@@ -76,10 +138,6 @@ Copies selected attributes so they can be applied to these fields in another rec
 	Checkboxes ticked to copy data
 
 Tick the checkboxes next to the fields to be copied, as shown in the figure :ref:`figCC`, then click :guilabel:`Copy`.
-
-.. |paste| image:: ../icons/EditPaste.png
-	:height: 16px
-	:width: 16px
 
 |paste| Paste
 -------------
@@ -112,18 +170,10 @@ Allows users to update the attributes for multiple selected database records (IN
 View Menu
 =========
 
-.. |winmaximise| image:: ../icons/GisWinMaximise.png
-	:height: 16px
-	:width: 16px
-
 |winmaximise| Maximise GIS window
 ---------------------------------
 
 Maximises the ArcGIS or MapInfo window and sets it as the active window.
-
-.. |winsidebyside| image:: ../icons/GisWinSideBySide.png
-	:height: 16px
-	:width: 16px
 
 |winsidebyside| Windows side by side
 ------------------------------------
@@ -148,10 +198,6 @@ Switch to GIS window
 
 Sets ArcGIS or MapInfo as the active window but does not alter its size.
 
-.. |zoom| image:: ../icons/ZoomSelection.png
-	:height: 16px
-	:width: 16px
-
 |zoom| Zoom to selection
 ---------------------------
 
@@ -173,10 +219,6 @@ Zooms to the currently selected features in the active GIS layer.
 Select Menu
 ===========
 
-.. |filterbyattr| image:: ../icons/FilterByAttributes.png
-	:height: 16px
-	:width: 16px
-
 |filterbyattr| Filter by Attributes
 -----------------------------------
 
@@ -186,18 +228,10 @@ Allows users to filter the database records based upon non-spatial or complex cr
 .. seealso::
 	See :ref:`query_builder_window` and `advanced_query_builder_window` for more information.
 
-.. |selectonmap| image:: ../icons/SelectOnMap.png
-	:height: 16px
-	:width: 16px
-
 |selectonmap| Select Current INCID on Map
 -----------------------------------------
 
 Selects **all** the GIS features associated only with the **current** INCID record in the GIS layer.
-
-.. |selectallonmap| image:: ../icons/SelectAllOnMap.png
-	:height: 16px
-	:width: 16px
 
 |selectallonmap| Select All Filtered INCIDs on Map
 --------------------------------------------------
@@ -208,18 +242,10 @@ Selects **all** the GIS features associated with **all** the currently filtered 
 .. caution::
 	This process may take a long time depending upon the number of currently filtered INCID records, the GIS layer size and their geographical distribution.
 
-.. |clearfilter| image:: ../icons/ClearFilter.png
-	:height: 16px
-	:width: 16px
-
 |clearfilter| Clear Filter
 --------------------------
 
 Removes the current filter so that all database records can be viewed using the record selectors.
-
-.. |getmapselection| image:: ../icons/GetMapSelection.png
-	:height: 16px
-	:width: 16px
 
 |getmapselection| Get Map Selection
 -----------------------------------
@@ -245,10 +271,6 @@ Split/Merge Menu
 .. note::
 	All options in this menu are disabled until the database records have been filtered and a process and reason has been selected from the 'Process' and 'Reason' drop-down lists in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
 
-.. |logicalsplit| image:: ../icons/LogicalSplit.png
-	:height: 16px
-	:width: 16px
-
 |logicalsplit| Logical Split
 ----------------------------
 
@@ -256,10 +278,6 @@ Splits features from the same current INCID into a new INCID. Logical splits are
 
 .. seealso::
 	See :ref:`logical_split`  for more information on this action.
-
-.. |logicalmerge| image:: ../icons/LogicalMerge.png
-	:height: 16px
-	:width: 16px
 
 |logicalmerge| Logical Merge
 ----------------------------
@@ -269,10 +287,6 @@ Combines two or more features selected in GIS into the INCID of one of the selec
 .. seealso::
 	See :ref:`logical_merge`  for more information on this action.
 
-.. |physicalsplit| image:: ../icons/PhysicalSplit.png
-	:height: 16px
-	:width: 16px
-
 |physicalsplit| Physical Split
 ------------------------------
 
@@ -280,10 +294,6 @@ Sub-divides a single feature, that has already been split in the GIS layer, into
 
 .. seealso::
 	See :ref:`physical_split`  for more information on this action.
-
-.. |physicalmerge| image:: ../icons/PhysicalMerge.png
-	:height: 16px
-	:width: 16px
 
 |physicalmerge| Physical Merge
 ------------------------------
@@ -306,10 +316,6 @@ Combines two or more fragments of a single TOID, that are also associated with t
 Tools Menu
 ==========
 
-.. |options| image:: ../icons/Options.png
-	:height: 16px
-	:width: 16px
-
 |options| Options
 -----------------
 
@@ -319,10 +325,6 @@ Allows users to alter some aspects of the HLU Tool configuration specific to the
 .. seealso::
 	See :ref:`options_window`  for more information.
 
-
-.. |switch| image:: ../icons/SwitchGISLayer.png
-	:height: 16px
-	:width: 16px
 
 |switch| Switch GIS Layer
 -------------------------

@@ -13,7 +13,7 @@ Interface
 Main Window
 ===========
 
-Once the HLU GIS Tool has been configured, the tool will start the associated GIS, then the main window will appear as shown in the figure :ref:`figUIMW`.
+Once the HLU Tool has been configured, the tool will start the associated GIS, then the main window will appear as shown in the figure :ref:`figUIMW`.
 
 .. _figUIMW:
 
@@ -24,7 +24,7 @@ Once the HLU GIS Tool has been configured, the tool will start the associated GI
 	HLU Tool Main Window
 
 
-Records can be viewed or updated through the main window of the HLU GIS Tool. Missing or invalid fields are highlighted in red and the relevant tab is also highlighted. The 'Apply' button will be active when all required fields have been completed and are valid on all tabs.
+Records can be viewed or updated through the main window of the HLU Tool. Missing or invalid fields are highlighted in red and the relevant tab is also highlighted. The 'Apply' button will be active when all required fields have been completed and are valid on all tabs.
 
 The following sections summarise the details available for each record.
 
@@ -395,7 +395,7 @@ Preferred GIS Application
 		The tool must be closed and restarted for this change to take effect.
 
 Map Document/Workspace
-	Sets the default map document or workspace opened by the HLU GIS Tool. As this field cannot be edited directly, users must click on the :guilabel:`…` button and browse to the new map document or workspace. 
+	Sets the default map document or workspace opened by the HLU Tool. As this field cannot be edited directly, users must click on the :guilabel:`…` button and browse to the new map document or workspace. 
 
 	.. note::
 		If the 'Preferred GIS' option is altered, this field must also be updated.

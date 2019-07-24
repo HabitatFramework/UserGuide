@@ -10,7 +10,7 @@ Recommended User Knowledge
 Users
 -----
 
-This user guide assumes that users of the HLU GIS Tool have:
+This user guide assumes that users of the HLU Tool have:
 
 * General IT experience including use of Microsoft Windows.
 * Experience in the use of a relevant GIS software (currently ArcGIS or MapInfo), including selecting, querying and editing features and attributes.
@@ -74,7 +74,7 @@ Related community links:
 * Users : `khub.net/group/association-of-local-environmental-records-centres <http://forum.lrcs.org.uk/viewforum.php?id=24>`_ - Announcements, bug reports, user Q&A and feature discussions.
 * Administrators : `github.com/HabitatFramework/HLUTool/releases <https://github.com/HabitatFramework/HLUTool/releases>`_ - Release notes and installers for ArcGIS and MapInfo systems.
 * Developers : `github.com/HabitatFramework/HLUTool <https://github.com/HabitatFramework/HLUTool>`_ - Source code for the HLU Tool.
-* Issues : `<github.com/HabitatFramework/HLUTool/issues https://github.com/HabitatFramework/HLUTool/issues>`_ - Details of known issues and existing change requests.
+* Issues : `github.com/HabitatFramework/HLUTool/issues <https://github.com/HabitatFramework/HLUTool/issues>`_ - Details of known issues and existing change requests.
 
 
 .. index::

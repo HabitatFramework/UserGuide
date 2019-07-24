@@ -1,3 +1,32 @@
+.. |selectonmap| image:: ../icons/SelectOnMap.png
+	:height: 16px
+	:width: 16px
+
+.. |logicalsplit| image:: ../icons/LogicalSplit.png
+	:height: 16px
+	:width: 16px
+
+.. |logicalmerge| image:: ../icons/LogicalMerge.png
+	:height: 16px
+	:width: 16px
+
+.. |getmapselection| image:: ../icons/GetMapSelection.png
+	:height: 16px
+	:width: 16px
+
+.. |physicalsplit| image:: ../icons/PhysicalSplit.png
+	:height: 16px
+	:width: 16px
+
+.. |physicalmerge| image:: ../icons/PhysicalMerge.png
+	:height: 16px
+	:width: 16px
+
+.. |apply| image:: ../icons/Apply.png
+	:height: 23px
+	:width: 58px
+
+
 .. index::
 	single: Key Concepts
 
@@ -17,10 +46,12 @@ Data Components
 
 Due to the number and complexity of data attributes and the need to minimise data duplication and reduce data volumes the spatial data and attribute data are separated into separate components. The HLU Tool provides an interface that links the spatial and attribute data and presents them to the user as a single entity.
 
-**Spatial Data**
+Spatial Data
+------------
 The spatial data is stored in one or more GIS layers together with a minimal set of attributes that uniquely identifies and summarises each spatial feature. Separating the spatial data from the attribute data reduces the number of attributes required for the spatial layer which improves performance in the GIS application.
 
-**Attribute Data**
+Attribute Data
+--------------
 The attribute data is stored in a relational database in a 'normalised' relational structure (i.e. groups of related attributes are divided into smaller, separate tables and relationships are defined between the tables). A normalised relational database enables the attributes to be retrieved and maintained in a very logical, and universal, way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
 
@@ -97,9 +128,9 @@ Determination Quality
 
 Every priority habitat and potential priority habitat must be assigned a determination quality. This categorises the accuracy with which the priority habitat has been determined and can be very useful when there is not a direct translation between the IHS habitat or multiplex codes and the priority habitat, or when the original survey source(s) are not as spatially accurate as the OS MasterMap features in the framework and hence there is some uncertainty of the exact position of the priority habitat.
 
-.. tabularcolumns:: |L|
+.. tabularcolumns:: |L|L|
 
-.. table:: Determination Quality values
+.. table:: Determination Quality values and usage
 
 	+----------------------------------------------------------+----------------------------+
 	|                  Determination Quality                   |         Usage              |
@@ -165,9 +196,9 @@ Split features will perform two types of split depending upon the filter active 
 .. note::
 	If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and **Get Map Selection** is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will **automatically** perform a physical split before displaying the attributes.
 
-.. |selectonmap| image:: ../icons/SelectOnMap.png
-	:height: 16px
-	:width: 16px
+.. raw:: latex
+
+	\newpage
 
 .. index::
 	single: Split; Logical
@@ -181,14 +212,13 @@ Logical split is used to create a new INCID in the database based upon a subset 
 
 For example, a group of adjacent permanent pasture features, each represented by a separate OS MasterMap feature, may be 'logically' grouped by being assigned to the same INCID because they share a common set of IHS codes, sources and other attributes. However, it may be discovered that one or more of the features are actually being managed differently to the remaining features. By logically splitting those features from the original INCID to form a new INCID those features can then be assigned a different IHS management code.
 
+	.. caution::
+		The selected features must all belong to the same INCID.
+
 To display all the features in the INCID of a given feature:
 
 * Select the feature of interest in the GIS layer.
-
-	.. note::
-		The selected features must all belong to the same INCID.
-
-* Return to the HLU main window and click :guilabel:`Get Map Selection`.
+* Return to the HLU main window and click |getmapselection| :guilabel:`Get Map Selection`.
 * Click |selectonmap| :guilabel:`Select Current INCID on Map`. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figLSFD`.
 
 .. _figLSFD:
@@ -202,9 +232,8 @@ To display all the features in the INCID of a given feature:
 To perform a logical split:
 
 * Select the subset of features to be split in the GIS layer as shown in the **right** part of the figure :ref:`figLSFD`.
-* Return to the HLU main window and click :guilabel:`Get Map Selection`.
-* Select one of the options in the 'Process' list.
-* Click :guilabel:`Split Features`. A new INCID will be created and displayed as the current record.
+* Return to the HLU Tool window and click |getmapselection| :guilabel:`Get Map Selection`.
+* Click |logicalsplit| :guilabel:`Logical Split`. A new INCID will be created and displayed as the current record.
 
 
 .. raw:: latex
@@ -249,7 +278,7 @@ To perform a physical split in ArGIS:
 	.. tip::
 		It is not necessary to **Save Edits** after splitting the feature in GIS because the changes will be saved automatically once the split has been completed with the tool.
 
-* The feature will be split but still selected as shown in the figure :ref:`figArcSFD`. Return to the HLU GIS Tool and click :guilabel:`Get Map Selection`.
+* The feature will be split but still selected as shown in the figure :ref:`figArcSFD`. Return to the HLU Tool and click |getmapselection| :guilabel:`Get Map Selection`.
 
 .. _figArcSFD:
 
@@ -258,8 +287,7 @@ To perform a physical split in ArGIS:
 
 	Split Features (ArcGIS)
 
-* Select one of the options in the 'Process' list.
-* Click :guilabel:`Split Features`. The record will be updated and details added to the History tab for the INCID.
+* Click |physicalsplit| :guilabel:`Physical Split`. The record will be updated and details added to the History tab for the INCID.
 
 
 MapInfo
@@ -284,7 +312,7 @@ To perform a physical split in MapInfo:
 
 	Data Disaggregation Dialog (MapInfo)
 
-* The feature will be split but still selected as shown in the figure :ref:`figMISF`. Return to the HLU GIS Tool and click :guilabel:`Get Map Selection`.
+* The feature will be split but still selected as shown in the figure :ref:`figMISF`. Return to the HLU Tool and click |getmapselection| :guilabel:`Get Map Selection`.
 
 .. _figMISF:
 
@@ -293,8 +321,7 @@ To perform a physical split in MapInfo:
 
 	Split Features (MapInfo)
 
-* Select one of the options in the 'Process' list.
-* Click :guilabel:`Split Features`. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
+* Click |physicalsplit| :guilabel:`Physical Split`. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
 
 
 .. _merge:
@@ -317,9 +344,9 @@ Logical merge combines all the features selected in the GIS into a single INCID 
 To perform a logical merge:
 
 * Select the features to be merged and a feature from the INCID they are to be merged with in the GIS layer.
-* Return to the HLU main window and click :guilabel:`Get Map Selection`.
+* Return to the HLU main window and click |getmapselection| :guilabel:`Get Map Selection`.
 * Select one of the options in the 'Process' list.
-* Click :guilabel:`Merge Features`. A list of INCIDs will be displayed as shown in the figure :ref:`figLMD`.
+* Click |logicalmerge| :guilabel:`Logical Merge`. A list of INCIDs will be displayed as shown in the figure :ref:`figLMD`.
 
 .. _figLMD:
 
@@ -331,6 +358,10 @@ To perform a logical merge:
 * Click on the grey box to the left of the row to select an INCID. The associated feature will blink in the GIS window. Click :guilabel:`OK`.
 * The selected features will be assigned to the selected INCID and details added to the History tab.
 * If the merged features are fragments of the same TOID the user will be given the option to then perform a physical merge.
+
+.. raw:: latex
+
+	\newpage
 
 .. index::
 	single: Merge; Physical
@@ -345,9 +376,9 @@ Physical merge combines fragments of a single TOID into a single, larger, featur
 To perform a physical merge:
 
 * Select two or more fragments from one TOID in the GIS layer as shown in the **left** part of the figure :ref:`figPMD`.
-* Return to the HLU main window and click :guilabel:`Get Map Selection`.
+* Return to the HLU main window and click |getmapselection| :guilabel:`Get Map Selection`.
 * Select one of the options in the 'Process' list.
-* Click :guilabel:`Merge Features`. The features will be combined in the GIS layer as shown in the **right** part of the figure :ref:`figPMD`.
+* Click |physicalmerge| :guilabel:`Physical Merge`. The features will be combined in the GIS layer as shown in the **right** part of the figure :ref:`figPMD`.
 
 .. _figPMD:
 
@@ -380,12 +411,12 @@ To update the attributes of an INCID:
 
 * Ensure that the active HLU GIS layer is editable (for ArcGIS users click :guilabel:`Editor` on the Editor toolbar, select :guilabel:`Start Editing` and choose the active HLU layer, for MapInfo users set the active HLU layer as 'Editable').
 * Select the feature or features to be updated.
-* Click :guilabel:`Get Map Selection`.
+* Click |getmapselection| :guilabel:`Get Map Selection`.
 * Make the required changes to the INCID attributes, ensuring that any fields highlighted as missing or in error are addressed.
-* Click :guilabel:`Apply`. The INCID will be updated and details will be added to the History tab.
+* Click |apply| :guilabel:`Apply`. The INCID will be updated and details will be added to the History tab.
 
 
-..note::
+.. note::
 	The :guilabel:`Apply` button will only be displayed if:
 		* The user is listed in the lut_user table.
 		* The active GIS layer is in edit mode.
