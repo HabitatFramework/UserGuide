@@ -246,7 +246,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'HLUTool-UserGuide', u'HLU Tool - User Guide',
+  ('index', 'HLUGISTool-UserGuide', u'HLU Tool - User Guide',
    u'Andy Foy', 'HLUTool-UserGuide', 'HLU Tool - User Guide.',
    'Miscellaneous'),
 ]
