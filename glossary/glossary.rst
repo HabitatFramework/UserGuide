@@ -38,7 +38,7 @@ Glossary
 		Integrated Habitat System - a hierarchical integration of existing habitat and land use classifications used in the UK. IHS was devised by the Somerset Environmental Records Centre.
 
 	INCID
-		An **Inc**\ remental **id**\ entifier used as a unique reference to a logical group of one or more features. See :ref:`incid` for more details.
+		An **INC**\ remental **ID**\ entifier used as a unique reference to a logical group of one or more features. See :ref:`incid` for more details.
 
 	Interpretation Comment
 		A free text field to explain or provide additional reasoning behind the priority habitat determination and interpretation.
@@ -71,7 +71,7 @@ Glossary
 		Habitat areas that are close to, but do not currently meet, priority habitat definitions but may do with appropriate management or following habitat restoration work.
 
 	Priority Habitat
-		Habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UHS Post-2010 Biodiversity Framework.
+		Habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UK Post-2010 Biodiversity Framework.
 
 	Process
 		The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current INCID. It may relate to a specific project, an ongoing process or an adhoc update.
@@ -83,10 +83,10 @@ Glossary
 		A dataset, document or reference used as the source of habitat or land use information. Up to three sources can be defined for each INCID.
 
 	Split
-		The tool can perform two types of split, Logical Split or Physical Split, depending upon the filter active in the tool. See :ref:`split` for more details.
+		The tool can perform two types of split, Logical Split or Physical Split, depending upon the features selected. See :ref:`split` for more details.
 
 	TOID
-		A unique *topographical identifier* applied to features in Ordnance Survey's MasterMap product. See :ref:`habitat_framework` for more details.
+		A unique **TO** \pographical **ID**\ entifier applied to features in Ordnance Survey's MasterMap product. See :ref:`habitat_framework` for more details.
 
 	Vague Date
 		A specific date, range of dates or imprecise date that can be specified in a variety of formats (e.g. '23 Mar 1987', 'Mar 1987 - Jun 1987', 'Spring 1987').

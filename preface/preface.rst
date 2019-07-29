@@ -2,7 +2,7 @@
 Preface
 *******
 
-The most up to date version of this documentation can be found in **HTML** and **PDF** form on ReadTheDocs at `readthedocs.org/projects/hlutool-userguide/ <https://readthedocs.org/projects/hlutool-userguide/>`_.
+The most up to date version of this documentation can be found in **HTML** and **PDF** form on ReadTheDocs at `readthedocs.org/projects/hlutool-userguide <https://readthedocs.org/projects/hlutool-userguide/>`_.
 
 Recommended User Knowledge
 ==========================
@@ -43,6 +43,8 @@ This Preface explains a little about the HLU Tool, the community of people who d
 
 :doc:`../interface/interface` \ describes all the user interface windows and components of the HLU Tool.
 
+:doc:`../functions/functions` \ demonstrates how to perform the common functions of the HLU Tool.
+
 :doc:`FAQ <../faq/faq>` \ has a list of commonly asked questions and their answers.
 
 :doc:`../glossary/glossary` \ contains a brief glossary and description of commonly used terms.
@@ -60,7 +62,7 @@ The code for the HLU Tool is 'open source' and is released under `GNU General Pu
 
 This guide is released under `GNU Free Documentation License (FDL) v1.3 <http://www.gnu.org/licenses/fdl.html>`_. Permission is granted to copy, distribute and/or modify this document under the terms of the license.
 
-Please remember, however, that the tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefully received. Enquiries can be made via the Knowledge Hub at `khub.net/group/association-of-local-environmental-records-centres <https://khub.net/group/association-of-local-environmental-records-centres>`_.
+Please remember, however, that the HLU Tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefully received. Enquiries can be made via the Knowledge Hub at `khub.net/group/association-of-local-environmental-records-centres <https://khub.net/group/association-of-local-environmental-records-centres>`_.
 
 
 .. index::
@@ -71,10 +73,17 @@ Useful links
 
 Related community links:
 
-* Users : `khub.net/group/association-of-local-environmental-records-centres <http://forum.lrcs.org.uk/viewforum.php?id=24>`_ - Announcements, bug reports, user Q&A and feature discussions.
-* Administrators : `github.com/HabitatFramework/HLUTool/releases <https://github.com/HabitatFramework/HLUTool/releases>`_ - Release notes and installers for ArcGIS and MapInfo systems.
-* Developers : `github.com/HabitatFramework/HLUTool <https://github.com/HabitatFramework/HLUTool>`_ - Source code for the HLU Tool.
-* Issues : `github.com/HabitatFramework/HLUTool/issues <https://github.com/HabitatFramework/HLUTool/issues>`_ - Details of known issues and existing change requests.
+Users
+	For announcements, bug reports, user Q&A and feature discussions see `khub.net/group/association-of-local-environmental-records-centres/group-forum <https://khub.net/group/association-of-local-environmental-records-centres/group-forum>`_
+
+Administrators
+	For release notes and installers for ArcGIS and MapInfo systems see `github.com/HabitatFramework/HLUTool/releases <https://github.com/HabitatFramework/HLUTool/releases>`_
+
+Developers
+	For the source code for the HLU Tool see `github.com/HabitatFramework/HLUTool <https://github.com/HabitatFramework/HLUTool>`_
+
+Issues
+	For details of any known issues and proposed change requests see `github.com/HabitatFramework/HLUTool/issues <https://github.com/HabitatFramework/HLUTool/issues>`_
 
 
 .. index::

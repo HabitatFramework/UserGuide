@@ -34,6 +34,7 @@ Contents
    concepts/concepts
    menus/menus
    interface/interface
+   functions/functions
    FAQ <faq/faq>
    glossary/glossary
    appendix/appendix

@@ -13,7 +13,7 @@ Interface
 Main Window
 ===========
 
-Once the HLU Tool has been configured, the tool will start the associated GIS, then the main window will appear as shown in the figure :ref:`figUIMW`.
+Once the HLU Tool has been configured, starting the tool will start the associated GIS application, then the main window will appear as shown in the figure :ref:`figUIMW`.
 
 .. _figUIMW:
 
@@ -24,9 +24,59 @@ Once the HLU Tool has been configured, the tool will start the associated GIS, t
 	HLU Tool Main Window
 
 
+.. raw:: latex
+
+	\newpage
+
 Records can be viewed or updated through the main window of the HLU Tool. Missing or invalid fields are highlighted in red and the relevant tab is also highlighted. The 'Apply' button will be active when all required fields have been completed and are valid on all tabs.
 
-The following sections summarise the details available for each record.
+The following sections summarise the different sections of the main window.
+
+Title Bar
+---------
+
+The main window title bar displays the following information:
+
+* The tool title, i.e. **HLU Tool**
+* The active GIS layer, e.g. **HLU_NonUrban_Features**.
+  
+
+.. note::
+
+	 The title bar may also display a number (e.g. **[1]**) representing which Map Window (MapInfo) or Data Frame (ArcGIS) contains the active GIS layer if there are multiple windows/frames in the associated GIS application.
+
+
+.. _figUITB:
+
+.. figure:: figures/UserInterfaceTitleBar.png
+	:align: center
+	:scale: 85
+
+	Main window - Title Bar
+
+
+	.. seealso::
+		See 'Why does the tool title bar show [READ ONLY]?' in :doc:`FAQ <../faq/faq>` for more information.
+
+
+.. _reason_section:
+
+Reason/Process Section
+----------------------
+
+The 'Reason/Process' section contains the 'Reason' and 'Process' fields as shown in the figure :ref:`figUIRPS`. These fields are required values for all update actions (attribute updates, splits, merges and bulk updates) and are recorded in the History table (and displayed on the History tab) to indicate **why** the record was updated. These fields are **sticky**, i.e. the selected reason and process will be retained and used for all subsequent actions in the current session until they are altered by the user.
+
+.. note::
+	If the tool is in **read-only** mode the 'Reason/Process Section' will not be displayed.
+
+.. _figUIRPS:
+
+.. figure:: figures/UserInterfaceReasonProcessSection.png
+	:align: center
+	:scale: 85
+
+	Main window - Reason/Process Section
+
 
 .. _incid_section:
 
@@ -39,7 +89,7 @@ The 'INCID' section displays summary information for each INCID in the database,
 	The displayed INCID value can be copied to the clipboard by selecting the value and then either right-clicking in the field and selecting **Copy** or pressing :kbd:`Ctrl-C`.
 
 .. note::
-	If the created or modified users are not configured, the 'By' fields will display their Windows login instead of their user name. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+	If the created or modified users are not configured, the 'By' fields will display their Windows login instead of their user name. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 .. _figUIIS:
 
@@ -48,57 +98,6 @@ The 'INCID' section displays summary information for each INCID in the database,
 	:scale: 85
 
 	Main window - INCID Section
-
-.. _reason_section:
-
-Reason/Process Section
-----------------------
-
-The 'Reason/Process' section contains the 'Reason' and 'Process' fields as shown in the figure :ref:`figUIRPS`. These fields are required values for all update actions (splits, merges and attribute updates) and are recorded in the History table (and displayed on the History tab) to indicate **why** the record was updated. These fields are **sticky**, i.e. the selected reason and process will be retained and used for all subsequent update actions in the current session unless/until they are altered by the user.
-
-.. _figUIRPS:
-
-.. figure:: figures/UserInterfaceReasonProcessSection.png
-	:align: center
-	:scale: 85
-
-	Main window - Reason/Process Section
-
-..note::
-	If the tool is in **read-only** mode the 'Reason/Process Section' will not be displayed.
-
-	..seealso::
-		See 'Why does the tool title bar show [READ ONLY]?' in :doc:`FAQ <../faq/faq>` for more information.
-
-
-.. _incid_status_section:
-
-INCID Status Section
---------------------
-
-The 'INCID Status' section contains record selectors to enable users to move back and forward between INCID records and displays the record position and the total number of records in the active filter (or the total number of INCID records in the database if there is no active filter). It also displays the number of TOIDs and TOID fragments selected in GIS for the current INCID when the filter was applied as well as the total number of TOIDs and TOID fragments related to the current INCID in the database.
-
-For example, figure :ref:`figUIISS` indicates that the interface is currently displaying record 4 of the 6 records in the active filter, and also shows that 2 TOIDs and 2 fragments from those TOIDs were selected out of a total of 3 TOIDs with 3 fragments associated with the current INCID. Hence, only a **subset** of the TOIDs or fragments associated with the current INCID are selected in GIS.
-
-.. note::
-	All INCIDs in the active filter will always be retrieved in INCID order, so moving backwards or forwards through the records using the record selector will always select the previous or next available INCID from those in the filter.
-
-.. _figUIISS:
-
-.. figure:: figures/UserInterfaceIncidStatusSection.png
-	:align: center
-	:scale: 85
-
-	Main window - Incid Status Section
-
-This section also contains the :guilabel:`Apply` button which is used to apply any attribute changes to the current INCID. See :ref:`attribute_updates` for more details.
-
-..note::
-	The :guilabel:`Apply` button will only be displayed if:
-		* The user is listed in the lut_user table.
-		* The active GIS layer is in edit mode.
-		* The user has made one or more changes to the current INCID.
-		* There are no fields in error.
 
 
 .. raw:: latex
@@ -148,7 +147,7 @@ IHS Summary
 Legacy Habitat
 	Drop-down list allowing users to view and maintain a legacy habitat definition (if required). The contents of the list are based on entries in the lut_legacy_habitat table.
 
-.. [6] The habitat 'Class' and 'Type' list contents are based only on entries in the relevant lookup tables where the 'is_local' flag is set to True (-1). See 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to update lookup table entries.
+.. [6] The habitat 'Class' and 'Type' list contents are based only on entries in the relevant lookup tables where the 'is_local' flag is set to True (-1). See 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to update lookup table entries.
 
 .. raw:: latex
 
@@ -173,7 +172,7 @@ Priority Habitats
 	Automatically added based upon the Habitat and multiplex codes selected on the :ref:`habitats_tab`. For new priority habitats, 'Determination Quality' and 'Interpretation Quality' must be entered.
 
 Potential Priority Habitats
-	Allows users to define other priority habitats that may also be present in the future given appropriate management or restoration. An INCID may have a potential priority habitat even if no priority habitats are present.
+	Allows users to define other priority habitats that may also be present in the future given appropriate management or restoration. An INCID may have one or more potential priority habitats even if no priority habitats are present.
 
 General Comments
 	A free-text field which allows users to enter any additional comments up to 254 characters.
@@ -213,16 +212,16 @@ Click on :guilabel:`Sources` to display the Sources tab as shown in the figure :
 	Main window - Sources Tab
 
 Name
-	Drop-down list containing a list of data sources. For details on adding new sources see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+	Drop-down list containing a list of data sources. For details on adding new sources see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 	.. note::
 		The following source fields will not be unlocked until a source name has been selected.
 
 Vague Date
-	Allows users to enter the date of the dataset. This can be either a precise date e.g. 01/04/2010 or a vague date e.g. Spring 2010-Summer 2010, 1980-2010 or 'Unknown'. For details on configuring vague dates see :ref:`vague_date_options`.
+	Allows users to enter the date of the dataset. This can be either a precise date e.g. 01/04/2010 or a vague date e.g. Spring 2010-Summer 2010, 1980-2010 or 'Unknown'. For details on configuring vague dates see :ref:`options_dates`.
 
 	.. note::
-		If a default date for the selected data source has been defined in the lut_sources table, the 'Vague Date' field will be set to the default date. If a default date has not been defined, then the 'Vague Date' field must be updated manually. See 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to define default source dates.
+		If a default date for the selected data source has been defined in the lut_sources table, the 'Vague Date' field will be set to the default date. If a default date has not been defined, then the 'Vague Date' field must be updated manually. See 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to define default source dates.
 
 Habitat Class
 	Drop-down list defining the habitat classification used for this data source. If no habitat classification is used, select 'Not Applicable'.
@@ -252,7 +251,7 @@ Habitat Imp.
 History Tab
 -----------
 
-The History tab displays a list of modifications made to the current INCID and the associated TOIDs. Each entry details what modification was made, when and by whom as shown in Figure 20. Entries are shown in **descending** date and time order with the most recent changes at the top. The maximum number of entries to appear in the history tab can be configured in the Options (see :ref:`gis_options` for more details).
+Click on :guilabel:`History` to display the History tab as shown in the figure :ref:`figUIHT`. The History tab displays a list of previous modifications made to the current INCID and the associated TOIDs. Each entry details what modifications were made, when and by whom. Entries are shown in **descending** date and time order with the most recent changes at the top. The maximum number of entries to appear in the history tab can be configured in the Options (see :ref:`options_gis` for more details).
 
 .. _figUIHT:
 
@@ -263,23 +262,64 @@ The History tab displays a list of modifications made to the current INCID and t
 	Main window - History Tab
 
 
+
+.. _incid_status_section:
+
+INCID Status Section
+--------------------
+
+The 'INCID Status' section contains record selectors to enable users to move back and forward between INCID records and displays the record position and the total number of records in the active filter (or the total number of INCID records in the database if there is no active filter). It also displays the number of TOIDs and TOID fragments selected in GIS for the current INCID when the filter was applied as well as the total number of TOIDs and TOID fragments related to the current INCID in the database.
+
+.. _figUIISS:
+
+.. figure:: figures/UserInterfaceIncidStatusSection.png
+	:align: center
+	:scale: 85
+
+	Main window - Incid Status Section
+
+For example, figure :ref:`figUIISS` indicates that the interface is currently displaying record 4 of the 6 records in the active filter, and also shows that 2 TOIDs and 2 fragments from those TOIDs were selected in the active GIS layer out of a total of 3 TOIDs with 3 fragments associated with the current INCID. Hence, only a **subset** of the TOIDs or fragments associated with the current INCID are selected in GIS.
+
+.. note::
+	All INCIDs in the active filter will always be retrieved in INCID order, so moving backwards or forwards through the records using the record selector will always select the previous or next available INCID from those in the filter.
+
+This section also contains the :guilabel:`Apply` button which is used to apply any attribute changes to the current INCID. See :ref:`attribute_updates` for more details.
+
+.. note::
+	The :guilabel:`Apply` button will only be displayed if:
+		* The user is listed in the lut_user table.
+		* The active GIS layer is in edit mode.
+		* The user has made one or more changes to the current INCID.
+		* There are no fields in error.
+
+
+.. raw:: latex
+
+	\newpage
+
 .. _error_messages:
 
-Error Messages
---------------
+Warning and Error Messages
+--------------------------
 
-Any fields that are in error, either as a result of invalid values in the current database records for the current INCID or as a result of changes made by the user to the field values, will be highlighted with a red border and exclamation mark (as seen in the figure :ref:`figUIEM`). The appropriate tab header for any invalid fields will also be highlighted to help users locate any errors in fields currently hidden on an inactive tab. Hovering over a field in error will display a *tooltip* message indicating the nature of the error.
+Any fields that either have a warning associated with them or are in error will be highlighted
+
+Warnings
+	Warnings will be highlighted with an orange border and exclamation mark in a triangle (as seen in the figure :ref:`figUIWEM`). Hovering over a field with a warning will display a *tooltip* message indicating the nature of the warning.
+
+Errors
+	Errors will be highlighted with a red border and exclamation mark in a circle (as seen in the figure :ref:`figUIWEM`). The appropriate tab header for any invalid fields will also be highlighted to help users locate any errors in fields currently hidden on an inactive tab. Hovering over a field with an error will display a *tooltip* message indicating the nature of the error.
 
 .. note::
 	Whilst **any** fields are in error the :guilabel:`Apply` button will not appear.
 
-.. _figUIEM:
+.. _figUIWEM:
 
 .. figure:: figures/UserInterfaceErrorMessages.png
 	:align: center
 	:scale: 85
 
-	Error Messages
+	Warning and Error Messages
 
 
 .. raw:: latex
@@ -289,36 +329,92 @@ Any fields that are in error, either as a result of invalid values in the curren
 .. index::
 	single: Bulk Updates
 
-.. _bulk_update_window:
+.. _bulk_update_mode:
 
-Bulk Updates
-============
+Bulk Update Mode
+================
 
-Allows users to update the attributes for multiple selected database records simultaneously.
+The main window will transform into the bulk update window when the bulk update mode is started (see :ref:`bulk_update` for more details). The window appears the same as the main window except for the Bulk Update section and the INCID Status section.
 
 .. note::
-	This feature is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
-.. _figUIBU:
+	* Bulk update mode can only be started once a filter is applied to the INCID records.
+	* This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
-.. figure:: figures/UserInterfaceBulkUpdate.png
+Bulk Update Section
+-------------------
+
+The 'Bulk Update' section displays summary information for all of the INCIDs and GIS features currently filtered (as shown in the figure :ref:`figUIIS`). The **Database** counts refer to the total number of INCIDs, TOIDs and Fragments found in the database relating to the current filter. The **Map** counts refer to the total number of INCIDs, TOIDs and Fragments currently selected in the active GIS layer.
+
+
+.. _figUIBUS:
+
+.. figure:: figures/UserInterfaceBulkUpdateSection.png
 	:align: center
 	:scale: 70
 
-	Main window - Bulk Update Mode
+	Main window - Bulk Update Section
 
-To perform a bulk update:
 
-* Filter the database records using 'Select by attributes' or select polygons in the GIS layer and click :guilabel:`Get Map Selection`. For details on filtering records see :ref:`query_builder_window`.
+Database INCIDs
+	Displays the number of INCIDs in the database for the active filter that the bulk update will be applied to.
 
-* Click *:guilabel:`Edit... --> Bulk Update` to enter bulk update mode. An empty form is displayed as shown in the figure :ref:`figUIBU`.
+Map INCIDs
+	Displays the number of INCIDs for features selected in the active GIS layer that the bulk update will be applied to.
 
-* The 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments affected by the update and allows users to select whether to create a History record for this process.
+Database TOIDs
+	Displays the number of TOIDs in the database for the active filter that the bulk update will be applied to.
 
-* Enter the updated details in the Habitats, Details, and Sources tabs, then click :guilabel:`Apply`. These fields will be updated for all the selected INCIDs.
+Map TOIDs
+	Displays the number of TOIDs for features selected in the active GIS layer that the bulk update will be applied to.
 
-.. caution::
-	If 'Delete Empty Bulk Update Rows' is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. See :ref:`database_options` for more details.
+Database Fragments
+	Displays the number of fragments in the database for the active filter.
+
+Map Fragments
+	Displays the number of fragments/features selected in the active GIS layer that the bulk update will be applied to.
+
+.. note::
+	Any discrepancies between the **Database** and **Map** counts will be highlighted with warning messages. This indicates that not all INCIDs, TOIDs or Fragments in the database are held within the active GIS layer.
+
+INCID Status Section
+--------------------
+
+The Bulk Update 'INCID Status' section shows the total number of INCIDs, TOIDs and Fragments in the active filter.
+
+.. _figUIBUS:
+
+.. figure:: figures/UserInterfaceBulkUpdateStatusSection.png
+	:align: center
+	:scale: 70
+
+	Main window - Bulk Update INCID Status Section
+
+For example, figure :ref:`figUIBUS` indicates that the active filter currently contains 24 INCIDs, 58 TOIDs and 58 fragments from those TOIDs.
+
+
+.. raw:: latex
+
+	\newpage
+
+.. index::
+	single: Bulk Updates; Confirmation
+	single: Windows; Bulk Update Confirmation
+
+.. _bulk_update_window:
+
+Bulk Update Window
+==================
+
+Before a bulk update is applied a confirmation window will appear with a number of options relating to the update as shown in the figure :ref:`figUIBUC`).
+
+.. _figUIBUC:
+
+.. figure:: figures/UserInterfaceBulkUpdateConfirmation.png
+	:align: center
+	:scale: 70
+
+	Bulk Update Confirmation Window
 
 
 .. raw:: latex
@@ -327,13 +423,14 @@ To perform a bulk update:
 
 .. index::
 	single: Windows; Options Window
+	single: Options
 
 .. _options_window:
 
 Options Window
 ==============
 
-Allows users to alter the HLU Tool configuration features specific to their user id. There are five categories of options as shown in the figure :ref:`figOD`.
+Allows users to alter the HLU Tool configuration features specific to their user id. There are seven tabs/categories of options.
 
 .. |options| image:: ../icons/Options.png
 	:height: 16px
@@ -341,52 +438,48 @@ Allows users to alter the HLU Tool configuration features specific to their user
 
 Click |options| or :guilabel:`Tools... --> Options` to open the window.
 
-.. _figOD:
+.. index::
+	single: Options; Database
 
-.. figure:: figures/OptionsDialog.png
-	:align: center
-	:scale: 90
-
-	HLU Options Dialog
-
-.. _database_options:
+.. _options_database:
 
 Database Options
 ----------------
 
+The following options relate to how the HLU Tool interacts with the underlying database.
+
+.. _figOWD:
+
+.. figure:: figures/OptionsWindowDatabase.png
+	:align: center
+	:scale: 90
+
+	HLU Options - Database
+
 Timeout
-	Sets the amount of time the tool will wait for the database to respond. The default value is 15. This value should be increased if an error occurs such as 'The connection to the database timed out'.
+	Sets the amount of time the tool will wait (in seconds) for the database to respond. The default value is 15. This value should be increased if an error occurs such as 'The connection to the database timed out' or if the network and/or database connection is known to be slow.
 
-Page Size
-	Sets how many records are retrieved from the database and stored in memory. The default value is 100. Increasing this value can improve performance when browsing records, however this will increase the amount of RAM required by the application and significant increases in the page size value could cause the tool to stop responding.
+Incid Table Page Size
+	Sets how many rows are retrieved from the database and stored in memory. The default value is 100. Increasing this value can improve performance when browsing records, however this will increase the amount of RAM required by the application and significant increases in the page size value could cause the tool to stop responding.
 
-Display History Rows
-	Sets the number of entries displayed in the 'History' tab of the main window. For more details on the 'History' tab see :ref:`history_tab`.
+.. index::
+	single: Options; GIS
+	single: Options; Export
 
-Delete Empty Bulk Update Rows
-	If this checkbox is ticked the details of child records are removed if the corresponding fields in the bulk update form are not completed. By default this box is unticked.
+.. _options_gis:
 
-	This option affects the following sections of the main window when performing bulk updates:
+GIS/Export Options
+------------------
 
-		* IHS Matrix
-		* IHS Formation
-		* IHS Management
-		* IHS Complex
-		* Priority Habitats
-		* Potential Priority Habitats
-		* Sources
+The following options relate to the GIS application associated with the HLU Tool and the export function.
 
-	.. caution::
+.. _figOWGE:
 
-		If the 'Delete Empty Bulk Update Rows' option is checked and a bulk update record has only 1 source record completed then, for each of the selected records, source 1 will be updated and if the selected record has data entered in sources 2 and 3, it will be deleted.
+.. figure:: figures/OptionsWindowGISExport.png
+	:align: center
+	:scale: 90
 
-.. _gis_options:
-
-GIS Options
------------
-
-History Display Columns
-	Allows users to select which additional columns from the GIS layer are displayed in the History tab for each update. If the checkbox is ticked, the field will be displayed.
+	HLU Options - GIS/Export
 
 Preferred GIS Application
 	Allows users to select whether the tool should use ArcGIS or MapInfo if both applications are installed on their computer.
@@ -409,10 +502,51 @@ Export Default Directory
 		.. note::
 			The default export folder path for ArcGIS users is controlled by ArcGIS and cannot be altered by the HLU Tool.
 
-.. _interface_options:
+.. index::
+	single: Options; History
+
+.. _options_history:
+
+History Options
+---------------
+
+The following options relate to how history records are displayed in the HLU Tool main interface.
+
+.. _figOWH:
+
+.. figure:: figures/OptionsWindowHistory.png
+	:align: center
+	:scale: 90
+
+	HLU Options - History
+
+History Display Columns
+	Allows users to select which additional columns from the GIS layer are displayed in the History tab for each update. If the checkbox for a column is ticked, the column will be displayed.
+
+Display History Rows
+	Sets the number of entries displayed in the 'History' tab of the main window. For more details on the 'History' tab see :ref:`history_tab`.
+
+
+.. index::
+	single: Options; Interface
+
+.. _options_interface:
 
 Interface Options
 -----------------
+
+The following options relate to how the HLU Tool main interface appears and what happens when attribute updates are applied.
+
+.. _figOWI:
+
+.. figure:: figures/OptionsWindowInterface.png
+	:align: center
+	:scale: 90
+
+	HLU Options - Interface
+
+Preferred Habitat Class
+	Allows the user to choose which Habitat Class in the INCID tab (see :ref:`Habitats_tab` for more details) is automatically selected each time the HLU Tool is started.
 
 Action to Take When Updating Subset
 	Allows users to select what action to take if they attempt to apply attribute changes to only a subset of features for an INCID (see :Ref:`attribute_updates` for more details). The available actions are:
@@ -421,50 +555,44 @@ Action to Take When Updating Subset
 		* Split - Always perform a **logical split** before applying the attribute updates.
 		* All - Always apply the attribute update to **all** features belonging to the INCID regardless of which features of the INCID are currently selected.
 
-Preferred Habitat Class
-	Allows the user to choose which Habitat Class in the INCID tab (see :ref:`Habitats_tab` for more details) is automatically selected each time the HLU Tool is started.
-
 Show NVC Codes
 	Allows the user to choose if a list of any potential NVC Codes related to the selected IHS habitat code will be shown.
+
+Show Group Headers
+	Allows the user to choose if section headers in the main user interface will be shown or hidden (to reduce the height of the interface).
 
 Notify After Completing Split/Merge?
 	Enable users to specify if a pop-up message should be displayed following the completion of any of the split or merge operations.
 
+Show OSMM Update Attributes
+	Allows the user to choose when Ordnance Survey MasterMap (OSMM) updates should be shown (see :Ref:`osmm_updates` for more details). The available options are:
 
-.. _sql_query_options:
+		* Never - **Never** show the OSMM Updates section.
+		* When Outstanding - Only show the OSMM Updates section when the update is **outstanding** (the status is 'Proposed' or 'Pending').
+		* Always - **Always** show the OSMM Updates section.
 
-SQL Query Options
------------------
+Reset Pending OSMM Update Status On Manual Update
+	Allows the user to choose if the status of OSMM Updates for the current INCID should be reset to 'Ignored' when an **attribute update** is applied.
 
-Warn Before Applying GIS Selection
-	Allows users to determine if/when a pop-up warning/information message should be displayed prior to selecting features in GIS (e.g. whilst performing a SQL query or in order to select the features for all INCIDs in the active filter).
+.. index::
+	single: Options; Filter
 
-	The message will indicate the expected number of features that will be selected (as shown in the figure :ref:`figGSWD`).
+.. _options_filter:
 
-	.. _figGSWD:
+Filter Options
+--------------
 
-	.. figure:: figures/GISSelectionWarningDialog.png
-		:align: center
+The following options relate to the preferred query builder used to filter INCID records.
 
-		GIS Selection Warning Dialog
+.. _figOWF:
 
+.. figure:: figures/OptionsWindowFilter.png
+	:align: center
+	:scale: 90
 
-	In the event that the SQL query that would be required to select the features in GIS would be too long or complex the message will also warn the user that a temporary join (which may take some time) will need to be performed in GIS (as shown in the figure :ref:`figGSWD2`).
+	HLU Options - Filter
 
-	.. _figGSWD2:
-
-	.. figure:: figures/GISSelectionJoinWarningDialog.png
-		:align: center
-
-		GIS Selection with Join Warning Dialog
-
-	The available options are:
-
-		* Always - Warn/inform the user before **every** GIS select, regardless of the expected number of features to be select or the method of selection to be used. 
-		* Joins - Only warn/inform the user when a temporary **join** will be performed in GIS in order to select the features.
-		* Never - Do not warn/inform the user regardless of the expected number of features to be select or the method of selection to be used.
-
-Use Advanced Query Builder?
+Use Advanced Query Builder
 	Allows the user to choose their preferred SQL query builder interface (see :ref:`query_builder_window` and :ref:`advanced_query_builder_window` for details).
 
 Get Values Count
@@ -473,17 +601,38 @@ Get Values Count
 	.. note::
 		This option is only available if 'Use Advanced Query Builder?' is selected.
 
-Sql Query Default Directory
+Warn Before GIS Select
+	Allows users to determine if/when a pop-up warning/information message should be displayed prior to selecting features in GIS, e.g. when applying a filter (see :ref:`_filter_by_attributes` for details) or when selecting the features for all INCIDs in the active filter. The available options are:
+
+		* Always - Warn/inform the user before **every** GIS select, regardless of the expected number of features to be select or the method of selection to be used. 
+		* Joins - Only warn/inform the user when a temporary **join** will be performed in GIS in order to select the features.
+		* Never - Do not warn/inform the user regardless of the expected number of features to be select or the method of selection to be used.
+
+Default Query Directory
 	Enables users to set a default folder path that will be used when saving or loading queries with the 'Advanced Query Builder' (see :ref:`advanced_query_builder_window` for details). A different path to the default can also be selected during the save and load process.
 
 	.. note::
-		This option is only available if 'Use Advanced Query Builder?' is selected.
+		This option is only available if 'Use Advanced Query Builder' is selected.
 
 
-.. _vague_date_options:
+.. index::
+	single: Options; Dates
 
-Vague Date Season Names
------------------------
+.. _options_dates:
+
+Dates Options
+-------------
+
+The following options relate to the formatting of vague dates used in the sources section of the main interface.
+
+.. _figOWDa:
+
+.. figure:: figures/OptionsWindowDates.png
+	:align: center
+	:scale: 90
+
+	HLU Options - Dates
+
 
 Seasons
 	These fields allow users to define how seasonal dates, such as 'Spring 2009' or 'Winter 2010', are entered so that they can be converted to dates in the HLU database.
@@ -493,6 +642,46 @@ Vague Date Delimiter
 
 	.. note::
 		The default value for the 'Vague Date Delimiter' is a hyphen ( - ). This can be altered to any character, however, it must not be the same delimiter used by the computer to enter precise dates, such as 01/04/2010. The default delimiter used by Windows for English-format dates is a forward slash ( / ).
+
+
+.. index::
+	single: Options; Bulk Update
+
+.. _options_bulk_update:
+
+Bulk Update Options
+-------------------
+
+The following options relate to the **default** values to use when applying bulk updates and OSMM bulk updates (see :ref:`bulk_update` for details). All options can be amended during the bulk update process.
+
+.. _figOWBU:
+
+.. figure:: figures/OptionsWindowBulkUpdate.png
+	:align: center
+	:scale: 90
+
+	HLU Options - Bulk Update
+
+Delete Orphan Priority Habitats
+	The default option for whether existing priority habitats (those automatically associated with the current IHS Habitat) that are **orphaned** (i.e. not associated with the new IHS Habitat) should be deleted following a change to the IHS Habitat during a bulk update. If unchecked, any existing priority habitats are converted to potential priority habitats with the determination quality changed to 'Previous present, by may no longer exist'.
+
+Delete Potential Priority Habitats
+	The default option for whether existing potential priority habitats (those added manually by a user) should be deleted following during a bulk update. If unchecked, any existing potential priority habitats will be retained.
+
+Delete Existing Multiplex Rows
+	The default option for whether existing multiplex (matrix, formation, management and complex) codes should be deleted following a change to the IHS Habitat during a bulk update. If unchecked, any existing multiplex codes will be retained, and any not be compatible with the new IHS Habitat will appear as errors when displayed in the main interface.
+
+Create History Records
+	The default option for whether history records will be created when a bulk update is applied.
+
+Determination Quality
+	The default option for which determination quality to apply to any new priority habitats (those automatically associated with the new IHS Habitat) following a change to the IHS Habitat during an OSMM bulk update.
+
+Interpretation Quality
+	The default option for which interpretation quality to apply to any new priority habitats (those automatically associated with the new IHS Habitat) following a change to the IHS Habitat during an OSMM bulk update.
+
+OSMM Source Name
+	The default option for which Ordnance Survey MasterMap source name to use when automatically adding a new source record during an OSMM bulk update.
 
 
 .. raw:: latex
@@ -512,7 +701,7 @@ Allows users to filter the INCID records that appear in the user interface and c
 	* **HLU Query Builder** - the original interface supplied with the HLU Tool
 	* **HLU Advanced Query Builder** - a new interface that provides more user-friendly and flexible functionality.
 		  
-Users can choose their preferred interface in the user Options (see :ref:`sql_query_options` for details).
+Users can choose their preferred interface in the user Options (see :ref:`options_filter` for details).
 
 
 .. index::
@@ -655,13 +844,13 @@ Verify
 	Click :guilabel:`Verify` to determine if the query is valid by checking the syntax of the text boxes and hence will execute successfully on the HLU Tool database. If the syntax is valid it will also determine if any records will be returned by the query.
 
 Load
-	Click :guilabel:`Load` to copy an existing query file into the text boxes. Users will be prompted for the source path and file name of an existing **.hsq** file. The default folder path can be set in the Options (see :ref:`sql_query_options` for more details).
+	Click :guilabel:`Load` to copy an existing query file into the text boxes. Users will be prompted for the source path and file name of an existing **.hsq** file. The default folder path can be set in the Options (see :ref:`options_filter` for more details).
 
 Save
-	Click :guilabel:`Save` to copy the text boxes to a query file. Users will be prompted for the destination path and file name of the **.hsq** file to save the query to. The default folder path can be set in the Options (see :ref:`sql_query_options` for more details).
+	Click :guilabel:`Save` to copy the text boxes to a query file. Users will be prompted for the destination path and file name of the **.hsq** file to save the query to. The default folder path can be set in the Options (see :ref:`options_filter` for more details).
 
 OK
-	Click :guilabel:`OK` to execute the query. If the user has requested to be warned before applying the GIS selection then a pop-up message will appear advising how many expected INCIDs and features will be selected and if a 'Join' will be used to select the features in GIS (see :ref:`sql_query_options` for more details).
+	Click :guilabel:`OK` to execute the query. If the user has requested to be warned before applying the GIS selection then a pop-up message will appear advising how many expected INCIDs and features will be selected and if a 'Join' will be used to select the features in GIS (see :ref:`options_filter` for more details).
 
 Cancel
 	Click :guilabel:`Cancel` to close the 'HLU Advanced Query Builder' window without executing a query.
@@ -669,6 +858,22 @@ Cancel
 
 .. tip::
 	Whilst the Tables and Where Clause can be entered as free-text by the user, it is recommended that users use the drop-down lists and :guilabel:`Add` buttons to reduce the likelihood of syntax errors.
+
+
+
+.. raw:: latex
+
+	\newpage
+
+.. index::
+	single: Windows; Filter by Incid
+
+.. _filter_by_incid:
+
+Filter by Incid...
+==================
+
+Allows users to filter the INCID records that appear in the user interface, and correspondingly which features are selected in the active GIS layer, for a single INCID.
 
 
 .. raw:: latex
@@ -704,7 +909,7 @@ To perform an export:
 	* A pop-up message will appear informing when the export has completed and prompting if the new GIS layer should be loaded into the active GIS document/workspace.
 
 	.. note::
-		The default export folder destination can be set by MapInfo users (see :ref:`gis_options` for more details).
+		The default export folder destination can be set by MapInfo users (see :ref:`options_gis` for more details).
 
 	.. warning::
 		Exporting all features or a large number of features can take a long time depending upon the number of features and the configuration of the HLU Tool and the associated GIS application and attribute database system.
@@ -717,7 +922,7 @@ During the export process checks and validation are performed to avoid potential
 	* If MapInfo users have initiated an export where the total size of the output .dbf attribute file is likely to exceed 2 GBs as this is the maximum file size supported by MapInfo.
 
 	.. seealso::
-		For details on defining export formats see 'Configuring Exports' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+		For details on defining export formats see 'Configuring Exports' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 
 .. raw:: latex

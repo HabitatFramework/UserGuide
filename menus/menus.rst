@@ -96,19 +96,19 @@ The following sections summarise the menu functionality and provide some guideli
 File Menu
 =========
 
-|export| Export
----------------
+Export...
+---------
 
 Allows users to export data from the HLU database to a GIS layer using a pre-defined export format.
 
 
 .. seealso::
-	See :ref:`export_window` for more information.
+	See :ref:`export_window` and :ref:`export_function` for more information.
 
 |exit| Exit
 -----------
 
-Exits the HLU Tool and allows users to decide whether or not to close the associated GIS window.
+Exits the HLU Tool and prompts users to choose whether or not to close the associated GIS window.
 
 .. raw:: latex
 
@@ -122,7 +122,8 @@ Exits the HLU Tool and allows users to decide whether or not to close the associ
 Edit Menu
 =========
 
-When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details) and the spatial data must be editable in the GIS application.
+.. note::
+	When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details) and the spatial data must be editable in the GIS application.
 
 |copy| Copy
 -----------
@@ -142,22 +143,39 @@ Tick the checkboxes next to the fields to be copied, as shown in the figure :ref
 |paste| Paste
 -------------
 
-Pastes the data copied by the 'Copy' tool into the same fields in another record.
+Pastes the data copied by the 'Copy' function into the same fields in another record.
 
 For example, the fields copied in the figure above would be pasted into 'Source 2' on the new record.
 
 .. note::
 	It is not possible to copy data from one field in one record and paste it into a different field in another record.
 
-Bulk Update
------------
+Review OSMM Updates
+-------------------
 
-Allows users to update the attributes for multiple selected database records (INCIDs) simultaneously.
+Allows users to review any outstanding Ordnance Survey MasterMap (OSMM) updates and choose to accept or reject each update. Once accepted, the updates will be pending and must then be applied using the **Bulk Apply OSMM Updates** function.
+
+
+.. seealso::
+	See :ref:`review_osmm_window` for more information.
+
+Bulk Apply OSMM Updates
+-----------------------
+
+Enables users to apply pending OSMM updates for multiple selected features and database records (INCIDs) simultaneously.
+
+
+.. seealso::
+	See :ref:`osmm_bulk_update_window` for more information.
+
+Bulk Apply Updates
+------------------
+
+Enables users to update the attributes for multiple selected features and database records (INCIDs) simultaneously.
 
 
 .. seealso::
 	See :ref:`bulk_update_window` for more information.
-
 
 
 .. raw:: latex
@@ -170,12 +188,7 @@ Allows users to update the attributes for multiple selected database records (IN
 View Menu
 =========
 
-|winmaximise| Maximise GIS window
----------------------------------
-
-Maximises the ArcGIS or MapInfo window and sets it as the active window.
-
-|winsidebyside| Windows side by side
+|winsidebyside| Windows Side By Side
 ------------------------------------
 
 Aligns the HLU window to the top left of the screen and expands the GIS window to fill the remaining area as shown in the figure :ref:`figWSBS`.
@@ -188,24 +201,31 @@ Aligns the HLU window to the top left of the screen and expands the GIS window t
 
 	Windows arranged side by side
 
-Keep DB window on top
----------------------
+|zoom| Zoom to Selection
+------------------------
 
-Sets the HLU database window to remain floating on top of any other open windows so that the database window is always visible. Enabling this option will ensure that the database window will not disappear behind the GIS window when the GIS window is active.
+Zooms to the currently selected features in the active GIS layer.
+
+Reset Tool window Size
+----------------------
+
+Returns the window height and width to their default size.
 
 Switch to GIS window
 --------------------
 
-Sets ArcGIS or MapInfo as the active window but does not alter its size.
+Sets the connected ArcGIS or MapInfo session as the active window but does not alter its size.
 
-|zoom| Zoom to selection
----------------------------
+Keep Tool window on top
+-----------------------
 
-Zooms to the currently selected features in the active GIS layer.
+An option to keep the HLU Tool window floating on top of any other application windows so that it is always visible. Enabling this option will ensure that the window will not disappear behind the GIS window when the GIS window is active.
 
+|zoom| Auto Zoom to selection
+-----------------------------
 
-.. caution::
-	This process may take a long time depending upon the number of currently selected features, the GIS layer size and their geographical distribution.
+An option to automatically zoom to the GIS features associated with an INCID in the active GIS layer whenever the INCID selection is changed using the HLU Tool.
+
 
 .. raw:: latex
 
@@ -219,41 +239,60 @@ Zooms to the currently selected features in the active GIS layer.
 Select Menu
 ===========
 
-|filterbyattr| Filter by Attributes
------------------------------------
+|filterbyattr| Filter by Attributes...
+--------------------------------------
 
-Allows users to filter the database records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
+Allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
 
 
 .. seealso::
 	See :ref:`query_builder_window` and `advanced_query_builder_window` for more information.
 
+Filter by Incid...
+------------------
+
+Allows users to filter the INCID records for a specific INCID.
+
+
+.. seealso::
+	See :ref:`query_incid_window` for more information.
+
+Allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
+
+
+|clearfilter| Clear Filter
+--------------------------
+
+Clears the current INCID filter so that all records are available for viewing using the record selectors.
+
 |selectonmap| Select Current INCID on Map
 -----------------------------------------
 
-Selects **all** the GIS features associated only with the **current** INCID record in the GIS layer.
+Selects **all** of the GIS features associated with only the **current** INCID record in the GIS layer.
 
 |selectallonmap| Select All Filtered INCIDs on Map
 --------------------------------------------------
 
-Selects **all** the GIS features associated with **all** the currently filtered INCID records in the GIS layer.
+Selects **all** of the GIS features associated with **all** of the currently filtered INCID records in the active GIS layer.
 
 
 .. caution::
 	This process may take a long time depending upon the number of currently filtered INCID records, the GIS layer size and their geographical distribution.
 
-|clearfilter| Clear Filter
---------------------------
-
-Removes the current filter so that all database records can be viewed using the record selectors.
-
 |getmapselection| Get Map Selection
 -----------------------------------
 
-Filters the database records to retrieve the attributes associated with the selected features in the GIS layer.
+Filters the database records to retrieve the attributes associated with the selected features in the active GIS layer.
+
 
 .. tip::
 	Selecting one or more features on the map and clicking **Get Map Selection** will select only the database records associated with the selected features. The INCID records can then be viewed using the record selectors and the number of selected features associated with the current INCID record will be displayed in the INCID status area to the right (together with the total number of features associated with the current INCID). Clicking **Select Current INCID on Map** allows users to expand the map selection to include all features belonging to the current INCID.
+
+Auto Select INCID on GIS
+------------------------
+
+An option to automatically select the GIS features associated with the current INCID record in the active GIS layer.
+
 
 
 .. raw:: latex
@@ -319,7 +358,7 @@ Tools Menu
 |options| Options
 -----------------
 
-Allows users to alter some aspects of the HLU Tool configuration specific to their own requirements.
+Allows users to alter many aspects of the HLU Tool configuration specific to their own requirements.
 
 
 .. seealso::
@@ -338,15 +377,20 @@ Allows users to switch between valid HLU layers in the GIS application.
 Styles
 ------
 
-Allows the user to select one of the user interface styles for all interfaces and windows:
+Allows the user to select one of the following styles for all HLU Tool interfaces and windows:
 
-* Original
-* Light Grey
-* Dark Grey
-* Shiny Blue
+	* Original
+	* Light Grey
+	* Dark Grey
+	* Shiny Blue
 
 About
 -----
 
-Displays the current application and database versions of the HLU Tool, the current database connection, the current user's id and name, and the HLU Tool's copyright statements.
+Displays the following information about the HLU Tool:
 
+	* Current application and database versions
+	* Current database connection details
+	* Current user id and name
+	* Copyright statements
+	* Links to the on-line User and Technical Guides

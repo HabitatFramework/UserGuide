@@ -12,7 +12,7 @@ suggest new entries!
 
 **How do I get a copy of the tool?**
 
-	The source code can be downloaded from `HabitatFramework/HLUTool <https://github.com/HabitatFramework/HLUTool>`_ and the latest installer setups for ArcGIS/MapInfo and MapInfo only can be downloaded from `HabitatFramework/HLUTool/Releases <https://github.com/HabitatFramework/HLUTool/releases>`_.
+	The source code can be downloaded from GitHub at `github.com/HabitatFramework/HLUTool <https://github.com/HabitatFramework/HLUTool>`_ and the latest installer set-ups for ArcGIS/MapInfo and MapInfo only can be downloaded from GitHub at `github.com/HabitatFramework/HLUTool/releases <https://github.com/HabitatFramework/HLUTool/releases>`_.
 
 **Do I have to use IHS with the tool?**
 
@@ -20,7 +20,7 @@ suggest new entries!
 
 **Why does the tool title bar show [READ ONLY]?**
 
-	This shows that the data cannot currently be edited. This is either because your userid has not been added to the database or has been added incorrectly (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details), or the active GIS layer is not in an active edit state. Once both of these conditions have been met click on the main window and the [READ ONLY] status should disappear.
+	This shows that the data cannot currently be edited. This is either because your userid has not been added to the database or has been added incorrectly (see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details), or the active GIS layer is not in an active edit state. Once both of these conditions have been met click on the main window and the [READ ONLY] status should disappear.
 
 **Can I use data that isn't snapped to OS MasterMap?**
 
@@ -35,11 +35,11 @@ suggest new entries!
 		3. Assign the OS MasterMap framework the required attributes to format them to match the required standards.
 		4. Load the attribute data into the target relational database and save the spatial and minimum attribute data in a valid HLU GIS layer format.
 
-	It is recommended that the conversion is performed by someone familiar with IHS and the OS MasterMap framework, expert in the configuration of the HLU Tool, experienced in advanced GIS geospatial processing, and ideally expert in SQL Server and developing data conversion routines. Enquiries can be made via the `ALERC forum <http://forum.lrcs.org.uk/viewforum.php?id=24>`_.
+	It is recommended that the conversion is performed by someone familiar with IHS and the OS MasterMap framework, expert in the configuration of the HLU Tool, experienced in advanced GIS geospatial processing, and ideally expert in SQL Server and developing data conversion routines. Enquiries can be made via the ALERC forum at `forum.lrcs.org.uk/viewforum.php?id=24 <http://forum.lrcs.org.uk/viewforum.php?id=24>`_.
 
 **Can I hide IHS habitats that don't occur in my region from the drop-down lists?**
 
-	You can currently hide IHS habitats from the `Habitat` list on the IHS tab in the main window (see 'Lookup Tables' in the `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details). There is also a planned change request to enable non-local IHS Habitats to be hidden from the `Habitat Type` list on the `Sources` tab in the main window.	
+	You can currently hide IHS habitats from the `Habitat` list on the IHS tab in the main window (see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details). There is also a planned change request to enable non-local IHS Habitats to be hidden from the `Habitat Type` list on the `Sources` tab in the main window.	
 
 **Can several people use the tool at the same time?**
 
@@ -51,5 +51,4 @@ suggest new entries!
 
 **How do I report a new bug or propose a change in the tool?**
 
-	Please check the existing known issues and change requests on `HabitatFramework/HLUTool/Issues <https://github.com/HabitatFramework/HLUTool/issues>`_ before reporting/proposing new issues or changes. New issues or proposed changes can be posted on the `ALERC forum <http://forum.lrcs.org.uk/viewforum.php?id=24>`_
-
+	Please check the existing known issues and change requests on GitHub at `github.com/HabitatFramework/HLUTool/issues <https://github.com/HabitatFramework/HLUTool/issues>`_ before reporting/proposing new issues or changes. New issues or proposed changes can be posted on the Knowledge Hub forum at `khub.net/group/association-of-local-environmental-records-centres/group-forum <https://khub.net/group/association-of-local-environmental-records-centres/group-forum>`_
