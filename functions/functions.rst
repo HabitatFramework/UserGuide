@@ -348,12 +348,12 @@ Filter by Incid
 	\newpage
 
 .. index::
-	single: Update; Bulk Update
+	single: Update; Bulk Updates
 
-.. _bulk_update:
+.. _bulk_updates:
 
-Bulk Update Mode
-================
+Bulk Updates
+============
 
 Bulk updates allow users to update the attributes for multiple INCID database records, and associated features in the active GIS layer, simultaneously.
 
@@ -405,6 +405,17 @@ OSMM Update
 
 
 
+.. _review_osmm_updates:
+
+
+
+
+
+
+
+
+
+
 
 .. raw:: latex
 
@@ -420,4 +431,31 @@ Export
 
 Export allows users to combine spatial geometries from a HLU GIS layer and attribute data from the HLU database into a combined GIS layer using a pre-defined export format.
 
+If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the records related to the selected INCIDs and the GIS features will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`filter_by_attributes`.
+
+To perform an export:
+
+	* Select the required INCID and GIS features to be exported (either by selecting the features in GIS and clicking :guilabel:`Get Map Selection` or performing a **Filter by Attributes**).
+	* Click :guilabel:`File... --> Export` to open the Export window.
+	* Select one of the pre-defined export formats from the 'Export Format' drop-down list.
+	* Tick the 'Selected only' checkbox to export **only** the selected features or clear the checkbox to export **all** of the features in the active GIS layer as required.
+	* Click :guilabel:`Ok` to perform the export.
+	* You will be prompted to select a destination folder and file name for the new GIS layer.
+	* A pop-up message will appear informing when the export has completed and prompting if the new GIS layer should be loaded into the active GIS document/workspace.
+
+	.. note::
+		The default export folder destination can be set by MapInfo users (see :ref:`options_gis` for more details).
+
+	.. warning::
+		Exporting all features or a large number of features can take a long time depending upon the number of features and the configuration of the HLU Tool and the associated GIS application and attribute database system.
+
+During the export process checks and validation are performed to avoid potential errors and frustrations. As a result warnings may appear under the following circumstances:
+
+	* If the export contains more than 5,000 INCIDs and hence may take some time to complete (the count of 5,000 is only an arbitrary value and does not represent any processing limit).
+	* If ArcGIS users have chosen to export to a shapefile (as opposed to a file or personal geodatabase feature class) and have selected an export format that contains field names that exceed 10 characters as this will result in the field names being automatically truncated or renamed by ArcGIS.
+	* If MapInfo users have selected an export format where the total length of the output fields (including the fields included from the GIS layer) exceeds 4,000 bytes as this is the maximum record length supported by MapInfo.
+	* If MapInfo users have initiated an export where the total size of the output .dbf attribute file is likely to exceed 2 GBs as this is the maximum file size supported by MapInfo.
+
+	.. seealso::
+		For details on defining export formats see 'Configuring Exports' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
