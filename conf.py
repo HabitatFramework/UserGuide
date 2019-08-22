@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# HLUGISTool-UserGuide documentation build configuration file, created by
+# HLUTool-UserGuide documentation build configuration file, created by
 # sphinx-quickstart on Thu Sep 19 16:01:57 2013.
 #
 # This file is execfile()d with the current directory set to its
@@ -182,7 +182,7 @@ html_last_updated_fmt = '%d %b %Y'
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'HLUGISTool-UserGuidedoc'
+htmlhelp_basename = 'HLUTool-UserGuidedoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -207,7 +207,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'HLUGISTool-UserGuide.tex', u'HLU Tool - User Guide',
+  ('index', 'HLUTool-UserGuide.tex', u'HLU Tool - User Guide',
    u'Andy Foy', 'manual'),
 ]
 
@@ -237,7 +237,7 @@ latex_show_urls = False
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'HLUGISTool-UserGuide', u'HLU Tool - User Guide',
+    ('index', 'HLUTool-UserGuide', u'HLU Tool - User Guide',
      [u'Andy Foy'], 1)
 ]
 
@@ -251,7 +251,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'HLUGISTool-UserGuide', u'HLU Tool - User Guide',
+  ('index', 'HLUTool-UserGuide', u'HLU Tool - User Guide',
    u'Andy Foy', 'HLUTool-UserGuide', 'HLU Tool - User Guide.',
    'Miscellaneous'),
 ]

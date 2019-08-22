@@ -39,6 +39,7 @@ The main window title bar displays the following information:
 
 * The tool title, i.e. **HLU Tool**
 * The active GIS layer, e.g. **HLU_NonUrban_Features**.
+* Whether the tool is in read-only mode, i.e. **[READONLY]**
   
 
 .. note::
@@ -51,7 +52,7 @@ The main window title bar displays the following information:
 	:align: center
 	:scale: 85
 
-	Main window - Title Bar
+	Main Window - Title Bar
 
 
 .. seealso::
@@ -74,8 +75,31 @@ The 'Reason/Process' section contains the 'Reason' and 'Process' fields as shown
 	:align: center
 	:scale: 85
 
-	Main window - Reason/Process Section
+	Main Window - Reason/Process Section
 
+
+.. _osmm_update_section:
+
+OSMM Updates Section
+--------------------
+
+The 'OSMM Updates' section displays summary information of any proposed or pending OSMM updates for each INCID in the database, including the update process flag, spatial flag, change flag, status and proposed new IHS Summary as shown in the figure :ref:`figUIOUS`.  See :ref:`review_osmm_window` for more details.
+
+.. note::
+	If/when the OSMM Update section appears can be configured in the user options. For details see :ref:`options_interface`.
+
+.. _figUIOUS:
+
+.. figure:: figures/UserInterfaceOSMMUpdateSection.png
+	:align: center
+	:scale: 85
+
+	Main Window - OSMM Updates Section
+
+
+.. raw:: latex
+
+	\newpage
 
 .. _incid_section:
 
@@ -84,19 +108,19 @@ INCID Section
 
 The 'INCID' section displays summary information for each INCID in the database, including area, perimeter, date created and date last modified as shown in the figure :ref:`figUIIS`.
 
-.. tip::
-	The displayed INCID value can be copied to the clipboard by selecting the value and then either right-clicking in the field and selecting **Copy** or pressing :kbd:`Ctrl-C`.
-
-.. note::
-	If the created or modified users are not configured, the 'By' fields will display their Windows login instead of their user name. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
-
 .. _figUIIS:
 
 .. figure:: figures/UserInterfaceIncidSection.png
 	:align: center
 	:scale: 85
 
-	Main window - INCID Section
+	Main Window - INCID Section
+
+.. tip::
+	The displayed INCID value can be copied to the clipboard by selecting the value and then either right-clicking in the field and selecting **Copy** or pressing :kbd:`Ctrl-C`.
+
+.. note::
+	If the created or modified users are not configured, the 'By' fields will display their Windows login instead of their user name. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 
 .. raw:: latex
@@ -108,7 +132,7 @@ The 'INCID' section displays summary information for each INCID in the database,
 Habitats Tab
 ------------
 
-The Habitats tab displays the Integrated Habitat System (IHS) and legacy habitat details for the current database record as shown in the figure :ref:`figUIHT`.
+Click on :guilabel:`Habitats` to display the Habitats tab as shown in the figure :ref:`figUIHT`. The Habitats tab displays the Integrated Habitat System (IHS) and legacy habitat details for the current INCID record.
 
 .. _figUHIT:
 
@@ -116,7 +140,7 @@ The Habitats tab displays the Integrated Habitat System (IHS) and legacy habitat
 	:align: center
 	:scale: 85
 
-	Main window - Habitats Tab
+	Main Window - Habitats Tab
 
 
 Class
@@ -157,7 +181,7 @@ Legacy Habitat
 Details Tab
 -----------
 
-Click on :guilabel:`Details` to display the Details tab as shown in the figure :ref:`figUIDT`.
+Click on :guilabel:`Details` to display the Details tab as shown in the figure :ref:`figUIDT`. The Details tab displays any priority and potential priority habitats, general comments, maps and site details.
 
 .. _figUIDT:
 
@@ -165,7 +189,7 @@ Click on :guilabel:`Details` to display the Details tab as shown in the figure :
 	:align: center
 	:scale: 85
 
-	Main window - Details Tab
+	Main Window - Details Tab
 
 Priority Habitats
 	Automatically added based upon the Habitat and multiplex codes selected on the :ref:`habitats_tab`. For new priority habitats, 'Determination Quality' and 'Interpretation Quality' must be entered.
@@ -200,7 +224,7 @@ Site Name
 Sources Tab
 -----------
 
-Click on :guilabel:`Sources` to display the Sources tab as shown in the figure :ref:`figUIST`. Up to three sources can be defined for each INCID.
+Click on :guilabel:`Sources` to display the Sources tab as shown in the figure :ref:`figUIST`. The Sources tab shows any sources of information that were used to determine the habitat and boundary of all features relating to the current INCID, plus the priorities that were applied to each source. Up to three sources can be defined for each INCID.
 
 .. _figUIST:
 
@@ -208,7 +232,7 @@ Click on :guilabel:`Sources` to display the Sources tab as shown in the figure :
 	:align: center
 	:scale: 85
 
-	Main window - Sources Tab
+	Main Window - Sources Tab
 
 Name
 	Drop-down list containing a list of data sources. For details on adding new sources see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
@@ -250,7 +274,7 @@ Habitat Imp.
 History Tab
 -----------
 
-Click on :guilabel:`History` to display the History tab as shown in the figure :ref:`figUIHT`.
+Click on :guilabel:`History` to display the History tab as shown in the figure :ref:`figUIHT`. The History tab displays a list of previous modifications made to the current INCID and the associated TOIDs. 
 
 .. _figUIHT:
 
@@ -258,9 +282,9 @@ Click on :guilabel:`History` to display the History tab as shown in the figure :
 	:align: center
 	:scale: 85
 
-	Main window - History Tab
+	Main Window - History Tab
 
-The History tab displays a list of previous modifications made to the current INCID and the associated TOIDs. Each entry details what modifications were made, when and by whom. Entries are shown in **descending** date and time order with the most recent changes at the top. The maximum number of entries to appear in the history tab can be configured in the Options (see :ref:`options_gis` for more details).
+Each entry details what modifications were made, when and by whom. Entries are shown in **descending** date and time order with the most recent changes at the top. The maximum number of entries to appear in the history tab can be configured in the Options (see :ref:`options_gis` for more details).
 
 .. _incid_status_section:
 
@@ -275,7 +299,7 @@ The 'INCID Status' section contains record selectors to enable users to move bac
 	:align: center
 	:scale: 85
 
-	Main window - Incid Status Section
+	Main Window - Incid Status Section
 
 For example, figure :ref:`figUIISS` indicates that the interface is currently displaying record 4 of the 6 records in the active filter, and also shows that 2 TOIDs and 2 fragments from those TOIDs were selected in the active GIS layer out of a total of 3 TOIDs with 3 fragments associated with the current INCID. Hence, only a **subset** of the TOIDs or fragments associated with the current INCID are selected in GIS.
 
@@ -310,9 +334,6 @@ Warnings
 Errors
 	Errors will be highlighted with a red border and exclamation mark in a circle (as seen in the figure :ref:`figUIWEM`). The appropriate tab header for any invalid fields will also be highlighted to help users locate any errors in fields currently hidden on an inactive tab. Hovering over a field with an error will display a *tooltip* message indicating the nature of the error.
 
-.. note::
-	Whilst **any** fields are in error the :guilabel:`Apply` button will not appear.
-
 .. _figUIWEM:
 
 .. figure:: figures/UserInterfaceErrorMessages.png
@@ -320,6 +341,9 @@ Errors
 	:scale: 85
 
 	Warning and Error Messages
+
+.. note::
+	Whilst **any** fields are in error the :guilabel:`Apply` button will not appear.
 
 
 .. raw:: latex
@@ -334,11 +358,20 @@ Errors
 Bulk Updates
 ============
 
-The main window will transform into the bulk update window when the bulk update mode is started (see :ref:`bulk_update` for more details). The window appears the same as the main window except for the Bulk Update section and the INCID Status section.
+The main window will transform into the bulk update window when the bulk update mode is started (see :ref:`bulk_update` for more details). The window appears the same as the main window except for the Bulk Update section and the INCID Status section as shown in the figure :ref:`figUIMWBU`.
+
+.. _figUIMWBU:
+
+.. figure:: figures/UserInterfaceBulkUpdate.png
+	:align: center
+	:scale: 60
+
+	Main Window - Bulk Update Mode
+
 
 .. note::
 
-	* Bulk update mode can only be started once a filter is applied to the INCID records.
+	* Bulk update mode can only be started when edit mode is active and once a filter is applied to the INCID records.
 	* This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 Bulk Update Section
@@ -346,14 +379,13 @@ Bulk Update Section
 
 The 'Bulk Update' section displays summary information for all of the INCIDs and GIS features currently filtered (as shown in the figure :ref:`figUIIS`). The **Database** counts refer to the total number of INCIDs, TOIDs and Fragments found in the database relating to the current filter. The **Map** counts refer to the total number of INCIDs, TOIDs and Fragments currently selected in the active GIS layer.
 
-
 .. _figUIBUS:
 
 .. figure:: figures/UserInterfaceBulkUpdateSection.png
 	:align: center
 	:scale: 85
 
-	Main window - Bulk Update Section
+	Main Window - Bulk Update Section
 
 
 Database INCIDs
@@ -388,7 +420,7 @@ The Bulk Update 'INCID Status' section shows the total number of INCIDs, TOIDs a
 	:align: center
 	:scale: 85
 
-	Main window - Bulk Update INCID Status Section
+	Main Window - Bulk Update INCID Status Section
 
 For example, figure :ref:`figUIBUS` indicates that the active filter currently contains 47 INCIDs, 58 TOIDs and 58 fragments from those TOIDs.
 
@@ -403,8 +435,8 @@ For example, figure :ref:`figUIBUS` indicates that the active filter currently c
 
 .. _bulk_update_window:
 
-Bulk Update Window
-------------------
+Bulk Update Confirmation Window
+-------------------------------
 
 Before a bulk update is applied a confirmation window will appear with a number of options relating to the update as shown in the figure :ref:`figUIBUC`.
 
@@ -441,45 +473,95 @@ Create History Records
 	\newpage
 
 .. index::
-	single: OSMM Updates
-
-.. _osmm_update_mode:
-
-OSMM Updates
-============
-
-The main window will transform when reviewing or bulk applying OSMM updates. See :ref:`review_osmm_window` and :ref:`bulk_osmm_update_mode` for more details.
-
-
-.. index::
 	single: OSMM Updates; Review
 	single: Windows; Review OSMM Updates
 
 .. _review_osmm_window:
 
 Review OSMM Updates
--------------------
+===================
 
-The main window will transform into the OSMM review updates window when the review OSMM updates mode is started (see :ref:`review_osmm_updates` for more details). The window appears the same as the main window except for the OSMM Update section and the INCID Status section.
+The main window will transform into the OSMM review updates window when the review OSMM updates mode is started (see :ref:`review_osmm_updates` for more details). The window appears the same as the main window except for the OSMM Update section and the INCID Status section as shown in the figure :ref:`figUIMWOU`.
+
+.. _figUIMWOU:
+
+.. figure:: figures/UserInterfaceReviewOSMMUpdates.png
+	:align: center
+	:scale: 60
+
+	Main Window - Review OSMM Updates Mode
 
 .. note::
 
+	* OSMM review update mode can only be started when there are proposed OSMM update records in the database.
 	* This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 
-Bulk Update Section
--------------------
+OSMM Updates Section
+---------------------
 
-The 'Bulk Update' section displays summary information for all of the INCIDs and GIS features currently filtered (as shown in the figure :ref:`figUIIS`). The **Database** counts refer to the total number of INCIDs, TOIDs and Fragments found in the database relating to the current filter. The **Map** counts refer to the total number of INCIDs, TOIDs and Fragments currently selected in the active GIS layer.
+The 'OSMM Updates' section displays summary details of any proposed or pending OSMM updates for each INCID in the database as shown in the figure :ref:`figUIOUS`.
 
-.. _figUIBUS:
+.. _figUIOUS:
 
-.. figure:: figures/UserInterfaceBulkUpdateSection.png
+.. figure:: figures/UserInterfaceOSMMUpdateSection.png
 	:align: center
 	:scale: 85
 
-	Main window - Bulk Update Section
+	Main Window - OSMM Updates Section
 
+
+Process Flag
+	Which step in the external OSMM Update process the proposed update was determined. Values represent the type of change in the IHS habitat class from the original incid feature to the new incid feature, and the number of sources assigned to the original incid feature, as follows:
+
+		* 1 = Built to Built (only 1 source)
+		* 2 = Built to Built (two or more sources)
+		* 3 = Built to Natural (any number of sources)
+		* 4 = Natural to Built (only 1 source)
+		* 5 = Natural to Built (two or more sources)
+		* 6 = Natural to Natural (only 1 source)
+		* 7 = Natural to Natural (two or more sources)
+		* 8 = Any to Unknown (any number of sources)
+
+Spatial Flag
+	Assists with prioritising proposed updates by indicating whether the proposed habitat category (e.g. 'WB') is the same as the original habitat category and whether it is a higher or lower level in the habitat hierarchy, as follows:
+
+		* A = Same category but proposed habitat is higher level, i.e. a more detailed IHS habitat code (e.g. WB3 to WB36)
+		* B = Same category but proposed habitat is different and same or lower level (e.g. LF271 to LF272, LF271 to LF27)
+		* C = Different category/habitat and proposed habitat is higher level (e.g. WB3 to EM41)
+		* D = Different category/habitat and proposed habitat is same level (e.g. WB3 to EM4)
+		* E = Different category/habitat and proposed habitat is lower level (e.g. WB36 to EM41)
+
+
+Change Flag
+	Denoted by an 'X' this indicates when a feature, once the external OSMM Update process is completed, previously overlapped two or more features in the original framework, and hence a portion of the new feature may now be assigned to a different INCID than it was originally.
+
+Status
+	Indicates the current status of the proposed OSMM Update, as follows:
+
+		* Proposed = the OSMM update has not be accepted or rejected by a user yet
+		* Pending = the OSMM update has been accepted and is awaiting to be applied (see see :ref:`bulk_osmm_update_mode` for more details).
+		* Applied = the OSMM update has been accepted and applied
+		* Ignored = the INCID was manually updated when an OSMM update was still proposed or pending and hence the OSMM update was ignored
+		* Rejected
+
+IHS Summary
+	Concatenation of the proposed IHS habitat and multiplex codes based on the new OSMM attributes.
+
+OSMM Updates Status Section
+---------------------------
+
+The OSMM Updates 'INCID Status' section shows the total number of INCIDs in the active filter, and the number of TOIDs and fragments for the current INCID.
+
+.. _figUIOUS:
+
+.. figure:: figures/UserInterfaceOSMMUpdateStatusSection.png
+	:align: center
+	:scale: 85
+
+	Main Window - OSMM Updates INCID Status Section
+
+For example, figure :ref:`figUIOUS` indicates that the active filter currently contains 13 INCIDs and the current INCID consists of 1 TOID with 1 fragment.
 
 
 .. raw:: latex
@@ -492,8 +574,13 @@ The 'Bulk Update' section displays summary information for all of the INCIDs and
 
 .. _bulk_osmm_update_mode:
 
-Review OSMM Updates Window
---------------------------
+Bulk OSMM Updates Window
+========================
+
+
+
+
+
 
 
 
