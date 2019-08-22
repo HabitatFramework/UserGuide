@@ -164,10 +164,6 @@ Every priority habitat and potential priority habitat must be assigned an interp
 	+------------------------------------------+---------------+------------+------------+
 
 
-.. raw:: latex
-
-	\newpage
-
 .. _split:
 
 Splitting Features
@@ -215,10 +211,6 @@ For example, a woodland may appear in OS MasterMap as a single feature, but comp
 .. caution::
 	If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and **Get Map Selection** is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will **automatically** perform a physical split before displaying the attributes.
 
-.. raw:: latex
-
-	\newpage
-
 .. _merge:
 
 Merging Features
@@ -250,27 +242,16 @@ Physical merge combines fragments of a single TOID into a single, larger, featur
 	Only fragments belonging to the same TOID can be merged in a single operation. If fragments for several TOIDs need to be merged, the operation must be repeated for each TOID.
 
 
-.. raw:: latex
-
-	\newpage
-
 .. index::
 	single: Update; Attribute Update Concept
 
 .. _attribute_update:
 
-Attribute Update
-================
+Attribute Updates
+=================
 
-Attribute Updates are the main mechanism for updating existing INCID details.
+Attribute updates are the main mechanism for updating existing INCID details. Typically attribute changes can only be applied to one INCID at a time and any changes made are applied to the current INCID and, if any attributes changed are also held in the GIS layer (e.g. IHS Category or IHS Summary) then the changes are also applied to any features for the current INCID selected in the active GIS layer (or to all features for the current INCID if no features are selected).
 
-
-
-
-
-.. raw:: latex
-
-	\newpage
 
 .. index::
 	single: Update; Bulk Update
@@ -278,25 +259,25 @@ Attribute Updates are the main mechanism for updating existing INCID details.
 
 .. _bulk_update:
 
-Bulk Update
-===========
+Bulk Updates
+============
 
+Attribute updates can also be applied in bulk to multiple INCID records at the same time. Any changes made will be applied to all INCIDs in the active filter and will also be reflected in the active GIS layer if any attributes changed are also held in the GIS layer (e.g. IHS Category or IHS Summary).
 
+.. note::
+	This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
-
-
-.. raw:: latex
-
-	\newpage
 
 .. index::
 	single: Update; OSMM Update Concept
 
 .. _osmm_update:
 
-OSMM Update
-===========
+OSMM Updates
+============
 
+If the habitat framework has been externally processed against a more recent OS MasterMap (OSMM) update then there may be proposed OSMM updates to review and apply. Any proposed updates are INCID specific and will appear at the top of the main interface (if one of the options to display them is configured in the user options) for the current INCID. Proposed updates can be reviewed one INCID at a time where they can either be accepted (when they become pending updates) or rejected. Pending updates can then be applied in bulk in a method similar to the bulk update process.
 
-
+.. note::
+	This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 

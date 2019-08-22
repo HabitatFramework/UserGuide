@@ -42,7 +42,10 @@ Functions
 Attribute Update
 ================
 
-Attribute Updates are the main mechanism for updating existing INCID details.
+Attribute Updates are the main mechanism for updating existing INCID details. Attributes can be changed at any time in the user interface, even when the user is not authorised for editing or when the active GIS layer is not being edited, but they can only be applied when not in read-only mode.
+
+.. note::
+	For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 To update the attributes of an INCID:
 
@@ -50,7 +53,7 @@ To update the attributes of an INCID:
 * Select the feature or features to be updated.
 * Click |getmapselection| :guilabel:`Get Map Selection`.
 * Make the required changes to the INCID attributes, ensuring that any fields highlighted as missing or in error are addressed.
-* Click |apply| :guilabel:`Apply`. The INCID will be updated and details will be added to the History tab.
+* Click |apply|. The INCID will be updated and details will be added to the History tab.
 
 
 .. note::
@@ -98,14 +101,7 @@ To perform a logical split:
 
 * Select the subset of features to be split in the GIS layer as shown in the **right** part of the figure :ref:`figLSFD`.
 * Return to the HLU Tool window and click |getmapselection| :guilabel:`Get Map Selection`.
-* Click |logicalsplit| :guilabel:`Logical Split`. A new INCID will be created and displayed as the current record.
-
-
-To display all the features in the INCID of a given feature:
-
-* Select the feature of interest in the GIS layer.
-* Return to the HLU main window and click |getmapselection| :guilabel:`Get Map Selection`.
-* Click |selectonmap| :guilabel:`Select Current INCID on Map`. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figLSFD`.
+* Click |logicalsplit| :guilabel:`Logical Split`. A new INCID will be created and displayed as the current record and details will be added to the History tab for the INCID.
 
 .. _figLSFD:
 
@@ -113,6 +109,13 @@ To display all the features in the INCID of a given feature:
 	:align: center
 
 	Logical Split – Before (left) and After (right)
+
+
+To display all the features in the INCID of a given feature:
+
+* Select the feature of interest in the GIS layer.
+* Return to the HLU main window and click |getmapselection| :guilabel:`Get Map Selection`.
+* Click |selectonmap| :guilabel:`Select Current INCID on Map`. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figLSFD`.
 
 
 .. raw:: latex
@@ -135,7 +138,7 @@ Physical split is use to create one or more new TOID fragments in the database b
 	* If several features have been split, select the fragments for one original feature and split using the tool. Repeat this operation for the remaining features.
 	* Ensure that the physical split is completed in the database prior to commencing any other operations such as 'Select by attributes …' to avoid database synchronisation issues.
 
-.. caution::
+.. tip::
 	If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and **Get Map Selection** is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will **automatically** perform a physical split before displaying the attributes.
 
 
@@ -159,7 +162,7 @@ To perform a physical split in ArGIS:
 	.. tip::
 		It is not necessary to **Save Edits** after splitting the feature in GIS because the changes will be saved automatically once the split has been completed with the tool.
 
-* The feature will be split but still selected as shown in the figure :ref:`figArcSFD`. Return to the HLU Tool and click |getmapselection| :guilabel:`Get Map Selection`.
+* The feature will be split but still selected as shown in the figure :ref:`figArcSFD`. At this stage both features will have the same fragment ID.
 
 .. _figArcSFD:
 
@@ -168,7 +171,7 @@ To perform a physical split in ArGIS:
 
 	Split Features (ArcGIS)
 
-* Click |physicalsplit| :guilabel:`Physical Split`. The record will be updated and details added to the History tab for the INCID.
+* Return to the HLU Tool and click |getmapselection| :guilabel:`Get Map Selection`. The feature will be split into separate fragments with unique fragment IDs and details will be added to the History tab for the INCID.
 
 
 MapInfo
@@ -179,7 +182,7 @@ To perform a physical split in MapInfo:
 * Set the Cosmetic layer as 'Editable' and draw the feature to split by.
 
 .. tip::
-	The Cosmetic layer should be used due to the time required for MapInfo to add a new feature to the full HLU layer.
+	The Cosmetic layer should be used to save time with MapInfo adding a new feature to a large HLU layer.
 
 * Set the HLU layer as 'Editable'.
 * Select the feature to be split and go to Objects > Set Target.
@@ -193,7 +196,7 @@ To perform a physical split in MapInfo:
 
 	Data Disaggregation Dialog (MapInfo)
 
-* The feature will be split but still selected as shown in the figure :ref:`figMISF`. Return to the HLU Tool and click |getmapselection| :guilabel:`Get Map Selection`.
+* The feature will be split but still selected as shown in the figure :ref:`figMISF`.
 
 .. _figMISF:
 
@@ -202,7 +205,7 @@ To perform a physical split in MapInfo:
 
 	Split Features (MapInfo)
 
-* Click |physicalsplit| :guilabel:`Physical Split`. The record will be updated and details added to the History tab for the INCID. The Cosmetic layer will be cleared.
+* Return to the HLU Tool and click |getmapselection| :guilabel:`Get Map Selection`. The feature will be split into separate fragments with unique fragment IDs and details will be added to the History tab for the INCID. The Cosmetic layer will also be cleared.
 
 
 .. raw:: latex
@@ -224,7 +227,7 @@ Merge features will performs two types of merge depending upon the filter active
 Logical Merge
 -------------
 
-Logical merge combines all the features selected in the GIS into a single INCID chosen from from the selected features. This assigns the attributes from the chosen INCID to all the other selected features and logically groups the features into a single INCID so that they can be updated together in the future.
+Logical merge combines all the features selected in the GIS into a single INCID chosen from the selected features. This assigns the attributes from the chosen INCID to all the other selected features and logically groups the features into a single INCID so that they can be updated together in the future.
 
 To perform a logical merge:
 
@@ -240,9 +243,12 @@ To perform a logical merge:
 
 	Select INCID to Keep Dialog
 
-* Click on the grey box to the left of the row to select an INCID. The associated feature will blink in the GIS window. Click :guilabel:`OK`.
-* The selected features will be assigned to the selected INCID and details added to the History tab.
-* If the merged features are fragments of the same TOID the user will be given the option to then perform a physical merge.
+* Click on the grey box to the left of the row to select an INCID. Any features with the selected INCID will flash in the GIS window.
+* Click :guilabel:`OK`. The selected features will be assigned to the selected INCID and details added to the History tab for the INCID.
+
+.. note::
+	If the merged features are all fragments of the same TOID the user will then be given the option to perform a physical merge.
+
 
 .. raw:: latex
 
@@ -258,12 +264,15 @@ Physical Merge
 
 Physical merge combines fragments of a single TOID into a single, larger, feature in the GIS layer. As the fragments must already belong to the same INCID there are no attribute updates but the boundaries between adjacent features will be removed.
 
+.. note::
+	Only fragments belonging to the same TOID can be merged in a single operation. If fragments for several TOIDs need to be merged, the operation must be repeated for each TOID.
+
 To perform a physical merge:
 
 * Select two or more fragments from one TOID in the GIS layer as shown in the **left** part of the figure :ref:`figPMD`.
 * Return to the HLU main window and click |getmapselection| :guilabel:`Get Map Selection`.
 * Select one of the options in the 'Process' list.
-* Click |physicalmerge| :guilabel:`Physical Merge`. The features will be combined in the GIS layer as shown in the **right** part of the figure :ref:`figPMD`.
+* Click |physicalmerge| :guilabel:`Physical Merge`. The features will be combined in the GIS layer as shown in the **right** part of the figure :ref:`figPMD` and details will be added to the History tab for the INCID.
 
 .. _figPMD:
 
@@ -273,59 +282,95 @@ To perform a physical merge:
 	Physical Merge – Before (left) and After (right)
 
 
-.. note::
-	Only fragments belonging to the same TOID can be merged in a single operation. If fragments for several TOIDs need to be merged, the operation must be repeated for each TOID.
-
-
-
-
-
-
 .. raw:: latex
 
 	\newpage
 
-.. index::
-	single: Filter
-
-.. _filter:
-
-Filters
-=======
-
-
-.. index::
-	single: Filter; by Attributes
-
 .. _filter_by_attributes:
 
 Filter by Attributes
---------------------
+====================
+
+Users can select which INCID records appear in the user interface, and correspondingly which features are selected in the active GIS layer, by performing a filter. The filter is performed by building a SQL query that will select one or more INCIDs based on a chosen set of criteria, or by entering a single INCID value. There are two main interfaces available:
+
+	* **HLU Query Builder** - the original interface supplied with the HLU Tool.
+	* **HLU Advanced Query Builder** - a new interface that provides more user-friendly and flexible functionality.
+
+.. note::
+	Users can choose their preferred interface for building a SQL query in the user Options (see :ref:`options_filter` for details).
+
+.. index::
+	single: Filter; Query Builder
+
+Query Filter
+------------
+
+To apply a filter using the standard query filter:
+
+* Ensure that the user option 'Use Advanced Query Builder' is unchecked (see :ref:`options_filter` for details).
+* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the HLU Query Builder window.
+* Select a Table, Column, Operator and Value in the first row in Query Builder table.
+* Add further criteria as required by selecting values in additional rows.
+* Ensure that the Boolean Operator and opening :guilabel:`(` and :guilabel:`)` closing brackets are entered as required.
+* Click :guilabel:`OK`. The query will be executed and the resulting INCIDs will be selected in the user interface.
+
+Depending on the setting of the user option 'Warn Before GIS Select', and depending on how many INCID records the query would return, a warning message may appear before executing the query (see :ref:`options_filter` for details). The message will indicate the expected number of features that will be selected (as shown in the figure :ref:`figGSWD`).
+
+.. _figGSWD:
+
+.. figure:: figures/GISSelectionWarningDialog.png
+	:align: center
+
+	GIS Selection Warning Dialog
+
+.. tip::
+	Clicking the 'Don't ask again' check box will stop the warning window appearing again in future. This option can also be set in the user options (see :ref:`options_filter` for details).
+
+In the event that the SQL query required to select the features in GIS would be very long or complex a different message may appear warning the user that a temporary join (which may take some time) will need to be performed in GIS (as shown in the figure :ref:`figGSJWD`).
+
+.. _figGSJWD:
+
+.. figure:: figures/GISSelectionJoinWarningDialog.png
+	:align: center
+
+	GIS Selection with Join Warning Dialog
+
+.. note::
+	Clicking the 'Don't ask again' check box in this instance will **not** stop the warning window appearing again in future when performing a temporary join. This warning can only be disabled in the user options (see :ref:`options_filter` for details).
 
 
+.. index::
+	single: Filter; Advanced Query Builder
 
+Advanced Query Filter
+---------------------
 
-	The message will indicate the expected number of features that will be selected (as shown in the figure :ref:`figGSWD`).
+To apply a filter using the advanced query filter:
 
-	.. _figGSWD:
+* Ensure that the user option 'Use Advanced Query Builder' is checked (see :ref:`options_filter` for details).
+* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the HLU Advanced Query Builder window.
+* Select a Table in the list and click :guilabel:`Add` to add it to the 'SELECT DISTINCT incid FROM' field and WHERE field.
+* Select a Column, Operator and Value in a similar way to build up a SQL clause.
+* Add further criteria as required by selecting values and adding them to the SQL clause.
+* Click :guilabel:`Verify` to check that the SQL clause is valid. A warning message explaining the error will appear if not.
+* Click :guilabel:`OK`. The query will be executed and the resulting INCIDs will be selected in the user interface.
 
-	.. figure:: figures/GISSelectionWarningDialog.png
-		:align: center
+.. note::
+	The last query executed will appear next time the Advanced Query Builder window is opened (whilst the tool remains running).
 
-		GIS Selection Warning Dialog
+ To permanently save an advanced query:
 
+* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the HLU Advanced Query Builder window.
+* Create a valid query as above.
+* Before executing the query click :guilabel:`Save`. A save dialog will open prompting you to selected a folder and file name.
+* Select a destination folder, enter a suitable file name and click :guilabel:`Save`. The query will be saved.
 
-	In the event that the SQL query that would be required to select the features in GIS would be too long or complex the message will also warn the user that a temporary join (which may take some time) will need to be performed in GIS (as shown in the figure :ref:`figGSWD2`).
+To load a previously saved advanced query:
 
-	.. _figGSWD2:
-
-	.. figure:: figures/GISSelectionJoinWarningDialog.png
-		:align: center
-
-		GIS Selection with Join Warning Dialog
-
-
-
+* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the HLU Advanced Query Builder window.
+* Click :guilabel:`Load`. A load dialog will open prompting you to selected an existing SQL query (*.hsq) file.
+* Select the required file and click :guilabel:`Open`.
+* The query will be loaded into the query window. It can now be verified and then executed.
 
 .. index::
 	single: Filter; by INCID

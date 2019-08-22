@@ -96,6 +96,13 @@ The following sections summarise the menu functionality and provide some guideli
 File Menu
 =========
 
+.. _figUIFM:
+
+.. figure:: figures/UserInterfaceFileMenu.png
+	:align: center
+
+	Main window - File Menu
+
 Export...
 ---------
 
@@ -121,6 +128,13 @@ Exits the HLU Tool and prompts users to choose whether or not to close the assoc
 
 Edit Menu
 =========
+
+.. _figUIEM:
+
+.. figure:: figures/UserInterfaceEditMenu.png
+	:align: center
+
+	Main window - Edit Menu
 
 .. note::
 	When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details) and the spatial data must be editable in the GIS application.
@@ -166,7 +180,7 @@ Enables users to apply pending OSMM updates for multiple selected features and d
 
 
 .. seealso::
-	See :ref:`osmm_bulk_update_window` for more information.
+	See :ref:`bulk_osmm_update_window` for more information.
 
 Bulk Apply Updates
 ------------------
@@ -187,6 +201,13 @@ Enables users to update the attributes for multiple selected features and databa
 
 View Menu
 =========
+
+.. _figUIVM:
+
+.. figure:: figures/UserInterfaceViewMenu.png
+	:align: center
+
+	Main window - View Menu
 
 |winsidebyside| Windows Side By Side
 ------------------------------------
@@ -239,6 +260,13 @@ An option to automatically zoom to the GIS features associated with an INCID in 
 Select Menu
 ===========
 
+.. _figUISM:
+
+.. figure:: figures/UserInterfaceSelectMenu.png
+	:align: center
+
+	Main window - Select Menu
+
 |filterbyattr| Filter by Attributes...
 --------------------------------------
 
@@ -255,7 +283,7 @@ Allows users to filter the INCID records for a specific INCID.
 
 
 .. seealso::
-	See :ref:`query_incid_window` for more information.
+	See :ref:`filter_incid_window` for more information.
 
 Allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
 
@@ -294,7 +322,6 @@ Auto Select INCID on GIS
 An option to automatically select the GIS features associated with the current INCID record in the active GIS layer.
 
 
-
 .. raw:: latex
 
 	\newpage
@@ -306,6 +333,13 @@ An option to automatically select the GIS features associated with the current I
 
 Split/Merge Menu
 ================
+
+.. _figUISMM:
+
+.. figure:: figures/UserInterfaceSplitMergeMenu.png
+	:align: center
+
+	Main window - Split/Merge Menu
 
 .. note::
 	All options in this menu are disabled until the database records have been filtered and a process and reason has been selected from the 'Process' and 'Reason' drop-down lists in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
@@ -355,8 +389,15 @@ Combines two or more fragments of a single TOID, that are also associated with t
 Tools Menu
 ==========
 
-|options| Options
------------------
+.. _figUITM:
+
+.. figure:: figures/UserInterfaceToolsMenu.png
+	:align: center
+
+	Main window - Tools Menu
+
+|options| Options...
+--------------------
 
 Allows users to alter many aspects of the HLU Tool configuration specific to their own requirements.
 
@@ -394,3 +435,4 @@ Displays the following information about the HLU Tool:
 	* Current user id and name
 	* Copyright statements
 	* Links to the on-line User and Technical Guides
+

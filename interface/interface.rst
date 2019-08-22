@@ -299,7 +299,7 @@ The 'INCID Status' section contains record selectors to enable users to move bac
 	:align: center
 	:scale: 85
 
-	Main Window - Incid Status Section
+	Main Window - INCID Status Section
 
 For example, figure :ref:`figUIISS` indicates that the interface is currently displaying record 4 of the 6 records in the active filter, and also shows that 2 TOIDs and 2 fragments from those TOIDs were selected in the active GIS layer out of a total of 3 TOIDs with 3 fragments associated with the current INCID. Hence, only a **subset** of the TOIDs or fragments associated with the current INCID are selected in GIS.
 
@@ -340,7 +340,7 @@ Errors
 	:align: center
 	:scale: 85
 
-	Warning and Error Messages
+	Main Window - Warning and Error Messages
 
 .. note::
 	Whilst **any** fields are in error the :guilabel:`Apply` button will not appear.
@@ -353,12 +353,12 @@ Errors
 .. index::
 	single: Bulk Updates
 
-.. _bulk_update_mode:
+.. _bulk_update_window:
 
-Bulk Updates
-============
+Bulk Update Window
+==================
 
-The main window will transform into the bulk update window when the bulk update mode is started (see :ref:`bulk_update` for more details). The window appears the same as the main window except for the Bulk Update section and the INCID Status section as shown in the figure :ref:`figUIMWBU`.
+The main window will transform into the bulk update window when the bulk update mode is started. The window appears the same as the main window except for the Bulk Update section and the INCID Status section as shown in the figure :ref:`figUIMWBU`. The History tab will also be disabled.
 
 .. _figUIMWBU:
 
@@ -366,7 +366,7 @@ The main window will transform into the bulk update window when the bulk update 
 	:align: center
 	:scale: 60
 
-	Main Window - Bulk Update Mode
+	Bulk Update Window
 
 
 .. note::
@@ -374,10 +374,10 @@ The main window will transform into the bulk update window when the bulk update 
 	* Bulk update mode can only be started when edit mode is active and once a filter is applied to the INCID records.
 	* This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
-Bulk Update Section
--------------------
+INCID Section
+-------------
 
-The 'Bulk Update' section displays summary information for all of the INCIDs and GIS features currently filtered (as shown in the figure :ref:`figUIIS`). The **Database** counts refer to the total number of INCIDs, TOIDs and Fragments found in the database relating to the current filter. The **Map** counts refer to the total number of INCIDs, TOIDs and Fragments currently selected in the active GIS layer.
+The 'INCID' section displays summary information for all of the INCIDs and GIS features currently filtered (as shown in the figure :ref:`figUIBUS`). The **Database** counts refer to the total number of INCIDs, TOIDs and Fragments found in the database relating to the current filter. The **Map** counts refer to the total number of INCIDs, TOIDs and Fragments currently selected in the active GIS layer.
 
 .. _figUIBUS:
 
@@ -385,7 +385,7 @@ The 'Bulk Update' section displays summary information for all of the INCIDs and
 	:align: center
 	:scale: 85
 
-	Main Window - Bulk Update Section
+	Bulk Update Window - INCID Section
 
 
 Database INCIDs
@@ -420,7 +420,7 @@ The Bulk Update 'INCID Status' section shows the total number of INCIDs, TOIDs a
 	:align: center
 	:scale: 85
 
-	Main Window - Bulk Update INCID Status Section
+	Bulk Update Window - INCID Status Section
 
 For example, figure :ref:`figUIBUS` indicates that the active filter currently contains 47 INCIDs, 58 TOIDs and 58 fragments from those TOIDs.
 
@@ -433,7 +433,7 @@ For example, figure :ref:`figUIBUS` indicates that the active filter currently c
 	single: Bulk Updates; Confirmation
 	single: Windows; Bulk Update Confirmation
 
-.. _bulk_update_window:
+.. _bulk_update_confirmation_window:
 
 Bulk Update Confirmation Window
 -------------------------------
@@ -478,10 +478,10 @@ Create History Records
 
 .. _review_osmm_window:
 
-Review OSMM Updates
-===================
+Review OSMM Updates Window
+==========================
 
-The main window will transform into the OSMM review updates window when the review OSMM updates mode is started (see :ref:`review_osmm_updates` for more details). The window appears the same as the main window except for the OSMM Update section and the INCID Status section as shown in the figure :ref:`figUIMWOU`.
+The main window will transform into the OSMM review updates window when the review OSMM updates mode is started (see :ref:`review_osmm_updates` for more details). The window appears the same as the main window except for the OSMM Updates section and the INCID Status section as shown in the figure :ref:`figUIMWOU`.
 
 .. _figUIMWOU:
 
@@ -489,7 +489,7 @@ The main window will transform into the OSMM review updates window when the revi
 	:align: center
 	:scale: 60
 
-	Main Window - Review OSMM Updates Mode
+	Review OSMM Updates Window
 
 .. note::
 
@@ -508,7 +508,7 @@ The 'OSMM Updates' section displays summary details of any proposed or pending O
 	:align: center
 	:scale: 85
 
-	Main Window - OSMM Updates Section
+	Review OSMM Updates Window - OSMM Updates Section
 
 
 Process Flag
@@ -540,7 +540,7 @@ Status
 	Indicates the current status of the proposed OSMM Update, as follows:
 
 		* Proposed = the OSMM update has not be accepted or rejected by a user yet
-		* Pending = the OSMM update has been accepted and is awaiting to be applied (see see :ref:`bulk_osmm_update_mode` for more details).
+		* Pending = the OSMM update has been accepted and is awaiting to be applied (see see :ref:`bulk_osmm_update_window` for more details).
 		* Applied = the OSMM update has been accepted and applied
 		* Ignored = the INCID was manually updated when an OSMM update was still proposed or pending and hence the OSMM update was ignored
 		* Rejected
@@ -548,20 +548,57 @@ Status
 IHS Summary
 	Concatenation of the proposed IHS habitat and multiplex codes based on the new OSMM attributes.
 
-OSMM Updates Status Section
----------------------------
+INCID Status Section
+--------------------
 
-The OSMM Updates 'INCID Status' section shows the total number of INCIDs in the active filter, and the number of TOIDs and fragments for the current INCID.
+The Review OSMM Updates 'INCID Status' section shows the total number of INCIDs in the active filter, and the number of TOIDs and fragments for the current INCID.
 
-.. _figUIOUS:
+.. _figUIOUIS:
 
 .. figure:: figures/UserInterfaceOSMMUpdateStatusSection.png
 	:align: center
 	:scale: 85
 
-	Main Window - OSMM Updates INCID Status Section
+	Review OSMM Updates Window - INCID Status Section
 
-For example, figure :ref:`figUIOUS` indicates that the active filter currently contains 13 INCIDs and the current INCID consists of 1 TOID with 1 fragment.
+For example, figure :ref:`figUIOUIS` indicates that the active filter currently contains 13 INCIDs and the current INCID consists of 1 TOID with 1 fragment.
+
+.. _osmm_updates_filter:
+
+OSMM Updates Filter
+-------------------
+
+When the review OSMM updates mode is first started, the OSMM Updates Filter window will appear as shown in the figure :ref:`figUIOUS`. This allows the user to filter which subset of proposed OSMM Updates to review.
+
+.. _figUIOUF:
+
+.. figure:: figures/UserInterfaceOSMMUpdatesFilter.png
+	:align: center
+	:scale: 85
+
+	Review OSMM Updates Filter Window
+
+OSMM Updates Summary
+	Displays a tabular summary of all the OSMM Updates in the database. Each row is a unique combination of the Process Flag, Spatial Flag, Change Flag and shows the number of records for each of the possible Status values (Rejected, Ignored, Proposed, Pending and Applied) and the total records for all statuses. Only combinations that exist in the database (rather than all possible combinations) will appear in the table.
+
+.. tip::
+	Selecting one of the rows in the table will set all of the values in the Filter by OSMM Updates section to those of the selected row.
+
+Filter by OSMM Updates
+	Allows the user to select specific values for any or all of the Process, Spatial, Change and Status fields.
+
+OK
+	Click :guilabel:`Ok` to apply the selected filter to the INCID records in the main interface and close the OSMM Updates Filter window.
+
+Reset
+	Click :guilabel:`Reset` to clear all of the Process, Spatial, Change and Status fields.
+
+Cancel
+	Click :guilabel:`Cancel` to close the OSMM Updates Filter window without applying a new filter.
+
+
+.. note::
+	The user can change the filter at any time when in Review OSMM Updates mode by clicking |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the OSMM Updates Filter window.
 
 
 .. raw:: latex
@@ -572,16 +609,41 @@ For example, figure :ref:`figUIOUS` indicates that the active filter currently c
 	single: OSMM Updates; Bulk Apply
 	single: Windows; Bulk Apply OSMM Updates
 
-.. _bulk_osmm_update_mode:
+.. _bulk_osmm_update_window:
 
 Bulk OSMM Updates Window
 ========================
 
+The main window will transform into the bulk OSMM update window when the bulk OSMM update mode is started. The window appears the same as the main window except for the Bulk Update section and the INCID Status section as shown in the figure :ref:`figUIMWBU`. The Habitats tab and History tab will also be disabled.
+
+.. _figUIMWBU:
+
+.. figure:: figures/UserInterfaceBulkUpdate.png
+	:align: center
+	:scale: 60
+
+	Bulk Update Window
 
 
+.. note::
 
+	* Bulk OSMM update mode can only be started when edit mode is active.
+	* This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
+INCID Section
+-------------
 
+The 'INCID' section displays summary information for all of the INCIDs and GIS features currently filtered (see :ref:`bulk_update_window` for details).
+
+INCID Status Section
+--------------------
+
+The Bulk Update 'INCID Status' section shows the total number of INCIDs, TOIDs and Fragments in the active filter (see :ref:`bulk_update_window` for details).
+
+OSMM Updates Filter
+-------------------
+
+When the bulk OSMM updates mode is first started, the OSMM Updates Filter window will appear (see :ref:`osmm_updates_filter` for details). This allows the user to filter which subset of pending OSMM Updates the bulk update will apply to.
 
 
 .. raw:: latex
@@ -860,11 +922,10 @@ OSMM Source Name
 Filter Windows
 ==============
 
-Allows users to filter the INCID records that appear in the user interface and correspondingly which features are selected in the active GIS layer. The filter is performed by building a SQL query that will select one or more INCIDs based on a chosen set of criteria, or by entering a single INCID value. There are three interfaces available:
+Allows users to filter the INCID records that appear in the user interface, and correspondingly which features are selected in the active GIS layer. The filter is performed by building a SQL query that will select one or more INCIDs based on a chosen set of criteria, or by entering a single INCID value. There are two main interfaces available:
 
 	* **HLU Query Builder** - the original interface supplied with the HLU Tool.
 	* **HLU Advanced Query Builder** - a new interface that provides more user-friendly and flexible functionality.
-	* **HLU Filter By INCID** - allows a single INCID value to be entered.
 		  
 Users can choose their preferred interface for building a SQL query in the user Options (see :ref:`options_filter` for details).
 
@@ -891,7 +952,7 @@ Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to ope
 .. figure:: figures/QueryBuilder.png
 	:align: center
 
-	HLU Query Builder
+	Query Builder Window
 
 
 Boolean Operator
@@ -939,7 +1000,7 @@ Value
 	:align: center
 	:scale: 90
 
-	List of Operators
+	Query Builder Window - List of Operators
 
 Once users have entered the values for the current row, click on another row in the query builder to confirm the entry and enable the 'OK' button.
 
@@ -972,7 +1033,7 @@ Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to ope
 .. figure:: figures/AdvancedQueryBuilder.png
 	:align: center
 
-	HLU Advanced Query Builder
+	Advanced Query Builder Window
 
 
 Tables
@@ -996,7 +1057,7 @@ Add Buttons
 	:align: center
 	:scale: 90
 
-	List of Operators
+	Advanced Query Builder Window - List of Operators
 
 SELECT DISTINCT incid FROM:
 	A text box that should contain a comma-separated list of the tables that are referenced in the **WHERE** text box.
@@ -1017,10 +1078,10 @@ Save
 	Click :guilabel:`Save` to copy the text boxes to a query file. Users will be prompted for the destination path and file name of the **.hsq** file to save the query to. The default folder path can be set in the Options (see :ref:`options_filter` for more details).
 
 OK
-	Click :guilabel:`OK` to execute the query. If the user has requested to be warned before applying the GIS selection then a pop-up message will appear advising how many expected INCIDs and features will be selected and if a 'Join' will be used to select the features in GIS (see :ref:`options_filter` for more details).
+	Click :guilabel:`OK` to execute the query and close the query window. If the user has requested to be warned before applying the GIS selection then a pop-up message will appear advising how many expected INCIDs and features will be selected and if a 'Join' will be used to select the features in GIS (see :ref:`options_filter` for more details).
 
 Cancel
-	Click :guilabel:`Cancel` to close the 'HLU Advanced Query Builder' window without executing a query.
+	Click :guilabel:`Cancel` to close the 'HLU Advanced Query Builder' window without applying a new filter.
 
 
 .. tip::
@@ -1040,7 +1101,7 @@ Cancel
 Filter by Incid Window
 ----------------------
 
-Allows users to filter the INCID records that appear in the user interface, and correspondingly which features are selected in the active GIS layer, to a single INCID.
+Users can also filter the INCID records that appear in the user interface, and correspondingly which features are selected in the active GIS layer, by entering a single INCID.
 
 Click :guilabel:`Select... --> Filter by Incid...` to open the window.
 
@@ -1049,7 +1110,17 @@ Click :guilabel:`Select... --> Filter by Incid...` to open the window.
 .. figure:: figures/FilterByIncid.png
 	:align: center
 
-	HLU Filter By Incid
+	Filter By Incid Window
+
+
+Enter Incid to filter by
+	Enter the full value of the INCID that is sought in this field (e.g. '0200:0001234').
+
+OK
+	Click :guilabel:`OK` to execute the query and close the query window. The button will only be enabled when an INCID value has been entered.
+
+Cancel
+	Click :guilabel:`Cancel` to close the query window without applying a new filter.
 
 
 .. raw:: latex
@@ -1073,10 +1144,22 @@ Click :guilabel:`File... --> Export` to open the Export window.
 .. figure:: figures/ExportDialog.png
 	:align: center
 
-	Export Dialog
+	Export Window
 
+Layer
+	Displays the active GIS layer.
 
-If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the records related to the selected INCIDs and the GIS features will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`filter_by_attributes`.
+Export Format
+	Allows the user to choose one of the predefined export formats.
+
+	.. seealso::
+		For details on defining export formats see 'Configuring Exports' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+
+Selected Only
+	Allows the user to choose if only the selected features in the active GIS layer will be exported or if all features from the active GIS layer associated with the INCIDs in the active filter will be exported.
+
+.. note::
+	If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the records related to the selected INCIDs and associated GIS features from the active GIS layer will be exported. Untick this checkbox to export all features from the active GIS layer associated with the INCIDs in the active filter. For details on how to filter records see :ref:`filter_by_attributes`.
 
 
 .. raw:: latex
@@ -1097,15 +1180,18 @@ Switch GIS Layer Window
 
 Click |switch| or :guilabel:`Tools... --> Switch GIS Layer` to open the window.
 
-Allows users to switch between GIS layers by selecting a different layer in the drop-down list (see the figure :ref:`figSGLD`). Only layers from the current workspace/document that are valid HLU layers (i.e. have the correct attribute names and formats) will appear in the drop-down list. The name of the layer will be followed by a number (e.g. 'HLU Non-urban Features [1]') indicating which map/document each layer is part of.
+Allows users to switch between GIS layers by selecting a different layer in the drop-down list (see the figure :ref:`figSGLD`). If there are multiple windows/frames in the associated GIS application the name of each layer may be followed by a window/frame name and number (e.g. 'HLU Non-urban Features in Layers [1]') indicating which window/frame that layer is associated with.
+
+.. note::
+	Only layers from the current workspace/document that are valid HLU layers (i.e. have the correct attribute names and formats) will appear in the drop-down list.
 
 .. _figSGLD:
 
 .. figure:: figures/SwitchGISLayerDialog.png
 	:align: center
 
-	Switch GIS Layer Dialog
+	Switch GIS Layer Window
 
-.. note::
-	The currently active GIS layer is automatically selected in the drop-down list when the Switch GIS Layer window opens. The active layer also appears in the main window title bar.
+.. tip::
+	The currently active GIS layer is automatically selected in the drop-down list when the Switch GIS Layer window opens. The active GIS layer also appears in the main window title bar.
 
