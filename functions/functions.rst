@@ -1,3 +1,7 @@
+.. |filterbyattr| image:: ../icons/FilterByAttributes.png
+	:height: 16px
+	:width: 16px
+
 .. |selectonmap| image:: ../icons/SelectOnMap.png
 	:height: 16px
 	:width: 16px
@@ -305,10 +309,17 @@ Users can select which INCID records appear in the user interface, and correspon
 Query Filter
 ------------
 
+.. _figQB:
+
+.. figure:: figures/QueryBuilder.png
+	:align: center
+
+	Query Builder Window
+
 To apply a filter using the standard query filter:
 
 * Ensure that the user option 'Use Advanced Query Builder' is unchecked (see :ref:`options_filter` for details).
-* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the HLU Query Builder window.
+* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the Query Builder window.
 * Select a Table, Column, Operator and Value in the first row in Query Builder table.
 * Add further criteria as required by selecting values in additional rows.
 * Ensure that the Boolean Operator and opening :guilabel:`(` and :guilabel:`)` closing brackets are entered as required.
@@ -345,10 +356,17 @@ In the event that the SQL query required to select the features in GIS would be 
 Advanced Query Filter
 ---------------------
 
+.. _figAQB:
+
+.. figure:: figures/AdvancedQueryBuilder.png
+	:align: center
+
+	Advanced Query Builder Window
+
 To apply a filter using the advanced query filter:
 
 * Ensure that the user option 'Use Advanced Query Builder' is checked (see :ref:`options_filter` for details).
-* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the HLU Advanced Query Builder window.
+* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the Advanced Query Builder window.
 * Select a Table in the list and click :guilabel:`Add` to add it to the 'SELECT DISTINCT incid FROM' field and WHERE field.
 * Select a Column, Operator and Value in a similar way to build up a SQL clause.
 * Add further criteria as required by selecting values and adding them to the SQL clause.
@@ -358,34 +376,40 @@ To apply a filter using the advanced query filter:
 .. note::
 	The last query executed will appear next time the Advanced Query Builder window is opened (whilst the tool remains running).
 
- To permanently save an advanced query:
+To **save** an advanced query:
 
-* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the HLU Advanced Query Builder window.
+* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the Advanced Query Builder window.
 * Create a valid query as above.
 * Before executing the query click :guilabel:`Save`. A save dialog will open prompting you to selected a folder and file name.
 * Select a destination folder, enter a suitable file name and click :guilabel:`Save`. The query will be saved.
 
-To load a previously saved advanced query:
+To **load** a previously saved advanced query:
 
-* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the HLU Advanced Query Builder window.
+* Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the Advanced Query Builder window.
 * Click :guilabel:`Load`. A load dialog will open prompting you to selected an existing SQL query (*.hsq) file.
 * Select the required file and click :guilabel:`Open`.
 * The query will be loaded into the query window. It can now be verified and then executed.
 
 .. index::
-	single: Filter; by INCID
+	single: Filter; Filter by INCID
 
 .. _filter_by_incid:
 
 Filter by Incid
 ---------------
 
+.. _figFBI:
 
+.. figure:: figures/FilterByIncid.png
+	:align: center
 
+	Filter By Incid Window
 
+To filter by a single INCID:
 
-
-
+* Click :guilabel:`Select... --> Filter by Incid...` to open the Filter by INCID window.
+* Enter or paste a valid INCID into the 'Enter Incid to filter by' field.
+* Click :guilabel:`OK`. The query will be executed and the resulting INCID will be selected in the user interface.
 
 
 .. raw:: latex
@@ -400,18 +424,12 @@ Filter by Incid
 Bulk Updates
 ============
 
-Bulk updates allow users to update the attributes for multiple INCID database records, and associated features in the active GIS layer, simultaneously.
+Users can update the attributes for multiple INCID database records, and associated features in the active GIS layer, by performing a bulk update. Bulk updates can only be applied to a subset of INCID records by applying a filter. Attribute updates applied in bulk update mode will be applied to all INCIDs in the active filter.
 
 .. note::
 
-	* Bulk update mode can only be started once a filter is applied to the INCID records.
+	* Bulk update mode can only be started once a filter is applied to the INCID records and the active GIS layer is editable.
 	* Bulk update mode is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
-
-To bulk apply updates:
-
-* Filter the database records using 'Select by attributes' or select polygons in the GIS layer and click :guilabel:`Get Map Selection`. For details on filtering records see :ref:`query_builder_window`.
-
-* Click *:guilabel:`Edit... --> Bulk Apply Updates` to enter bulk update mode. An empty form is displayed as shown in the figure :ref:`figUIBU`.
 
 .. _figUIBU:
 
@@ -421,18 +439,27 @@ To bulk apply updates:
 
 	Main window - Bulk Update Mode
 
+To bulk apply updates:
 
-* The 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments affected by the update and allows users to select whether to create a History record for this process.
+* Filter the database records using 'Select by attributes' or select polygons in the GIS layer and click :guilabel:`Get Map Selection`. For details on filtering records see :ref:_filter_by_attributes`.
+* Click :guilabel:`Edit... --> Bulk Apply Updates` to enter bulk update mode. An empty form is displayed as shown in the figure :ref:`figUIBU` and the 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments affected by the update.
+* Enter the update details in the Habitats, Details, and Sources tabs, then click :guilabel:`Apply`. The Bulk Update confirmation window will appear as shown in the figure :ref:`figUIBUC`.
+* Select the required options for the bulk update and click :guilabel:`OK`. The INCIDs in the active filter will be updated.
 
-* Enter the updated details in the Habitats, Details, and Sources tabs, then click :guilabel:`Apply`. These fields will be updated for all the selected INCIDs.
+.. _figUIBUC:
+
+.. figure:: figures/UserInterfaceBulkUpdateConfirmation.png
+	:align: center
+	:scale: 85
+
+	Bulk Update Confirmation Window
 
 .. caution::
-	If 'Delete Empty Bulk Update Rows' is checked in the Options, child records will be deleted if these fields are not completed in the bulk update form. See :ref:`options_database` for more details.
+	Bulk updates should be used with caution as unexpected results may occur if users do not understand the implications of any updates made and options applied.
 
+To cancel the bulk update mode:
 
-
-
-
+* Click :guilabel:`Cancel` or click :guilabel:`Edit... --> Cancel Bulk Apply Updates`. The main window will return to the standard interface.
 
 
 .. raw:: latex
@@ -440,26 +467,133 @@ To bulk apply updates:
 	\newpage
 
 .. index::
-	single: Update; OSMM Update
-
-.. _osmm_update:
-
-OSMM Update
-===========
-
-
-
+	single: Update; Review OSMM Updates
 
 .. _review_osmm_updates:
 
+Review OSMM Updates
+===================
+
+If the habitat framework has been externally processed against a more recent OS MasterMap (OSMM) update there may be proposed OSMM updates to review and apply. Proposed updates can either be skipped (so that they can be reviewed again later), accepted (when they become pending updates to be applied later) or rejected (so that they cannot be applied later). They can be reviewed one INCID at a time or all remaining INCIDs in the active filter can be rejected or accepted en-mass.
+
+.. _figUIOUF:
+
+.. figure:: figures/UserInterfaceOSMMUpdatesFilter.png
+	:align: center
+	:scale: 85
+
+	Review OSMM Updates Filter Window
+
+To filter proposed OSMM Updates:
+
+* Click :guilabel:`Edit... --> Review OSMM Updates` to enter review OSMM update mode. The OSMM Updates Filter window will appear as shown in figure :ref:`figUIOUF`.
+* Select a row in the table or manually select the required values for any or all of the Process, Spatial, Change and Status fields.
+* Click :guilabel:`Ok` to apply the selected filter to the INCID records in the main interface.
+
+.. note::
+	To apply another filter at any time click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to re-open the OSMM Updates Filter window.
+
+.. _figUIOU:
+
+.. figure:: figures/UserInterfaceReviewOSMMUpdates.png
+	:align: center
+	:scale: 60
+
+	Review OSMM Updates Window
+
+To process proposed OSMM Updates:
+
+* Once a filter has been applied the main interface appears as shown in the figure :ref:`figUIBOU` and the 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments that will be affected by the update.
+* Click :guilabel:`Skip` to skip the proposed update for the current INCID. It can then be reviewed again at a later time.
+* Click :guilabel:`Reject` to reject the proposed update for the current INCID. It will no longer be available for reviewing or applying.
+* Click :guilabel:`Accept` to accept the proposed update for the current INCID. The update will now be 'Pending' and must be applied by bulk applying OSMM Updates (see :ref:`bulk_osmm_update` for details).
+
+.. note::
+	Holding down the :guilabel:`Ctrl` key changes the :guilabel:`Reject` and :guilabel:`Accept` buttons to :guilabel:`Reject All` and :guilabel:`Accept All` thereby allowing the user to Reject or Accept all remaining INCIDs in the active filter.
+
+Once all the INCIDs in the active filter have been processed a message will appear as shown in figure :ref:`figUIOUW`. The user can apply another filter or cancel the review OSMM Updates mode.
+
+.. _figUIOUW:
+
+.. figure:: figures/OSMMUpdatesDone.png
+	:align: center
+	:scale: 60
+
+	Review OSMM Updates - No more records found
+
+To cancel the review OSMM Updates mode:
+
+* Click :guilabel:`Edit... --> Cancel Review OSMM Updates`. The main window will return to the standard interface.
 
 
+.. raw:: latex
 
+	\newpage
 
+.. index::
+	single: Update; Bulk OSMM Update
 
+.. _bulk_osmm_update:
 
+Bulk Apply OSMM Updates
+=======================
 
+Once proposed OSMM updates have been accepted they become 'Pending' and must be bulk processed in order to apply them.
 
+.. note::
+
+	* Bulk apply OSMM update mode can only be started when the active GIS layer is editable.
+	* Bulk apply OSMM update mode is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+
+.. _figUIBOUF:
+
+.. figure:: figures/UserInterfaceOSMMUpdatesFilter.png
+	:align: center
+	:scale: 85
+
+	Review OSMM Updates Filter Window
+
+To filter pending OSMM Updates:
+
+* Click :guilabel:`Edit... --> Bulk Apply OSMM Updates` to enter bulk OSMM update mode. The OSMM Updates Filter window will appear as shown in figure :ref:`figUIBOUF`.
+* Select a row in the table or manually select the required values for any or all of the Process, Spatial, Change and Status fields.
+* Click :guilabel:`Ok` to apply the selected filter to the INCID records in the main interface.
+
+.. note::
+	To apply another filter at any time click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to re-open the OSMM Updates Filter window.
+
+.. _figUIBOU:
+
+.. figure:: figures/UserInterfaceBulkOSMMUpdate.png
+	:align: center
+	:scale: 60
+
+	Bulk OSMM Update Window
+
+To bulk apply OSMM updates:
+
+* Once a filter has been applied an empty form is displayed as shown in the figure :ref:`figUIBOU` and the 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments that will be affected by the update.
+* The Habitats tab will be disabled as changes to the habitat attributes are determined by the pending OSMM update for each INCID.
+* Enter any required update details in the Details and Sources tabs, then click :guilabel:`Apply`. The Bulk Update confirmation window will appear as shown in the figure :ref:`figUIBOUC`.
+* Select the required options for the bulk update and click :guilabel:`OK`. The INCIDs in the active filter will be updated.
+
+.. _figUIBOUC:
+
+.. figure:: figures/UserInterfaceBulkUpdateConfirmation.png
+	:align: center
+	:scale: 85
+
+	Bulk Update Confirmation Window
+
+.. note::
+	If a default OSMM Source Name has been set (see :ref:`options_bulk_update` for details) this will automatically appear in the Sources tab.
+
+.. caution::
+	Performing bulk OSMM updates should be used with caution as unexpected results may occur if users do not understand the implications of any update details or options applied.
+
+To cancel the bulk apply OSMM update mode:
+
+* Click :guilabel:`Cancel` or click :guilabel:`Edit... --> Cancel Bulk Apply OSMM Updates`. The main window will return to the standard interface.
 
 
 .. raw:: latex
@@ -476,7 +610,12 @@ Export
 
 Export allows users to combine spatial geometries from a HLU GIS layer and attribute data from the HLU database into a combined GIS layer using a pre-defined export format.
 
-If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the records related to the selected INCIDs and the GIS features will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`filter_by_attributes`.
+.. _figED:
+
+.. figure:: figures/ExportDialog.png
+	:align: center
+
+	Export Window
 
 To perform an export:
 
@@ -484,19 +623,22 @@ To perform an export:
 	* Click :guilabel:`File... --> Export` to open the Export window.
 	* Select one of the pre-defined export formats from the 'Export Format' drop-down list.
 	* Tick the 'Selected only' checkbox to export **only** the selected features or clear the checkbox to export **all** of the features in the active GIS layer as required.
-	* Click :guilabel:`Ok` to perform the export.
-	* You will be prompted to select a destination folder and file name for the new GIS layer.
+	  
+	.. note::
+		If a filter is active based on the features selected in the active GIS layer then the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the selected INCIDs and associated GIS features will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`filter_by_attributes`.
+
+	* Click :guilabel:`Ok` to start the export. Select a destination folder and suitable file name for the new GIS layer when prompted.
 	* A pop-up message will appear informing when the export has completed and prompting if the new GIS layer should be loaded into the active GIS document/workspace.
 
 	.. note::
 		The default export folder destination can be set by MapInfo users (see :ref:`options_gis` for more details).
 
 	.. warning::
-		Exporting all features or a large number of features can take a long time depending upon the number of features and the configuration of the HLU Tool and the associated GIS application and attribute database system.
+		Exporting all features or a large number of features can take a long time depending upon the number of features and the configuration of the HLU Tool GIS application and database system.
 
 During the export process checks and validation are performed to avoid potential errors and frustrations. As a result warnings may appear under the following circumstances:
 
-	* If the export contains more than 5,000 INCIDs and hence may take some time to complete (the count of 5,000 is only an arbitrary value and does not represent any processing limit).
+	* If the export contains more than 50,000 INCIDs and hence may take a long time to complete (the count of 50,000 is only an arbitrary value and does not represent any processing limit).
 	* If ArcGIS users have chosen to export to a shapefile (as opposed to a file or personal geodatabase feature class) and have selected an export format that contains field names that exceed 10 characters as this will result in the field names being automatically truncated or renamed by ArcGIS.
 	* If MapInfo users have selected an export format where the total length of the output fields (including the fields included from the GIS layer) exceeds 4,000 bytes as this is the maximum record length supported by MapInfo.
 	* If MapInfo users have initiated an export where the total size of the output .dbf attribute file is likely to exceed 2 GBs as this is the maximum file size supported by MapInfo.

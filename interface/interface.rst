@@ -1,3 +1,8 @@
+.. |filterbyattr| image:: ../icons/FilterByAttributes.png
+	:height: 16px
+	:width: 16px
+
+
 .. index::
 	single: Interfaces
 
@@ -563,12 +568,25 @@ The Review OSMM Updates 'INCID Status' section shows the total number of INCIDs 
 
 For example, figure :ref:`figUIOUIS` indicates that the active filter currently contains 13 INCIDs and the current INCID consists of 1 TOID with 1 fragment.
 
+Holding down the :guilabel:`Ctrl` key changes the :guilabel:`Reject` and :guilabel:`Accept` buttons to :guilabel:`Reject All` and :guilabel:`Accept All` thereby allowing the user to Reject or Accept all remaining INCIDs in the active filter.
+
+.. _figUIOUIS2:
+
+.. figure:: figures/UserInterfaceOSMMUpdateStatusSection2.png
+	:align: center
+	:scale: 85
+
+	Review OSMM Updates Window - INCID Status Section 2
+
+For example, figure :ref:`figUIOUIS2` shows the 'INCID Status' section when the :guilabel:`Ctrl` key is pressed.
+
+
 .. _osmm_updates_filter:
 
 OSMM Updates Filter
 -------------------
 
-When the review OSMM updates mode is first started, the OSMM Updates Filter window will appear as shown in the figure :ref:`figUIOUS`. This allows the user to filter which subset of proposed OSMM Updates to review.
+When the review OSMM updates mode is first started, the OSMM Updates Filter window will appear as shown in the figure :ref:`figUIOUF`. This allows the user to filter which subset of proposed OSMM Updates to review.
 
 .. _figUIOUF:
 
@@ -582,10 +600,22 @@ OSMM Updates Summary
 	Displays a tabular summary of all the OSMM Updates in the database. Each row is a unique combination of the Process Flag, Spatial Flag, Change Flag and shows the number of records for each of the possible Status values (Rejected, Ignored, Proposed, Pending and Applied) and the total records for all statuses. Only combinations that exist in the database (rather than all possible combinations) will appear in the table.
 
 .. tip::
-	Selecting one of the rows in the table will set all of the values in the Filter by OSMM Updates section to those of the selected row.
+	Selecting one of the rows in the table will set the Process, Spatial and Change values in the Filter by OSMM Updates section to those of the selected row. However, the Status field will not be changed and must be selected manually.
 
-Filter by OSMM Updates
-	Allows the user to select specific values for any or all of the Process, Spatial, Change and Status fields.
+Process
+	Allows the user to select a specific value, to select only proposed updates with a given Process flag, or select <all> to select proposed updates with any Process flag.
+
+Spatial
+	Allows the user to select a specific value, to select only proposed updates with a given Spatial flag, or select <all> to select proposed updates with any Spatial flag.
+
+Change
+	Allows the user to select a specific value, to select only proposed updates with a given Change flag, or select <all> to select proposed updates with any Change flag.
+
+Status
+	Allows the user to select a specific value to select only proposed updates with a given pending status (Rejected, Ignored or Proposed).
+
+	.. note::
+		Typically only updates with a pending status of 'Proposed' would be selected, but the option to select updates with a pending status of 'Rejected' or 'Ignored' is available to enabled earlier actions to be reviewed or undone. However, it is **not** possible to select updates that have already been accepted or applied (i.e. have a status of 'Pending' or 'Applied').
 
 OK
 	Click :guilabel:`Ok` to apply the selected filter to the INCID records in the main interface and close the OSMM Updates Filter window.
@@ -611,18 +641,18 @@ Cancel
 
 .. _bulk_osmm_update_window:
 
-Bulk OSMM Updates Window
-========================
+Bulk OSMM Update Window
+=======================
 
-The main window will transform into the bulk OSMM update window when the bulk OSMM update mode is started. The window appears the same as the main window except for the Bulk Update section and the INCID Status section as shown in the figure :ref:`figUIMWBU`. The Habitats tab and History tab will also be disabled.
+The main window will transform into the bulk OSMM update window when the bulk OSMM update mode is started. The window appears the same as the main window except for the Bulk Update section and the INCID Status section as shown in the figure :ref:`figUIMWBOU`. The Habitats tab and History tab will also be disabled.
 
-.. _figUIMWBU:
+.. _figUIMWBOU:
 
-.. figure:: figures/UserInterfaceBulkUpdate.png
+.. figure:: figures/UserInterfaceBulkOSMMUpdate.png
 	:align: center
 	:scale: 60
 
-	Bulk Update Window
+	Bulk OSMM Update Window
 
 
 .. note::
@@ -791,7 +821,7 @@ Notify After Completing Split/Merge?
 	Enable users to specify if a pop-up message should be displayed following the completion of any of the split or merge operations.
 
 Show OSMM Update Attributes
-	Allows the user to choose when Ordnance Survey MasterMap (OSMM) updates should be shown (see :Ref:`osmm_updates` for more details). The available options are:
+	Allows the user to choose when Ordnance Survey MasterMap (OSMM) updates should be shown (see :Ref:`osmm_update_section` for more details). The available options are:
 
 		* Never - **Never** show the OSMM Updates section.
 		* When Outstanding - Only show the OSMM Updates section when the update is **outstanding** (the status is 'Proposed' or 'Pending').
@@ -1081,7 +1111,7 @@ OK
 	Click :guilabel:`OK` to execute the query and close the query window. If the user has requested to be warned before applying the GIS selection then a pop-up message will appear advising how many expected INCIDs and features will be selected and if a 'Join' will be used to select the features in GIS (see :ref:`options_filter` for more details).
 
 Cancel
-	Click :guilabel:`Cancel` to close the 'HLU Advanced Query Builder' window without applying a new filter.
+	Click :guilabel:`Cancel` to close the 'Advanced Query Builder' window without applying a new filter.
 
 
 .. tip::
@@ -1096,7 +1126,7 @@ Cancel
 	single: Windows; Filter by Incid
 	single: Filter; Filter by Incid
 
-.. _filter_by_incid:
+.. _filter_by_incid_window:
 
 Filter by Incid Window
 ----------------------

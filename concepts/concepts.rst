@@ -276,7 +276,7 @@ Attribute updates can also be applied in bulk to multiple INCID records at the s
 OSMM Updates
 ============
 
-If the habitat framework has been externally processed against a more recent OS MasterMap (OSMM) update then there may be proposed OSMM updates to review and apply. Any proposed updates are INCID specific and will appear at the top of the main interface (if one of the options to display them is configured in the user options) for the current INCID. Proposed updates can be reviewed one INCID at a time where they can either be accepted (when they become pending updates) or rejected. Pending updates can then be applied in bulk in a method similar to the bulk update process.
+If the habitat framework has been externally processed against a more recent OS MasterMap (OSMM) update there may be proposed OSMM updates to review and apply. Any proposed updates are INCID specific and will appear at the top of the main interface (if one of the options to display them is configured in the user options) for the current INCID. Proposed updates can be reviewed one INCID at a time where they can either be accepted (when they become pending updates) or rejected. Pending updates can then be applied in bulk in a method similar to the bulk update process.
 
 .. note::
 	This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.

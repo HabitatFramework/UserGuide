@@ -117,7 +117,7 @@
 			"file": "menus/menus.rst",
 			"settings":
 			{
-				"buffer_size": 11538,
+				"buffer_size": 11489,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -376,9 +376,11 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"Main window",
+			"paste",
 			"read-only",
 			"filter",
 			"[",
@@ -504,9 +506,7 @@
 			"Bool2CollapsedConverter",
 			"<<<",
 			">>>",
-			"tabitem",
-			"menu",
-			"Data=\"F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "
+			"tabitem"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -514,6 +514,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Main Window",
 			"habitats_tab",
 			"figures/",
 			"../icons/",
@@ -564,7 +565,7 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -734,10 +735,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3996.0,
+						"translation.y": 1086.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -746,15 +747,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11538,
+						"buffer_size": 11489,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								548,
-								534
+								4876,
+								4876
 							]
 						],
 						"settings":
@@ -763,10 +764,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3063.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -795,7 +796,7 @@
 						"translation.y": 693.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -824,7 +825,7 @@
 						"translation.y": 5280.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -957,7 +958,7 @@
 	"project": "UserGuide.sublime-project",
 	"replace":
 	{
-		"height": 44.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":

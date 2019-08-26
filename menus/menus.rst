@@ -86,7 +86,7 @@ The following sections summarise the menu functionality and provide some guideli
 .. figure:: figures/UserInterfaceToolbars.png
 	:align: center
 
-	Main window - Toolbars
+	Main Window - Toolbars
 
 .. index::
 	single: Menus; File Menu
@@ -99,9 +99,9 @@ File Menu
 .. _figUIFM:
 
 .. figure:: figures/UserInterfaceFileMenu.png
-	:align: center
+	:align: left
 
-	Main window - File Menu
+	Main Window - File Menu
 
 Export...
 ---------
@@ -132,9 +132,9 @@ Edit Menu
 .. _figUIEM:
 
 .. figure:: figures/UserInterfaceEditMenu.png
-	:align: center
+	:align: left
 
-	Main window - Edit Menu
+	Main Window - Edit Menu
 
 .. note::
 	When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details) and the spatial data must be editable in the GIS application.
@@ -150,19 +150,17 @@ Copies selected attributes so they can be applied to these fields in another rec
 	:align: center
 	:scale: 90
 
-	Checkboxes ticked to copy data
+	Main Window - Copy Checkboxes
 
 Tick the checkboxes next to the fields to be copied, as shown in the figure :ref:`figCC`, then click :guilabel:`Copy`.
 
 |paste| Paste
 -------------
 
-Pastes the data copied by the 'Copy' function into the same fields in another record.
-
-For example, the fields copied in the figure above would be pasted into 'Source 2' on the new record.
+Pastes the data copied by the 'Copy' function into the same fields in another record. For example, the fields copied in the figure above would be pasted into 'Source 2' on the new record.
 
 .. note::
-	It is not possible to copy data from one field in one record and paste it into a different field in another record.
+	It is not possible to copy data from one field and paste it into a different field.
 
 Review OSMM Updates
 -------------------
@@ -205,9 +203,9 @@ View Menu
 .. _figUIVM:
 
 .. figure:: figures/UserInterfaceViewMenu.png
-	:align: center
+	:align: left
 
-	Main window - View Menu
+	Main Window - View Menu
 
 |winsidebyside| Windows Side By Side
 ------------------------------------
@@ -218,9 +216,9 @@ Aligns the HLU window to the top left of the screen and expands the GIS window t
 
 .. figure:: figures/WindowsSideBySide.png
 	:align: center
-	:scale: 80
+	:scale: 50
 
-	Windows arranged side by side
+	Main Window - Side by Side
 
 |zoom| Zoom to Selection
 ------------------------
@@ -263,9 +261,9 @@ Select Menu
 .. _figUISM:
 
 .. figure:: figures/UserInterfaceSelectMenu.png
-	:align: center
+	:align: left
 
-	Main window - Select Menu
+	Main Window - Select Menu
 
 |filterbyattr| Filter by Attributes...
 --------------------------------------
@@ -283,7 +281,7 @@ Allows users to filter the INCID records for a specific INCID.
 
 
 .. seealso::
-	See :ref:`filter_incid_window` for more information.
+	See :ref:`filter_by_incid_window` for more information.
 
 Allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
 
@@ -337,9 +335,9 @@ Split/Merge Menu
 .. _figUISMM:
 
 .. figure:: figures/UserInterfaceSplitMergeMenu.png
-	:align: center
+	:align: left
 
-	Main window - Split/Merge Menu
+	Main Window - Split/Merge Menu
 
 .. note::
 	All options in this menu are disabled until the database records have been filtered and a process and reason has been selected from the 'Process' and 'Reason' drop-down lists in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
@@ -392,9 +390,9 @@ Tools Menu
 .. _figUITM:
 
 .. figure:: figures/UserInterfaceToolsMenu.png
-	:align: center
+	:align: left
 
-	Main window - Tools Menu
+	Main Window - Tools Menu
 
 |options| Options...
 --------------------
