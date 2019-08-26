@@ -436,7 +436,7 @@ For example, figure :ref:`figUIBUS` indicates that the active filter currently c
 
 .. index::
 	single: Bulk Updates; Confirmation
-	single: Windows; Bulk Update Confirmation
+	single: Windows; Bulk Update Confirmation Window
 
 .. _bulk_update_confirmation_window:
 
@@ -479,7 +479,7 @@ Create History Records
 
 .. index::
 	single: OSMM Updates; Review
-	single: Windows; Review OSMM Updates
+	single: Windows; Review OSMM Updates Window
 
 .. _review_osmm_window:
 
@@ -637,7 +637,7 @@ Cancel
 
 .. index::
 	single: OSMM Updates; Bulk Apply
-	single: Windows; Bulk Apply OSMM Updates
+	single: Windows; Bulk Apply OSMM Updates Window
 
 .. _bulk_osmm_update_window:
 
@@ -945,9 +945,9 @@ OSMM Source Name
 	\newpage
 
 .. index::
-	single: Windows; Filter by Attributes
+	single: Filter by Attributes
 
-.. _filter_by_attributes:
+.. _filter_Windows:
 
 Filter Windows
 ==============
@@ -1123,7 +1123,7 @@ Cancel
 	\newpage
 
 .. index::
-	single: Windows; Filter by Incid
+	single: Windows; Filter by Incid Window
 	single: Filter; Filter by Incid
 
 .. _filter_by_incid_window:

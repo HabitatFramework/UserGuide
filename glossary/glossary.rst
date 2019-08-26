@@ -8,19 +8,19 @@ Glossary
 .. glossary::
 
 	Apply
-		Applies any changes made by the user to all the features for the INCID in the active feature in the main window. See :ref:`main_window` for more details.
+		Commits any changes made by the user to all of the features for the current INCID in the active feature when in the main window. See :ref:`main_window` for more details.
 
 	Boundary Importance
 		The relative importance of each source when determining the boundary location of all the features in an INCID (e.g. of 'Primary' or 'Secondary' importance).
 
 	Bulk Update
-		Enables updates to the attributes for multiple selected INCIDs simultaneously. See :ref:`bulk_update_window` for more details.
+		Enables updates to the attributes for multiple selected INCIDs simultaneously. See :ref:`bulk_update_window` and :ref:`bulk_updates` for more details.
 
 	Determination Quality
 		Categorises the accuracy with which a priority habitat has been determined (e.g. 'Definitely is the priority habitat'). See :ref:`determination_quality` for more details.
 
 	Export
-		Combines spatial data for the selected features from GIS with the associated attribute data from the database into a single new GIS layer based upon a pre-defined export format. See :ref:`export_window` for more details.
+		Combines spatial data for the selected features from GIS with the associated attribute data from the database into a single new GIS layer based upon a pre-defined export format. See :ref:`export_window` and :ref:`export_function` for more details.
 
 	Fragment ID
 		An incremental number used as a unique reference to individual features (fragments) of a single TOID. See :ref:`habitat_framework` for more details.
@@ -61,6 +61,9 @@ Glossary
 	Multiplex Codes
 		Matrix, Formation, Management and Complex codes (known collectively as 'Multiplex' codes) can be recorded alongside an IHS Habitat code to refine the habitat definition for an INCID.
 
+	OSMM Update
+		Updates based on recent OS MasterMap external processing. See :ref:`osmm_update` for more details.
+
 	Physical Split
 		Creates one or more new TOID fragments in the database based upon a single TOID which has been split in the GIS layer. See :ref:`physical_split` for more details.
 
@@ -74,13 +77,13 @@ Glossary
 		Habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UK Post-2010 Biodiversity Framework.
 
 	Process
-		The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current INCID. It may relate to a specific project, an ongoing process or an adhoc update.
+		The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current INCID. It may relate to a specific project, an ongoing process or an adhoc update. See :ref:`reason_section` for more details.
 
 	Reason
-		The underlying explanation for the change in habitat or land use. It may be as a result of known changes in the habitat (such as habitat restoration), because new information indicates the existing data is wrong or because there has been a change but the underlying the cause is unknown.
+		The underlying explanation for the change in habitat or land use. It may be as a result of known changes in the habitat (such as habitat restoration), because new information indicates the existing data is wrong or because there has been a change but the underlying the cause is unknown. See :ref:`reason_section` for more details.
 
 	Source
-		A dataset, document or reference used as the source of habitat or land use information. Up to three sources can be defined for each INCID.
+		A dataset, document or reference used as the source of habitat or land use information. Up to three sources can be defined for each INCID. See :ref:`source_tab` for more details.
 
 	Split
 		The tool can perform two types of split, Logical Split or Physical Split, depending upon the features selected. See :ref:`split` for more details.

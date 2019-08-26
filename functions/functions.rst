@@ -441,7 +441,7 @@ Users can update the attributes for multiple INCID database records, and associa
 
 To bulk apply updates:
 
-* Filter the database records using 'Select by attributes' or select polygons in the GIS layer and click :guilabel:`Get Map Selection`. For details on filtering records see :ref:_filter_by_attributes`.
+* Filter the database records using 'Select by attributes' or select polygons in the GIS layer and click :guilabel:`Get Map Selection`. For details on filtering records see :ref:`filter_by_attributes`.
 * Click :guilabel:`Edit... --> Bulk Apply Updates` to enter bulk update mode. An empty form is displayed as shown in the figure :ref:`figUIBU` and the 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments affected by the update.
 * Enter the update details in the Habitats, Details, and Sources tabs, then click :guilabel:`Apply`. The Bulk Update confirmation window will appear as shown in the figure :ref:`figUIBUC`.
 * Select the required options for the bulk update and click :guilabel:`OK`. The INCIDs in the active filter will be updated.
@@ -630,11 +630,11 @@ To perform an export:
 	* Click :guilabel:`Ok` to start the export. Select a destination folder and suitable file name for the new GIS layer when prompted.
 	* A pop-up message will appear informing when the export has completed and prompting if the new GIS layer should be loaded into the active GIS document/workspace.
 
-	.. note::
-		The default export folder destination can be set by MapInfo users (see :ref:`options_gis` for more details).
+.. note::
+	The default export folder destination can be set by MapInfo users (see :ref:`options_gis` for more details).
 
-	.. warning::
-		Exporting all features or a large number of features can take a long time depending upon the number of features and the configuration of the HLU Tool GIS application and database system.
+.. warning::
+	Exporting all features or a large number of features can take a long time depending upon the number of features and the configuration of the HLU Tool GIS application and database system.
 
 During the export process checks and validation are performed to avoid potential errors and frustrations. As a result warnings may appear under the following circumstances:
 
@@ -643,6 +643,6 @@ During the export process checks and validation are performed to avoid potential
 	* If MapInfo users have selected an export format where the total length of the output fields (including the fields included from the GIS layer) exceeds 4,000 bytes as this is the maximum record length supported by MapInfo.
 	* If MapInfo users have initiated an export where the total size of the output .dbf attribute file is likely to exceed 2 GBs as this is the maximum file size supported by MapInfo.
 
-	.. seealso::
-		For details on defining export formats see 'Configuring Exports' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+.. seealso::
+	For details on defining export formats see 'Configuring Exports' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
