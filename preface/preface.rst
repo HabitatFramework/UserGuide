@@ -107,7 +107,7 @@ The following typographical conventions are used in this manual:
 :kbd:`Ctrl-A`
 	Indicates a key, or combination of keys, to press.
 
-**Commit**
+:guilabel:`Commit`
 	Indicates a label, button or anything that appears in user interfaces.
 
 **Tools... --> About**
