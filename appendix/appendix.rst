@@ -10,20 +10,28 @@ Appendix
 Change Log
 ==========
 
-**v3.1.1** ... 25th November 2019
+3.1.1
+-----
+25Nov2019
+
     :guilabel:`Fixed` *Fix084* - No longer find first habitat type on change in IHS habitat
 
-**v3.1.0** - 5th November 2019
-    :guilabel:`New` *CR54* - New pop-out windows to more clearly display/edit priority and potential priority habitats
+v3.1.0
+------
+05Nov2019
 
-    :guilabel:`New` *CR52* - Major enhancement to enable multiple priority and potential priority habitat classifications to be supported
+    :guilabel:`New` New pop-out windows to display/edit priority and potential priority habitats (*CR54*)
 
-    :guilabel:`New` *CR56* - Major enhancement to validate that any mandatory or recommended multiplex codes relating to the current habitat type have been selected
+    :guilabel:`New` Enable multiple priority and potential priority habitat classifications to be supported (*CR52*)
+
+    :guilabel:`New` Validate mandatory or recommended multiplex codes have been selected (*CR56*)
 
 v3.0.2
-    Fixes
-        :guilabel:`Fixed` Fix081 - Enable a subset of features for each selected INCID to be exported.
-        :guilabel:`Fixed` Fix083 - Ensure predicted count of toids/fragment selected works with any filter query.
+------
+14Oct2019
+
+    * :guilabel:`Fixed` Enable a subset of features for each selected INCID to be exported (*Fix081*)
+    * :guilabel:`Fixed` Ensure predicted count of toids/fragment selected works with any filter query (*Fix083*)
           
 3.0.1
     Fixes
