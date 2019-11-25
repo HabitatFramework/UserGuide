@@ -103,6 +103,7 @@ File Menu
 
 	Main Window - File Menu
 
+
 Export...
 ---------
 
@@ -135,6 +136,7 @@ Edit Menu
 	:align: left
 
 	Main Window - Edit Menu
+
 
 .. note::
 	When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details) and the spatial data must be editable in the GIS application.
@@ -207,6 +209,7 @@ View Menu
 
 	Main Window - View Menu
 
+
 |winsidebyside| Windows Side By Side
 ------------------------------------
 
@@ -264,6 +267,7 @@ Select Menu
 	:align: left
 
 	Main Window - Select Menu
+
 
 |filterbyattr| Filter by Attributes...
 --------------------------------------
@@ -339,6 +343,7 @@ Split/Merge Menu
 
 	Main Window - Split/Merge Menu
 
+
 .. note::
 	All options in this menu are disabled until the database records have been filtered and a process and reason has been selected from the 'Process' and 'Reason' drop-down lists in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
 
@@ -393,6 +398,7 @@ Tools Menu
 	:align: left
 
 	Main Window - Tools Menu
+
 
 |options| Options...
 --------------------

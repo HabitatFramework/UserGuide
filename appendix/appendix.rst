@@ -3,12 +3,196 @@ Appendix
 ********
 
 .. index::
+    single: Change Log
+
+.. _change_log:
+
+Change Log
+==========
+
+3.1.1
+    Fixes
+        * Fix084 - No longer find first habitat type on change in IHS habitat.
+
+3.1.0
+    Additions
+        * CR54 (Show/edit priority habitats) - New pop-out windows to more clearly display/edit priority and potential priority habitats.
+        * CR52 (Multiple priority habitat classifications) - Major enhancement to enable multiple priority and potential priority habitat classifications to be supported.
+        * CR56 (Translation to IHS non-habitat codes) - Major enhancement to validate that any mandatory or recommended multiplex codes relating to the current habitat type have been selected.
+
+3.0.2
+    Fixes
+        * Fix081 - Enable a subset of features for each selected INCID to be exported.
+        * Fix083 - Ensure predicted count of toids/fragment selected works with any filter query.
+          
+3.0.1
+    Fixes
+        * Fix082 - Check if any OSMM updates before enabling review and bulk update functionality.
+
+3.0.0
+    Additions
+        * Fix068 - New command in the main interface to enable auto zoom when selecting features for an incid in GIS.
+        * Fix069 - New command in the main interface to enable auto select of features in GIS when moving to a new incid.
+        * Fix071 - A user option to set the minimum zoom scale for when zooming to selected features in GIS.
+        * Fix072 - A simple query filter window to search for a single INCID.
+        * Fix073 - New command in the main interface to reset the window dimensions to their default values (in case a user has resized the window manually).
+        * Fix076 - A user option to hide the group headers in main interface to reduce window height on small monitors.
+
+    Changes
+        * CR49 (Process bulk OSMM Updates) - Major enhancement to display and process and proposed OSMM updates.
+        * Fix070 - Improvements to 'zoom to selected features' functionality to only zoom if the selected features don't already appear within the current map window extent.
+        * Fix074 - Save the option to keep the main tool interface on top of other windows (previously this would have to be set each time the tool was started).
+        * Fix075 - Ensure than filtered records are always displayed in INCID order.
+        * Fix078 - Major overhaul/improvements to the bulk update functionality including a new interface before applying update to confirm how to handle existing multiplex codes, sources and priority habitats.
+        * Fix079 - Updated 'About' window layout including links to online user and technical guides.
+
+    Fixes
+        * KI116 (Cancelled attribute updates) - Fixes bug when cancelled updates to a subset of INCID features were still applied when moving to another INCID.
+        * KI117 (Bulk update errors) - Not specifically fixed but unable to reproduce errors following major overhaul/improvements (see Fix078).
+        * Fix077 - Correctly trap the error if the database requires a later version of the started application (previously this error went unreported before the application closed).
+        * Fix080 - Fix bug where changes to text fields in user options were not being saved when <Enter> key was pressed to save changes.
+
+2.4.3
+    Fixes
+        * Fix067 - Select features in the active HLU layer directly (rather than via a selection set) to avoid problems during export later. This relates to ArcGIS installations only and only affects queries performed using the HLU tool that select a large number of features.
+
+2.4.2
+    Changes
+        * Fix064 - Perform exports outside of edit sessions (in ArcGIS) to improve performance and reduce the memory usage when changes are saved at the end of the edit session.
+        * Fix065 - Prompt the user for the export GIS layer name before starting export (rather than only once the attributes have been saved to a temporary database).
+        * Fix066 - Improve the performance when exporting the attributes to a temporary database.
+
+    Fixes
+        * Fix063 - Apply the user option database connection timeout value rather than the fixed value of 15 seconds.
+
+2.4.1
+    Changes
+        * Fix061 - Enable the tool to work with all 32bit versions of MapInfo (including MapInfo 15.0).
+        * Fix062 - Enable tool to run in a multi-user virtual environment without needing to close all running instances of MapInfo first.
+
+
+2.4.0
+    Additions
+        * CR44 (Editable Legacy Habitat field) - Make the legacy habitat field editable in the user interface with a drop-down menu of available values from the new 'lut_legacy_habitat' table.
+        * Fix056 - Add a new option 'Show NVC Codes' to enable related NVC Codes to be shown or hidden in the user interface 'Habitats' tab.
+        * Fix058 - Display the current database connection details in 'About' dialog.
+
+    Changes
+        * Fix059 - Do not display the map window number after the current layer name if there is only one map window in the GIS application.
+        * Fix060 - Disable the switch GIS layer button and menu item if there is only one valid layer in the current GIS document/workspace.
+
+    Fixes
+        * Fix057 - Adjust the user interface window height correctly when showing/hiding the optional areas (NVC Codes & Reason/Process fields).
+
+2.3.3
+    Fixes
+        * Fix052 - Ensure 'Get Map Selection' works in MapInfo when the selection is based on joining two or more tables.
+        * Fix053 - Check if all selected features have unique keys in the active HLU layer to avoid any potential data integrity problems caused by splitting/merging when a physical split has not been completed.
+        * Fix054 - Improvement to error reporting during the export process.
+        * Fix055 - Enable connection via OLEDB to Access 2007 (.accdb) databases using Microsoft Access Database Engine (ACE) driver.
+
+2.3.2
+    Fixes
+        * CR43 (Sort multiple fields in exports) - Fix an error when exports fail if the selected format includes the **source\_id** field from the **incid_sources** table with a *field\_format* of 'Lookup' or Both'.
+
+2.3.1
+    Additions
+        * CR43 (Sort multiple fields in exports) - Sort all records from incid-related 'child' tables so that multiple fields will always appear in the same order in exported layers.
+
+    Changes
+        * Fix051 - Improve performance when filtering large number of incids.
+
+2.3.0
+    Additions
+        * CR14 (Exporting IHS codes or descriptions) - Enable users to specify if individual fields should be exported with descriptions instead of codes by specifying a **field\_format** value of 'Code' or 'Lookup' in the exports_fields table.
+        * CR15 (Concatenate IHS codes and descriptions) - Enable users to specify if individual fields should be exported with **both** codes and descriptions concatenated together by specifying a **field\_format** value of 'Both' in the exports_fields table.
+        * CR16 (Adding exported features) - Ask users if they want to add the new GIS layer to the active map once the export has completed.
+        * CR17 (Exporting date fields) - Enable **incid\_source** dates to be converted into a specific text date format by specifying a **field\_format** value (e.g. 'dd/MM/yyyy') in the exports_fields table.
+        * Fix034 - Enable auto-increment fields to be included in export layers by specifying a **field\_type** of 99 (AutoNumber) in the exports_fields table.
+        * Fix037 - Move the geometry length and area fields to the **end** of the list of fields for all export layers.
+        * Fix038 - Display the export progress in the ArcGIS status bar correctly during an export.
+        * Fix040 - Enable MapInfo users to set a default export folder path in the user options.
+        * Fix042 - Warn users when an export may take some time because it is very large (i.e. exceeds 5000 incids).
+        * Fix043 - Enable new 'dummy' fields to be included in export formats by specifying **table\_name** and **column\_name** values of '<none>' in the exports_fields table.
+        * Fix044 - Enable maximum text field lengths to be specified in export formats by specifying a **field\_length** value in the exports_fields table.
+        * Fix045 - Interweave multiple record fields from the same database table together (e.g. s1name, s1class, s1type, s2name, s2class, s2type, s3name, s3class, s3type).
+        * Fix048 - Enable fields to be converted to a different data type in an export by specifying a **field\_type** in the exports_fields table.
+        * Fix049 - Enable the multi-record counter to be inserted 'within' the export format **field\_name** (e.g 'source1name' by specifying 'source<no>name').
+        * Fix050 - Warn ArcGIS users if export format **field\_names** may be truncated or renamed when exporting to shapefiles (which only support 10 character names).
+
+    Changes
+        * CR13 (Export features performance) - Improvements to 'Export' performance for small numbers of incids/features by saving selected features to a temporary GIS layer before joining to the database attributes.
+
+    Fixes
+        * Fix033 - Ignore case during export when comparing field names in the feature layer and database attributes to avoid duplicate fields in the export layer.
+        * Fix035 - When 'Selected Only' checked only export **selected** features in GIS not **all** features for selected the incids.
+        * Fix036 - Clear all missing/empty fields when exporting features with ArcGIS to avoid values from preceding records from being exported.
+        * Fix039 - Check export layers won't exceed the MapInfo maximum record length (4000 bytes) or maximum .tab file size (2 Gb).
+        * Fix041 - Check the selected export format contains the incid column to avoid errors trying to join the attribute data to the GIS layer.
+        * Fix046 - Don't repeat details from the same *incid\_source** record in multiple source export fields when there are less than 3 source records.
+        * Fix047 - Break the process of exporting database attributes into chunks to avoid errors with excessive SQL query lengths.
+
+2.2.0
+    Additions
+        * CR5 (Select by Attribute Interface) - Added a new 'Advanced Query Builder' interface which allows users to build, verify, save and load free-form SQL queries. Check 'User Advanced Query Builder' in the options settings to use the new interface.
+        * Fix032 - Added a new button/menu 'Select all Filtered INCIDs on Map' to enable users to select **all** of the incids in the active filter on map, not just the current incid.
+
+    Changes
+        * CR12 (Select by attributes performance) - Improvement to 'Select by Attribute' performance (now known as 'Filter by Attributes'). Where possible execute more complex SQL queries (up to a GIS-specific maximum SQL string length) instead of using GIS table joins.
+
+2.1.1
+    Additions
+    * KI15 (User Interface style) - Enable the user to select any of three user interface styles (Original, Dark Grey & Light Grey).
+    * CR37 (Site reference& site name) - Add the site reference field to the user interface to enable the user to view/edit the value relating to the current INCID.
+    * CR39 (Split and merge complete messages) - Enable users to specify in the options if a pop-up message should be displayed following any of the split or merge operations.
+
+    Removals
+        * CR27 (Select current INCID) - Remove the 'Select by INCID' menu item and toolbar button as it serves no known purpose.
+
+    Changes
+        * CR7 (Split/merge options) - Display all four split and merge options on the menu bar and button toolbar and enable only the available options for the current selection.
+        * CR11 (History tab) - Change the field names on the history tab to make it clearer the history refers to previous or modified value, not the current values).
+        * CR20 (Window size/design) - Adjust the layout of the window to reduce the minimum height so support smaller screen resolutions.
+        * CR25 (Reason and process fields) - Do not display the reason and process fields sub-section of the user interface when the tool is in read-only mode.
+        * CR28 (INCID display field) - Enable the user to select the text in the INCID field and copy the value to the clipboard.
+        * CR38 (Logical merge prompt window) - Widen the default 'Select INCID to keep' window width so that more attributes initially appear.
+
+    Fixes
+        * Fix031 - Fix crash by checking if the value of any 'editable' combobox is NULL before finding the text in the drop-down list.
+        * CR2 (Apply button) - Changes to the 'IHS Habitat' field now trigger the 'Apply' button to be enabled.  The automatic selection of a source 'Habitat Type' when a 'Habitat Class' with only one possible Habitat Type is selected, disabled by CR2 in release v1.0.9, has now been re-instated.
+
+2.1.0
+    Additions
+        * CR42 (Database upgrade kit) - A new standalone program 'HluDbUpdater.exe' has been created which runs sql scripts to apply database structure and/or content changes to any target HLU Tool database.  See [HLU Database Updater](https://github.com/HabitatFramework/HLUTool-DatabaseUpdater/releases) for the latest version of the program.
+
+    Removals
+        * CR29 (Habitat classification and code conversion to IHS) - the NVC Codes field has been removed temporarily as there is currently no space to display it. It can be reinstated in a future release if required when space allows.
+
+    Changes
+        * CR30 (Database validation on start-up) - Update database validation to reflect updates to the database structure and also check that the tool is not already running on the same machine.
+        * CR29 (Habitat classification and code conversion to IHS) - Replace the IHS Category and NVC Category drop-down lists with new Habitat Classification and Habitat Type drop-down lists to provide users with ability to translate different input sources to IHS.
+        * CR32 (Local flags) - Enable users to flag habitat classifications and habitat types as 'local' to indicate if they should appear in the relevant drop-down lists in the user interface.
+
+    Fixes
+        * Fix025 - Add a default sort order when loading all lookup tables to act as a backup sort order if the sort_order columns are zero (or all the same values).
+        * Fix026 - Hide the MapInfo pop-up progress bar when updating tables and merging features.
+        * Fix027 - Force the Incid table to be refilled after any split/merge processing to ensure that any updates updates immediately following don't fail.
+        * Fix028 - Only update DateTime fields to whole seconds (ignoring fractions of a second) to avoid rounding differences when comparing fields during updates.
+        * Fix029 - Ignore case when comparing column names in MapInfo to ensure all features are re-selected following a physical split.
+        * Fix030 - Include time with date when updating DateTime fields in databases via ODBC connection type.
+
+
+.. raw:: latex
+
+    \newpage
+
+.. index::
 	single: Dos and Don'ts
 
 .. _dos_and_donts:
 
 DOs and DON'Ts
-================
+==============
 
 It is essential that the following guidelines are followed to ensure that the tool runs smoothly:
 
@@ -70,6 +254,12 @@ What Happened?
 
 GNU Free Documentation License
 ==============================
+
+Permission is granted to copy, distribute and/or modify this document under 
+the terms of the GNU Free Documentation License, Version 1.3 or any later
+version published by the Free Software Foundation; with no Invariant Sections,
+no Front-Cover Texts and no Back-Cover Texts.  A copy of the license is
+included in the Appendix section.
 
 .. raw:: latex
 

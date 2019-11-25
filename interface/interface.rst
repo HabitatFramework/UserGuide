@@ -2,6 +2,10 @@
 	:height: 16px
 	:width: 16px
 
+.. |zoomtable| image:: ../icons/ZoomTable.png
+	:height: 16px
+	:width: 16px
+
 
 .. index::
 	single: Interfaces
@@ -199,8 +203,12 @@ Click on :guilabel:`Details` to display the Details tab as shown in the figure :
 Priority Habitats
 	Automatically added based upon the Habitat and multiplex codes selected on the :ref:`habitats_tab`. For new priority habitats, 'Determination Quality' and 'Interpretation Quality' must be entered.
 
+	Click |zoomtable| to open the Priority Habitats window.
+
 Potential Priority Habitats
 	Allows users to define other priority habitats that may also be present in the future given appropriate management or restoration. An INCID may have one or more potential priority habitats even if no priority habitats are present.
+
+	Click |zoomtable| to open the Potential Priority Habitats window.
 
 General Comments
 	A free-text field which allows users to enter any additional comments up to 254 characters.
@@ -349,6 +357,56 @@ Errors
 
 .. note::
 	Whilst **any** fields are in error the :guilabel:`Apply` button will not appear.
+
+
+.. raw:: latex
+
+	\newpage
+
+.. index::
+	single: Main Window; Priority Habitats
+	single: Windows; Priority Habitats Window
+
+.. _priority_habitats_window:
+
+Priority Habitats Window
+========================
+
+Allows users to edit any priority habitats as shown in the figure :ref:`figUIPHW`.
+
+Click |zoomtable| adjacent to the Priority Habitats table on the Details tab to open the window.
+
+.. _figUIPHW:
+
+.. figure:: figures/UserInterfacePriorityHabitatsWindow.png
+	:align: center
+
+	Priority Habitats Window
+
+
+.. raw:: latex
+
+	\newpage
+
+.. index::
+	single: Main Window; Potential Priority Habitats
+	single: Windows; Potential Priority Habitats Window
+
+.. _potential_priority_habitats_window:
+
+Potential Priority Habitats Window
+==================================
+
+Allows users to add, edit or delete any potential priority habitats as shown in the figure :ref:`figUIPPHW`.
+
+Click |zoomtable| adjacent to the Potential Priority Habitats table on the Details tab to open the window.
+
+.. _figUIPPHW:
+
+.. figure:: figures/UserInterfacePotentialPriorityHabitatsWindow.png
+	:align: center
+
+	PotentialPriority Habitats Window
 
 
 .. raw:: latex
@@ -970,10 +1028,6 @@ Query Builder Window
 --------------------
 
 Allows users to filter the database records using the query builder shown in the figure :ref:`figQB`.
-
-.. |filterbyattr| image:: ../icons/FilterByAttributes.png
-	:height: 16px
-	:width: 16px
 
 Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the window.
 
