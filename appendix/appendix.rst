@@ -14,8 +14,8 @@ Change Log
 (25th November 2019)
 
     * :guilabel:`Fixed` Clear habitat type when IHS habitat changes (after change of incid or paste) (*Fix084*)
-    * :guilabel:`Fixed` Don't show multiplex warnings when at least one recommended code is selected (*Fix085*)
-    * :guilabel:`Fixed` Clear error messages if priority habitat errors have been fixed in pop-up window (*Fix086*)
+    * :guilabel:`Fixed` Clear multiplex warnings when at least one recommended code is selected (*Fix085*)
+    * :guilabel:`Fixed` Clear error messages if priority habitats have been fixed in pop-up window (*Fix086*)
 
 **3.1.0**
 (5th November 2019)
