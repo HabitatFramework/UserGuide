@@ -162,7 +162,7 @@
 			"file": "appendix/appendix.rst",
 			"settings":
 			{
-				"buffer_size": 38030,
+				"buffer_size": 37904,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -364,7 +364,7 @@
 	],
 	"find":
 	{
-		"height": 24.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -894,15 +894,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 38030,
+						"buffer_size": 37904,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1159,
-								1159
+								62,
+								62
 							]
 						],
 						"settings":
@@ -915,7 +915,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 360.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

@@ -31,7 +31,7 @@ Change Log
 **3.0.1**
 (10th October 2019)
 
-    * :guilabel:`Fixed` Check for OSMM updates before enabling review and bulk update functions (*Fix082*)
+    * :guilabel:`Fixed` Check for OSMM updates before enabling OSMM review and bulk update (*Fix082*)
 
 **3.0.0**
 (1st August 2019)
@@ -70,7 +70,7 @@ Change Log
 (6th June 2016)
 
     * :guilabel:`Improved` Enable use with all 32bit versions of MapInfo (*Fix061*)
-    * :guilabel:`Improved` Enable use in multi-user virtual environment if MapInfo already running (*Fix062*)
+    * :guilabel:`Improved` Enable use on multi-user virtual systems if MapInfo already running (*Fix062*)
 
 
 **2.4.0**
