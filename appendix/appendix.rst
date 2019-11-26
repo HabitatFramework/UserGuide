@@ -29,9 +29,13 @@ Change Log
     * :guilabel:`Fixed` Ensure predicted count of toids/fragment works with any filter query (*Fix083*)
           
 **3.0.1**
-    * :guilabel:`Fixed` Check if any OSMM updates before enabling review and bulk update functionality (*Fix082*)
+()
+
+    * :guilabel:`Fixed` Check for OSMM updates before enabling review and bulk update functionality (*Fix082*)
 
 **3.0.0**
+()
+
     * :guilabel:`New` Enable auto zoom when selecting features for an incid in GIS (*Fix068*)
     * :guilabel:`New` Enable auto select of features in GIS when moving to a new incid (*Fix069*)
     * :guilabel:`New` Option to set minimum zoom scale when zooming to selected features in GIS (*Fix071*)
@@ -42,51 +46,67 @@ Change Log
     * :guilabel:`Improved` Improvements to 'zoom to selected features' functionality (*Fix070*)
     * :guilabel:`Improved` Save option to keep the main tool interface on top of other windows (*Fix074*)
     * :guilabel:`Improved` Ensure than filtered records are always displayed in INCID order (*Fix075*)
-    * :guilabel:`Improved` Major overhaul of the bulk update functionality including new confirm window (*Fix078*)
-    * :guilabel:`Improved` Updated 'About' window layout including links to online user and technical guides (*Fix079*)
+    * :guilabel:`Improved` Major overhaul of bulk update functionality with new confirm window (*Fix078*)
+    * :guilabel:`Improved` Updated 'About' window with links to online user and technical guides (*Fix079*)
     * :guilabel:`Fixed` Bug when cancelled updates to a subset of INCID features were still applied (*KI116*)
     * :guilabel:`Fixed` Bulk update error where determination quality is blank (*KI117*)
     * :guilabel:`Fixed` Trap error when database requires a later version of the started application (*Fix077*)
-    * :guilabel:`Fixed` Changes to text fields in user options not being saved when <Enter> key was pressed (*Fix080*)
+    * :guilabel:`Fixed` Changes to text fields in options not being saved using <Enter> key (*Fix080*)
 
 **2.4.3**
-    * :guilabel:`Fixed` Problems during export (in ArcGIS) after selecting features in the active HLU layer (*Fix067*)
+()
+
+    * :guilabel:`Fixed` Export problems (in ArcGIS) after selecting features in the active GIS layer (*Fix067*)
 
 **2.4.2**
-    * :guilabel:`Improved` Improved performance (in ArcGIS) by exporting outside of edit sessions (*Fix064*)
+()
+
+    * :guilabel:`Improved` Performance (in ArcGIS) by exporting outside of edit sessions (*Fix064*)
     * :guilabel:`Improved` Prompt user for export GIS layer name before starting export (*Fix065*)
-    * :guilabel:`Improved` Improved performance when exporting the attributes to a temporary database (*Fix066*)
-    * :guilabel:`Fixed` Apply database connection time-out option instead of fixed value of 15 seconds (*Fix063*)
+    * :guilabel:`Improved` Performance when exporting attributes to a temporary database (*Fix066*)
+    * :guilabel:`Fixed` Apply database connection time-out option instead of default 15 seconds (*Fix063*)
 
 **2.4.1**
+()
+
     * :guilabel:`Improved` Enable use with all 32bit versions of MapInfo (*Fix061*)
-    * :guilabel:`Improved` Enable use in a multi-user virtual environment whilst MapInfo is already running (*Fix062*)
+    * :guilabel:`Improved` Enable use in multi-user virtual environment if MapInfo is already running (*Fix062*)
 
 
 **2.4.0**
-    * :guilabel:`New` Legacy habitat field editable with drop-down list from new 'lut_legacy_habitat' table (*CR44*)
-    * :guilabel:`New` Option to enable related NVC Codes to be shown/hidden in the 'Habitats' tab (*Fix056*)
+()
+
+    * :guilabel:`New` Legacy habitat field editable with list from new 'lut_legacy_habitat' table (*CR44*)
+    * :guilabel:`New` Option to show/hide related NVC Codes in the 'Habitats' tab (*Fix056*)
     * :guilabel:`New` Display the current database connection details in 'About' dialog (*Fix058*)
 
     * :guilabel:`Improved` Hide map window number after layer name when only one map window (*Fix059*)
     * :guilabel:`Improved` Disable switch GIS layer button/menu when only one valid GIS layer (*Fix060*)
 
-    * :guilabel:`Fixed` Adjust interface window height correctly when showing/hiding optional areas (*Fix057*)
+    * :guilabel:`Fixed` Adjust interface height correctly when showing/hiding optional areas (*Fix057*)
 
 **2.3.3**
+()
+
     * :guilabel:`Improved` Improvement to error reporting during the export process (*Fix054*)
     * :guilabel:`Improved` Enable connection via OLEDB to Access 2007 (.accdb) databases (*Fix055*)
-    * :guilabel:`Fixed` Ensure 'Get Map Selection' works (in MapInfo) when selection based on multiple tables (*Fix052*)
+    * :guilabel:`Fixed` 'Get Map Selection' bug (in MapInfo) when selection based on multiple tables (*Fix052*)
     * :guilabel:`Fixed` Check all selected features have unique keys before splitting/merging (*Fix053*)
 
 **2.3.2**
-    * :guilabel:`Fixed` Error when exporting the **source\_id** field with a *field\_format* of 'Lookup' or Both' (*CR43*)
+()
+
+    * :guilabel:`Fixed` Bug exporting the **source\_id** field with a *field\_format* of 'Lookup' or 'Both' (*CR43*)
 
 **2.3.1**
-    * :guilabel:`New` Sort records from 'child' tables so multiple fields are always exported in the same order (*CR43*)
-    * :guilabel:`Improved` Improved performance when filtering large number of incids (*Fix051*)
+()
+
+    * :guilabel:`New` Sort records from 'child' tables so multiple fields are exported in same order (*CR43*)
+    * :guilabel:`Improved` Performance when filtering large number of incids (*Fix051*)
 
 **2.3.0**
+()
+
     * :guilabel:`New` Enable fields to be exported with codes or descriptions (*CR14*)
     * :guilabel:`New` Enable fields to be exported with **both** codes and descriptions (*CR15*)
     * :guilabel:`New` Prompt users to add the new GIS layer when an export has completed (*CR16*)
@@ -101,30 +121,34 @@ Change Log
     * :guilabel:`New` Interweave multiple record fields from the same 'child' table together (*Fix045*)
     * :guilabel:`New` Enable fields to be converted to a different data type during an export (*Fix048*)
     * :guilabel:`New` Enable the multiple record counter to be included in an export **field\_name** (*Fix049*)
-    * :guilabel:`New` Warn users (in ArcGIS) if **field\_names** may be truncated exporting to shapefiles (*Fix050*)
-    * :guilabel:`Improved` Improved performance when exporting small numbers of incids (*CR13*)
-    * :guilabel:`Fixed` Ignore case during export when comparing GIS layer and database field names (*Fix033*)
+    * :guilabel:`New` Warn users (in ArcGIS) of truncated **field\_names** exporting to shapefiles (*Fix050*)
+    * :guilabel:`Improved` Performance when exporting small numbers of incids (*CR13*)
+    * :guilabel:`Fixed` Bug during export when comparing GIS layer and database field names (*Fix033*)
     * :guilabel:`Fixed` Only export **selected** features in GIS When 'Selected Only' checked (*Fix035*)
     * :guilabel:`Fixed` Clear all missing/empty fields when exporting features (in ArcGIS) (*Fix036*)
-    * :guilabel:`Fixed` Check exports (in MapInfo) won't exceed the max. record length or file size (*Fix039*)
+    * :guilabel:`Fixed` Check exports (in MapInfo) won't exceed the max. record length/file size (*Fix039*)
     * :guilabel:`Fixed` Check the selected export format contains the incid column (*Fix041*)
     * :guilabel:`Fixed` Don't repeat details from the same *incid\_source** record (*Fix046*)
     * :guilabel:`Fixed` Avoid errors with excessive SQL query lengths (*Fix047*)
 
 **2.2.0**
-    * :guilabel:`New` 'Advanced Query Builder' interface for filtering records (*CR5*)
-    * :guilabel:`New` 'Select all Filtered INCIDs on Map' button/menu to select **all** filtered incids on map (*Fix032*)
+()
 
-    * :guilabel:`Improved` Improved performance to 'Select by Attribute' (now known as 'Filter by Attributes') (*CR12*)
+    * :guilabel:`New` 'Advanced Query Builder' interface for filtering records (*CR5*)
+    * :guilabel:`New` 'Select all Filtered INCIDs on Map' button/menu (*Fix032*)
+
+    * :guilabel:`Improved` Performance of 'Select by Attribute' (now known as 'Filter by Attributes') (*CR12*)
 
 **2.1.1**
+()
+
     * :guilabel:`New` Enable selection of new user interface styles (Dark Grey & Light Grey) (*KI15*)
     * :guilabel:`New` Site reference field added to the interface (*CR37*)
-    * :guilabel:`New` Option to display a pop-up message following any of the split or merge operations (*CR39*)
+    * :guilabel:`New` Optional pop-up message following any of the split or merge operations (*CR39*)
     * :guilabel:`Removed` 'Select by INCID' button and menu as it served no known purpose (*CR27*)
-    * :guilabel:`Improved` Display buttons and menus for all split and merge options and enable when available (*CR7*)
+    * :guilabel:`Improved` Only enable buttons/menus for split and merge options when available (*CR7*)
     * :guilabel:`Improved` Clarify previous and modified field values on the history tab (*CR11*)
-    * :guilabel:`Improved` Reduce the interface minimum height to support smaller screen resolutions (*CR20*)
+    * :guilabel:`Improved` Reduce interface minimum height to support smaller screen resolutions (*CR20*)
     * :guilabel:`Improved` Hide the reason and process fields when the tool is in read-only mode (*CR25*)
     * :guilabel:`Improved` Enable INCID field text to be copied to the clipboard (*CR28*)
     * :guilabel:`Improved` Widen the 'Select INCID to keep' window (*CR38*)
@@ -132,17 +156,19 @@ Change Log
     * :guilabel:`Fixed` Changes to the 'IHS Habitat' field now enabled the 'Apply' button (*CR2*)
 
 **2.1.0**
-    * :guilabel:`New` Standalone 'HluDbUpdater.exe' to apply database structure and/or content changes (*CR42*)
-    * :guilabel:`Removed` NVC Codes field (temporarily) as there is currently no space to display it (*CR29*)
+()
+
+    * :guilabel:`New` Standalone 'HluDbUpdater' application to apply database changes (*CR42*)
+    * :guilabel:`Removed` NVC Codes field (temporarily) as there is currently no space in interface (*CR29*)
     * :guilabel:`Improved` Update database validation and check the tool is not already running (*CR30*)
-    * :guilabel:`Improved` Replaced IHS Category/NVC Category fields with Habitat Classification/Type fields (*CR29*)
-    * :guilabel:`Improved` Only habitat classifications/types flagged 'local' appear in the drop-down lists (*CR32*)
+    * :guilabel:`Improved` Replaced IHS/NVC Category fields with Habitat Classification/Type fields (*CR29*)
+    * :guilabel:`Improved` Only habitat classes/types flagged 'local' appear in the drop-down lists (*CR32*)
     * :guilabel:`Fixed` Apply default sort order to lookup tables when *sort\_order* same/blank (*Fix025*)
-    * :guilabel:`Fixed` Hide pop-up progress bars (in MapInfo) when updating tables and merging features (*Fix026*)
+    * :guilabel:`Fixed` Hide progress bars (in MapInfo) when updating tables and merging features (*Fix026*)
     * :guilabel:`Fixed` Bug updating incid immediately after split/merge process (*Fix027*)
-    * :guilabel:`Fixed` Bug comparing fields during updates due to DateTime fields with fractions of seconds (*Fix028*)
+    * :guilabel:`Fixed` Bug comparing DateTime fields with fractions of seconds during updates (*Fix028*)
     * :guilabel:`Fixed` Error re-selecting features after physical split (in MapInfo) (*Fix029*)
-    * :guilabel:`Fixed` Include time with date when updating DateTime fields via ODBC connection type (*Fix030*)
+    * :guilabel:`Fixed` Include time in DateTime fields when updating via ODBC connection type (*Fix030*)
 
 
 .. raw:: latex
