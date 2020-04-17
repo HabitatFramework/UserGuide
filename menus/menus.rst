@@ -231,6 +231,7 @@ Aligns the HLU window to the top left of the screen and expands the GIS window t
 
 	Main Window - Side by Side
 
+
 |zoom| Zoom to Selection
 ------------------------
 
@@ -282,16 +283,16 @@ The Select menu contains the following functions:
 |filterbyattr| Filter by Attributes...
 --------------------------------------
 
-Allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
+Allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder or advanced query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
 
 
 .. seealso::
-	See :ref:`query_builder_window` and `advanced_query_builder_window` for more information.
+	See :ref:`query_builder_window` and :ref:`advanced_query_builder_window` for more information.
 
 Filter by Attributes - Advanced...
 ----------------------------------
 
-When reviewing OSMM updates, allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria, and where the OSMM update status is not 'Pending' or 'Applied', will be available for reviewing.
+When reviewing OSMM updates, allows users to filter the INCID records based upon non-spatial or complex criteria using the advanced query builder. Only INCID records matching the filter criteria, and where the OSMM update status is not 'Pending' or 'Applied', will be available for reviewing.
 
 
 .. seealso::
@@ -306,7 +307,7 @@ Allows users to filter the INCID records for a specific INCID.
 .. seealso::
 	See :ref:`filter_by_incid_window` for more information.
 
-Allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
+Allows users to filter the INCID records based upon non-spatial or complex criteria using the Filter by Incid window. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
 
 
 |clearfilter| Clear Filter

@@ -319,7 +319,7 @@ For example, figure :ref:`figUIISS` indicates that the interface is currently di
 .. note::
 	All INCIDs in the active filter will always be retrieved in INCID order, so moving backwards or forwards through the records using the record selector will always select the previous or next available INCID from those in the filter.
 
-This section also contains the :guilabel:`Apply` button which is used to apply any attribute changes to the current INCID. See :ref:`attribute_updates` for more details.
+This section also contains the :guilabel:`Apply` button which is used to apply any attribute changes to the current INCID. See :ref:`attribute_update` for more details.
 
 .. note::
 	The :guilabel:`Apply` button will only be displayed if:
@@ -937,9 +937,9 @@ Preferred Habitat Class
 	Allows the user to choose which Habitat Class in the INCID tab (see :ref:`Habitats_tab` for more details) is automatically selected each time the HLU Tool is started.
 
 Action to Take When Updating Subset
-	Allows users to select what action to take if they attempt to apply attribute changes to only a subset of features for an INCID (see :Ref:`attribute_updates` for more details). The available actions are:
+	Allows users to select what action to take if they attempt to apply attribute changes to only a subset of features for an INCID (see :ref:`attribute_update` for more details). The available actions are:
 
-		* Prompt - Always **prompt** the user when attempting to update a subset of INCID features (see :Ref:`attribute_updates` for an example of the prompt dialog).
+		* Prompt - Always **prompt** the user when attempting to update a subset of INCID features (see :ref:`attribute_update` for an example of the prompt dialog).
 		* Split - Always perform a **logical split** before applying the attribute updates.
 		* All - Always apply the attribute update to **all** features belonging to the INCID regardless of which features of the INCID are currently selected.
 
