@@ -1,3 +1,8 @@
+.. |br| raw:: html
+
+    <br />
+
+
 .. |copy| image:: ../icons/EditCopy.png
 	:height: 16px
 	:width: 16px
@@ -104,7 +109,9 @@ File Menu
 	Main Window - File Menu
 
 
-| Export...
+|br|
+
+Export...
 ---------
 
 Allows users to export data from the HLU database to a GIS layer using a pre-defined export format.
@@ -138,10 +145,12 @@ Edit Menu
 	Main Window - Edit Menu
 
 
-| .. note::
+|br|
+
+.. note::
 	When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details) and the spatial data must be editable in the GIS application.
 
-copy| Copy
+|copy| Copy
 -----------
 
 Copies selected attributes so they can be applied to these fields in another record.
@@ -210,7 +219,8 @@ View Menu
 	Main Window - View Menu
 
 
-| 
+|br|
+
 
 |winsidebyside| Windows Side By Side
 ------------------------------------
@@ -271,7 +281,8 @@ Select Menu
 	Main Window - Select Menu
 
 
-| 
+|br|
+
 
 |filterbyattr| Filter by Attributes...
 --------------------------------------
@@ -360,7 +371,8 @@ Split/Merge Menu
 .. note::
 	All options in this menu are disabled until the database records have been filtered and a process and reason has been selected from the 'Process' and 'Reason' drop-down lists in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
 
-| 
+|br|
+
 
 |logicalsplit| Logical Split
 ----------------------------
@@ -415,7 +427,8 @@ Tools Menu
 	Main Window - Tools Menu
 
 
-| 
+|br|
+
 
 |options| Options...
 --------------------
