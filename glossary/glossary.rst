@@ -55,7 +55,7 @@ Glossary
 	Logical Split
 		Creates a single new INCID record in the database for the features selected from an existing INCID in the GIS layer. See :ref:`logical_split` for more details.
 
-	Merge
+	Merge Features
 		The tool can perform two types of merge, Logical Merge or Physical Merge, depending upon the filter active in the tool. See :ref:`merge` for more details.
 
 	Multiplex Codes
@@ -85,7 +85,7 @@ Glossary
 	Source
 		A dataset, document or reference used as the source of habitat or land use information. Up to three sources can be defined for each INCID. See :ref:`source_tab` for more details.
 
-	Split
+	Split Features
 		The tool can perform two types of split, Logical Split or Physical Split, depending upon the features selected. See :ref:`split` for more details.
 
 	TOID
