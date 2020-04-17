@@ -494,7 +494,7 @@ For example, figure :ref:`figUIBUS` indicates that the active filter currently c
 
 .. index::
 	single: Bulk Updates; Confirmation
-	single: Windows; Bulk Update Confirmation Window
+	single: Windows; Bulk Updates Confirmation Window
 
 .. _bulk_update_confirmation_window:
 
@@ -519,16 +519,30 @@ Delete Potential Priority Habitats
 	Whether existing potential priority habitats (those added manually by a user) should be deleted following during a bulk update. If unchecked, any existing potential priority habitats will be retained.
 
 Delete Existing Multiplex Rows
-	Whether existing multiplex (matrix, formation, management and complex) codes should be deleted following a change to the IHS Habitat during a bulk update. If unchecked, any existing multiplex codes will be retained, and any not be compatible with the new IHS Habitat will appear as errors when displayed in the main interface.
+	Whether existing multiplex (matrix, formation, management and complex) codes should be deleted following a change to the IHS Habitat during a bulk update. The available options are:
+
+		* All - Deletes **all** existing multiplex codes.
+		* Invalid - Deletes only existing multiplex codes that are not valid for the new IHS habitat.
+		* None - All existing multiplex codes will be retained, and any not be compatible with the new IHS Habitat will appear as errors when displayed in the main interface.
+
+	.. caution::
+		Use option **All** with caution. A warning message will appear when this option is selected.
+
+	.. note::
+		This option will only be displayed if a new IHS Habitat has been entered for the bulk update.
+
 
 Delete Existing Source Rows
-	Whether existing source rows will be deleted when one or more new sources are provided for a bulk update. This option cannot be controlled by the user as it automatically determined based on whether one or more new sources are provided or not.
+	[Read only] Whether existing source rows will be deleted when one or more new sources are provided for a bulk update.
+
+	.. note::
+		This option cannot be controlled by the user - it is automatically determined based on whether one or more new sources are provided or not.
 
 Create History Records
 	Whether history records will be created when a bulk update is applied.
 
-.. note::
-	The default values for all of the above fields (except for *Delete Existing Source Rows*) can be set in the options (see :ref:`options_bulk_update` for more details).
+	.. note::
+		The default values for all of the above fields (except for *Delete Existing Source Rows*) can be set in the options (see :ref:`options_bulk_update` for more details).
 
 
 .. raw:: latex
@@ -585,10 +599,12 @@ Process Flag
 		* 6 = Natural to Natural (only 1 source)
 		* 7 = Natural to Natural (two or more sources)
 		* 8 = Any to Unknown (any number of sources)
+		* 9 = Unknown to any (except unknown) (any number of sources)
 
 Spatial Flag
 	Assists with prioritising proposed updates by indicating whether the proposed habitat category (e.g. 'WB') is the same as the original habitat category and whether it is a higher or lower level in the habitat hierarchy, as follows:
 
+		* <blank> = Same category and habitat (e.g. GN1 to GN1)
 		* A = Same category but proposed habitat is higher level, i.e. a more detailed IHS habitat code (e.g. WB3 to WB36)
 		* B = Same category but proposed habitat is different and same or lower level (e.g. LF271 to LF272, LF271 to LF27)
 		* C = Different category/habitat and proposed habitat is higher level (e.g. WB3 to EM41)
@@ -639,6 +655,9 @@ Holding down the :guilabel:`Ctrl` key changes the :guilabel:`Reject` and :guilab
 For example, figure :ref:`figUIOUIS2` shows the 'INCID Status' section when the :guilabel:`Ctrl` key is pressed.
 
 
+.. index::
+	single: OSMM Updates; Filter
+
 .. _osmm_updates_filter:
 
 OSMM Updates Filter
@@ -657,8 +676,8 @@ When the review OSMM updates mode is first started, the OSMM Updates Filter wind
 OSMM Updates Summary
 	Displays a tabular summary of all the OSMM Updates in the database. Each row is a unique combination of the Process Flag, Spatial Flag, Change Flag and shows the number of records for each of the possible Status values (Rejected, Ignored, Proposed, Pending and Applied) and the total records for all statuses. Only combinations that exist in the database (rather than all possible combinations) will appear in the table.
 
-.. tip::
-	Selecting one of the rows in the table will set the Process, Spatial and Change values in the Filter by OSMM Updates section to those of the selected row. However, the Status field will not be changed and must be selected manually.
+	.. tip::
+		Selecting one of the rows in the table will set the Process, Spatial and Change values in the Filter by OSMM Updates section to those of the selected row. However, the Status field will not be changed and must be selected manually.
 
 Process
 	Allows the user to select a specific value, to select only proposed updates with a given Process flag, or select <all> to select proposed updates with any Process flag.
@@ -686,7 +705,24 @@ Cancel
 
 
 .. note::
-	The user can change the filter at any time when in Review OSMM Updates mode by clicking |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the OSMM Updates Filter window.
+	The user can change the filter at any time when in Review OSMM Updates mode by clicking |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the OSMM Updates Filter window,  or :guilabel:`Select... --> Filter by Attributes - Advanced ...` to open the Advanced Query Builder window.
+
+
+.. index::
+	single: OSMM Updates; Advanced Filter
+
+.. _osmm_updates_advanced_filter:
+
+
+OSMM Updates Filter - Advanced
+------------------------------
+
+As an alternative to the OSMM Updates Filter window that first appears when the review OSMM updates mode is first started, the advanced filter window can be used. This provides the user with greater control to filter which subset of proposed OSMM Updates to review.
+
+To open the advanced filter window:
+
+* Close the standard OSMM Updates Filter window
+* Click :guilabel:`Select... --> Filter by Attributes - Advacned...` to open the Advanced Query Builder window.
 
 
 .. raw:: latex
@@ -732,6 +768,35 @@ OSMM Updates Filter
 -------------------
 
 When the bulk OSMM updates mode is first started, the OSMM Updates Filter window will appear (see :ref:`osmm_updates_filter` for details). This allows the user to filter which subset of pending OSMM Updates the bulk update will apply to.
+
+
+.. index::
+	single: Windows; Bulk Apply OSMM Updates Confirmation Window
+
+.. _bulk_osmm_update_confirmation_window:
+
+Bulk OSMM Update Confirmation Window
+------------------------------------
+
+Before a bulk OSMM update is applied a confirmation window will appear with a number of options relating to the update as shown in the figure :ref:`figUIBOUC`.
+
+.. _figUIBOUC:
+
+.. figure:: figures/UserInterfaceBulkOSMMUpdateConfirmation.png
+	:align: center
+	:scale: 85
+
+	Bulk OSMM Update Confirmation Window
+
+
+Habitat Determination Quality
+	The accuracy with which any priority habitats have been determined (e.g. 'Definitely is the priority habitat'). This will apply to all priority habitats created as a result of the OSMM updates.
+
+Habitat Interpretation Quality
+	An assessment of the quality and age of the habitat source, and the relationship between the habitat type and the priority habitat type (e.g. 'Low (5)'). This will apply to all priority habitats created as a result of the OSMM updates.
+
+.. note::
+	The default values for these fields can be set in the options (see :ref:`options_bulk_update` for more details).
 
 
 .. raw:: latex
@@ -813,8 +878,8 @@ Map Document/Workspace
 Export Default Directory
 	Enables MapInfo users to set a default destination folder path for new GIS layers when performing an export (see :ref:`export_window` for more details). A different path to the default can also be selected during the export process.
 
-		.. note::
-			This option is only available if MapInfo is selected as the 'Preferred GIS Application'. The default export folder path for ArcGIS users is controlled by ArcGIS and cannot be altered by the HLU Tool.
+	.. note::
+		This option is only available if MapInfo is selected as the 'Preferred GIS Application'. The default export folder path for ArcGIS users is controlled by ArcGIS and cannot be altered by the HLU Tool.
 
 .. index::
 	single: Options; History
@@ -1242,8 +1307,8 @@ Export Format
 Selected Only
 	Allows the user to choose if only the selected features in the active GIS layer will be exported or if all features from the active GIS layer associated with the INCIDs in the active filter will be exported.
 
-.. note::
-	If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the records related to the selected INCIDs and associated GIS features from the active GIS layer will be exported. Untick this checkbox to export all features from the active GIS layer associated with the INCIDs in the active filter. For details on how to filter records see :ref:`filter_by_attributes`.
+	.. note::
+		If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the records related to the selected INCIDs and associated GIS features from the active GIS layer will be exported. Untick this checkbox to export all features from the active GIS layer associated with the INCIDs in the active filter. For details on how to filter records see :ref:`filter_by_attributes`.
 
 
 .. raw:: latex

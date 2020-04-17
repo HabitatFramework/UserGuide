@@ -104,7 +104,7 @@ File Menu
 	Main Window - File Menu
 
 
-Export...
+| Export...
 ---------
 
 Allows users to export data from the HLU database to a GIS layer using a pre-defined export format.
@@ -138,10 +138,10 @@ Edit Menu
 	Main Window - Edit Menu
 
 
-.. note::
+| .. note::
 	When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details) and the spatial data must be editable in the GIS application.
 
-|copy| Copy
+copy| Copy
 -----------
 
 Copies selected attributes so they can be applied to these fields in another record.
@@ -210,7 +210,7 @@ View Menu
 	Main Window - View Menu
 
 
-|winsidebyside| Windows Side By Side
+| |winsidebyside| Windows Side By Side
 ------------------------------------
 
 Aligns the HLU window to the top left of the screen and expands the GIS window to fill the remaining area as shown in the figure :ref:`figWSBS`.
@@ -269,7 +269,7 @@ Select Menu
 	Main Window - Select Menu
 
 
-|filterbyattr| Filter by Attributes...
+| |filterbyattr| Filter by Attributes...
 --------------------------------------
 
 Allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
@@ -277,6 +277,15 @@ Allows users to filter the INCID records based upon non-spatial or complex crite
 
 .. seealso::
 	See :ref:`query_builder_window` and `advanced_query_builder_window` for more information.
+
+Filter by Attributes - Advanced...
+----------------------------------
+
+When reviewing OSMM updates, allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria, and where the OSMM update status is not 'Pending' or 'Applied', will be available for reviewing.
+
+
+.. seealso::
+	See :ref:`advanced_query_builder_window` for more information.
 
 Filter by Incid...
 ------------------
@@ -347,7 +356,7 @@ Split/Merge Menu
 .. note::
 	All options in this menu are disabled until the database records have been filtered and a process and reason has been selected from the 'Process' and 'Reason' drop-down lists in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
 
-|logicalsplit| Logical Split
+| |logicalsplit| Logical Split
 ----------------------------
 
 Splits features from the same current INCID into a new INCID. Logical splits are used to isolate one or more features from one INCID into a new INCID so that they can be updated independently.
@@ -400,7 +409,7 @@ Tools Menu
 	Main Window - Tools Menu
 
 
-|options| Options...
+| |options| Options...
 --------------------
 
 Allows users to alter many aspects of the HLU Tool configuration specific to their own requirements.

@@ -10,6 +10,16 @@ Appendix
 Change Log
 ==========
 
+**3.1.2**
+(17th April 2020)
+
+    * :guilabel:`New` List all IHS habitat codes when habitat type is blank (*Fix090*)
+    * :guilabel:`New` Enable advanced filter when reviewing OSMM updates (*Fix092*)
+    * :guilabel:`Fixed` Enable bulk update options only if habitat has changed (*Fix087*)
+    * :guilabel:`Fixed` Add warning to delete multiplex codes option in bulk update (*Fix088*)
+    * :guilabel:`Fixed` Only enable split/merge functions after select from map (*Fix089*)
+    * :guilabel:`Fixed` Fix bug when applying bulk updates where multiplex codes are not replaced (*Fix091*)
+
 **3.1.1**
 (25th November 2019)
 
