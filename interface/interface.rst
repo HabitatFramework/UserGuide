@@ -406,7 +406,7 @@ Click |zoomtable| adjacent to the Potential Priority Habitats table on the Detai
 .. figure:: figures/UserInterfacePotentialPriorityHabitatsWindow.png
 	:align: center
 
-	PotentialPriority Habitats Window
+	Potential Priority Habitats Window
 
 
 .. raw:: latex
@@ -522,7 +522,7 @@ Delete Existing Multiplex Rows
 	Whether existing multiplex (matrix, formation, management and complex) codes should be deleted following a change to the IHS Habitat during a bulk update. The available options are:
 
 		* All - Deletes **all** existing multiplex codes.
-		* Invalid - Deletes only existing multiplex codes that are not valid for the new IHS habitat.
+		* Invalid - Deletes only existing multiplex codes that are not valid for the new IHS Habitat.
 		* None - All existing multiplex codes will be retained, and any not be compatible with the new IHS Habitat will appear as errors when displayed in the main interface.
 
 	.. caution::
@@ -605,11 +605,11 @@ Spatial Flag
 	Assists with prioritising proposed updates by indicating whether the proposed habitat category (e.g. 'WB') is the same as the original habitat category and whether it is a higher or lower level in the habitat hierarchy, as follows:
 
 		* <blank> = Same category and habitat (e.g. GN1 to GN1)
-		* A = Same category but proposed habitat is higher level, i.e. a more detailed IHS habitat code (e.g. WB3 to WB36)
+		* A = Same category but proposed habitat is higher level (e.g. WB3 to WB36)
 		* B = Same category but proposed habitat is different and same or lower level (e.g. LF271 to LF272, LF271 to LF27)
-		* C = Different category/habitat and proposed habitat is higher level (e.g. WB3 to EM41)
-		* D = Different category/habitat and proposed habitat is same level (e.g. WB3 to EM4)
-		* E = Different category/habitat and proposed habitat is lower level (e.g. WB36 to EM41)
+		* C = Proposed habitat is different and higher level (e.g. WB3 to EM41)
+		* D = Proposed habitat is different and same level (e.g. WB3 to EM4)
+		* E = Proposed habitat is different and lower level (e.g. WB36 to EM4)
 
 
 Change Flag
@@ -642,7 +642,7 @@ The Review OSMM Updates 'INCID Status' section shows the total number of INCIDs 
 
 For example, figure :ref:`figUIOUIS` indicates that the active filter currently contains 13 INCIDs and the current INCID consists of 1 TOID with 1 fragment.
 
-Holding down the :guilabel:`Ctrl` key changes the :guilabel:`Reject` and :guilabel:`Accept` buttons to :guilabel:`Reject All` and :guilabel:`Accept All` thereby allowing the user to Reject or Accept all remaining INCIDs in the active filter.
+Holding down the :guilabel:`Ctrl` key changes the :guilabel:`Reject` and :guilabel:`Accept` buttons to :guilabel:`Reject All` and :guilabel:`Accept All` thereby allowing the user to Reject or Accept **all** remaining INCIDs in the active filter.
 
 .. _figUIOUIS2:
 
@@ -705,7 +705,13 @@ Cancel
 
 
 .. note::
-	The user can change the filter at any time when in Review OSMM Updates mode by clicking |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the OSMM Updates Filter window,  or :guilabel:`Select... --> Filter by Attributes - Advanced ...` to open the Advanced Query Builder window.
+	The user can change the filter at any time when in Review OSMM Updates mode by clicking:
+
+		* |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the OSMM Updates Filter window.
+		* :guilabel:`Select... --> Filter by Attributes - Advanced ...` to open the Advanced Query Builder window.
+
+.. tip::
+	Clicking on any of the column headings will sort the table by that column in ascending order. Clicking on the same column again will sort it in descending order.
 
 
 .. index::
@@ -721,8 +727,8 @@ As an alternative to the OSMM Updates Filter window that first appears when the 
 
 To open the advanced filter window:
 
-* Close the standard OSMM Updates Filter window
-* Click :guilabel:`Select... --> Filter by Attributes - Advacned...` to open the Advanced Query Builder window.
+	* Close the standard OSMM Updates Filter window
+	* Click :guilabel:`Select... --> Filter by Attributes - Advanced...` to open the Advanced Query Builder window.
 
 
 .. raw:: latex
@@ -797,6 +803,9 @@ Habitat Interpretation Quality
 
 .. note::
 	The default values for these fields can be set in the options (see :ref:`options_bulk_update` for more details).
+
+.. note::
+	Some of the options cannot be controlled by the user - they are automatically set for bulk OSMM updates.
 
 
 .. raw:: latex

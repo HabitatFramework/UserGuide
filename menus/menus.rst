@@ -210,7 +210,9 @@ View Menu
 	Main Window - View Menu
 
 
-| |winsidebyside| Windows Side By Side
+| 
+
+|winsidebyside| Windows Side By Side
 ------------------------------------
 
 Aligns the HLU window to the top left of the screen and expands the GIS window to fill the remaining area as shown in the figure :ref:`figWSBS`.
@@ -269,7 +271,9 @@ Select Menu
 	Main Window - Select Menu
 
 
-| |filterbyattr| Filter by Attributes...
+| 
+
+|filterbyattr| Filter by Attributes...
 --------------------------------------
 
 Allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
@@ -356,7 +360,9 @@ Split/Merge Menu
 .. note::
 	All options in this menu are disabled until the database records have been filtered and a process and reason has been selected from the 'Process' and 'Reason' drop-down lists in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
 
-| |logicalsplit| Logical Split
+| 
+
+|logicalsplit| Logical Split
 ----------------------------
 
 Splits features from the same current INCID into a new INCID. Logical splits are used to isolate one or more features from one INCID into a new INCID so that they can be updated independently.
@@ -409,7 +415,9 @@ Tools Menu
 	Main Window - Tools Menu
 
 
-| |options| Options...
+| 
+
+|options| Options...
 --------------------
 
 Allows users to alter many aspects of the HLU Tool configuration specific to their own requirements.
