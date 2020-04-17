@@ -19,12 +19,12 @@ Change Log
     * :guilabel:`Fixed` Enable bulk update options only if habitat has changed (*Fix087*)
     * :guilabel:`Fixed` Add warning to delete multiplex codes option in bulk update (*Fix088*)
     * :guilabel:`Fixed` Only enable split/merge functions after select from map (*Fix089*)
-    * :guilabel:`Fixed` Fix bug when applying bulk updates where multiplex codes are not replaced (*Fix091*)
+    * :guilabel:`Fixed` Apply bulk updates even when multiplex codes are not replaced (*Fix091*)
 
 **3.1.1**
 (25th November 2019)
 
-    * :guilabel:`Fixed` Clear habitat type when IHS habitat changes (after change of incid or paste) (*Fix084*)
+    * :guilabel:`Fixed` Clear habitat type when IHS habitat changes (after change of incid) (*Fix084*)
     * :guilabel:`Fixed` Clear multiplex warnings when at least one recommended code is selected (*Fix085*)
     * :guilabel:`Fixed` Clear error messages if priority habitats have been fixed in pop-up window (*Fix086*)
 
@@ -135,7 +135,7 @@ Change Log
     * :guilabel:`New` Warn users (in ArcGIS) of truncated **field\_names** exporting to shapefiles (*Fix050*)
     * :guilabel:`Improved` Performance when exporting small numbers of incids (*CR13*)
     * :guilabel:`Fixed` Bug during export when comparing GIS layer and database field names (*Fix033*)
-    * :guilabel:`Fixed` Only export **selected** features in GIS When 'Selected Only' checked (*Fix035*)
+    * :guilabel:`Fixed` Only export **selected** features in GIS when 'Selected Only' checked (*Fix035*)
     * :guilabel:`Fixed` Clear all missing/empty fields when exporting features (in ArcGIS) (*Fix036*)
     * :guilabel:`Fixed` Check exports (in MapInfo) won't exceed the max. record length/file size (*Fix039*)
     * :guilabel:`Fixed` Check the selected export format contains the incid column (*Fix041*)

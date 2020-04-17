@@ -333,7 +333,7 @@ This section also contains the :guilabel:`Apply` button which is used to apply a
 	\newpage
 
 .. index::
-	see: Windows; Warning and Error Messages
+	single: Windows; Warning and Error Messages
 
 .. _error_messages:
 
