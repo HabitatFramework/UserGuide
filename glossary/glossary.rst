@@ -1,9 +1,9 @@
-.. index::
-	single: Glossary
-
 ********
 Glossary
 ********
+
+.. index::
+	single: Glossary
 
 .. glossary::
 
@@ -62,7 +62,7 @@ Glossary
 		Matrix, Formation, Management and Complex codes (known collectively as 'Multiplex' codes) can be recorded alongside an IHS Habitat code to refine the habitat definition for an INCID.
 
 	OSMM Update
-		Updates based on recent OS MasterMap external processing. See :ref:`osmm_update` for more details.
+		Update based on recent OS MasterMap external processing. See :ref:`osmm_update` for more details.
 
 	Physical Split
 		Creates one or more new TOID fragments in the database based upon a single TOID which has been split in the GIS layer. See :ref:`physical_split` for more details.

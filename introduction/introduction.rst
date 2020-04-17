@@ -2,6 +2,9 @@
 Introduction
 ************
 
+.. index::
+	single: Introduction
+
 Background
 ==========
 
@@ -23,6 +26,11 @@ The first version of the tool (v1.0.0) was released in March 2011.
 .. raw:: latex
 
 	\newpage
+
+.. index::
+	single: Introduction; Data Structure
+	single: Data Structure
+
 
 Data structure
 ==============
@@ -78,6 +86,10 @@ The attribute data is stored in a 'normalised' relational structure which enable
 .. raw:: latex
 
 	\newpage
+
+.. index::
+	single: Introduction; Benefits of HLU Tool
+	single: Benefits of HLU Tool
 
 Benefits of the HLU Tool
 ========================

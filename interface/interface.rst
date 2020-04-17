@@ -7,14 +7,12 @@
 	:width: 16px
 
 
-.. index::
-	single: Interfaces
-
 **********
 Interfaces
 **********
 
 .. index::
+	see: Interfaces; Windows
 	single: Windows; Main Window
 
 .. _main_window:
@@ -1075,9 +1073,6 @@ OSMM Source Name
 .. raw:: latex
 
 	\newpage
-
-.. index::
-	single: Filter by Attributes
 
 .. _filter_Windows:
 

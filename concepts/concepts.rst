@@ -1,12 +1,10 @@
-.. index::
-	single: Key Concepts
-
 ********
 Concepts
 ********
 
 .. index::
-	single: MasterMap Framework
+	single: Concepts; MasterMap Framework
+	single: MasterMap Framework, concept
 	see: Topographical identifier; TOID
 	see: Fragment; TOID_Fragment_ID
 
@@ -25,6 +23,10 @@ Attribute Data
 --------------
 The attribute data is stored in a relational database in a 'normalised' relational structure (i.e. groups of related attributes are divided into smaller, separate tables and relationships are defined between the tables). A normalised relational database enables the attributes to be retrieved and maintained in a very logical, and universal, way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
+
+.. index::
+	single: Concepts; Habitat Framework
+	single: Habitat Framework, concept
 
 .. _habitat_framework:
 
@@ -49,6 +51,10 @@ All OS MasterMap features have a TOpographic IDentity or 'TOID' that uniquely id
 Apart from the spatial representation of the features, the habitat framework only retains the TOID from OS MasterMap because all other attributes can be retrieved using this if necessary. Where OS MasterMap features need to be sub-divided into smaller units in order to represent habitat survey details that are not already shown these still retain the original TOID but are also assigned a fragment identifier so that each fragment can be uniquely identified.
 
 
+.. index::
+	single: Concepts; INCID
+	single: INCID, concept
+
 .. _incid:
 
 INCremental IDentifier (INCID)
@@ -68,7 +74,8 @@ Similarly, features from different INCIDs that are actually related and should s
 	\newpage
 
 .. index::
-	single: Priority Habitats
+	single: Concepts; Priority Habitats
+	single: Priority Habitats, concept
 
 .. _priority_habitats:
 
@@ -86,7 +93,8 @@ However, if priority habitat associated codes are changed or removed in the :ref
 
 
 .. index::
-	single: Potential Priority Habitats
+	single: Concepts; Potential Priority Habitats
+	single: Potential Priority Habitats, concept
 
 .. _potential_priority_habitats:
 
@@ -99,7 +107,8 @@ If a priority habitat was known to have been present but it may no longer exist 
 
 
 .. index::
-	single: Determination Quality
+	single: Concepts; Determination Quality
+	single: Determination Quality, concept
 
 .. _determination_quality:
 
@@ -130,7 +139,8 @@ Every priority habitat and potential priority habitat must be assigned a determi
 
 
 .. index::
-	single: Interpretation Quality
+	single: Concepts; Interpretation Quality
+	single: Interpretation Quality, concept
 
 .. _interpretation_quality:
 
@@ -173,7 +183,8 @@ There are two ways to split features depending upon the filter active in the too
 
 
 .. index::
-	single: Split; Logical
+	single: Concepts; Logical Split
+	single: Split Features; Logical Split, concept
 
 .. _logical_split:
 
@@ -190,7 +201,8 @@ For example, a group of adjacent permanent pasture features, each represented by
 	* The selected features must all belong to the same INCID.
 
 .. index::
-	single: Split; Physical
+	single: Concepts; Physical Split
+	single: Split Features; Physical Split, concept
 
 .. _physical_split:
 
@@ -219,7 +231,8 @@ Merging Features
 There are two ways to merge features depending upon the filter active in the tool - **logical merge** and **physical merge**.
 
 .. index::
-	single: Merge; Logical
+	single: Concepts; Logical Merge
+	single: Merge Features; Logical Merge, concept
 
 .. _logical_merge:
 
@@ -229,7 +242,8 @@ Logical Merge
 Logical merge combines all the features selected in the GIS into a single INCID chosen from from the selected features. This assigns the attributes from the chosen INCID to all the other selected features and logically groups the features into a single INCID so that they can be updated together in the future.
 
 .. index::
-	single: Merge; Physical
+	single: Concepts; Physical Merge
+	single: Merge Features; Physical Merge, concept
 
 .. _physical_merge:
 
@@ -243,7 +257,8 @@ Physical merge combines fragments of a single TOID into a single, larger, featur
 
 
 .. index::
-	single: Update; Attribute Update Concept
+	single: Concepts; Attribute Updates
+	single: Updates; Attribute Updates, concept
 
 .. _attribute_update:
 
@@ -254,8 +269,8 @@ Attribute updates are the main mechanism for updating existing INCID details. Ty
 
 
 .. index::
-	single: Update; Bulk Update
-	see: Bulk Update; 
+	single: Concepts; Bulk Updates
+	single: Updates; Bulk Updates, concept
 
 .. _bulk_update:
 
@@ -269,7 +284,8 @@ Attribute updates can also be applied in bulk to multiple INCID records at the s
 
 
 .. index::
-	single: Update; OSMM Update Concept
+	single: Concepts; OSMM Updates
+	single: Updates; OSMM Updates, concept
 
 .. _osmm_update:
 

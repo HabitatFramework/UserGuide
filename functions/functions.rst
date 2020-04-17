@@ -31,20 +31,19 @@
 	:width: 58px
 
 
-.. index::
-	single: Functions
-
 *********
 Functions
 *********
 
 .. index::
-	single: Updates; Attribute Update
+	single: Functions
+	single: Attribute Updates
+	single: Updates; Attribute Updates
 
 .. _attribute_update:
 
-Attribute Update
-================
+Attribute Updates
+=================
 
 Attribute Updates are the main mechanism for updating existing INCID details. Attributes can be changed at any time in the user interface, even when the user is not authorised for editing or when the active GIS layer is not being edited, but they can only be applied when not in read-only mode.
 
@@ -89,7 +88,7 @@ Features can be split logically or physically depending upon the filter active i
 	\newpage
 
 .. index::
-	single: Split; Logical
+	single: Split Features; Logical Split
 
 .. _logical_split:
 
@@ -127,7 +126,7 @@ To display all the features in the INCID of a given feature:
 	\newpage
 
 .. index::
-	single: Split; Physical
+	single: Split Features; Physical Split
 
 .. _physical_split:
 
@@ -224,7 +223,7 @@ Merge Features
 Merge features will performs two types of merge depending upon the filter active in the tool. If two or more features from multiple INCIDs are present in the current filter then the tool will allow a logical merge to be performed. If two or more fragments from the same TOID and with different TOID_Fragment_Ids are present in the current filter then the tool will allow a physical merge to be performed.
 
 .. index::
-	single: Merge; Logical
+	single: Merge Features; Logical Merge
 
 .. _logical_merge:
 
@@ -259,7 +258,7 @@ To perform a logical merge:
 	\newpage
 
 .. index::
-	single: Merge; Physical
+	single: Merge Features; Physical Merge
 
 .. _physical_merge:
 
@@ -289,6 +288,9 @@ To perform a physical merge:
 .. raw:: latex
 
 	\newpage
+
+.. index::
+	see: Filter by Attributes; Query Builder
 
 .. _filter_by_attributes:
 
@@ -391,7 +393,7 @@ To **load** a previously saved advanced query:
 * The query will be loaded into the query window. It can now be verified and then executed.
 
 .. index::
-	single: Filter; Filter by INCID
+	single: Filter; Filter by Incid
 
 .. _filter_by_incid:
 
@@ -417,7 +419,8 @@ To filter by a single INCID:
 	\newpage
 
 .. index::
-	single: Update; Bulk Updates
+	single: Bulk Updates
+	single: Updates; Bulk Updates
 
 .. _bulk_updates:
 
@@ -467,7 +470,8 @@ To cancel the bulk update mode:
 	\newpage
 
 .. index::
-	single: Update; Review OSMM Updates
+	single: OSMM Updates, Review
+	single: Updates; OSMM Updates, Review
 
 .. _review_osmm_updates:
 
@@ -531,7 +535,8 @@ To cancel the review OSMM Updates mode:
 	\newpage
 
 .. index::
-	single: Update; Bulk OSMM Update
+	single: OSMM Updates, Bulk Apply
+	single: Updates; OSMM Updates, Bulk Apply
 
 .. _bulk_osmm_update:
 

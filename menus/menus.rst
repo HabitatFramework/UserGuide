@@ -71,10 +71,6 @@
 	:width: 16px
 
 
-
-.. index::
-	single: Menus
-
 *****
 Menus
 *****
@@ -91,6 +87,7 @@ The following sections summarise the menu functionality and provide some guideli
 
 .. index::
 	single: Menus; File Menu
+	see: Files Menu; Menus; Files Menu
 
 .. _file_menu:
 
@@ -128,6 +125,7 @@ Exits the HLU Tool and prompts users to choose whether or not to close the assoc
 
 .. index::
 	single: Menus; Edit Menu
+	see: Edit Menu; Menus; Edit Menu
 
 .. _edit_menu:
 
@@ -204,6 +202,7 @@ Enables users to update the attributes for multiple selected features and databa
 
 .. index::
 	single: Menus; View Menu
+	see: View Menu; Menus; View Menu
 
 View Menu
 =========
@@ -264,6 +263,7 @@ An option to automatically zoom to the GIS features associated with an INCID in 
 
 .. index::
 	single: Menus; Select Menu
+	see: Select Menu; Menus; Select Menu
 
 .. _select_menu:
 
@@ -350,6 +350,7 @@ An option to automatically select the GIS features associated with the current I
 
 .. index::
 	single: Menus; Split/Merge Menu
+	see: Split/Merge Menu; Menus; Split/Merge Menu
 
 .. _split_merge_menu:
 
@@ -408,6 +409,7 @@ Combines two or more fragments of a single TOID, that are also associated with t
 
 .. index::
 	single: Menus; Tools Menu
+	see: Tools Menu; Menus; Tools Menu
 
 .. _tools_menu:
 

@@ -2,6 +2,9 @@
 Preface
 *******
 
+.. index::
+	single: Preface
+
 The most up to date version of this documentation can be found in **HTML** and **PDF** form on ReadTheDocs at `readthedocs.org/projects/hlutool-userguide <https://readthedocs.org/projects/hlutool-userguide/>`_.
 
 Recommended User Knowledge

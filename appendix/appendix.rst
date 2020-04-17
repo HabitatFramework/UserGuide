@@ -3,6 +3,7 @@ Appendix
 ********
 
 .. index::
+    single: Appendix; Change Log
     single: Change Log
 
 .. _change_log:
@@ -186,22 +187,23 @@ Change Log
     \newpage
 
 .. index::
-	single: Dos and Don'ts
+    single: Appendix; Do's and Don't's
+	single: Do's and Don't's
 
 .. _dos_and_donts:
 
-DOs and DON'Ts
-==============
+DO's and DON'T's
+================
 
 It is essential that the following guidelines are followed to ensure that the tool runs smoothly:
 
-**DOs:**
+**DO's:**
 
 	* :strong:`DO` close all instances of MapInfo before launching the tool as the tool may try and communicate with the wrong instance of MapInfo.
 	* :strong:`DO` close all instances of ArcGIS before launching the tool. Unlike with MapInfo, the tool will automatically communicate with the correct instance of ArcGIS, however multiple instances will require more memory and may therefore affect tool performance.
 	* :strong:`DO` use a file geodatabase or personal geodatabase to store spatial information (ArcGIS users only).
 
-**DO NOTs:**
+**DO NOT's:**
 
 	* :strong:`DO NOT` remove the HLU layer from the map while the tool is running.
 	* :strong:`DO NOT` close the associated GIS while the tool is running, otherwise the tool will display an error message.
@@ -250,6 +252,10 @@ What Happened?
 .. raw:: latex
 
 	\newpage
+
+.. index::
+    single: Appendix; Licence
+    single: Licence
 
 GNU Free Documentation License
 ==============================
