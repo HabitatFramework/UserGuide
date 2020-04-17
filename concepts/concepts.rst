@@ -4,7 +4,7 @@ Concepts
 
 .. index::
 	single: Concepts; MasterMap Framework
-	single: MasterMap Framework, concept
+	single: MasterMap Framework, Concept
 	see: Topographical identifier; TOID
 	see: Fragment; TOID_Fragment_ID
 
@@ -26,7 +26,7 @@ The attribute data is stored in a relational database in a 'normalised' relation
 
 .. index::
 	single: Concepts; Habitat Framework
-	single: Habitat Framework, concept
+	single: Habitat Framework, Concept
 
 .. _habitat_framework:
 
@@ -53,7 +53,7 @@ Apart from the spatial representation of the features, the habitat framework onl
 
 .. index::
 	single: Concepts; INCID
-	single: INCID, concept
+	single: INCID, Concept
 
 .. _incid:
 
@@ -75,7 +75,7 @@ Similarly, features from different INCIDs that are actually related and should s
 
 .. index::
 	single: Concepts; Priority Habitats
-	single: Priority Habitats, concept
+	single: Priority Habitats, Concept
 
 .. _priority_habitats:
 
@@ -94,7 +94,7 @@ However, if priority habitat associated codes are changed or removed in the :ref
 
 .. index::
 	single: Concepts; Potential Priority Habitats
-	single: Potential Priority Habitats, concept
+	single: Potential Priority Habitats, Concept
 
 .. _potential_priority_habitats:
 
@@ -108,7 +108,7 @@ If a priority habitat was known to have been present but it may no longer exist 
 
 .. index::
 	single: Concepts; Determination Quality
-	single: Determination Quality, concept
+	single: Determination Quality, Concept
 
 .. _determination_quality:
 
@@ -140,7 +140,7 @@ Every priority habitat and potential priority habitat must be assigned a determi
 
 .. index::
 	single: Concepts; Interpretation Quality
-	single: Interpretation Quality, concept
+	single: Interpretation Quality, Concept
 
 .. _interpretation_quality:
 
@@ -184,7 +184,7 @@ There are two ways to split features depending upon the filter active in the too
 
 .. index::
 	single: Concepts; Logical Split
-	single: Split Features; Logical Split, concept
+	single: Split Features; Logical Split, Concept
 
 .. _logical_split:
 
@@ -202,7 +202,7 @@ For example, a group of adjacent permanent pasture features, each represented by
 
 .. index::
 	single: Concepts; Physical Split
-	single: Split Features; Physical Split, concept
+	single: Split Features; Physical Split, Concept
 
 .. _physical_split:
 
@@ -232,7 +232,7 @@ There are two ways to merge features depending upon the filter active in the too
 
 .. index::
 	single: Concepts; Logical Merge
-	single: Merge Features; Logical Merge, concept
+	single: Merge Features; Logical Merge, Concept
 
 .. _logical_merge:
 
@@ -243,7 +243,7 @@ Logical merge combines all the features selected in the GIS into a single INCID 
 
 .. index::
 	single: Concepts; Physical Merge
-	single: Merge Features; Physical Merge, concept
+	single: Merge Features; Physical Merge, Concept
 
 .. _physical_merge:
 
@@ -258,7 +258,7 @@ Physical merge combines fragments of a single TOID into a single, larger, featur
 
 .. index::
 	single: Concepts; Attribute Updates
-	single: Updates; Attribute Updates, concept
+	single: Updates; Attribute Updates, Concept
 
 .. _attribute_update:
 
@@ -270,7 +270,7 @@ Attribute updates are the main mechanism for updating existing INCID details. Ty
 
 .. index::
 	single: Concepts; Bulk Updates
-	single: Updates; Bulk Updates, concept
+	single: Updates; Bulk Updates, Concept
 
 .. _bulk_update:
 
@@ -285,7 +285,7 @@ Attribute updates can also be applied in bulk to multiple INCID records at the s
 
 .. index::
 	single: Concepts; OSMM Updates
-	single: Updates; OSMM Updates, concept
+	single: Updates; OSMM Updates, Concept
 
 .. _osmm_update:
 

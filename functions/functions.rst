@@ -419,7 +419,7 @@ To filter by a single INCID:
 	\newpage
 
 .. index::
-	single: Bulk Updates
+	single: Bulk Updates; Apply
 	single: Updates; Bulk Updates
 
 .. _bulk_updates:
@@ -470,7 +470,7 @@ To cancel the bulk update mode:
 	\newpage
 
 .. index::
-	single: OSMM Updates, Review
+	single: OSMM Updates; Review
 	single: Updates; OSMM Updates, Review
 
 .. _review_osmm_updates:
@@ -535,7 +535,7 @@ To cancel the review OSMM Updates mode:
 	\newpage
 
 .. index::
-	single: OSMM Updates, Bulk Apply
+	single: OSMM Updates; Bulk Apply
 	single: Updates; OSMM Updates, Bulk Apply
 
 .. _bulk_osmm_update:
@@ -606,14 +606,14 @@ To cancel the bulk apply OSMM update mode:
 	\newpage
 
 .. index::
-	single: Export
+	single: Exports
 
 .. _export_function:
 
-Export
-======
+Exports
+=======
 
-Export allows users to combine spatial geometries from a HLU GIS layer and attribute data from the HLU database into a combined GIS layer using a pre-defined export format.
+Exporting allows users to combine spatial geometries from a HLU GIS layer and attribute data from the HLU database into a combined GIS layer using a pre-defined export format.
 
 .. _figED:
 

@@ -37,7 +37,6 @@ Contents
    functions/functions
    FAQ <faq/faq>
    glossary/glossary
-   changelog/changelog
    appendix/appendix
 
 

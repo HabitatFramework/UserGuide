@@ -1,13 +1,15 @@
-**************************
-Frequently Asked Questions
-**************************
+***
+FAQ
+***
 
 .. index::
 	single: FAQ
 	see: Frequently asked questions; FAQ
 
-This is a list of Frequently Asked Questions about the HLU Tool. Feel free to
-suggest new entries!
+Frequently Asked Questions
+==========================
+
+This is a list of Frequently Asked Questions about the HLU Tool. Feel free to suggest new entries!
 
 
 **How do I get a copy of the tool?**

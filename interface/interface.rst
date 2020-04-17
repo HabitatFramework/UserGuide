@@ -332,6 +332,9 @@ This section also contains the :guilabel:`Apply` button which is used to apply a
 
 	\newpage
 
+.. index::
+	see: Windows; Warning and Error Messages
+
 .. _error_messages:
 
 Warning and Error Messages
@@ -362,7 +365,6 @@ Errors
 	\newpage
 
 .. index::
-	single: Main Window; Priority Habitats
 	single: Windows; Priority Habitats Window
 
 .. _priority_habitats_window:
@@ -387,7 +389,6 @@ Click |zoomtable| adjacent to the Priority Habitats table on the Details tab to 
 	\newpage
 
 .. index::
-	single: Main Window; Potential Priority Habitats
 	single: Windows; Potential Priority Habitats Window
 
 .. _potential_priority_habitats_window:
@@ -412,6 +413,7 @@ Click |zoomtable| adjacent to the Potential Priority Habitats table on the Detai
 	\newpage
 
 .. index::
+	single: Windows; Bulk Updates Window
 	single: Bulk Updates
 
 .. _bulk_update_window:
@@ -491,8 +493,8 @@ For example, figure :ref:`figUIBUS` indicates that the active filter currently c
 	\newpage
 
 .. index::
-	single: Bulk Updates; Confirmation
 	single: Windows; Bulk Updates Confirmation Window
+	single: Bulk Updates; Confirmation
 
 .. _bulk_update_confirmation_window:
 
@@ -548,8 +550,8 @@ Create History Records
 	\newpage
 
 .. index::
-	single: OSMM Updates; Review
 	single: Windows; Review OSMM Updates Window
+	single: OSMM Updates; Review
 
 .. _review_osmm_window:
 
@@ -654,6 +656,7 @@ For example, figure :ref:`figUIOUIS2` shows the 'INCID Status' section when the 
 
 
 .. index::
+	single: Windows; OSMM Updates Filter Window
 	single: OSMM Updates; Filter
 
 .. _osmm_updates_filter:
@@ -713,6 +716,7 @@ Cancel
 
 
 .. index::
+	single: Windows; OSMM Updates Advanced Filter Window
 	single: OSMM Updates; Advanced Filter
 
 .. _osmm_updates_advanced_filter:
@@ -734,8 +738,8 @@ To open the advanced filter window:
 	\newpage
 
 .. index::
-	single: OSMM Updates; Bulk Apply
 	single: Windows; Bulk Apply OSMM Updates Window
+	single: OSMM Updates; Bulk Apply
 
 .. _bulk_osmm_update_window:
 
@@ -1281,6 +1285,7 @@ Cancel
 	\newpage
 
 .. index::
+	single: Exports
 	single: Windows; Export Window
 
 .. _export_window:
@@ -1320,6 +1325,7 @@ Selected Only
 	\newpage
 
 .. index::
+	single: Switch GIS Layer
 	single: Windows; Switch GIS Layer Window
 
 .. _switch_layer_window:
