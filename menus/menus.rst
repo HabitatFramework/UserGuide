@@ -1,8 +1,3 @@
-.. |br| raw:: html
-
-    <br />
-
-
 .. |copy| image:: ../icons/EditCopy.png
 	:height: 16px
 	:width: 16px
@@ -93,6 +88,7 @@ The following sections summarise the menu functionality and provide some guideli
 
 	Main Window - Toolbars
 
+
 .. index::
 	single: Menus; File Menu
 
@@ -109,7 +105,7 @@ File Menu
 	Main Window - File Menu
 
 
-|br|
+The File menu contains the following functions:
 
 Export...
 ---------
@@ -129,6 +125,7 @@ Exits the HLU Tool and prompts users to choose whether or not to close the assoc
 
 	\newpage
 
+
 .. index::
 	single: Menus; Edit Menu
 
@@ -145,7 +142,7 @@ Edit Menu
 	Main Window - Edit Menu
 
 
-|br|
+The Edit menu contains the following functions:
 
 .. note::
 	When the tool is launched, the database tool is read-only by default as indicated. To enable edit mode, the user details must be configured in the database (see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details) and the spatial data must be editable in the GIS application.
@@ -219,8 +216,7 @@ View Menu
 	Main Window - View Menu
 
 
-|br|
-
+The View menu contains the following functions:
 
 |winsidebyside| Windows Side By Side
 ------------------------------------
@@ -281,8 +277,7 @@ Select Menu
 	Main Window - Select Menu
 
 
-|br|
-
+The Select menu contains the following functions:
 
 |filterbyattr| Filter by Attributes...
 --------------------------------------
@@ -371,8 +366,7 @@ Split/Merge Menu
 .. note::
 	All options in this menu are disabled until the database records have been filtered and a process and reason has been selected from the 'Process' and 'Reason' drop-down lists in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
 
-|br|
-
+The Split/Merge menu contains the following functions:
 
 |logicalsplit| Logical Split
 ----------------------------
@@ -427,8 +421,7 @@ Tools Menu
 	Main Window - Tools Menu
 
 
-|br|
-
+The Tools menu contains the following functions:
 
 |options| Options...
 --------------------
