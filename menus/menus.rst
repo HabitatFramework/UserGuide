@@ -100,7 +100,7 @@ File Menu
 .. _figUIFM:
 
 .. figure:: figures/UserInterfaceFileMenu.png
-	:align: left
+	:align: center
 
 	Main Window - File Menu
 
@@ -137,7 +137,7 @@ Edit Menu
 .. _figUIEM:
 
 .. figure:: figures/UserInterfaceEditMenu.png
-	:align: left
+	:align: center
 
 	Main Window - Edit Menu
 
@@ -211,7 +211,7 @@ View Menu
 .. _figUIVM:
 
 .. figure:: figures/UserInterfaceViewMenu.png
-	:align: left
+	:align: center
 
 	Main Window - View Menu
 
@@ -272,7 +272,7 @@ Select Menu
 .. _figUISM:
 
 .. figure:: figures/UserInterfaceSelectMenu.png
-	:align: left
+	:align: center
 
 	Main Window - Select Menu
 
@@ -358,7 +358,7 @@ Split/Merge Menu
 .. _figUISMM:
 
 .. figure:: figures/UserInterfaceSplitMergeMenu.png
-	:align: left
+	:align: center
 
 	Main Window - Split/Merge Menu
 
@@ -416,7 +416,7 @@ Tools Menu
 .. _figUITM:
 
 .. figure:: figures/UserInterfaceToolsMenu.png
-	:align: left
+	:align: center
 
 	Main Window - Tools Menu
 
