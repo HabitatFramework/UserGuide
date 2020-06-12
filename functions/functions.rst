@@ -76,6 +76,11 @@ To update the attributes of an INCID:
 
 	Attribute Update Warning Dialog
 
+
+.. raw:: latex
+
+	\newpage
+
 .. _split:
 
 Split Features
@@ -352,6 +357,10 @@ In the event that the SQL query required to select the features in GIS would be 
 	Clicking the 'Don't ask again' check box in this instance will **not** stop the warning window appearing again in future when performing a temporary join. This warning can only be disabled in the user options (see :ref:`options_filter` for details).
 
 
+.. raw:: latex
+
+	\newpage
+
 .. index::
 	single: Filter; Advanced Query Builder
 
@@ -391,6 +400,11 @@ To **load** a previously saved advanced query:
 * Click :guilabel:`Load`. A load dialog will open prompting you to selected an existing SQL query (*.hsq) file.
 * Select the required file and click :guilabel:`Open`.
 * The query will be loaded into the query window. It can now be verified and then executed.
+
+
+.. raw:: latex
+
+	\newpage
 
 .. index::
 	single: Filter; Filter by Incid
@@ -441,6 +455,11 @@ Users can update the attributes for multiple INCID database records, and associa
 	:scale: 70
 
 	Main window - Bulk Update Mode
+
+
+.. raw:: latex
+
+	\newpage
 
 To bulk apply updates:
 
@@ -504,6 +523,11 @@ To filter proposed OSMM Updates:
 	:scale: 60
 
 	Review OSMM Updates Window
+
+
+.. raw:: latex
+
+	\newpage
 
 To process proposed OSMM Updates:
 
@@ -574,6 +598,11 @@ To filter pending OSMM Updates:
 	:scale: 60
 
 	Bulk OSMM Update Window
+
+
+.. raw:: latex
+
+	\newpage
 
 To bulk apply OSMM updates:
 

@@ -62,7 +62,7 @@ Glossary
 		Matrix, Formation, Management and Complex codes (known collectively as 'Multiplex' codes) can be recorded alongside an IHS Habitat code to refine the habitat definition for an INCID.
 
 	OSMM Update
-		Update based on recent OS MasterMap external processing. See :ref:`osmm_update` for more details.
+		An Update based on recent OS MasterMap external processing. See :ref:`osmm_update` for more details.
 
 	Physical Split
 		Creates one or more new TOID fragments in the database based upon a single TOID which has been split in the GIS layer. See :ref:`physical_split` for more details.
@@ -77,10 +77,10 @@ Glossary
 		Habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UK Post-2010 Biodiversity Framework.
 
 	Process
-		The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current INCID. It may relate to a specific project, an ongoing process or an adhoc update. See :ref:`reason_section` for more details.
+		The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current INCID. See :ref:`reason_section` for more details.
 
 	Reason
-		The underlying explanation for the change in habitat or land use. It may be as a result of known changes in the habitat (such as habitat restoration), because new information indicates the existing data is wrong or because there has been a change but the underlying the cause is unknown. See :ref:`reason_section` for more details.
+		The underlying explanation for the change in habitat or land use. See :ref:`reason_section` for more details.
 
 	Source
 		A dataset, document or reference used as the source of habitat or land use information. Up to three sources can be defined for each INCID. See :ref:`source_tab` for more details.

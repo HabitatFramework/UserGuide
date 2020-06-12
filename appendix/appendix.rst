@@ -11,6 +11,14 @@ Appendix
 Change Log
 ==========
 
+**3.1.3**
+(12th June 2020)
+
+    * :guilabel:`Fixed` Delete existing sources when bulk applying OSMM update (*Fix093*)
+    * :guilabel:`Fixed` Insert new primary BAP habitats when bulk applying OSMM update (*Fix094*)
+    * :guilabel:`Improved` Show OSMM XRef ID in user interface for pending OSMM updates (*Fix095*)
+    * :guilabel:`Improved` Improve performance when applying or rejecting multiple OSMM updates (*Fix095*)
+
 **3.1.2**
 (17th April 2020)
 
@@ -181,6 +189,10 @@ Change Log
     * :guilabel:`Fixed` Error re-selecting features after physical split (in MapInfo) (*Fix029*)
     * :guilabel:`Fixed` Include time in DateTime fields when updating via ODBC connection type (*Fix030*)
 
+
+.. raw:: latex
+
+    \newpage
 
 .. index::
     single: Appendix; Licence

@@ -85,12 +85,18 @@ The 'Reason/Process' section contains the 'Reason' and 'Process' fields as shown
 	Main Window - Reason/Process Section
 
 
+Reason
+	The underlying explanation for the change in habitat or land use. It may be as a result of known changes in the habitat (such as habitat restoration), because new information indicates the existing data is wrong or because there has been a change but the underlying the cause is unknown.
+
+Process
+	The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current INCID. It may relate to a specific project, an ongoing process or an adhoc update.
+
 .. _osmm_update_section:
 
 OSMM Updates Section
 --------------------
 
-The 'OSMM Updates' section displays summary information of any proposed or pending OSMM updates for each INCID in the database, including the update process flag, spatial flag, change flag, status and proposed new IHS Summary as shown in the figure :ref:`figUIOUS`.  See :ref:`review_osmm_window` for more details.
+The 'OSMM Updates' section displays summary information of any proposed or pending OSMM updates for each INCID in the database, including the update process flag, spatial flag, change flag, status and proposed new IHS Summary as shown in the figure :ref:`figUIOUS`.
 
 .. note::
 	If/when the OSMM Update section appears can be configured in the user options. For details see :ref:`options_interface`.
@@ -102,6 +108,9 @@ The 'OSMM Updates' section displays summary information of any proposed or pendi
 	:scale: 85
 
 	Main Window - OSMM Updates Section
+
+
+For a description of the fields see :ref:`review_osmm_section`.
 
 
 .. raw:: latex
@@ -122,6 +131,23 @@ The 'INCID' section displays summary information for each INCID in the database,
 	:scale: 85
 
 	Main Window - INCID Section
+
+
+INCID
+	The unique reference for the current record.
+
+Area
+	The total area of all the selected features for the current INCID.
+
+Length
+	The total perimeter length of all the selected features for the current INCID.
+
+Created/By
+	The date the current INCID was first created and the name of the user that created it. For most INCIDs this will relate to when the data was first loaded into the framework. For INCIDs that have been created as a result of a logical split this relate to when the split was performed.
+
+Modified/By
+	The date the current INCID was last modified and the name of the user that modified it. If the INCID has not been modified this will correspond with when the data was first loaded into the framework.
+
 
 .. tip::
 	The displayed INCID value can be copied to the clipboard by selecting the value and then either right-clicking in the field and selecting **Copy** or pressing :kbd:`Ctrl-C`.
@@ -263,7 +289,7 @@ Habitat Class
 Habitat Type
 	Drop-down list defining the type of habitat. This list is filtered based upon the habitat class.
 
-Boundary Imp
+Boundary Imp.
 	Drop-down list defining the importance of the source data in determining the INCID boundary (in relation to the other sources). Select 'None' if the data source played no part in determining the boundary.
 
 Habitat Imp.
@@ -574,6 +600,8 @@ The main window will transform into the OSMM review updates window when the revi
 	* This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 
+.. _review_osmm_section:
+
 OSMM Updates Section
 ---------------------
 
@@ -613,7 +641,7 @@ Spatial Flag
 
 
 Change Flag
-	Denoted by an 'X' this indicates when a feature, once the external OSMM Update process is completed, previously overlapped two or more features in the original framework, and hence a portion of the new feature may now be assigned to a different INCID than it was originally.
+	Denoted by an 'X' this indicates when a feature (once the external OSMM Update process is completed) overlaps two or more features in the original framework, and so a portion of the new feature may now be assigned to a different INCID than it was originally. Hence part of the new feature has been changed.
 
 Status
 	Indicates the current status of the proposed OSMM Update, as follows:
