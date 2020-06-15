@@ -17,7 +17,7 @@ Change Log
     * :guilabel:`Fixed` Delete existing sources when bulk applying OSMM update (*Fix093*)
     * :guilabel:`Fixed` Insert new primary BAP habitats when bulk applying OSMM update (*Fix094*)
     * :guilabel:`Improved` Show OSMM XRef ID in user interface for pending OSMM updates (*Fix095*)
-    * :guilabel:`Improved` Improve performance when applying or rejecting multiple OSMM updates (*Fix095*)
+    * :guilabel:`Improved` Improve performance when applying/rejecting multiple OSMM updates (*Fix095*)
 
 **3.1.2**
 (17th April 2020)

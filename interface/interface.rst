@@ -96,7 +96,7 @@ Process
 OSMM Updates Section
 --------------------
 
-The 'OSMM Updates' section displays summary information of any proposed or pending OSMM updates for each INCID in the database, including the update process flag, spatial flag, change flag, status and proposed new IHS Summary as shown in the figure :ref:`figUIOUS`.
+The 'OSMM Updates' section displays summary information of any proposed or pending OSMM updates for each INCID in the database, including the update process flag, change flag, spatial flag, status and proposed new IHS Summary as shown in the figure :ref:`figUIOUS`.
 
 .. note::
 	If/when the OSMM Update section appears can be configured in the user options. For details see :ref:`options_interface`.
@@ -629,8 +629,8 @@ Process Flag
 		* 8 = Any to Unknown (any number of sources)
 		* 9 = Unknown to any (except unknown) (any number of sources)
 
-Spatial Flag
-	Assists with prioritising proposed updates by indicating whether the proposed habitat category (e.g. 'WB') is the same as the original habitat category and whether it is a higher or lower level in the habitat hierarchy, as follows:
+Change Flag
+	Assists with prioritising proposed updates by summarising the type of habitat change. Values indicate whether the proposed habitat category (e.g. 'WB') is the same as the original habitat category and whether it is a higher or lower level in the habitat hierarchy, as follows:
 
 		* <blank> = Same category and habitat (e.g. GN1 to GN1)
 		* A = Same category but proposed habitat is higher level (e.g. WB3 to WB36)
@@ -640,8 +640,8 @@ Spatial Flag
 		* E = Proposed habitat is different and lower level (e.g. WB36 to EM4)
 
 
-Change Flag
-	Denoted by an 'X' this indicates when a feature (once the external OSMM Update process is completed) overlaps two or more features in the original framework, and so a portion of the new feature may now be assigned to a different INCID than it was originally. Hence part of the new feature has been changed.
+Spatial Flag
+	Indicates whether part of the new feature has been changed compared to the original framework. An 'X' denotes when a feature (once the external OSMM Update process has been completed) overlaps two or more features in the original framework, and so a portion of the new feature may now be assigned to a different INCID than it was originally.
 
 Status
 	Indicates the current status of the proposed OSMM Update, as follows:
@@ -703,19 +703,19 @@ When the review OSMM updates mode is first started, the OSMM Updates Filter wind
 	Review OSMM Updates Filter Window
 
 OSMM Updates Summary
-	Displays a tabular summary of all the OSMM Updates in the database. Each row is a unique combination of the Process Flag, Spatial Flag, Change Flag and shows the number of records for each of the possible Status values (Rejected, Ignored, Proposed, Pending and Applied) and the total records for all statuses. Only combinations that exist in the database (rather than all possible combinations) will appear in the table.
+	Displays a tabular summary of all the OSMM Updates in the database. Each row is a unique combination of the Process Flag, Change Flag, Spatial Flag and shows the number of records for each of the possible Status values (Rejected, Ignored, Proposed, Pending and Applied) and the total records for all statuses. Only combinations that exist in the database (rather than all possible combinations) will appear in the table.
 
 	.. tip::
-		Selecting one of the rows in the table will set the Process, Spatial and Change values in the Filter by OSMM Updates section to those of the selected row. However, the Status field will not be changed and must be selected manually.
+		Selecting one of the rows in the table will set the Process, Change and Spatial values in the Filter by OSMM Updates section to those of the selected row. However, the Status field will not be changed and must be selected manually.
 
 Process
 	Allows the user to select a specific value, to select only proposed updates with a given Process flag, or select <all> to select proposed updates with any Process flag.
 
-Spatial
-	Allows the user to select a specific value, to select only proposed updates with a given Spatial flag, or select <all> to select proposed updates with any Spatial flag.
-
 Change
 	Allows the user to select a specific value, to select only proposed updates with a given Change flag, or select <all> to select proposed updates with any Change flag.
+
+Spatial
+	Allows the user to select a specific value, to select only proposed updates with a given Spatial flag, or select <all> to select proposed updates with any Spatial flag.
 
 Status
 	Allows the user to select a specific value to select only proposed updates with a given pending status (Rejected, Ignored or Proposed).
@@ -727,7 +727,7 @@ OK
 	Click :guilabel:`Ok` to apply the selected filter to the INCID records in the main interface and close the OSMM Updates Filter window.
 
 Reset
-	Click :guilabel:`Reset` to clear all of the Process, Spatial, Change and Status fields.
+	Click :guilabel:`Reset` to clear all of the Process, Change, Spatial and Status fields.
 
 Cancel
 	Click :guilabel:`Cancel` to close the OSMM Updates Filter window without applying a new filter.

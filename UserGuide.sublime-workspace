@@ -162,7 +162,7 @@
 			"file": "appendix/appendix.rst",
 			"settings":
 			{
-				"buffer_size": 36549,
+				"buffer_size": 36546,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -364,7 +364,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -567,7 +567,7 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 11,
 			"sheets":
 			[
 				{
@@ -829,7 +829,7 @@
 						"translation.y": 781.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -896,15 +896,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 36549,
+						"buffer_size": 36546,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11099,
-								11099
+								512,
+								512
 							]
 						],
 						"settings":
@@ -917,10 +917,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2351.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

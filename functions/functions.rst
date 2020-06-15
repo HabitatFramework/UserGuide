@@ -510,7 +510,7 @@ If the habitat framework has been externally processed against a more recent OS 
 To filter proposed OSMM Updates:
 
 * Click :guilabel:`Edit... --> Review OSMM Updates` to enter review OSMM update mode. The OSMM Updates Filter window will appear as shown in figure :ref:`figUIOUF`.
-* Select a row in the table or manually select the required values for any or all of the Process, Spatial, Change and Status fields.
+* Select a row in the table or manually select the required values for any or all of the Process, Change, Spatial and Status fields.
 * Click :guilabel:`Ok` to apply the selected filter to the INCID records in the main interface.
 
 .. note::
@@ -585,7 +585,7 @@ Once proposed OSMM updates have been accepted they become 'Pending' and must be 
 To filter pending OSMM Updates:
 
 * Click :guilabel:`Edit... --> Bulk Apply OSMM Updates` to enter bulk OSMM update mode. The OSMM Updates Filter window will appear as shown in figure :ref:`figUIBOUF`.
-* Select a row in the table or manually select the required values for any or all of the Process, Spatial, Change and Status fields.
+* Select a row in the table or manually select the required values for any or all of the Process, Change, Spatial and Status fields.
 * Click :guilabel:`Ok` to apply the selected filter to the INCID records in the main interface.
 
 .. note::

@@ -16,6 +16,9 @@ Glossary
 	Bulk Update
 		Enables updates to the attributes for multiple selected INCIDs simultaneously. See :ref:`bulk_update_window` and :ref:`bulk_updates` for more details.
 
+	Change Flag
+		For OSMM updates this indicates whether the proposed habitat category (e.g. 'WB') is the same as the original habitat category and whether it is a higher or lower level in the habitat hierarchy. See :ref:`review_osmm_section` for more details.
+
 	Determination Quality
 		Categorises the accuracy with which a priority habitat has been determined (e.g. 'Definitely is the priority habitat'). See :ref:`determination_quality` for more details.
 
@@ -79,11 +82,17 @@ Glossary
 	Process
 		The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current INCID. See :ref:`reason_section` for more details.
 
+	Process Flag
+		For OSMM updates this represents the type of change in the IHS habitat class from the original incid feature to the new incid feature, as well as the number of sources assigned to the original incid feature.  See :ref:`review_osmm_section` for more details.
+
 	Reason
 		The underlying explanation for the change in habitat or land use. See :ref:`reason_section` for more details.
 
 	Source
 		A dataset, document or reference used as the source of habitat or land use information. Up to three sources can be defined for each INCID. See :ref:`source_tab` for more details.
+
+	Spatial Flag
+		For OSMM updates this indicates whether part of the new feature has been changed compared to the original framework, with An 'X' denotes when a new feature overlaps two or more features in the original framework and hence a portion of the new feature may now be assigned to a different INCID than it was originally. See :ref:`review_osmm_section` for more details.
 
 	Split Feature
 		The tool can perform two types of split, Logical Split or Physical Split, depending upon the features selected. See :ref:`split` for more details.
