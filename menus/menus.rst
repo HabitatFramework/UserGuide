@@ -168,10 +168,28 @@ Pastes the data copied by the 'Copy' function into the same fields in another re
 .. note::
 	It is not possible to copy data from one field and paste it into a different field.
 
+Accept OSMM Update
+------------------
+
+Accept the proposed update for the current INCID. Once accepted, the update will be 'Pending' and must then be applied using the **Bulk Apply OSMM Updates** function.
+
+
+.. seealso::
+	See :ref:`review_osmm_window` for more information.
+
+Reject OSMM Update
+------------------
+
+Reject the proposed update for the current INCID.
+
+
+.. seealso::
+	See :ref:`review_osmm_window` for more information.
+
 Review OSMM Updates
 -------------------
 
-Allows users to review any outstanding Ordnance Survey MasterMap (OSMM) updates and choose to accept or reject each update. Once accepted, the updates will be pending and must then be applied using the **Bulk Apply OSMM Updates** function.
+Allows users to review any outstanding Ordnance Survey MasterMap (OSMM) updates and choose to accept or reject each update. Once accepted, the updates will be 'Pending' and must then be applied using the **Bulk Apply OSMM Updates** function.
 
 
 .. seealso::

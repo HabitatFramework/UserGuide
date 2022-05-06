@@ -11,13 +11,29 @@ Appendix
 Change Log
 ==========
 
+**3.1.4**
+(22nd April 2022)
+
+    * :guilabel:`Improved` Enable auto zoom when selecting features on map (*Fix097*)
+    * :guilabel:`Improved` Enable get map selection when in OSMM update mode (*Fix101*)
+    * :guilabel:`Improved` Enable OSMM updates to be manually accepted/rejected in normal edit mode (*Fix103*)
+    * :guilabel:`Improved` Check if the user is sure before closing application (*Fix106*)
+    * :guilabel:`Fixed` Bug when no features found in current layer when applying OSMM filter (*Fix098*)
+    * :guilabel:`Fixed` Prevent OSMM updates being actioned too quickly (*Fix099*)
+    * :guilabel:`Fixed` Clear invalid multiplex codes on change of habitat (*Fix100*)
+    * :guilabel:`Fixed` Display correct number of selected features on export (*Fix102*)
+    * :guilabel:`Fixed` Reset interface height and width correctly (*Fix104*)
+    * :guilabel:`Fixed` Trap error when unable to register Access table during selection and export (*Fix105*)
+    * :guilabel:`Fixed` Reset filter when no features selected in current layer after get map selection (*Fix107*)
+    * :guilabel:`Fixed` Prevent existing multiplex codes from not being displayed (*Fix108*)
+
 **3.1.3**
 (12th June 2020)
 
     * :guilabel:`Fixed` Delete existing sources when bulk applying OSMM update (*Fix093*)
     * :guilabel:`Fixed` Insert new primary BAP habitats when bulk applying OSMM update (*Fix094*)
     * :guilabel:`Improved` Show OSMM XRef ID in user interface for pending OSMM updates (*Fix095*)
-    * :guilabel:`Improved` Improve performance when applying/rejecting multiple OSMM updates (*Fix095*)
+    * :guilabel:`Improved` Improve performance when applying/rejecting multiple OSMM updates (*Fix096*)
 
 **3.1.2**
 (17th April 2020)
