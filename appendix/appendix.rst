@@ -16,7 +16,7 @@ Change Log
 
     * :guilabel:`Improved` Enable auto zoom when selecting features on map (*Fix097*)
     * :guilabel:`Improved` Enable get map selection when in OSMM update mode (*Fix101*)
-    * :guilabel:`Improved` Enable OSMM updates to be manually accepted/rejected in normal edit mode (*Fix103*)
+    * :guilabel:`Improved` Enable OSMM updates to be manually accepted/rejected in normal mode (*Fix103*)
     * :guilabel:`Improved` Check if the user is sure before closing application (*Fix106*)
     * :guilabel:`Fixed` Bug when no features found in current layer when applying OSMM filter (*Fix098*)
     * :guilabel:`Fixed` Prevent OSMM updates being actioned too quickly (*Fix099*)
@@ -24,7 +24,7 @@ Change Log
     * :guilabel:`Fixed` Display correct number of selected features on export (*Fix102*)
     * :guilabel:`Fixed` Reset interface height and width correctly (*Fix104*)
     * :guilabel:`Fixed` Trap error when unable to register Access table during selection and export (*Fix105*)
-    * :guilabel:`Fixed` Reset filter when no features selected in current layer after get map selection (*Fix107*)
+    * :guilabel:`Fixed` Reset filter when no features selected in current layer on get map selection (*Fix107*)
     * :guilabel:`Fixed` Prevent existing multiplex codes from not being displayed (*Fix108*)
 
 **3.1.3**

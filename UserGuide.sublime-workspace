@@ -162,7 +162,7 @@
 			"file": "appendix/appendix.rst",
 			"settings":
 			{
-				"buffer_size": 37712,
+				"buffer_size": 37704,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -896,15 +896,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 37712,
+						"buffer_size": 37704,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1301,
-								1301
+								1170,
+								1170
 							]
 						],
 						"settings":
