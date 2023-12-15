@@ -40,7 +40,7 @@ Functions
 	single: Attribute Updates
 	single: Updates; Attribute Updates
 
-.. _attribute_update:
+.. _function_attribute_update:
 
 Attribute Updates
 =================
@@ -67,9 +67,9 @@ To update the attributes of an INCID:
 		* There are no fields in error.
 
 .. caution::
-	If changes are made to an INCID and applied when only a subset of the TOIDs or fragments for that INCID are selected in GIS the user may be notified (depending upon their user Options) as shown in the figure :ref:`figAUWD`. See :ref:`options_interface` for more details.
+	If changes are made to an INCID and applied when only a subset of the TOIDs or fragments for that INCID are selected in GIS the user may be notified (depending upon their user Options) as shown in the figure :ref:`figFAUWD`. See :ref:`options_interface` for more details.
 
-.. _figAUWD:
+.. _figFAUWD:
 
 .. figure:: figures/AttributeUpdateWarningDialog.png
 	:align: center
@@ -81,7 +81,7 @@ To update the attributes of an INCID:
 
 	\newpage
 
-.. _split:
+.. _function_split:
 
 Split Features
 ==============
@@ -95,7 +95,7 @@ Features can be split logically or physically depending upon the filter active i
 .. index::
 	single: Split Features; Logical Split
 
-.. _logical_split:
+.. _function_logical_split:
 
 Logical Split
 -------------
@@ -107,11 +107,11 @@ Logical split is used to create a new INCID in the database based upon a subset 
 
 To perform a logical split:
 
-* Select the subset of features to be split in the GIS layer as shown in the **right** part of the figure :ref:`figLSFD`.
+* Select the subset of features to be split in the GIS layer as shown in the **right** part of the figure :ref:`figFLSFD`.
 * Return to the HLU Tool window and click |getmapselection| :guilabel:`Get Map Selection`.
 * Click |logicalsplit| :guilabel:`Logical Split`. A new INCID will be created and displayed as the current record and details will be added to the History tab for the INCID.
 
-.. _figLSFD:
+.. _figFLSFD:
 
 .. figure:: figures/LogicalSplitDiagram.png
 	:align: center
@@ -123,7 +123,7 @@ To display all the features in the INCID of a given feature:
 
 * Select the feature of interest in the GIS layer.
 * Return to the HLU main window and click |getmapselection| :guilabel:`Get Map Selection`.
-* Click |selectonmap| :guilabel:`Select Current INCID on Map`. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figLSFD`.
+* Click |selectonmap| :guilabel:`Select Current INCID on Map`. All the features associated with the current INCID will be displayed as shown in the **left** part of the figure :ref:`figFLSFD`.
 
 
 .. raw:: latex
@@ -133,7 +133,7 @@ To display all the features in the INCID of a given feature:
 .. index::
 	single: Split Features; Physical Split
 
-.. _physical_split:
+.. _function_physical_split:
 
 Physical Split
 --------------
@@ -155,9 +155,9 @@ ArcGIS
 
 To perform a physical split in ArGIS:
 
-* On the 'Editor' toolbar (shown in the figure :ref:`figArcEMB`), click :guilabel:`Editor` and select :guilabel:`Start Editing`.
+* On the 'Editor' toolbar (shown in the figure :ref:`figFArcEMB`), click :guilabel:`Editor` and select :guilabel:`Start Editing`.
 
-.. _figArcEMB:
+.. _figFArcEMB:
 
 .. figure:: figures/ArcGISEditMenuBar.png
 	:align: center
@@ -170,9 +170,9 @@ To perform a physical split in ArGIS:
 	.. tip::
 		It is not necessary to **Save Edits** after splitting the feature in GIS because the changes will be saved automatically once the split has been completed with the tool.
 
-* The feature will be split but still selected as shown in the figure :ref:`figArcSFD`. At this stage both features will have the same fragment ID.
+* The feature will be split but still selected as shown in the figure :ref:`figFArcSFD`. At this stage both features will have the same fragment ID.
 
-.. _figArcSFD:
+.. _figFArcSFD:
 
 .. figure:: figures/ArcGISSplitFeaturesDiagram.png
 	:align: center
@@ -195,18 +195,18 @@ To perform a physical split in MapInfo:
 * Set the HLU layer as 'Editable'.
 * Select the feature to be split and go to Objects > Set Target.
 * Select the polygon in the Cosmetic layer and go to Objects > Split.
-* In the Data Disaggregation dialog ensure that 'Method' for all fields is set to 'Value' as shown in the figure :ref:`figMIDD`, then click :guilabel:`OK`.
+* In the Data Disaggregation dialog ensure that 'Method' for all fields is set to 'Value' as shown in the figure :ref:`figFMIDD`, then click :guilabel:`OK`.
 
-.. _figMIDD:
+.. _figFMIDD:
 
 .. figure:: figures/MapInfoDataDisaggregationDialog.png
 	:align: center
 
 	Data Disaggregation Dialog (MapInfo)
 
-* The feature will be split but still selected as shown in the figure :ref:`figMISF`.
+* The feature will be split but still selected as shown in the figure :ref:`figFMISF`.
 
-.. _figMISF:
+.. _figFMISF:
 
 .. figure:: figures/MapInfoSplitFeaturesDiagram.png
 	:align: center
@@ -220,7 +220,7 @@ To perform a physical split in MapInfo:
 
 	\newpage
 
-.. _merge:
+.. _function_merge:
 
 Merge Features
 ==============
@@ -230,7 +230,7 @@ Merge features will performs two types of merge depending upon the filter active
 .. index::
 	single: Merge Features; Logical Merge
 
-.. _logical_merge:
+.. _function_logical_merge:
 
 Logical Merge
 -------------
@@ -242,9 +242,9 @@ To perform a logical merge:
 * Select the features to be merged and a feature from the INCID they are to be merged with in the GIS layer.
 * Return to the HLU main window and click |getmapselection| :guilabel:`Get Map Selection`.
 * Select one of the options in the 'Process' list.
-* Click |logicalmerge| :guilabel:`Logical Merge`. A list of INCIDs will be displayed as shown in the figure :ref:`figLMD`.
+* Click |logicalmerge| :guilabel:`Logical Merge`. A list of INCIDs will be displayed as shown in the figure :ref:`figFLMD`.
 
-.. _figLMD:
+.. _figFLMD:
 
 .. figure:: figures/LogicalMergeDialog.png
 	:align: center
@@ -265,7 +265,7 @@ To perform a logical merge:
 .. index::
 	single: Merge Features; Physical Merge
 
-.. _physical_merge:
+.. _function_physical_merge:
 
 Physical Merge
 --------------
@@ -277,12 +277,12 @@ Physical merge combines fragments of a single TOID into a single, larger, featur
 
 To perform a physical merge:
 
-* Select two or more fragments from one TOID in the GIS layer as shown in the **left** part of the figure :ref:`figPMD`.
+* Select two or more fragments from one TOID in the GIS layer as shown in the **left** part of the figure :ref:`figFPMD`.
 * Return to the HLU main window and click |getmapselection| :guilabel:`Get Map Selection`.
 * Select one of the options in the 'Process' list.
-* Click |physicalmerge| :guilabel:`Physical Merge`. The features will be combined in the GIS layer as shown in the **right** part of the figure :ref:`figPMD` and details will be added to the History tab for the INCID.
+* Click |physicalmerge| :guilabel:`Physical Merge`. The features will be combined in the GIS layer as shown in the **right** part of the figure :ref:`figFPMD` and details will be added to the History tab for the INCID.
 
-.. _figPMD:
+.. _figFPMD:
 
 .. figure:: figures/PhysicalMergeDiagram.png
 	:align: center
@@ -316,7 +316,7 @@ Users can select which INCID records appear in the user interface, and correspon
 Query Filter
 ------------
 
-.. _figQB:
+.. _figFQB:
 
 .. figure:: figures/QueryBuilder.png
 	:align: center
@@ -332,9 +332,9 @@ To apply a filter using the standard query filter:
 * Ensure that the Boolean Operator and opening :guilabel:`(` and :guilabel:`)` closing brackets are entered as required.
 * Click :guilabel:`OK`. The query will be executed and the resulting INCIDs will be selected in the user interface.
 
-Depending on the setting of the user option 'Warn Before GIS Select', and depending on how many INCID records the query would return, a warning message may appear before executing the query (see :ref:`options_filter` for details). The message will indicate the expected number of features that will be selected (as shown in the figure :ref:`figGSWD`).
+Depending on the setting of the user option 'Warn Before GIS Select', and depending on how many INCID records the query would return, a warning message may appear before executing the query (see :ref:`options_filter` for details). The message will indicate the expected number of features that will be selected (as shown in the figure :ref:`figFGSWD`).
 
-.. _figGSWD:
+.. _figFGSWD:
 
 .. figure:: figures/GISSelectionWarningDialog.png
 	:align: center
@@ -344,9 +344,9 @@ Depending on the setting of the user option 'Warn Before GIS Select', and depend
 .. tip::
 	Clicking the 'Don't ask again' check box will stop the warning window appearing again in future. This option can also be set in the user options (see :ref:`options_filter` for details).
 
-In the event that the SQL query required to select the features in GIS would be very long or complex a different message may appear warning the user that a temporary join (which may take some time) will need to be performed in GIS (as shown in the figure :ref:`figGSJWD`).
+In the event that the SQL query required to select the features in GIS would be very long or complex a different message may appear warning the user that a temporary join (which may take some time) will need to be performed in GIS (as shown in the figure :ref:`figFGSJWD`).
 
-.. _figGSJWD:
+.. _figFGSJWD:
 
 .. figure:: figures/GISSelectionJoinWarningDialog.png
 	:align: center
@@ -367,7 +367,7 @@ In the event that the SQL query required to select the features in GIS would be 
 Advanced Query Filter
 ---------------------
 
-.. _figAQB:
+.. _figFAQB:
 
 .. figure:: figures/AdvancedQueryBuilder.png
 	:align: center
@@ -414,7 +414,7 @@ To **load** a previously saved advanced query:
 Filter by Incid
 ---------------
 
-.. _figFBI:
+.. _figFFBI:
 
 .. figure:: figures/FilterByIncid.png
 	:align: center
@@ -448,7 +448,7 @@ Users can update the attributes for multiple INCID database records, and associa
 	* Bulk update mode can only be started once a filter is applied to the INCID records and the active GIS layer is editable.
 	* Bulk update mode is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
-.. _figUIBU:
+.. _figFUIBU:
 
 .. figure:: figures/UserInterfaceBulkUpdate.png
 	:align: center
@@ -464,11 +464,11 @@ Users can update the attributes for multiple INCID database records, and associa
 To bulk apply updates:
 
 * Filter the database records using 'Select by attributes' or select polygons in the GIS layer and click :guilabel:`Get Map Selection`. For details on filtering records see :ref:`filter_by_attributes`.
-* Click :guilabel:`Edit... --> Bulk Apply Updates` to enter bulk update mode. An empty form is displayed as shown in the figure :ref:`figUIBU` and the 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments affected by the update.
-* Enter the update details in the Habitats, Details, and Sources tabs, then click :guilabel:`Apply`. The Bulk Update confirmation window will appear as shown in the figure :ref:`figUIBUC`.
+* Click :guilabel:`Edit... --> Bulk Apply Updates` to enter bulk update mode. An empty form is displayed as shown in the figure :ref:`figFUIBU` and the 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments affected by the update.
+* Enter the update details in the Habitats, Details, and Sources tabs, then click :guilabel:`Apply`. The Bulk Update confirmation window will appear as shown in the figure :ref:`figFUIBUC`.
 * Select the required options for the bulk update and click :guilabel:`OK`. The INCIDs in the active filter will be updated.
 
-.. _figUIBUC:
+.. _figFUIBUC:
 
 .. figure:: figures/UserInterfaceBulkUpdateConfirmation.png
 	:align: center
@@ -499,7 +499,7 @@ Review OSMM Updates
 
 If the habitat framework has been externally processed against a more recent OS MasterMap (OSMM) update there may be proposed OSMM updates to review and apply. Proposed updates can either be skipped (so that they can be reviewed again later), accepted (when they become pending updates to be applied later) or rejected (so that they cannot be applied later). They can be reviewed one INCID at a time or all remaining INCIDs in the active filter can be rejected or accepted en-mass.
 
-.. _figUIOUF:
+.. _figFUIOUF:
 
 .. figure:: figures/UserInterfaceOSMMUpdatesFilter.png
 	:align: center
@@ -509,14 +509,14 @@ If the habitat framework has been externally processed against a more recent OS 
 
 To filter proposed OSMM Updates:
 
-* Click :guilabel:`Edit... --> Review OSMM Updates` to enter review OSMM update mode. The OSMM Updates Filter window will appear as shown in figure :ref:`figUIOUF`.
+* Click :guilabel:`Edit... --> Review OSMM Updates` to enter review OSMM update mode. The OSMM Updates Filter window will appear as shown in figure :ref:`figFUIOUF`.
 * Select a row in the table or manually select the required values for any or all of the Process, Change, Spatial and Status fields.
 * Click :guilabel:`Ok` to apply the selected filter to the INCID records in the main interface.
 
 .. note::
 	To apply another filter at any time click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to re-open the OSMM Updates Filter window.
 
-.. _figUIOU:
+.. _figFUIOU:
 
 .. figure:: figures/UserInterfaceReviewOSMMUpdates.png
 	:align: center
@@ -531,7 +531,7 @@ To filter proposed OSMM Updates:
 
 To process proposed OSMM Updates:
 
-* Once a filter has been applied the main interface appears as shown in the figure :ref:`figUIBOU` and the 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments that will be affected by the update.
+* Once a filter has been applied the main interface appears as shown in the figure :ref:`figFUIBOU` and the 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments that will be affected by the update.
 * Click :guilabel:`Skip` to skip the proposed update for the current INCID. It can then be reviewed again at a later time.
 * Click :guilabel:`Reject` to reject the proposed update for the current INCID. It will no longer be available for reviewing or applying.
 * Click :guilabel:`Accept` to accept the proposed update for the current INCID. The update will now be 'Pending' and must be applied by bulk applying OSMM Updates (see :ref:`bulk_osmm_update` for details).
@@ -539,9 +539,9 @@ To process proposed OSMM Updates:
 .. note::
 	Holding down the :guilabel:`Ctrl` key changes the :guilabel:`Reject` and :guilabel:`Accept` buttons to :guilabel:`Reject All` and :guilabel:`Accept All` thereby allowing the user to Reject or Accept all remaining INCIDs in the active filter.
 
-Once all the INCIDs in the active filter have been processed a message will appear as shown in figure :ref:`figUIOUW`. The user can apply another filter or cancel the review OSMM Updates mode.
+Once all the INCIDs in the active filter have been processed a message will appear as shown in figure :ref:`figFUIOUW`. The user can apply another filter or cancel the review OSMM Updates mode.
 
-.. _figUIOUW:
+.. _figFUIOUW:
 
 .. figure:: figures/OSMMUpdatesDone.png
 	:align: center
@@ -574,7 +574,7 @@ Once proposed OSMM updates have been accepted they become 'Pending' and must be 
 	* Bulk apply OSMM update mode can only be started when the active GIS layer is editable.
 	* Bulk apply OSMM update mode is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
-.. _figUIBOUF:
+.. _figFUIBOUF:
 
 .. figure:: figures/UserInterfaceOSMMUpdatesFilter.png
 	:align: center
@@ -584,14 +584,14 @@ Once proposed OSMM updates have been accepted they become 'Pending' and must be 
 
 To filter pending OSMM Updates:
 
-* Click :guilabel:`Edit... --> Bulk Apply OSMM Updates` to enter bulk OSMM update mode. The OSMM Updates Filter window will appear as shown in figure :ref:`figUIBOUF`.
+* Click :guilabel:`Edit... --> Bulk Apply OSMM Updates` to enter bulk OSMM update mode. The OSMM Updates Filter window will appear as shown in figure :ref:`figFUIBOUF`.
 * Select a row in the table or manually select the required values for any or all of the Process, Change, Spatial and Status fields.
 * Click :guilabel:`Ok` to apply the selected filter to the INCID records in the main interface.
 
 .. note::
 	To apply another filter at any time click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to re-open the OSMM Updates Filter window.
 
-.. _figUIBOU:
+.. _figFUIBOU:
 
 .. figure:: figures/UserInterfaceBulkOSMMUpdate.png
 	:align: center
@@ -606,12 +606,12 @@ To filter pending OSMM Updates:
 
 To bulk apply OSMM updates:
 
-* Once a filter has been applied an empty form is displayed as shown in the figure :ref:`figUIBOU` and the 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments that will be affected by the update.
+* Once a filter has been applied an empty form is displayed as shown in the figure :ref:`figFUIBOU` and the 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments that will be affected by the update.
 * The Habitats tab will be disabled as changes to the habitat attributes are determined by the pending OSMM update for each INCID.
-* Enter any required update details in the Details and Sources tabs, then click :guilabel:`Apply`. The Bulk Update confirmation window will appear as shown in the figure :ref:`figUIBOUC`.
+* Enter any required update details in the Details and Sources tabs, then click :guilabel:`Apply`. The Bulk Update confirmation window will appear as shown in the figure :ref:`figFUIBOUC`.
 * Select the required options for the bulk update and click :guilabel:`OK`. The INCIDs in the active filter will be updated.
 
-.. _figUIBOUC:
+.. _figFUIBOUC:
 
 .. figure:: figures/UserInterfaceBulkUpdateConfirmation.png
 	:align: center
@@ -644,7 +644,7 @@ Exports
 
 Exporting allows users to combine spatial geometries from a HLU GIS layer and attribute data from the HLU database into a combined GIS layer using a pre-defined export format.
 
-.. _figED:
+.. _figFED:
 
 .. figure:: figures/ExportDialog.png
 	:align: center
@@ -659,7 +659,7 @@ To perform an export:
 	* Tick the 'Selected only' checkbox to export **only** the selected features or clear the checkbox to export **all** of the features in the active GIS layer as required.
 	  
 	.. note::
-		If a filter is active based on the features selected in the active GIS layer then the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the selected INCIDs and associated GIS features will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`filter_by_attributes`.
+		If a filter is active based on the features selected in the active GIS layer then the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figFED`). Only the selected INCIDs and associated GIS features will be exported. Untick this checkbox to export all records. For details on how to filter records see :ref:`filter_by_attributes`.
 
 	* Click :guilabel:`Ok` to start the export. Select a destination folder and suitable file name for the new GIS layer when prompted.
 	* A pop-up message will appear informing when the export has completed and prompting if the new GIS layer should be loaded into the active GIS document/workspace.

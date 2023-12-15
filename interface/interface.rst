@@ -503,7 +503,7 @@ INCID Status Section
 
 The Bulk Update 'INCID Status' section shows the total number of INCIDs, TOIDs and Fragments in the active filter.
 
-.. _figUIBUS:
+.. _figUIBUSS:
 
 .. figure:: figures/UserInterfaceBulkUpdateStatusSection.png
 	:align: center
@@ -605,9 +605,9 @@ The main window will transform into the OSMM review updates window when the revi
 OSMM Updates Section
 ---------------------
 
-The 'OSMM Updates' section displays summary details of any proposed or pending OSMM updates for each INCID in the database as shown in the figure :ref:`figUIOUS`.
+The 'OSMM Updates' section displays summary details of any proposed or pending OSMM updates for each INCID in the database as shown in the figure :ref:`figUIROUS`.
 
-.. _figUIOUS:
+.. _figUIROUS:
 
 .. figure:: figures/UserInterfaceOSMMUpdateSection.png
 	:align: center

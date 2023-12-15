@@ -77,7 +77,7 @@ Menus
 
 The following sections summarise the menu functionality and provide some guidelines for their use. Where menu functions are also available on one of the toolbars the relevant icon is shown next to each heading.
 
-.. _figUITB:
+.. _figUIToB:
 
 .. figure:: figures/UserInterfaceToolbars.png
 	:align: center
