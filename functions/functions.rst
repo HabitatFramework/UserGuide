@@ -397,7 +397,7 @@ To **save** an advanced query:
 To **load** a previously saved advanced query:
 
 * Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the Advanced Query Builder window.
-* Click :guilabel:`Load`. A load dialog will open prompting you to selected an existing SQL query (*.hsq) file.
+* Click :guilabel:`Load`. A load dialog will open prompting you to selected an existing SQL query (.hsq) file.
 * Select the required file and click :guilabel:`Open`.
 * The query will be loaded into the query window. It can now be verified and then executed.
 

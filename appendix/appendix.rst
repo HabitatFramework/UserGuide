@@ -236,7 +236,7 @@ included in the Appendix section.
     
     
      Copyright (C) 2000, 2001, 2002, 2007, 2008 Free Software Foundation, Inc.
-         <http://fsf.org/>
+     <http://fsf.org/>
      Everyone is permitted to copy and distribute verbatim copies
      of this license document, but changing it is not allowed.
     
