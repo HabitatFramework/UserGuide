@@ -12,7 +12,6 @@ Contents
 	\listoffigures
 	\renewcommand\contentsname{Table of Contents}
 
-
 .. raw:: latex
 
    \newpage
@@ -39,11 +38,9 @@ Contents
    glossary/glossary
    appendix/appendix
 
-
 .. only:: html
 
    Index
    =====
 
    * :ref:`genindex`
-

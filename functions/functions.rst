@@ -66,7 +66,7 @@ To update the attributes of an INCID:
 		* The user has made one or more changes to the current INCID.
 		* There are no fields in error.
 
-.. caution::
+.. warning::
 	If changes are made to an INCID and applied when only a subset of the TOIDs or fragments for that INCID are selected in GIS the user may be notified (depending upon their user Options) as shown in the figure :ref:`figFAUWD`. See :ref:`options_interface` for more details.
 
 .. _figFAUWD:
@@ -465,7 +465,7 @@ To bulk apply updates:
 
 * Filter the database records using 'Select by attributes' or select polygons in the GIS layer and click :guilabel:`Get Map Selection`. For details on filtering records see :ref:`filter_by_attributes`.
 * Click :guilabel:`Edit... --> Bulk Apply Updates` to enter bulk update mode. An empty form is displayed as shown in the figure :ref:`figFUIBU` and the 'Bulk Update' section displays the number of INCIDs, TOIDs and fragments affected by the update.
-* Enter the update details in the Habitats, Details, and Sources tabs, then click :guilabel:`Apply`. The Bulk Update confirmation window will appear as shown in the figure :ref:`figFUIBUC`.
+* Enter the update details in the Habitats, Priority, Details, and Sources tabs, then click :guilabel:`Apply`. The Bulk Update confirmation window will appear as shown in the figure :ref:`figFUIBUC`.
 * Select the required options for the bulk update and click :guilabel:`OK`. The INCIDs in the active filter will be updated.
 
 .. _figFUIBUC:
@@ -476,8 +476,8 @@ To bulk apply updates:
 
 	Bulk Update Confirmation Window
 
-.. caution::
-	Bulk updates should be used with caution as unexpected results may occur if users do not understand the implications of any updates made and options applied.
+.. warning::
+	Bulk updates should be used with caution as unexpected results may occur if users do not understand the implications of any updates made or the options applied.
 
 To cancel the bulk update mode:
 
@@ -622,8 +622,8 @@ To bulk apply OSMM updates:
 .. note::
 	If a default OSMM Source Name has been set (see :ref:`options_bulk_update` for details) this will automatically appear in the Sources tab.
 
-.. caution::
-	Performing bulk OSMM updates should be used with caution as unexpected results may occur if users do not understand the implications of any update details or options applied.
+.. warning::
+	Performing bulk OSMM updates should be used with caution as unexpected results may occur if users do not understand the implications of any update details or the options applied.
 
 To cancel the bulk apply OSMM update mode:
 

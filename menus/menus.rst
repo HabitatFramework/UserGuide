@@ -84,7 +84,6 @@ The following sections summarise the menu functionality and provide some guideli
 
 	Main Window - Toolbars
 
-
 .. index::
 	single: Menus; File Menu
 	see: Files Menu; Menus
@@ -109,7 +108,6 @@ Export...
 
 Allows users to export data from the HLU database to a GIS layer using a pre-defined export format.
 
-
 .. seealso::
 	See :ref:`export_window` and :ref:`export_function` for more information.
 
@@ -121,7 +119,6 @@ Exits the HLU Tool and prompts users to choose whether or not to close the assoc
 .. raw:: latex
 
 	\newpage
-
 
 .. index::
 	single: Menus; Edit Menu
@@ -173,7 +170,6 @@ Accept OSMM Update
 
 Accept the proposed update for the current INCID. Once accepted, the update will be 'Pending' and must then be applied using the **Bulk Apply OSMM Updates** function.
 
-
 .. seealso::
 	See :ref:`review_osmm_window` for more information.
 
@@ -181,7 +177,6 @@ Reject OSMM Update
 ------------------
 
 Reject the proposed update for the current INCID.
-
 
 .. seealso::
 	See :ref:`review_osmm_window` for more information.
@@ -191,7 +186,6 @@ Review OSMM Updates
 
 Allows users to review any outstanding Ordnance Survey MasterMap (OSMM) updates and choose to accept or reject each update. Once accepted, the updates will be 'Pending' and must then be applied using the **Bulk Apply OSMM Updates** function.
 
-
 .. seealso::
 	See :ref:`review_osmm_window` for more information.
 
@@ -199,7 +193,6 @@ Bulk Apply OSMM Updates
 -----------------------
 
 Enables users to apply pending OSMM updates for multiple selected features and database records (INCIDs) simultaneously.
-
 
 .. seealso::
 	See :ref:`bulk_osmm_update_window` for more information.
@@ -209,10 +202,8 @@ Bulk Apply Updates
 
 Enables users to update the attributes for multiple selected features and database records (INCIDs) simultaneously.
 
-
 .. seealso::
 	See :ref:`bulk_update_window` for more information.
-
 
 .. raw:: latex
 
@@ -248,9 +239,8 @@ Aligns the HLU window to the top left of the screen and expands the GIS window t
 
 	Main Window - Side by Side
 
-
-|zoom| Zoom to Selection
-------------------------
+Zoom to Selection
+-----------------
 
 Zooms to the currently selected features in the active GIS layer.
 
@@ -272,8 +262,7 @@ An option to keep the HLU Tool window floating on top of any other application w
 |zoom| Auto Zoom to selection
 -----------------------------
 
-An option to automatically zoom to the GIS features associated with an INCID in the active GIS layer whenever the INCID selection is changed using the HLU Tool.
-
+Options to automatically zoom to the GIS features associated with an INCID in the active GIS layer whenever the INCID selection is changed using the HLU Tool. Choices are 'Off', 'When out of view' and 'Always'.
 
 .. raw:: latex
 
@@ -301,17 +290,15 @@ The Select menu contains the following functions:
 |filterbyattr| Filter by Attributes...
 --------------------------------------
 
-Allows users to filter the INCID records based upon non-spatial or complex criteria using the query builder or advanced query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
-
+Allows users to filter the INCID records based upon non-spatial or complex criteria using the advanced query builder. Only INCID records matching the filter criteria will be available for viewing using the record selectors.
 
 .. seealso::
-	See :ref:`query_builder_window` and :ref:`advanced_query_builder_window` for more information.
+	See :ref:`advanced_query_builder_window` for more information.
 
 Filter by Attributes - Advanced...
 ----------------------------------
 
 When reviewing OSMM updates, allows users to filter the INCID records based upon non-spatial or complex criteria using the advanced query builder. Only INCID records matching the filter criteria, and where the OSMM update status is not 'Pending' or 'Applied', will be available for reviewing.
-
 
 .. seealso::
 	See :ref:`advanced_query_builder_window` for more information.
@@ -320,7 +307,6 @@ Filter by Incid...
 ------------------
 
 Allows users to filter the INCID records for a specific INCID.
-
 
 .. seealso::
 	See :ref:`filter_by_incid_window` for more information.
@@ -343,15 +329,13 @@ Selects **all** of the GIS features associated with only the **current** INCID r
 
 Selects **all** of the GIS features associated with **all** of the currently filtered INCID records in the active GIS layer.
 
-
-.. caution::
+.. warning::
 	This process may take a long time depending upon the number of currently filtered INCID records, the GIS layer size and their geographical distribution.
 
 |getmapselection| Get Map Selection
 -----------------------------------
 
 Filters the database records to retrieve the attributes associated with the selected features in the active GIS layer.
-
 
 .. tip::
 	Selecting one or more features on the map and clicking **Get Map Selection** will select only the database records associated with the selected features. The INCID records can then be viewed using the record selectors and the number of selected features associated with the current INCID record will be displayed in the INCID status area to the right (together with the total number of features associated with the current INCID). Clicking **Select Current INCID on Map** allows users to expand the map selection to include all features belonging to the current INCID.
@@ -360,7 +344,6 @@ Auto Select INCID on GIS
 ------------------------
 
 An option to automatically select the GIS features associated with the current INCID record in the active GIS layer.
-
 
 .. raw:: latex
 
@@ -381,7 +364,6 @@ Split/Merge Menu
 	:align: center
 
 	Main Window - Split/Merge Menu
-
 
 .. note::
 	All options in this menu are disabled until the database records have been filtered and a process and reason has been selected from the 'Process' and 'Reason' drop-down lists in the INCID section on the main window. For details on the INCID section see :ref:`incid_section`.
@@ -420,7 +402,6 @@ Combines two or more fragments of a single TOID, that are also associated with t
 .. seealso::
 	See :ref:`physical_merge`  for more information on this action.
 
-
 .. raw:: latex
 
 	\newpage
@@ -449,7 +430,6 @@ The Tools menu contains the following functions:
 
 Allows users to alter many aspects of the HLU Tool configuration specific to their own requirements.
 
-
 .. seealso::
 	See :ref:`options_window`  for more information.
 
@@ -458,7 +438,6 @@ Allows users to alter many aspects of the HLU Tool configuration specific to the
 -------------------------
 
 Allows users to switch between valid HLU layers in the GIS application.
-
 
 .. seealso::
 	See :ref:`switch_layer_window`  for more information.
@@ -483,4 +462,3 @@ Displays the following information about the HLU Tool:
 	* Current user id and name
 	* Copyright statements
 	* Links to the on-line User and Technical Guides
-

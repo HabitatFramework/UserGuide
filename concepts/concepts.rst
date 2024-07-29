@@ -23,7 +23,6 @@ Attribute Data
 --------------
 The attribute data is stored in a relational database in a 'normalised' relational structure (i.e. groups of related attributes are divided into smaller, separate tables and relationships are defined between the tables). A normalised relational database enables the attributes to be retrieved and maintained in a very logical, and universal, way whilst simultaneously reducing the data storage requirements and improving the data structure and integrity.
 
-
 .. index::
 	single: Concepts; Habitat Framework
 	single: Habitat Framework, Concept
@@ -50,7 +49,6 @@ All OS MasterMap features have a TOpographic IDentity or 'TOID' that uniquely id
 
 Apart from the spatial representation of the features, the habitat framework only retains the TOID from OS MasterMap because all other attributes can be retrieved using this if necessary. Where OS MasterMap features need to be sub-divided into smaller units in order to represent habitat survey details that are not already shown these still retain the original TOID but are also assigned a fragment identifier so that each fragment can be uniquely identified.
 
-
 .. index::
 	single: Concepts; INCID
 	single: INCID, Concept
@@ -68,7 +66,6 @@ Similarly, features from different INCIDs that are actually related and should s
 
 .. [3] Features in the same INCID do not have to be adjacent but it is recommended that they are at least spatially associated with one-another (e.g. they are within the same site or either side of the same road/railway).
 
-
 .. raw:: latex
 
 	\newpage
@@ -82,15 +79,14 @@ Similarly, features from different INCIDs that are actually related and should s
 Priority Habitats
 =================
 
-Some IHS Habitat and some multiplex codes (Formation, Management and Complex codes) are equivalent to, or more distinct than, priority habitats [4]_. When any such codes are selected in the main window :ref:`habitats_tab` the tool automatically adds the associated priority habitats to the 'Priority Habitats' section of the :ref:`details_tab`.
+Some primary and secondary Habitat codes are equivalent to, or more distinct than, priority habitats [4]_. When any such codes are selected in the main window :ref:`habitats_tab` the tool automatically adds the associated priority habitats to the 'Priority Habitats' section of the :ref:`priority_tab`.
 
 However, if priority habitat associated codes are changed or removed in the :ref:`habitats_tab` the tool does **not** automatically remove existing priority habitats from the 'Priority Habitats' section of the :ref:`details_tab`. Instead they are moved to the 'Potential Priority Habitats' section and the :ref:`determination_quality` is set to 'Previously present, but may no longer exist'.
 
 .. note::
 	Existing priority habitats that have been automatically moved to the 'Potential Priority Habitats' section but are no longer required must be deleted by the user (see :ref:`details_tab`.)
 
-.. [4] Priority habitats are habitats identified as requiring action in the UK Biodiversity Action Plan (UK BAP) and continue to be regarded as conservation priorities in the UK Post-2010 Biodiversity Framework.
-
+.. [4] Priority habitats are habitats identified as habitats of principle importance for the conservation of biodiversity in England according to Section 41 of the National Environment and Rural Communities (NERC) Act. There are 56 habitats of principle importance (previously called UKBAP priority habitats) included on the S41 list.
 
 .. index::
 	single: Concepts; Potential Priority Habitats
@@ -101,10 +97,9 @@ However, if priority habitat associated codes are changed or removed in the :ref
 Potential Priority Habitats
 ---------------------------
 
-If a habitat area is close to, but does not currently meet, the definition of a priority habitat (but may do so with appropriate management or following habitat restoration work) then the appropriate priority habitat can be added to the 'Potential Priority Habitats' section of the :ref:`details_tab` with the :ref:`determination_quality` set to 'Not present but close to definition'.
+If a habitat area is close to, but does not currently meet, the definition of a priority habitat (but may do so with appropriate management or following habitat restoration work) then the appropriate priority habitat can be added to the 'Potential Priority Habitats' section of the :ref:`priority_tab` with the :ref:`determination_quality` set to 'Not present but close to definition'.
 
-If a priority habitat was known to have been present but it may no longer exist then it can be added to the 'Potential Priority Habitats' section of the :ref:`details_tab` with the :ref:`determination_quality` set to 'Previously present, but may no longer exist'.
-
+If a priority habitat was known to have been present but it may no longer exist then it can be added to the 'Potential Priority Habitats' section of the :ref:`priority_tab` with the :ref:`determination_quality` set to 'Previously present, but may no longer exist'.
 
 .. index::
 	single: Concepts; Determination Quality
@@ -115,7 +110,7 @@ If a priority habitat was known to have been present but it may no longer exist 
 Determination Quality
 ---------------------
 
-Every priority habitat and potential priority habitat must be assigned a determination quality. This categorises the accuracy with which the priority habitat has been determined and can be very useful when there is not a direct translation between the IHS habitat or multiplex codes and the priority habitat, or when the original survey source(s) are not as spatially accurate as the OS MasterMap features in the framework and hence there is some uncertainty of the exact position of the priority habitat.
+Every priority habitat and potential priority habitat must be assigned a determination quality [5]_. This categorises the accuracy with which the priority habitat has been determined and can be very useful when there is not a direct translation between the UKHab primary and secondary codes and the priority habitat, or when the original survey source(s) are not as spatially accurate as the OS MasterMap features in the framework and hence there is some uncertainty of the exact position of the priority habitat.
 
 .. tabularcolumns:: |L|C|
 
@@ -137,6 +132,7 @@ Every priority habitat and potential priority habitat must be assigned a determi
 	| Previously present, but may no longer exist              | Potential Priority Habitat |
 	+----------------------------------------------------------+----------------------------+
 
+.. [5] A determination quality can now also be assigned to the INCID as a whole to categorise the accuracy with which the UKHab primary and secondary codes have been determined from the original survey source(s).
 
 .. index::
 	single: Concepts; Interpretation Quality
@@ -147,7 +143,7 @@ Every priority habitat and potential priority habitat must be assigned a determi
 Interpretation Quality
 ----------------------
 
-Every priority habitat and potential priority habitat must be assigned an interpretation quality. This is selected based on an assessment of the quality of the original habitat type and it's relationship between it and the priority habitat type and also the age of the original habitat source.
+Every priority habitat and potential priority habitat must be assigned an interpretation quality [6]_. This is selected based on an assessment of the quality of the original habitat type and it's relationship between it and the priority habitat type and also the age of the original habitat source(s).
 
 .. tabularcolumns:: |L|C|C|C|
 
@@ -173,6 +169,7 @@ Every priority habitat and potential priority habitat must be assigned an interp
 	| Expert knowledge of site quality         | Medium (4)    | Medium (4) | Low (5)    |
 	+------------------------------------------+---------------+------------+------------+
 
+.. [6] An interpretation quality can now also be assigned to the INCID as a whole to assign a quality to the relationship between the primary and secondary codes and the survey type and age of the original habitat source(s).
 
 .. _split:
 
@@ -180,7 +177,6 @@ Splitting Features
 ==================
 
 There are two ways to split features depending upon the filter active in the tool - **logical split** and **physical split**.
-
 
 .. index::
 	single: Concepts; Logical Split
@@ -193,7 +189,7 @@ Logical Split
 
 Logical split is used to create a new INCID in the database based upon a subset of features selected from a single INCID in the GIS layer. Logically splitting one or more features assigns them to a different INCID than the other features in the current INCID which then allows them to be updated independently of the remaining features in the original INCID. 
 
-For example, a group of adjacent permanent pasture features, each represented by a separate OS MasterMap feature, may be 'logically' grouped by being assigned to the same INCID because they share a common set of IHS codes, sources and other attributes. However, it may be discovered that one or more of the features are actually being managed differently to the remaining features. By logically splitting those features from the original INCID to form a new INCID those features can then be assigned a different IHS management code.
+For example, a group of adjacent permanent pasture features, each represented by a separate OS MasterMap feature, may be 'logically' grouped by being assigned to the same INCID because they share a common set of UKHab primary and secondary codes, sources and other attributes. However, it may be later recognised that one or more of the features are actually being managed differently to the remaining features. By logically splitting those features from the original INCID to form a new INCID those features can then be assigned a different management secondary code.
 
 .. note::
 
@@ -220,7 +216,7 @@ For example, a woodland may appear in OS MasterMap as a single feature, but comp
 	* If several features have been split, select the fragments for one original feature and split using the tool. Repeat this operation for the remaining features.
 	* Ensure that the physical split is completed in the database prior to commencing any other operations such as 'Select by attributes …' to avoid database synchronisation issues.
 
-.. caution::
+.. warning::
 	If two or more fragments from the same TOID and with the same TOID_Fragment_Id are selected in the GIS and **Get Map Selection** is clicked then the tool will recognise that the fragments must have been split by the user in the GIS layer and will **automatically** perform a physical split before displaying the attributes.
 
 .. _merge:
@@ -255,7 +251,6 @@ Physical merge combines fragments of a single TOID into a single, larger, featur
 .. note::
 	Only fragments belonging to the same TOID can be merged in a single operation. If fragments for several TOIDs need to be merged, the operation must be repeated for each TOID.
 
-
 .. index::
 	single: Concepts; Attribute Updates
 	single: Updates; Attribute Updates, Concept
@@ -265,8 +260,7 @@ Physical merge combines fragments of a single TOID into a single, larger, featur
 Attribute Updates
 =================
 
-Attribute updates are the main mechanism for updating existing INCID details. Typically attribute changes can only be applied to one INCID at a time and any changes made are applied to the current INCID and, if any attributes changed are also held in the GIS layer (e.g. IHS Category or IHS Summary) then the changes are also applied to any features for the current INCID selected in the active GIS layer (or to all features for the current INCID if no features are selected).
-
+Attribute updates are the main mechanism for updating existing INCID details. Typically attribute changes can only be applied to one INCID at a time, and any changes attributes applied to the INCID are also held in the GIS layer (e.g. primary and secondary codes) then they are also applied to any features for the current INCID selected in the active GIS layer (or to all features for the current INCID if no features are selected).
 
 .. index::
 	single: Concepts; Bulk Updates
@@ -277,11 +271,10 @@ Attribute updates are the main mechanism for updating existing INCID details. Ty
 Bulk Updates
 ============
 
-Attribute updates can also be applied in bulk to multiple INCID records at the same time. Any changes made will be applied to all INCIDs in the active filter and will also be reflected in the active GIS layer if any attributes changed are also held in the GIS layer (e.g. IHS Category or IHS Summary).
+Attribute updates can also be applied in bulk to multiple INCID records at the same time. Any changes made will be applied to all INCIDs in the active filter and will also be reflected in the active GIS layer if any of the changed attributes are also held in the GIS layer (e.g. primary and secondary codes).
 
 .. note::
-	This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
-
+	This function is only available to users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 .. index::
 	single: Concepts; OSMM Updates
@@ -296,4 +289,3 @@ If the habitat framework has been externally processed against a more recent OS 
 
 .. note::
 	This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
-

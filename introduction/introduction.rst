@@ -12,16 +12,9 @@ Since the introduction of the Integrated Habitat System (IHS) and the adoption o
 
 The subsequent incorporation of the Ordnance Survey MasterMap boundaries and TOIDs into existing habitat datasets brought improved positional accuracy to the data, and in many cases also provided additional habitat and land-use source information. However, new datasets have significantly increased in volume with some county-wide datasets now containing over 2 million habitat features, with each feature having over 50 attributes. As a result the attributes and evidence-base required for habitat and land use information has grown so much in recent years that it is no longer practical to store or maintain the data in a standard GIS layer.
 
-Solution
-========
+One of the key requirements for the tool was the ability to use multiple GIS and database environments, so it was designed to be compatible with both ArcGIS and MapInfo and multiple relational databases including SQLServer and MS Access. In principle other database systems such as PostgreSQL and Oracle can be supported but these have not been tested. The tool needed to provide a user interface between the spatial data data held in GIS and the attribute data held in a relational database, maintaining changes to both the attributes and the spatial data. It also had to provide an audit trail to indicate when data was last edited, why and by whom.
 
-In 2009 exeGesIS Ltd was engaged to develop a new GIS-based tool to manage habitat and land use data based upon an OS MasterMap framework. Funding was provided by the Local Record Centres (LRCs) in the South East of England in partnership with Natural England.
-
-The tool needed to provide a user interface between the spatial data data held in GIS and the attribute data held in a relational database, maintaining changes to both the attributes and the spatial data. It also had to provide an audit trail to indicate when data was last edited, why and by whom.
-
-One of the key requirements for the tool was the ability to use multiple GIS and database environments, so it was designed to be compatible with both ArcGIS and MapInfo and multiple relational databases including SQLServer and MS Access. In principle other database systems such as PostgreSQL and Oracle can be supported but these have not been tested.
-
-The first version of the tool (v1.0.0) was released in March 2011.
+In 2009 exeGesIS Ltd was engaged to develop a new GIS-based tool to manage habitat and land use data based upon an OS MasterMap framework. Funding was provided by the Local Record Centres (LRCs) in the South East of England in partnership with Natural England. The first version of the tool (v1.0.0) was released in March 2011. Since 2013 the tool has been supported and maintained by Andy Foy Consulting, and in 2014, 2019 and 2024 it went through phases of major redevelopment with the latest version (v4.0.2) enabling it to support the UK Habitat Classification (UKHab).
 
 .. raw:: latex
 
@@ -44,7 +37,7 @@ Whilst there are benefits to splitting the HLU features by OS MasterMap, such as
 
 .. tabularcolumns:: |L|R|R|
 
-.. table:: Effect of OS MasterMap Split (Single Dataset)
+.. table:: Example of OS MasterMap Split (Single Dataset)
 
 	+------------+------------------------+------------------------------+
 	|            | Original habitat layer | HLU layer split by MasterMap |
@@ -67,7 +60,7 @@ The example in the table below shows the effect of separating the spatial and at
 
 .. tabularcolumns:: |L|R|R|
 
-.. table:: Effect of OS MasterMap Split (Attribute and Spatial Datasets)
+.. table:: Example of OS MasterMap Split (Attribute and Spatial Datasets)
 
 	+---------------------+------------------------------+-------------------------------------------+
 	|                     | HLU layer split by MasterMap | HLU layer and separate attribute database |
@@ -103,4 +96,3 @@ The tool provides a user-friendly and efficient interface enabling users to sear
 5. Enabling data to be extracted in an number of formats, including the National Inventory dataset format, as broad habitat layers or as priority habitat layers.
 6. Ensuring that all local datasets can be readily combined into regional or national datasets and direct comparisons can be made between local datasets.
 7. Improved data retrieval/update response times which would otherwise be unacceptable directly in GIS given the volume and complexity of the underlying data.
-

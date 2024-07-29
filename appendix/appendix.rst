@@ -11,6 +11,38 @@ Appendix
 Change Log
 ==========
 
+**4.0.2**
+(31st July 2024)
+
+    * :guilabel:`Improved` ???
+
+**4.0.1**
+(27th March 2024)
+
+    * :guilabel:`New` Option to show or hide the source habitat group in the main window Habitat tab
+    * :guilabel:`New` Option to show or hide the habitat secondaries summary in the main window Habitat tab
+    * :guilabel:`New` Optional validation for the mandatory secondary habitats based on the source habitat type
+    * :guilabel:`New` Optional validation of potential priority habitat determination quality
+    * :guilabel:`Fixed` Disable OSMM update buttons when no update is pending
+    * :guilabel:`Fixed` Clear the selected table and operator in the advanced filter when clearing
+    * :guilabel:`Fixed` Adjust secondary table height automatically when window height is changed
+    * :guilabel:`Fixed` Error during INCID update when incid_mm_polygon fields to be null
+    * :guilabel:`Fixed` Display modified details in the history records correctly
+
+**4.0.0**
+(1st January 2024)
+
+    * :guilabel:`New` Support UKHab rather than IHS as the central habitat classification
+    * :guilabel:`Improved` 'None' priority habitat type replaced by determination and interpretation fields
+    * :guilabel:`Improved` Reset the active incid filter when selected feature(s) are not found in GIS
+    * :guilabel:`Improved` Load all lookup tables during initialisation to improved performance
+    * :guilabel:`Improved` Various data integrity checks when selecting, splitting, merging or updating INCIDs
+    * :guilabel:`New` Mandatory habitat secondaries field in the Habitats tab
+    * :guilabel:`New` Optional habitat secondaries suggestions and tips in the Habitats tab
+    * :guilabel:`New` Don't enable outstanding edits to be saved when moving away from the current INCID
+    * :guilabel:`New` Display data version (e.g. 'Live' or 'Test') in the About window
+    * :guilabel:`Removed` Standard, non-advanced, query builder
+
 **3.1.4**
 (22nd April 2022)
 

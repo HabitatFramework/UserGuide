@@ -32,10 +32,10 @@ Glossary
 		An incremental number used as a unique reference to individual features (fragments) of a single TOID. See :ref:`habitat_framework` for more details.
 
 	Habitat Class
-		One of the habitat classification systems used in the UK to record or describe an area of habitat (e.g. 'Phase 1', 'NVC', 'BAP Priority').
+		One of the habitat classification systems used in the UK to record or describe an area of habitat (e.g. 'Phase 1', 'NVC', 'UKHab', 'IHS', BAP Priority').
 
 	Habitat Importance
-		The relative importance of each source when determining the IHS habitat and associated IHS codes for all the features in an INCID (e.g. of 'Primary' or 'Secondary' importance).
+		The relative importance of each source when determining the primary and secondary habitat codes for all the features in an INCID (e.g. of 'Primary' or 'Secondary' importance).
 
 	Habitat Type
 		The code and/or descriptive term of a habitat classification system that best represents an area of habitat (e.g. 'B312', 'CG2', 'Lowland Calcareous Grassland').
@@ -65,7 +65,7 @@ Glossary
 		The tool can perform two types of merge, Logical Merge or Physical Merge, depending upon the filter active in the tool. See :ref:`merge` for more details.
 
 	Multiplex Code
-		Matrix, Formation, Management and Complex codes (known collectively as 'Multiplex' codes) can be recorded alongside an IHS Habitat code to refine the habitat definition for an INCID.
+		Matrix, Formation, Management and Complex codes (known collectively as 'Multiplex' codes) recorded alongside an IHS Habitat code.
 
 	OSMM Update
 		An outstanding proposed update based on recent OS MasterMap external processing. See :ref:`osmm_update` for more details.
@@ -86,7 +86,7 @@ Glossary
 		The activity being undertaken that has lead to applying this change to the spatial or attribute data of the current INCID. See :ref:`reason_section` for more details.
 
 	Process Flag
-		For outstanding Ordnance Survey updates this represents the type of change in the IHS habitat class from the original incid feature to the new incid feature, as well as the number of sources assigned to the original incid feature.  See :ref:`review_osmm_section` for more details.
+		For outstanding Ordnance Survey updates this represents the type of change in the primary habitat group from the original incid feature to the new incid feature, as well as the number of sources assigned to the original incid feature.  See :ref:`review_osmm_section` for more details.
 
 	Reason
 		The underlying explanation for the change in habitat or land use. See :ref:`reason_section` for more details.
@@ -105,6 +105,9 @@ Glossary
 
 	TOID
 		A unique **TO** \pographical **ID**\ entifier applied to features in Ordnance Survey's MasterMap product. See :ref:`habitat_framework` for more details.
+
+	UKHab
+		The UK Habitat Classification System - a new, free-to-use, unified and comprehensive approach to classifying habitats, designed to provide a simple and robust approach to survey and monitoring for the 21st century. See `ukhab.org/ <https://ukhab.org/>`_ for more information.
 
 	Vague Date
 		A specific date, range of dates or imprecise date that can be specified in a variety of formats (e.g. '23 Mar 1987', 'Mar 1987 - Jun 1987', 'Spring 1987').

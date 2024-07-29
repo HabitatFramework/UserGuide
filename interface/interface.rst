@@ -30,12 +30,11 @@ Once the HLU Tool has been configured, starting the tool will start the associat
 
 	Main Window
 
-
 .. raw:: latex
 
 	\newpage
 
-Records can be viewed or updated through the main window of the HLU Tool. Missing or invalid fields are highlighted in red and the relevant tab is also highlighted. The 'Apply' button will be active when all required fields have been completed and are valid on all tabs.
+Records can be viewed or updated through the main window of the HLU Tool. Missing or invalid fields are highlighted in red and the relevant tab is also highlighted. The 'Apply' button will be active when edit mode is active and all required fields have been completed and are valid on all tabs.
 
 The following sections summarise the different sections of the main window.
 
@@ -45,13 +44,10 @@ Title Bar
 The main window title bar displays the following information:
 
 * The tool title, i.e. **HLU Tool**
-* The active GIS layer, e.g. **HLU_NonUrban_Features**.
 * Whether the tool is in read-only mode, i.e. **[READONLY]**
   
-
 .. note::
 	 The title bar may also display a number (e.g. **[1]**) representing which Map Window (MapInfo) or Data Frame (ArcGIS) contains the active GIS layer if there are multiple windows/frames in the associated GIS application.
-
 
 .. _figUITB:
 
@@ -61,10 +57,8 @@ The main window title bar displays the following information:
 
 	Main Window - Title Bar
 
-
 .. seealso::
 		See 'Why does the tool title bar show [READ ONLY]?' in :doc:`FAQ <../faq/faq>` for more information.
-
 
 .. _reason_section:
 
@@ -96,7 +90,7 @@ Process
 OSMM Updates Section
 --------------------
 
-The 'OSMM Updates' section displays summary information of any proposed or pending OSMM updates for each INCID in the database, including the update process flag, change flag, spatial flag, status and proposed new IHS Summary as shown in the figure :ref:`figUIOUS`.
+The 'OSMM Updates' section displays summary information of any proposed or pending OSMM updates for each INCID in the database, including the update process flag, change flag, spatial flag, status and proposed new UKHab primary and secondary codes as shown in the figure :ref:`figUIOUS`.
 
 .. note::
 	If/when the OSMM Update section appears can be configured in the user options. For details see :ref:`options_interface`.
@@ -111,7 +105,6 @@ The 'OSMM Updates' section displays summary information of any proposed or pendi
 
 
 For a description of the fields see :ref:`review_osmm_section`.
-
 
 .. raw:: latex
 
@@ -148,13 +141,11 @@ Created/By
 Modified/By
 	The date the current INCID was last modified and the name of the user that modified it. If the INCID has not been modified this will correspond with when the data was first loaded into the framework.
 
-
 .. tip::
 	The displayed INCID value can be copied to the clipboard by selecting the value and then either right-clicking in the field and selecting **Copy** or pressing :kbd:`Ctrl-C`.
 
 .. note::
 	If the created or modified users are not configured, the 'By' fields will display their Windows login instead of their user name. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
-
 
 .. raw:: latex
 
@@ -165,9 +156,9 @@ Modified/By
 Habitats Tab
 ------------
 
-Click on :guilabel:`Habitats` to display the Habitats tab as shown in the figure :ref:`figUIHT`. The Habitats tab displays the Integrated Habitat System (IHS) and legacy habitat details for the current INCID record.
+Click on :guilabel:`Habitats` to display the Habitats tab as shown in the figure :ref:`figUIHT`. The Habitats tab displays the UKHab primary and secondary codes and the legacy habitat for the current INCID record. It also assists attribute updates when the original survey source(s) are not using UKHab by providing translations from a range of habitat classifications (e.g. JNCC Phase 1, IHS and NVC) to UKHab.
 
-.. _figUHIT:
+.. _figUIHT:
 
 .. figure:: figures/UserInterfaceHabitatsTab.png
 	:align: center
@@ -177,33 +168,123 @@ Click on :guilabel:`Habitats` to display the Habitats tab as shown in the figure
 
 
 Class
-	Drop-down list of habitat classifications used to filter the 'Type' drop-down list to a specific habitat class. The contents in the list are based on entries in the lut_habitat_class table. [6]_
-
-	.. note::
-		The entries in this field are only used to assist the user to select the most suitable Habitat value and are not saved to the database. Use Sources if you wish to record the source habitat classification and type in the database (see :ref:`source_tab` for more details).
+	Drop-down list of habitat classifications used to filter the 'Type' drop-down list to a specific habitat class. The contents in the list are based on entries in the lut_habitat_class table. [7]_
 
 Type
-	Drop-down list of habitat classification types used to filter the 'Habitat' drop-down list to relevant IHS codes. The contents in the list are based on entries in the lut_habitat_type table that relate to the selected Class (above). [6]_
+	Drop-down list of habitat classification types used to filter the 'Primary' drop-down list to relevant codes. The contents in the list are based on entries in the lut_habitat_type table that relate to the selected Class (above). [7]_
  
 	.. note::
-		The entries in this field are only used to assist the user to select the most suitable Habitat value and are not saved to the database. Use Sources if you wish to record the source habitat classification and type in the database (see :ref:`source_tab` for more details).
+		The entries in these fields are only used to assist the user to select the most appropriate Primary codes. They are **not** saved to the database. Use Sources if you wish to record the source habitat classification and type in the database (see :ref:`source_tab` for more details).
 
-Habitat
-	Drop-down list allowing users to select the desired IHS Habitat code. The contents of the list will vary and relate directly to the selected Class and Type (above) and entries in the lut_habitat_type_ihs_habitat table.
+.. [7] The habitat 'Class' and 'Type' list contents are based only on entries in the relevant lookup tables where the 'is_local' flag is set to True (-1). See 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to update lookup table entries.
+
+Primary
+	Drop-down list allowing users to select the desired UKHab primary code. The contents of the list will vary and relate directly to the selected Class and Type (above) and entries in the lut_habitat_type_primary table. [8]_
 
 NVC Codes
-	[Read only]. Automatically displays a list of any potential NVC Codes related to the IHS habitat codes selected in the preceding drop-down list.
+	[Read only]. Displays a list of any NVC Codes related to the UKHab primary code selected in the preceding drop-down list. This field can be displayed or hidden in the user options as required.
 
-IHS Matrix / Formation / Management / Complex
-	Drop-down lists allowing users to refine the habitat definition by adding 'multiplex' codes according to the guidelines of IHS.
+Mandatory
+	[Read only]. A comma-separated list of any UKHab secondary codes that **must** be added along with the selected primary habitat into the table below according to the UKHab documentation.
 
-IHS Summary
-	[Read only]. Automatically generated concatenation of the IHS habitat and multiplex codes selected from the preceding drop-down lists.
+Suggested
+	[Read only]. A comma-separated list of any UKHab secondary codes that **may** be added along with the selected primary habitat into the table below according to the UKHab documentation.
+
+Group
+	Drop-down list allowing users to select a subset of secondary codes. The contents of the list will vary and relate directly to the selected primary habitat and entries in the lut_secondary_group and lut_primary_secondary tables. [8]_
+
+Code
+	Drop-down list allowing users to select a secondary code. The contents of the list will vary and relate directly to the selected primary habitat and entries in the lut_secondary and lut_primary_secondary tables. [8]_
+
+Add Secondary Habitat
+	A button to add the selected secondary code to the table below. Duplicate codes already in the table will be ignored.
+
+Summary
+	[Read only]. Automatically generated sorted and concatenation string of the UKHab secondary codes present in the table above.
 
 Legacy Habitat
 	Drop-down list allowing users to view and maintain a legacy habitat definition (if required). The contents of the list are based on entries in the lut_legacy_habitat table.
 
-.. [6] The habitat 'Class' and 'Type' list contents are based only on entries in the relevant lookup tables where the 'is_local' flag is set to True (-1). See 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to update lookup table entries.
+.. [8] The primary and secondary group/code list contents are based only on entries in the relevant lookup tables where the 'is_local' flag is set to True (-1). See 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to update lookup table entries.
+
+.. raw:: latex
+
+	\newpage
+
+.. _ihs_tab:
+
+IHS Tab
+-------
+
+Click on :guilabel:`IHS` to display the IHS tab as shown in the figure :ref:`figUIIT`. The IHS tab displays the former Integrated Habitat System (IHS) details for the current INCID record.
+
+.. _figUIIT:
+
+.. figure:: figures/UserInterfaceIHSTab.png
+	:align: center
+	:scale: 85
+
+	Main Window - IHS Tab
+
+
+Habitat
+	[Read only]. Displays the IHS Habitat code prior to conversion to UKHab.
+
+IHS Matrix / Formation / Management / Complex
+	[Read only]. Displays the IHS Matrix / Formation / Management / Complex codes prior to conversion to UKHab.
+
+IHS Summary
+	[Read only]. Concatenation of the above IHS habitat and multiplex codes.
+
+.. raw:: latex
+
+	\newpage
+
+.. _priority_tab:
+
+Priority Tab
+------------
+
+Click on :guilabel:`Priority` to display the Priority tab as shown in the figure :ref:`figUIPT`. The Details tab displays any priority and potential priority habitats for the current INCID.
+
+.. _figUIPT:
+
+.. figure:: figures/UserInterfacePriorityTab.png
+	:align: center
+	:scale: 85
+
+	Main Window - Priority Tab
+
+Priority Habitats
+	Automatically added based upon the Habitat and multiplex codes selected on the :ref:`habitats_tab`. For new priority habitats, 'Determination Quality' and 'Interpretation Quality' must be entered.
+
+Determination
+	Drop-down list allowing the user to select the accuracy with which the priority habitat has been determined.
+
+Interpretation
+	Drop-down list allowing the user to select the quality of interpretation between the original survey source and the priority habitat, taking into account the age of the source data and the relationship between the source habitat classification and the priority habitat.
+
+Interpretation Comments
+	A free text field which allows the user to provide additional reasoning behind the habitat interpretation.
+
+	Click |zoomtable| to open the Priority Habitats window.
+
+Potential Priority Habitats
+	Allows users to define other priority habitats that may also be present in the future given appropriate management or restoration. An INCID may have one or more potential priority habitats even if no priority habitats are present.
+
+Determination
+	Drop-down list allowing the user to select the accuracy with which the potential priority habitat has been determined.
+
+Interpretation
+	Drop-down list allowing the user to select the quality of interpretation between the original survey source and the potential priority habitat, taking into account the age of the source data and the relationship between the source habitat classification and the priority habitat.
+
+Interpretation Comments
+	A free text field which allows the user to provide additional reasoning behind the habitat interpretation.
+
+	Click |zoomtable| to open the Potential Priority Habitats window.
+
+.. note::
+	To delete a potential priority habitat click on the grey box to the left of the potential priority habitat to select the row, then press the keyboard :kbd:`Delete` key to remove it.
 
 .. raw:: latex
 
@@ -214,7 +295,7 @@ Legacy Habitat
 Details Tab
 -----------
 
-Click on :guilabel:`Details` to display the Details tab as shown in the figure :ref:`figUIDT`. The Details tab displays any priority and potential priority habitats, general comments, maps and site details.
+Click on :guilabel:`Details` to display the Details tab as shown in the figure :ref:`figUIDT`. The Details tab displays any general comments, maps, site details, condition assessments and quality assessments.
 
 .. _figUIDT:
 
@@ -224,24 +305,14 @@ Click on :guilabel:`Details` to display the Details tab as shown in the figure :
 
 	Main Window - Details Tab
 
-Priority Habitats
-	Automatically added based upon the Habitat and multiplex codes selected on the :ref:`habitats_tab`. For new priority habitats, 'Determination Quality' and 'Interpretation Quality' must be entered.
-
-	Click |zoomtable| to open the Priority Habitats window.
-
-Potential Priority Habitats
-	Allows users to define other priority habitats that may also be present in the future given appropriate management or restoration. An INCID may have one or more potential priority habitats even if no priority habitats are present.
-
-	Click |zoomtable| to open the Potential Priority Habitats window.
-
 General Comments
 	A free-text field which allows users to enter any additional comments up to 254 characters.
 
 Boundary Map
-	Drop-down lists defining the source data map used to identify the boundary.
+	Drop-down list allowing users to select the map source used to define the boundary.
 
 Digitisation Map
-	Drop-down lists defining the map used to digitise the boundary.
+	Drop-down list allowing users to select the map source used to digitise the boundary.
 
 Site Ref
 	A free-text field which allows users to enter the reference code or key of the site containing the INCID features.
@@ -249,8 +320,23 @@ Site Ref
 Site Name
 	A free-text field which allows users to enter the name of the site containing the INCID features.
 
-.. note::
-	To delete a potential priority habitat click on the grey box to the left of the potential priority habitat to select the row, then press the keyboard :kbd:`Delete` key to remove it.
+Condition
+	Drop-down list allowing users to select a condition assessment of the habitat parcel or select 'Unknown' if not known.
+
+Qualifier
+	Drop-down list allowing users to select a qualifier for how the condition assessment was determined.
+
+Date
+	Allows users to enter the date of the condition assessment.
+
+Determination
+	Drop-down list allowing the user to select the accuracy with which the primary and secondary habitats have been determined.
+
+Interpretation
+	Drop-down list allowing the user to select the quality of interpretation between the original survey source and the primary and secondary habitats, taking into account the age of the source data and the relationship between the source habitat classification and UKHab.
+
+Interpretation Comments
+	A free text field which allows the user to provide additional reasoning behind the habitat interpretation.
 
 .. raw:: latex
 
@@ -278,7 +364,7 @@ Name
 		The following source fields will not be unlocked until a source name has been selected.
 
 Vague Date
-	Allows users to enter the date of the dataset. This can be either a precise date e.g. 01/04/2010 or a vague date e.g. Spring 2010-Summer 2010, 1980-2010 or 'Unknown'. For details on configuring vague dates see :ref:`options_dates`.
+	Allows users to enter the date of the data source. This can be either a precise date e.g. 01/04/2010 or a vague date e.g. Spring 2010-Summer 2010, 1980-2010 or 'Unknown'. For details on configuring vague dates see :ref:`options_dates`.
 
 	.. note::
 		If a default date for the selected data source has been defined in the lut_sources table, the 'Vague Date' field will be set to the default date. If a default date has not been defined, then the 'Vague Date' field must be updated manually. See 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_ for details of how to define default source dates.
@@ -353,7 +439,6 @@ This section also contains the :guilabel:`Apply` button which is used to apply a
 		* The user has made one or more changes to the current INCID.
 		* There are no fields in error.
 
-
 .. raw:: latex
 
 	\newpage
@@ -385,7 +470,6 @@ Errors
 .. note::
 	Whilst **any** fields are in error the :guilabel:`Apply` button will not appear.
 
-
 .. raw:: latex
 
 	\newpage
@@ -400,7 +484,7 @@ Priority Habitats Window
 
 Allows users to edit any priority habitats as shown in the figure :ref:`figUIPHW`.
 
-Click |zoomtable| adjacent to the Priority Habitats table on the Details tab to open the window.
+Click |zoomtable| adjacent to the Priority Habitats table on the Priority tab to open the window.
 
 .. _figUIPHW:
 
@@ -408,7 +492,6 @@ Click |zoomtable| adjacent to the Priority Habitats table on the Details tab to 
 	:align: center
 
 	Priority Habitats Window
-
 
 .. raw:: latex
 
@@ -424,7 +507,7 @@ Potential Priority Habitats Window
 
 Allows users to add, edit or delete any potential priority habitats as shown in the figure :ref:`figUIPPHW`.
 
-Click |zoomtable| adjacent to the Potential Priority Habitats table on the Details tab to open the window.
+Click |zoomtable| adjacent to the Potential Priority Habitats table on the Priority tab to open the window.
 
 .. _figUIPPHW:
 
@@ -432,7 +515,6 @@ Click |zoomtable| adjacent to the Potential Priority Habitats table on the Detai
 	:align: center
 
 	Potential Priority Habitats Window
-
 
 .. raw:: latex
 
@@ -447,7 +529,7 @@ Click |zoomtable| adjacent to the Potential Priority Habitats table on the Detai
 Bulk Update Window
 ==================
 
-The main window will transform into the bulk update window when the bulk update mode is started. The window appears the same as the main window except for the Bulk Update section and the INCID Status section as shown in the figure :ref:`figUIMWBU`. The History tab will also be disabled.
+The main window will transform into the bulk update window when the bulk update mode is started. The window appears the same as the main window except for the Bulk Update section and the INCID Status section as shown in the figure :ref:`figUIMWBU`. The IHS and History tabs will also be disabled.
 
 .. _figUIMWBU:
 
@@ -456,7 +538,6 @@ The main window will transform into the bulk update window when the bulk update 
 	:scale: 60
 
 	Bulk Update Window
-
 
 .. note::
 
@@ -513,7 +594,6 @@ The Bulk Update 'INCID Status' section shows the total number of INCIDs, TOIDs a
 
 For example, figure :ref:`figUIBUS` indicates that the active filter currently contains 47 INCIDs, 58 TOIDs and 58 fragments from those TOIDs.
 
-
 .. raw:: latex
 
 	\newpage
@@ -539,27 +619,28 @@ Before a bulk update is applied a confirmation window will appear with a number 
 
 
 Delete Orphan Priority Habitats
-	Whether existing priority habitats (those automatically associated with the current IHS Habitat) that are **orphaned** (i.e. not associated with the new IHS Habitat) should be deleted following a change to the IHS Habitat during a bulk update. If unchecked, any existing priority habitats are converted to potential priority habitats with the determination quality changed to 'Previous present, by may no longer exist'.
-
-Delete Potential Priority Habitats
-	Whether existing potential priority habitats (those added manually by a user) should be deleted following during a bulk update. If unchecked, any existing potential priority habitats will be retained.
-
-Delete Existing Multiplex Rows
-	Whether existing multiplex (matrix, formation, management and complex) codes should be deleted following a change to the IHS Habitat during a bulk update. The available options are:
-
-		* All - Deletes **all** existing multiplex codes.
-		* Invalid - Deletes only existing multiplex codes that are not valid for the new IHS Habitat.
-		* None - All existing multiplex codes will be retained, and any not be compatible with the new IHS Habitat will appear as errors when displayed in the main interface.
-
-	.. caution::
-		Use option **All** with caution. A warning message will appear when this option is selected.
+	Whether existing priority habitats (those automatically associated with the current primary and secondary habitats) that are **orphaned** (i.e. not associated with the new primary and secondary habitats) should be deleted following a bulk update. If unchecked, any existing priority habitats are converted to potential priority habitats with the determination quality changed to 'Previous present, by may no longer exist'.
 
 	.. note::
-		This option will only be displayed if a new IHS Habitat has been entered for the bulk update.
+		This option will only be displayed if a new primary habitat has been entered for the bulk update.
 
+Delete Potential Priority Habitats
+	Whether existing potential priority habitats (those added manually by a user) should be deleted following a bulk update. If unchecked, any existing potential priority habitats will be retained.
+
+	.. note::
+		This option will only be displayed if a new primary habitat has been entered for the bulk update.
+
+Delete Existing IHS Codes
+	Whether any existing IHS habitat and multiplex (matrix, formation, management and complex) codes should be deleted following a bulk update.
+
+Delete Existing Secondary Codes
+	Whether any existing secondary habitat codes should be deleted following a bulk update.
+
+	.. note::
+		This option will only be displayed if a new primary habitat has been entered for the bulk update.
 
 Delete Existing Source Rows
-	[Read only] Whether existing source rows will be deleted when one or more new sources are provided for a bulk update.
+	[Read only]. Whether existing source rows will be deleted when one or more new sources are provided for a bulk update.
 
 	.. note::
 		This option cannot be controlled by the user - it is automatically determined based on whether one or more new sources are provided or not.
@@ -569,7 +650,6 @@ Create History Records
 
 	.. note::
 		The default values for all of the above fields (except for *Delete Existing Source Rows*) can be set in the options (see :ref:`options_bulk_update` for more details).
-
 
 .. raw:: latex
 
@@ -599,7 +679,6 @@ The main window will transform into the OSMM review updates window when the revi
 	* OSMM review update mode can only be started when there are proposed OSMM update records in the database.
 	* This function is only available to configured users who have been given bulk update permissions. For details on configuring users see 'Lookup Tables' in the HLU Tool Technical Guide at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
-
 .. _review_osmm_section:
 
 OSMM Updates Section
@@ -617,7 +696,7 @@ The 'OSMM Updates' section displays summary details of any proposed or pending O
 
 
 Process Flag
-	Which step in the external OSMM Update process the proposed update was determined. Values represent the type of change in the IHS habitat class from the original incid feature to the new incid feature, and the number of sources assigned to the original incid feature, as follows:
+	Which step in the external OSMM Update process the proposed update was determined. Values represent the type of change in the primary habitat type from the original INCID feature to the new INCID feature, and the number of sources assigned to the original INCID feature, as follows:
 
 		* 1 = Built to Built (only 1 source)
 		* 2 = Built to Built (two or more sources)
@@ -630,15 +709,14 @@ Process Flag
 		* 9 = Unknown to any (except unknown) (any number of sources)
 
 Change Flag
-	Assists with prioritising proposed updates by summarising the type of habitat change. Values indicate whether the proposed habitat category (e.g. 'WB') is the same as the original habitat category and whether it is a higher or lower level in the habitat hierarchy, as follows:
+	Assists with prioritising proposed updates by summarising the type of habitat change. Values indicate whether the proposed habitat group (e.g. urban 'u') is the same as the original habitat group and whether it is a higher or lower level in the habitat hierarchy, as follows:
 
-		* <blank> = Same category and habitat (e.g. GN1 to GN1)
-		* A = Same category but proposed habitat is higher level (e.g. WB3 to WB36)
-		* B = Same category but proposed habitat is different and same or lower level (e.g. LF271 to LF272, LF271 to LF27)
-		* C = Proposed habitat is different and higher level (e.g. WB3 to EM41)
-		* D = Proposed habitat is different and same level (e.g. WB3 to EM4)
-		* E = Proposed habitat is different and lower level (e.g. WB36 to EM4)
-
+		* <blank> = Same group and habitat (e.g. g1a to g1a)
+		* A = Same category but proposed habitat is higher level (e.g. g1a to g1a5)
+		* B = Same category but proposed habitat is different and same or lower level (e.g. g1a to g2a, or g1a5 to g1a)
+		* C = Proposed habitat is different and higher level (e.g. g1a to w1c5)
+		* D = Proposed habitat is different and same level (e.g. g1a to w1c)
+		* E = Proposed habitat is different and lower level (e.g. g1a to w1)
 
 Spatial Flag
 	Indicates whether part of the new feature has been changed compared to the original framework. An 'X' denotes when a feature (once the external OSMM Update process has been completed) overlaps two or more features in the original framework, and so a portion of the new feature may now be assigned to a different INCID than it was originally.
@@ -647,13 +725,13 @@ Status
 	Indicates the current status of the proposed OSMM Update, as follows:
 
 		* Proposed = the OSMM update has not be accepted or rejected by a user yet
-		* Pending = the OSMM update has been accepted and is awaiting to be applied (see see :ref:`bulk_osmm_update_window` for more details).
+		* Pending = the OSMM update has been accepted and is awaiting to be applied (see see :ref:`bulk_osmm_update_window` for more details)
 		* Applied = the OSMM update has been accepted and applied
 		* Ignored = the INCID was manually updated when an OSMM update was still proposed or pending and hence the OSMM update was ignored
-		* Rejected
+		* Rejected = the OSMM update has been rejected
 
-IHS Summary
-	Concatenation of the proposed IHS habitat and multiplex codes based on the new OSMM attributes.
+Summary
+	Concatenation of the proposed primary and secondary habitat codes based on the new OSMM attributes.
 
 INCID Status Section
 --------------------
@@ -681,7 +759,6 @@ Holding down the :guilabel:`Ctrl` key changes the :guilabel:`Reject` and :guilab
 	Review OSMM Updates Window - INCID Status Section 2
 
 For example, figure :ref:`figUIOUIS2` shows the 'INCID Status' section when the :guilabel:`Ctrl` key is pressed.
-
 
 .. index::
 	single: Windows; OSMM Updates Filter Window
@@ -732,7 +809,6 @@ Reset
 Cancel
 	Click :guilabel:`Cancel` to close the OSMM Updates Filter window without applying a new filter.
 
-
 .. note::
 	The user can change the filter at any time when in Review OSMM Updates mode by clicking:
 
@@ -742,13 +818,11 @@ Cancel
 .. tip::
 	Clicking on any of the column headings will sort the table by that column in ascending order. Clicking on the same column again will sort it in descending order.
 
-
 .. index::
 	single: Windows; OSMM Updates Advanced Filter Window
 	single: OSMM Updates; Advanced Filter
 
 .. _osmm_updates_advanced_filter:
-
 
 OSMM Updates Filter - Advanced
 ------------------------------
@@ -759,7 +833,6 @@ To open the advanced filter window:
 
 	* Close the standard OSMM Updates Filter window
 	* Click :guilabel:`Select... --> Filter by Attributes - Advanced...` to open the Advanced Query Builder window.
-
 
 .. raw:: latex
 
@@ -784,7 +857,6 @@ The main window will transform into the bulk OSMM update window when the bulk OS
 
 	Bulk OSMM Update Window
 
-
 .. note::
 
 	* Bulk OSMM update mode can only be started when edit mode is active.
@@ -804,7 +876,6 @@ OSMM Updates Filter
 -------------------
 
 When the bulk OSMM updates mode is first started, the OSMM Updates Filter window will appear (see :ref:`osmm_updates_filter` for details). This allows the user to filter which subset of pending OSMM Updates the bulk update will apply to.
-
 
 .. index::
 	single: Windows; Bulk Apply OSMM Updates Confirmation Window
@@ -836,7 +907,6 @@ Habitat Interpretation Quality
 
 .. note::
 	Some of the options cannot be controlled by the user - they are automatically set for bulk OSMM updates.
-
 
 .. raw:: latex
 
@@ -914,6 +984,9 @@ Map Document/Workspace
 	.. note::
 		If the 'Preferred GIS' option is altered, this field must also be updated.
 
+Minimum auto zoom size
+	The minimum auto zoom size to use whenever zoom to selection is clicked or when the INCID selection is changed in the interface and auto zoom is active.
+
 Export Default Directory
 	Enables MapInfo users to set a default destination folder path for new GIS layers when performing an export (see :ref:`export_window` for more details). A different path to the default can also be selected during the export process.
 
@@ -953,7 +1026,7 @@ Display History Rows
 Interface Options
 -----------------
 
-The following options relate to how the HLU Tool main interface appears and what happens when attribute updates are applied.
+The following options relate to how the HLU Tool main interface appears and the default preferences for some habitat lists.
 
 .. _figOWI:
 
@@ -963,8 +1036,91 @@ The following options relate to how the HLU Tool main interface appears and what
 
 	Options Window - Interface
 
+Show Group Headers
+	Allows the user to choose if section headers will be shown or hidden in the main user interface (to reduce the height of the interface).
+
+Show IHS Tab
+	Allows the user to choose if the IHS tab will be shown or hidden in the main user interface.
+
+Show Source Habitat
+	Allows the user to choose if the Source Habitat group, containing the Habitat Class and Habitat Type lists, will be shown or hidden in the main user interface. The group can be hidden if the source habitat data is in UKHab and primary and secondary habitats are being entered directly without any need to assist the user with translating from other habitat classifications.
+
+Show Habitat Suggestions
+	Allows the user to choose if any suggested secondary habitat related to the source habitat type and selected primary habitat.
+
+Show NVC Codes
+	Allows the user to choose if a list of any potential NVC Codes related to the selected primary habitat will be shown.
+
+Show Habitat Summary
+	Allows the user to choose if the summary of the primary and secondary codes will be shown or hidden in the main user interface (to reduce the height of the interface).
+
+Show OSMM Update Attributes
+	Allows the user to choose when Ordnance Survey MasterMap (OSMM) updates should be shown (see :Ref:`osmm_update_section` for more details). The available options are:
+
+		* Never - **Never** show the OSMM Updates section.
+		* When Outstanding - Only show the OSMM Updates section when the update is **outstanding** (the status is 'Proposed' or 'Pending').
+		* Always - **Always** show the OSMM Updates section.
+
 Preferred Habitat Class
-	Allows the user to choose which Habitat Class in the INCID tab (see :ref:`Habitats_tab` for more details) is automatically selected each time the HLU Tool is started.
+	Allows the user to choose which Habitat Class in the Habitat tab (see :ref:`Habitats_tab` for more details) is automatically selected each time the HLU Tool is started.
+
+Preferred Secondary Group
+	Allows the user to choose which Secondary Group in the Habitat tab (see :ref:`Habitats_tab` for more details) is automatically selected each time the HLU Tool is started.
+
+Secondary Table Order
+	Allows the user to choose the order that any secondary habitats appear in the secondary table.
+
+Secondary Code Delimiter
+	Allows the user to choose the delimiter characters (e.g. '.' or ', ') that are used to separate any secondary habitat codes in the Summary field. Up to 2 non-alphanumeric characters can be entered.
+
+	.. warning::
+		This option will also affect the concatenated secondary codes summary saved in the active GIS layer so changed should be applied with caution.
+
+.. index::
+	single: Options; Updates
+
+.. _options_updates:
+
+Updates Options
+---------------
+
+The following options relate to what validation is performed and what happens when attribute updates are applied.
+
+.. _figOWU:
+
+.. figure:: figures/OptionsWindowUpdates.png
+	:align: center
+	:scale: 90
+
+	Options Window - Updates
+
+Habitat/Secondary Validation
+	Allows users to select whether mandatory secondary codes for the selected source habitat type are validated, i.e. have been added to the secondary table, and if the missing codes are considered as errors or just warnings. The available actions are:
+
+		* Ignore - Missing mandatory secondary codes for the selected source habitat type are **ignored**.
+		* Warning - Missing mandatory secondary codes for the selected source habitat type are flagged with a **warning**.
+		* Error - Missing mandatory secondary codes for the selected source habitat type are flagged with an **error**.
+
+Primary/Secondary Validation
+	Allows users to select whether secondary codes for the selected primary habitat are validated, i.e. have been added to the secondary table. The available actions are:
+
+		* Ignore - Missing secondary codes for the selected primary habitat are **ignored**.
+		* Error - Missing secondary codes for the selected primary habitat are flagged with an **error**.
+
+Determination And Interpretation Quality Validation
+	Allows users to select whether entering determination and interpretation values to reflect the quality of the selected primary and secondary habitats. The available actions are:
+
+		* Optional - Determination and interpretation quality are **optional** for every INCID.
+		* Mandatory - Determination and interpretation quality are **mandatory** for every INCID.
+
+Potential Priority Habitat Determination Quality Validation
+	Allows users to select whether the determination quality value for potential priority habitats is validated. The available actions are:
+
+		* Ignore - The determination quality value for potential priority habitats is **ignored** (i.e. is not validated).
+		* Error - Invalid determination quality values for potential priority habitats are flagged with an **error**.
+		  
+	.. note::
+		Ignoring the validation for potential priority habitats enables the user to select determination quality values that indicate that the habitat **is** or **probably is** in the associated polygon(s). Otherwise determination quality values can **ONLY** be 'Not present but close to definition' or 'Previously present, but may no longer exist'.
 
 Action to Take When Updating Subset
 	Allows users to select what action to take if they attempt to apply attribute changes to only a subset of features for an INCID (see :ref:`attribute_update` for more details). The available actions are:
@@ -973,21 +1129,16 @@ Action to Take When Updating Subset
 		* Split - Always perform a **logical split** before applying the attribute updates.
 		* All - Always apply the attribute update to **all** features belonging to the INCID regardless of which features of the INCID are currently selected.
 
-Show NVC Codes
-	Allows the user to choose if a list of any potential NVC Codes related to the selected IHS habitat code will be shown.
+When To Clear IHS Codes After Update
+	Allows users to select when existing IHS Codes should be cleared when attribute updates are applied. The available options are:
 
-Show Group Headers
-	Allows the user to choose if section headers in the main user interface will be shown or hidden (to reduce the height of the interface).
+		* Do not clear - **Do not clear** any existing IHS habitat and multiplex codes following an attribute update.
+		* Clear on change in primary code only - Clear any existing IHS habitat and multiplex codes **only** following a change to the primary habitat code.
+		* Clear on change in primary or secondary codes only - Clear any existing IHS habitat and multiplex codes following a change to **either** the primary or secondary habitat codes.
+		* Clear on any change - Clear any existing IHS habitat and multiplex codes following **any** change in an attribute update.
 
-Notify After Completing Split/Merge?
-	Enable users to specify if a pop-up message should be displayed following the completion of any of the split or merge operations.
-
-Show OSMM Update Attributes
-	Allows the user to choose when Ordnance Survey MasterMap (OSMM) updates should be shown (see :Ref:`osmm_update_section` for more details). The available options are:
-
-		* Never - **Never** show the OSMM Updates section.
-		* When Outstanding - Only show the OSMM Updates section when the update is **outstanding** (the status is 'Proposed' or 'Pending').
-		* Always - **Always** show the OSMM Updates section.
+Notify After Completing Split/Merge
+	Allows users to specify if a pop-up message should be displayed following the completion of any of the split or merge operations.
 
 Reset Pending OSMM Update Status On Manual Update
 	Allows the user to choose if the status of OSMM Updates for the current INCID should be reset to 'Ignored' when an **attribute update** is applied.
@@ -1000,7 +1151,7 @@ Reset Pending OSMM Update Status On Manual Update
 Filter Options
 --------------
 
-The following options relate to the preferred query builder used to filter INCID records.
+The following options relate to the advanced query builder used to filter INCID records.
 
 .. _figOWF:
 
@@ -1010,14 +1161,8 @@ The following options relate to the preferred query builder used to filter INCID
 
 	Options Window - Filter
 
-Use Advanced Query Builder
-	Allows the user to choose their preferred SQL query builder interface (see :ref:`query_builder_window` and :ref:`advanced_query_builder_window` for details).
-
 Get Values Count
 	Allows the user to select the maximum number of unique field values that will be retrieved each time the :guilabel:`Get Values` button is pressed when using the 'Advanced Query Builder' (see :ref:`advanced_query_builder_window` for details). The maximum number of rows that can be retrieved at any time cannot exceed 100,000. This number should be reduced if performance issues are experienced when the :guilabel:`Get Values` button is pressed or when the drop-down list is used on the 'Advanced Query Builder'.
-
-	.. note::
-		This option is only available if 'Use Advanced Query Builder' is selected.
 
 Warn Before GIS Select
 	Allows users to determine if/when a pop-up warning/information message should be displayed prior to selecting features in GIS, e.g. when applying a filter (see :ref:`filter_by_attributes` for details) or when selecting the features for all INCIDs in the active filter. The available options are:
@@ -1028,10 +1173,6 @@ Warn Before GIS Select
 
 Default Query Directory
 	Enables users to set a default folder path that will be used when saving or loading queries with the 'Advanced Query Builder' (see :ref:`advanced_query_builder_window` for details). A different path to the default can also be selected during the save and load process.
-
-	.. note::
-		This option is only available if 'Use Advanced Query Builder' is selected.
-
 
 .. index::
 	single: Options; Dates
@@ -1061,7 +1202,6 @@ Vague Date Delimiter
 	.. note::
 		The default value for the 'Vague Date Delimiter' is a hyphen ( - ). This can be altered to any character, however, it must not be the same delimiter used by the computer to enter precise dates, such as 01/04/2010. The default delimiter used by Windows for English-format dates is a forward slash ( / ).
 
-
 .. index::
 	single: Options; Bulk Update
 
@@ -1081,26 +1221,28 @@ The following options relate to the **default** values to use when applying bulk
 	Options Window - Bulk Update
 
 Delete Orphan Priority Habitats
-	The default option for whether existing priority habitats (those automatically associated with the current IHS Habitat) that are **orphaned** (i.e. not associated with the new IHS Habitat) should be deleted following a change to the IHS Habitat during a bulk update. If unchecked, any existing priority habitats are converted to potential priority habitats with the determination quality changed to 'Previous present, by may no longer exist'.
+	The default option for whether existing priority habitats (those automatically associated with the current primary and secondary habitats) that are **orphaned** (i.e. not associated with the new primary and secondary habitats) should be deleted following a change to the primary habitat during a bulk update. If unchecked, any existing priority habitats are converted to potential priority habitats with the determination quality changed to 'Previous present, by may no longer exist'.
 
 Delete Potential Priority Habitats
 	The default option for whether existing potential priority habitats (those added manually by a user) should be deleted following during a bulk update. If unchecked, any existing potential priority habitats will be retained.
 
-Delete Existing Multiplex Rows
-	The default option for whether existing multiplex (matrix, formation, management and complex) codes should be deleted following a change to the IHS Habitat during a bulk update. If unchecked, any existing multiplex codes will be retained, and any not be compatible with the new IHS Habitat will appear as errors when displayed in the main interface.
+Delete Existing IHS Codes
+	The default option for whether existing IHS habitat and multiplex (matrix, formation, management and complex) codes should be deleted following a change to the habitat during a bulk update. If unchecked, any existing multiplex codes will be retained, and any not be compatible with the new IHS Habitat will appear as errors when displayed in the main interface.
+
+Delete Existing Secondary Codes
+	The default option for whether existing secondary codes should be deleted following a change to the primary habitat during a bulk update. If unchecked, any existing secondary codes will be retained, and any not compatible with the new primary habitat will appear as errors when displayed in the main interface (see :ref:`options_updates` for more details).
 
 Create History Records
 	The default option for whether history records will be created when a bulk update is applied.
 
-Determination Quality
-	The default option for which determination quality to apply to any new priority habitats (those automatically associated with the new IHS Habitat) following a change to the IHS Habitat during an OSMM bulk update.
+Priority Determination Quality
+	The default option for which determination quality to apply to any new priority habitats (those automatically associated with the new primary habitat) following a change to the primary habitat during an OSMM bulk update.
 
-Interpretation Quality
-	The default option for which interpretation quality to apply to any new priority habitats (those automatically associated with the new IHS Habitat) following a change to the IHS Habitat during an OSMM bulk update.
+Priority Interpretation Quality
+	The default option for which interpretation quality to apply to any new priority habitats (those automatically associated with the new primary habitat) following a change to the primary habitat during an OSMM bulk update.
 
 OSMM Source Name
 	The default option for which Ordnance Survey MasterMap source name to use when automatically adding a new source record during an OSMM bulk update.
-
 
 .. raw:: latex
 
@@ -1111,94 +1253,7 @@ OSMM Source Name
 Filter Windows
 ==============
 
-Allows users to filter the INCID records that appear in the user interface, and correspondingly which features are selected in the active GIS layer. The filter is performed by building a SQL query that will select one or more INCIDs based on a chosen set of criteria, or by entering a single INCID value. There are two main interfaces available:
-
-	* **HLU Query Builder** - the original interface supplied with the HLU Tool.
-	* **HLU Advanced Query Builder** - a new interface that provides more user-friendly and flexible functionality.
-		  
-Users can choose their preferred interface for building a SQL query in the user Options (see :ref:`options_filter` for details).
-
-
-.. index::
-	single: Windows; Query Builder Window
-	single: Filter; Query Builder
-
-.. _query_builder_window:
-
-Query Builder Window
---------------------
-
-Allows users to filter the database records using the query builder shown in the figure :ref:`figQB`.
-
-Click |filterbyattr| or :guilabel:`Select... --> Filter by Attributes...` to open the window.
-
-.. _figQB:
-
-.. figure:: figures/QueryBuilder.png
-	:align: center
-
-	Query Builder Window
-
-
-Boolean Operator
-	Allows users to perform logical selections using:
-
-		* 'AND'
-		* 'AND NOT'
-		* 'OR'
-		* 'OR NOT'.
-
-	.. note::
-		The value of the 'Boolean Operator' field on the first row is not used.
-
-'(' and ')'
-	Allow users to add additional brackets to **nest** criteria and boolean operators to meet specific selection requirements
-
-	For example, the query in the figure :ref:`figQB` will select records where:
-
-		* ihs_habitat equals 'GC0' **AND** bap_habitat equals **EITHER** 'PHAP-LCG' **OR** 'PHAP-UCG'
-		
-	In other words records **must** match the specified ihs_habitat value and **must also** match **either** of the specified bap_habitat values.
-
-	.. note::
-
-		Without the additional set of brackets around the last two lines in the above example the query would select records that either:
-
-			* match the ihs_habitat specified value **AND** the first specified bap_habitat value, **OR**
-			* match the second specified bap_habitat value (regardless of the ihs_habitat value)
-
-Table
-	Identifies the table to be searched.
-
-Column
-	Identifies the field in the selected table to be searched.
-
-Operator
-	Drop-down list of the available operators as shown in the figure :ref:`figSOL`.
-
-Value
-	The value to search for. Values can either be entered as free-text or selected from the drop-down list (where available).
-
-.. _figSOL:
-
-.. figure:: figures/SQLOperatorList.png
-	:align: center
-	:scale: 90
-
-	Query Builder Window - List of Operators
-
-Once users have entered the values for the current row, click on another row in the query builder to confirm the entry and enable the 'OK' button.
-
-If a mistake has been made when entering the selection criteria, click on the grey box to the left of 'Boolean Operator' to select the row, then press the keyboard :kbd:`Delete` key to remove it.
-
-
-.. tip::
-	If features are likely to be selected from multiple INCIDs it will typically be much quicker to select features in the GIS (if the available attributes are sufficient for the selection) then use 'Get Map Selection'.
-
-
-.. raw:: latex
-
-	\newpage
+Allows users to filter the INCID records that appear in the user interface, and correspondingly which features are selected in the active GIS layer. The filter is performed by building a SQL query that will select one or more INCIDs based on a chosen set of criteria.
 
 .. index::
 	single: Windows; Advanced Query Builder Window
@@ -1268,10 +1323,8 @@ OK
 Cancel
 	Click :guilabel:`Cancel` to close the 'Advanced Query Builder' window without applying a new filter.
 
-
 .. tip::
 	Whilst the Tables and Where Clause can be entered as free-text by the user, it is recommended that users use the drop-down lists and :guilabel:`Add` buttons to reduce the likelihood of syntax errors.
-
 
 .. raw:: latex
 
@@ -1306,7 +1359,6 @@ OK
 
 Cancel
 	Click :guilabel:`Cancel` to close the query window without applying a new filter.
-
 
 .. raw:: latex
 
@@ -1347,7 +1399,6 @@ Selected Only
 	.. note::
 		If the database records have been filtered the 'Selected only' checkbox is automatically ticked and the number of selected GIS features is shown (as seen in :ref:`figED`). Only the records related to the selected INCIDs and associated GIS features from the active GIS layer will be exported. Untick this checkbox to export all features from the active GIS layer associated with the INCIDs in the active filter. For details on how to filter records see :ref:`filter_by_attributes`.
 
-
 .. raw:: latex
 
 	\newpage
@@ -1381,4 +1432,3 @@ Allows users to switch between GIS layers by selecting a different layer in the 
 
 .. tip::
 	The currently active GIS layer is automatically selected in the drop-down list when the Switch GIS Layer window opens. The active GIS layer also appears in the main window title bar.
-
