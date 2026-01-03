@@ -1045,8 +1045,8 @@ Show IHS Tab
 Show Source Habitat
 	Allows the user to choose if the Source Habitat group, containing the Habitat Class and Habitat Type lists, will be shown or hidden in the main user interface. The group can be hidden if the source habitat data is in UKHab and primary and secondary habitats are being entered directly without any need to assist the user with translating from other habitat classifications.
 
-Show Habitat Suggestions
-	Allows the user to choose if any suggested secondary habitat related to the source habitat type and selected primary habitat.
+Show Secondary Suggestions
+	Allows the user to choose if any suggested secondary habitats related to the source habitat type and selected primary habitat are shown.
 
 Show NVC Codes
 	Allows the user to choose if a list of any potential NVC Codes related to the selected primary habitat will be shown.
@@ -1141,7 +1141,7 @@ Notify After Completing Split/Merge
 	Allows users to specify if a pop-up message should be displayed following the completion of any of the split or merge operations.
 
 Reset Pending OSMM Update Status On Manual Update
-	Allows the user to choose if the status of OSMM Updates for the current INCID should be reset to 'Ignored' when an **attribute update** is applied.
+	Allows the user to choose if the status of any pending OSMM Updates for the current INCID should be reset to 'Ignored' when an **attribute update** is applied.
 
 .. index::
 	single: Options; Filter
@@ -1227,10 +1227,10 @@ Delete Potential Priority Habitats
 	The default option for whether existing potential priority habitats (those added manually by a user) should be deleted following during a bulk update. If unchecked, any existing potential priority habitats will be retained.
 
 Delete Existing IHS Codes
-	The default option for whether existing IHS habitat and multiplex (matrix, formation, management and complex) codes should be deleted following a change to the habitat during a bulk update. If unchecked, any existing multiplex codes will be retained, and any not be compatible with the new IHS Habitat will appear as errors when displayed in the main interface.
+	The default option for whether existing IHS habitat and multiplex (matrix, formation, management and complex) codes should be deleted following a change to the habitat during a bulk update. If checked, any existing multiplex codes will be deleted, otherwise they will be retained.
 
 Delete Existing Secondary Codes
-	The default option for whether existing secondary codes should be deleted following a change to the primary habitat during a bulk update. If unchecked, any existing secondary codes will be retained, and any not compatible with the new primary habitat will appear as errors when displayed in the main interface (see :ref:`options_updates` for more details).
+	The default option for whether existing secondary codes should be deleted following a change to the primary habitat during a bulk update. If checked, any existing secondary codes will be deleted, otherwise they will be retained and may not be compatible with the new primary habitat (see :ref:`options_updates` for more details).
 
 Create History Records
 	The default option for whether history records will be created when a bulk update is applied.
